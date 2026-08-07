@@ -1,0 +1,12 @@
+{
+  "name": "heliograph-tokens",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:tokens": "node style-dictionary.config.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "^5.5.1",
+    "@tokens-studio/sd-transforms": "^1.2.0"
+  }
+}
