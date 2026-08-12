@@ -1,0 +1,10 @@
+/* circle-check — Figma node 120:2861 */
+
+.ccheck {
+  flex-shrink: 0;
+}
+
+.ccheck--dark .ccheck__disc { fill: var(--colors-purple-02); }
+.ccheck--dark .ccheck__tick { stroke: #1b0b3b; }
+.ccheck--light .ccheck__disc { fill: var(--colors-purple-06); }
+.ccheck--light .ccheck__tick { stroke: var(--colors-absolute-white); }

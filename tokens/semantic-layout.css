@@ -1,0 +1,79 @@
+/* Semantic layout — grid, insets, stacks, sizing, elevation, border widths, focus ring
+   Verbatim from Heliograph build/css/variables.css (Style Dictionary output of tokens.json).
+   Source of truth: mixpanel/Heliograph. Do not hand-edit values. */
+:root{
+  --border-radius-none: 0px;
+  --border-radius-icon: 4px;
+  --border-radius-control: 4px;
+  --border-radius-tertiary: 4px;
+  --border-radius-tag: 4px;
+  --border-radius-input: 4px;
+  --border-radius-content: 16px;
+  --border-radius-sm-outer: 24px;
+  --border-radius-lg-outer: 40px;
+  --border-radius-pill: 100px;
+  --layout-grid-desktop-plus-breakpoint: 1440px; /* @kind spacing */
+  --layout-grid-desktop-plus-columns: 12px; /* @kind other */
+  --layout-grid-desktop-plus-margin: 48px;
+  --layout-grid-desktop-plus-gutter: 16px;
+  --layout-grid-desktop-plus-max-width: 1520px; /* @kind other */
+  --layout-grid-desktop-breakpoint: 1200px; /* @kind spacing */
+  --layout-grid-desktop-columns: 12px; /* @kind other */
+  --layout-grid-desktop-margin: 40px;
+  --layout-grid-desktop-gutter: 16px;
+  --layout-grid-desktop-max-width: 1360px; /* @kind other */
+  --layout-grid-tablet-breakpoint: 808px; /* @kind spacing */
+  --layout-grid-tablet-columns: 6px; /* @kind other */
+  --layout-grid-tablet-margin: 32px;
+  --layout-grid-tablet-gutter: 16px;
+  --layout-grid-tablet-max-width: none; /* @kind other */
+  --layout-grid-phone-breakpoint: 384px; /* @kind spacing */
+  --layout-grid-phone-columns: 2px; /* @kind other */
+  --layout-grid-phone-margin: 16px;
+  --layout-grid-phone-gutter: 16px;
+  --layout-grid-phone-max-width: none; /* @kind other */
+  --icon-sm: 16px;
+  --icon-default: 24px;
+  --control: 16px;
+  --round-icon-button-lg: 32px;
+  --round-icon-button-sm: 24px;
+  --switch-width: 48px;
+  --switch-height: 24px;
+  --inset-button-lg-button-top-bottom: 14px;
+  --inset-button-lg-button-right: 14px;
+  --inset-button-lg-button-left: 16px;
+  --inset-button-lg-button-icon-gap: 6px;
+  --inset-button-lg-button-icon-gap-hover: 8px;
+  --inset-button-sm-button-top-bottom: 10px;
+  --inset-button-sm-button-right: 12px;
+  --inset-button-sm-button-left: 14px;
+  --inset-button-sm-button-icon-gap: 6px;
+  --inset-button-sm-button-icon-gap-hover: 8px;
+  --inset-button-tertiary-top-bottom: 8px;
+  --inset-button-tertiary-right-left: 8px;
+  --inset-tag-lg-top-bottom: 10px;
+  --inset-tag-lg-right-left: 12px;
+  --inset-tag-lg-icon-gap: 6px;
+  --inset-tag-sm-top-bottom: 8px;
+  --inset-tag-sm-left-right: 8px;
+  --inset-tag-sm-icon-gap: 6px;
+  --inset-input-top-bottom: 12px;
+  --inset-input-right-left: 16px;
+  --inset-card-border-spacing: 8px;
+  --stack-section-md: 40px;
+  --stack-section-lg: 80px;
+  --stack-page-top: 64px;
+  --stack-page-bottom: 120px;
+  --generic-spacing-xx-sm: 8px;
+  --generic-spacing-x-sm: 16px;
+  --generic-spacing-sm: 24px;
+  --generic-spacing-md: 32px;
+  --generic-spacing-lg: 40px;
+  --generic-spacing-x-lg: 80px;
+  --elevation-card-default-on-light: 0 40px 36px -48px rgba(120, 86, 255, 0.3);
+  --elevation-card-default-on-dark: 0 40px 24px -38px rgba(120, 86, 255, 0.3);
+  --focus: 0 0 0 4px rgba(120, 86, 255, 0.3); /* @kind shadow */
+  --thin: 0.5px; /* @kind spacing */
+  --standard: 1px; /* @kind spacing */
+  --none: 0px; /* @kind spacing */
+}

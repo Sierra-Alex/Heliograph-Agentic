@@ -1,0 +1,8 @@
+/* button-lockup — Figma node 400:39735 */
+
+.blk {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+}

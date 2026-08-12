@@ -1,0 +1,166 @@
+/* ---- Base ---- */
+
+.sh {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-light);
+  overflow: clip;
+  width: var(--breakpoints-1440);
+}
+
+/* ---- Banner ---- */
+
+.sh__banner {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-lg);
+  border-radius: var(--border-radius-sm-outer);
+  overflow: clip;
+  position: relative;
+  margin: 0 var(--generic-spacing-x-sm);
+}
+
+/* ---- Content ---- */
+
+.sh__content {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  padding-left: var(--layout-grid-desktop-plus-margin);
+}
+
+/* ---- Image ---- */
+
+.sh__image {
+  flex-shrink: 0;
+  width: 684px;
+  padding: var(--inset-card-border-spacing);
+}
+
+.sh__image-placeholder {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: var(--border-radius-content);
+  background: var(--surface-muted);
+  opacity: 0.4;
+}
+
+/* ---- Simple gradient ---- */
+
+.sh--purple.sh--simple .sh__banner {
+  background: var(--container-fill-gradient-hero-light-purple);
+}
+
+.sh--pool.sh--simple .sh__banner {
+  background: var(--container-fill-gradient-hero-light-pool);
+}
+
+.sh--mint.sh--simple .sh__banner {
+  background: var(--container-fill-gradient-hero-light-mint);
+}
+
+.sh--lava.sh--simple .sh__banner {
+  background: var(--container-fill-gradient-hero-light-lava);
+}
+
+.sh--mustard.sh--simple .sh__banner {
+  background: var(--container-fill-gradient-hero-light-mustard);
+}
+
+.sh--grass.sh--simple .sh__banner {
+  background: var(--container-fill-gradient-hero-light-grass);
+}
+
+/* ---- Sliced gradient ---- */
+
+.sh__slices {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sh__slice {
+  position: absolute;
+  height: 1200px;
+}
+
+.sh--purple .sh__slice {
+  background: var(--container-fill-gradient-hero-dark-purple);
+}
+
+.sh--pool .sh__slice {
+  background: var(--container-fill-gradient-hero-dark-pool);
+}
+
+.sh--mint .sh__slice {
+  background: var(--container-fill-gradient-hero-dark-mint);
+}
+
+.sh--lava .sh__slice {
+  background: var(--container-fill-gradient-hero-dark-lava);
+}
+
+.sh--mustard .sh__slice {
+  background: var(--container-fill-gradient-hero-dark-mustard);
+}
+
+.sh--grass .sh__slice {
+  background: var(--container-fill-gradient-hero-dark-grass);
+}
+
+/* ---- Responsive: Desktop ---- */
+
+.sh--desktop {
+  width: var(--breakpoints-1200);
+}
+
+.sh--desktop .sh__content {
+  padding-left: var(--layout-grid-desktop-margin);
+}
+
+.sh--desktop .sh__image {
+  width: 520px;
+}
+
+/* ---- Responsive: Tablet ---- */
+
+.sh--tablet {
+  width: var(--breakpoints-808);
+}
+
+.sh--tablet .sh__banner {
+  flex-direction: column;
+  margin: 0 var(--generic-spacing-xx-sm);
+}
+
+.sh--tablet .sh__content {
+  flex: none;
+  padding: var(--layout-grid-tablet-margin);
+  padding-bottom: 0;
+}
+
+.sh--tablet .sh__image {
+  width: auto;
+}
+
+/* ---- Responsive: Phone ---- */
+
+.sh--phone {
+  width: var(--breakpoints-384);
+}
+
+.sh--phone .sh__banner {
+  flex-direction: column;
+  margin: 0 var(--generic-spacing-xx-sm);
+}
+
+.sh--phone .sh__content {
+  flex: none;
+  padding: var(--layout-grid-phone-margin);
+  padding-bottom: 0;
+}
+
+.sh--phone .sh__image {
+  width: auto;
+}

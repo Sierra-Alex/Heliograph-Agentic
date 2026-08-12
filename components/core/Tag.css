@@ -1,0 +1,128 @@
+/* ---- Base ---- */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border: var(--standard) solid currentColor;
+  border-radius: var(--border-radius-tag);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  /* Hug the label even when the tag is a flex/grid item, where the default
+     align-items: stretch would otherwise blow it out to the container width.
+     Upstream relies on every call site being a flex-start container; this
+     makes the component safe to drop anywhere. */
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* ---- Size ---- */
+
+.tag--lg {
+  font: var(--component-tag-lg-tag);
+  gap: var(--inset-tag-lg-icon-gap);
+  padding: var(--inset-tag-lg-top-bottom) var(--inset-tag-lg-right-left);
+}
+
+.tag--sm {
+  font: var(--component-tag-sm-tag);
+  gap: var(--inset-tag-sm-icon-gap);
+  padding: var(--inset-tag-sm-top-bottom) var(--inset-tag-sm-left-right);
+}
+
+/* ---- Purple ---- */
+
+.tag--purple:not(.tag--on-dark) {
+  background-color: var(--tag-on-light-purple-fill);
+  border-color: var(--tag-on-light-purple-border);
+  color: var(--tag-on-light-purple-text);
+}
+
+.tag--on-dark.tag--purple {
+  background-color: var(--tag-on-dark-purple-fill);
+  border-color: var(--tag-on-dark-purple-border);
+  color: var(--tag-on-dark-purple-text);
+}
+
+/* ---- Pool ---- */
+
+.tag--pool:not(.tag--on-dark) {
+  background-color: var(--tag-on-light-pool-fill);
+  border-color: var(--tag-on-light-pool-border);
+  color: var(--tag-on-light-pool-text);
+}
+
+.tag--on-dark.tag--pool {
+  background-color: var(--tag-on-dark-pool-fill);
+  border-color: var(--tag-on-dark-pool-border);
+  color: var(--tag-on-dark-pool-text);
+}
+
+/* ---- Mint ---- */
+
+.tag--mint:not(.tag--on-dark) {
+  background-color: var(--tag-on-light-mint-fill);
+  border-color: var(--tag-on-light-mint-border);
+  color: var(--tag-on-light-mint-text);
+}
+
+.tag--on-dark.tag--mint {
+  background-color: var(--tag-on-dark-mint-fill);
+  border-color: var(--tag-on-dark-mint-border);
+  color: var(--tag-on-dark-mint-text);
+}
+
+/* ---- Lava ---- */
+
+.tag--lava:not(.tag--on-dark) {
+  background-color: var(--tag-on-light-lava-fill);
+  border-color: var(--tag-on-light-lava-border);
+  color: var(--tag-on-light-lava-text);
+}
+
+.tag--on-dark.tag--lava {
+  background-color: var(--tag-on-dark-lava-fill);
+  border-color: var(--tag-on-dark-lava-border);
+  color: var(--tag-on-dark-lava-text);
+}
+
+/* ---- Peach ---- */
+
+.tag--peach:not(.tag--on-dark) {
+  background-color: var(--tag-on-light-peach-fill);
+  border-color: var(--tag-on-light-peach-border);
+  color: var(--tag-on-light-peach-text);
+}
+
+.tag--on-dark.tag--peach {
+  background-color: var(--tag-on-dark-peach-fill);
+  border-color: var(--tag-on-dark-peach-border);
+  color: var(--tag-on-dark-peach-text);
+}
+
+/* ---- Mustard ---- */
+
+.tag--mustard:not(.tag--on-dark) {
+  background-color: var(--tag-on-light-mustard-fill);
+  border-color: var(--tag-on-light-mustard-border);
+  color: var(--tag-on-light-mustard-text);
+}
+
+.tag--on-dark.tag--mustard {
+  background-color: var(--tag-on-dark-mustard-fill);
+  border-color: var(--tag-on-dark-mustard-border);
+  color: var(--tag-on-dark-mustard-text);
+}
+
+/* ---- Grass ---- */
+
+.tag--grass:not(.tag--on-dark) {
+  background-color: var(--tag-on-light-grass-fill);
+  border-color: var(--tag-on-light-grass-border);
+  color: var(--tag-on-light-grass-text);
+}
+
+.tag--on-dark.tag--grass {
+  background-color: var(--tag-on-dark-grass-fill);
+  border-color: var(--tag-on-dark-grass-border);
+  color: var(--tag-on-dark-grass-text);
+}

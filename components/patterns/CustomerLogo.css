@@ -1,0 +1,20 @@
+/* customer-logo — Figma node 127:11196 */
+
+.clogo {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.clogo > img {
+  position: absolute;
+  display: block;
+}
+
+.clogo--dark {
+  filter: grayscale(1) brightness(0);
+}
+
+.clogo--light {
+  filter: grayscale(1) brightness(0) invert(1);
+}

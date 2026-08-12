@@ -1,0 +1,23 @@
+/* Full Width Headlines — Figma node 127:15352 */
+
+.fwh {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-md);
+  padding: 0 var(--generic-spacing-md);
+}
+
+.fwh__headline {
+  margin: 0;
+  font: var(--headline-h3);
+  letter-spacing: var(--letter-spacing-negative-2);
+  color: var(--text-on-light-headline);
+  text-wrap: pretty;
+}
+
+.fwh--dark.fwh--purple .fwh__headline { color: var(--text-on-dark-headline-purple); }
+.fwh--dark.fwh--pool .fwh__headline { color: var(--text-on-dark-headline-pool); }
+.fwh--dark.fwh--mint .fwh__headline { color: var(--text-on-dark-headline-mint); }
+.fwh--dark.fwh--lava .fwh__headline { color: var(--text-on-dark-headline-lava); }
+.fwh--dark.fwh--mustard .fwh__headline { color: var(--text-on-dark-headline-mustard); }
+.fwh--dark.fwh--grass .fwh__headline { color: var(--text-on-dark-headline-grass); }

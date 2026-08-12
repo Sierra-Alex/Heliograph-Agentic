@@ -1,0 +1,157 @@
+/* ---- Base ---- */
+
+.tn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: var(--generic-spacing-x-sm) var(--layout-grid-desktop-plus-margin);
+  background: var(--colors-absolute-alpha-80);
+  backdrop-filter: blur(var(--blur-18));
+  -webkit-backdrop-filter: blur(var(--blur-18));
+  border-bottom: 1px solid var(--divider-on-light);
+  width: 100%;
+}
+
+/* ---- Responsive padding ---- */
+
+.tn--desktop-plus {
+  padding-left: var(--layout-grid-desktop-plus-margin);
+  padding-right: var(--layout-grid-desktop-plus-margin);
+}
+
+.tn--desktop {
+  padding-left: var(--layout-grid-desktop-margin);
+  padding-right: var(--layout-grid-desktop-margin);
+}
+
+.tn--tablet {
+  padding-left: var(--layout-grid-tablet-margin);
+  padding-right: var(--layout-grid-tablet-margin);
+}
+
+.tn--phone {
+  padding-left: var(--layout-grid-phone-margin);
+  padding-right: var(--layout-grid-phone-margin);
+}
+
+/* ---- Left group ---- */
+
+.tn__left {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-x-lg);
+}
+
+/* ---- Logo ---- */
+
+.tn__logo {
+  flex-shrink: 0;
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+/* ---- Nav links ---- */
+
+.tn__links {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-x-sm);
+}
+
+.tn__link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  font: var(--body-b4-medium);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-link);
+  opacity: 0.7;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.tn__link:hover {
+  opacity: 1;
+}
+
+.tn__caret {
+  width: 5px;
+  height: 2.5px;
+  flex-shrink: 0;
+}
+
+.tn__caret img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(90deg);
+}
+
+/* ---- Right group ---- */
+
+.tn__right {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-x-sm);
+}
+
+.tn--desktop-plus .tn__right,
+.tn--desktop .tn__right {
+  gap: var(--generic-spacing-x-sm);
+}
+
+.tn--tablet .tn__right,
+.tn--phone .tn__right {
+  gap: var(--generic-spacing-xx-sm);
+}
+
+/* ---- Login link ---- */
+
+.tn__login {
+  font: var(--body-b4-medium);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-link);
+  opacity: 0.7;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.tn__login:hover {
+  opacity: 1;
+}
+
+/* ---- Button group ---- */
+
+.tn__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+/* ---- Burger menu ---- */
+
+.tn__burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.tn__burger img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}

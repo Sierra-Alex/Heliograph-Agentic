@@ -1,0 +1,139 @@
+/* ---- Base ---- */
+
+.ctl {
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+}
+
+.ctl__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+.ctl__headline {
+  color: var(--text-on-light-headline);
+  margin: 0;
+}
+
+.ctl__subhead {
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-body);
+  margin: 0;
+}
+
+.ctl__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+/* ---- Alignment ---- */
+
+.ctl--left {
+  align-items: flex-start;
+}
+
+.ctl--left .ctl__text {
+  align-items: flex-start;
+}
+
+.ctl--center {
+  align-items: center;
+}
+
+.ctl--center .ctl__text {
+  align-items: center;
+  text-align: center;
+}
+
+/* ---- Heading: H1 ---- */
+
+.ctl--h1 {
+  gap: var(--generic-spacing-sm);
+}
+
+.ctl--h1 .ctl__headline {
+  font: var(--headline-h1);
+  letter-spacing: var(--letter-spacing-negative-2);
+}
+
+.ctl--h1 .ctl__subhead {
+  font: var(--body-b3);
+}
+
+/* ---- Heading: H2 ---- */
+
+.ctl--h2 {
+  gap: var(--generic-spacing-sm);
+}
+
+.ctl--h2 .ctl__headline {
+  font: var(--headline-h2);
+  letter-spacing: var(--letter-spacing-negative-2);
+}
+
+.ctl--h2 .ctl__subhead {
+  font: var(--body-b3);
+}
+
+/* ---- Heading: H3 ---- */
+
+.ctl--h3 {
+  gap: var(--generic-spacing-x-sm);
+}
+
+.ctl--h3 .ctl__headline {
+  font: var(--headline-h3);
+  letter-spacing: var(--letter-spacing-negative-2);
+}
+
+.ctl--h3 .ctl__subhead {
+  font: var(--body-b4);
+}
+
+/* ---- Heading: H4 ---- */
+
+.ctl--h4 {
+  gap: var(--generic-spacing-x-sm);
+}
+
+.ctl--h4 .ctl__headline {
+  font: var(--headline-h4);
+  letter-spacing: var(--letter-spacing-negative-1);
+}
+
+.ctl--h4 .ctl__subhead {
+  font: var(--body-b4);
+}
+
+/* ---- Heading: H5 ---- */
+
+.ctl--h5 {
+  gap: var(--generic-spacing-x-sm);
+}
+
+.ctl--h5 .ctl__headline {
+  font: var(--headline-h5);
+  letter-spacing: var(--letter-spacing-0);
+}
+
+.ctl--h5 .ctl__subhead {
+  font: var(--body-b4);
+}
+
+/* ---- Heading: H6 ---- */
+
+.ctl--h6 {
+  gap: var(--generic-spacing-x-sm);
+}
+
+.ctl--h6 .ctl__headline {
+  font: var(--headline-h5);
+  letter-spacing: var(--letter-spacing-0);
+}
+
+.ctl--h6 .ctl__subhead {
+  font: var(--body-b4);
+}

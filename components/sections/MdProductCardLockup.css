@@ -1,0 +1,116 @@
+/* ---- Base ---- */
+
+.mpcl {
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin);
+  overflow: clip;
+}
+
+.mpcl__inner {
+  display: flex;
+  gap: var(--layout-grid-desktop-plus-gutter);
+  align-items: flex-start;
+}
+
+/* ---- Type column ---- */
+
+.mpcl__type {
+  flex: 1 0 0;
+  min-width: 0;
+  position: sticky;
+  top: var(--stack-section-lg);
+}
+
+/* ---- Cards column ---- */
+
+.mpcl__cards {
+  flex: 0 0 66%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-sm);
+}
+
+/* ---- Viewport: Desktop ---- */
+
+.mpcl--desktop {
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-margin);
+}
+
+.mpcl--desktop .mpcl__inner {
+  gap: var(--layout-grid-desktop-gutter);
+}
+
+/* ---- Viewport: Tablet ---- */
+
+.mpcl--tablet {
+  padding: var(--stack-section-lg) var(--layout-grid-tablet-margin);
+}
+
+.mpcl--tablet .mpcl__inner {
+  flex-direction: column;
+  gap: var(--stack-section-md);
+}
+
+.mpcl--tablet .mpcl__type {
+  position: static;
+}
+
+.mpcl--tablet .mpcl__cards {
+  flex: none;
+  width: 100%;
+}
+
+/* ---- Viewport: Phone ---- */
+
+.mpcl--phone {
+  padding: var(--stack-section-md) var(--layout-grid-phone-margin);
+}
+
+.mpcl--phone .mpcl__inner {
+  flex-direction: column;
+  gap: var(--stack-section-md);
+}
+
+.mpcl--phone .mpcl__type {
+  position: static;
+}
+
+.mpcl--phone .mpcl__cards {
+  flex: none;
+  width: 100%;
+}
+
+/* ---- Page Background: Light ---- */
+
+.mpcl--bg-light {
+  background: var(--surface-light);
+}
+
+/* ---- Page Background: Standard ---- */
+
+.mpcl--bg-standard {
+  background: var(--surface-default);
+}
+
+/* ---- Page Background: Muted ---- */
+
+.mpcl--bg-muted {
+  background: var(--surface-muted);
+}
+
+/* ---- Page Background: Dark ---- */
+
+.mpcl--bg-dark.mpcl--purple { background: var(--surface-purple-dark); }
+.mpcl--bg-dark.mpcl--pool { background: var(--surface-pool-dark); }
+.mpcl--bg-dark.mpcl--mint { background: var(--surface-mint-dark); }
+.mpcl--bg-dark.mpcl--lava { background: var(--surface-lava-dark); }
+.mpcl--bg-dark.mpcl--mustard { background: var(--surface-mustard-dark); }
+.mpcl--bg-dark.mpcl--grass { background: var(--surface-grass-dark); }
+
+.mpcl--bg-dark .mpcl__type .ctl__headline {
+  color: var(--colors-absolute-white);
+}
+
+.mpcl--bg-dark .mpcl__type .ctl__subhead {
+  color: var(--text-on-dark-body);
+}

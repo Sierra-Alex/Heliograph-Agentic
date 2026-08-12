@@ -1,0 +1,43 @@
+/* Sm Hero Images — Figma node 127:14642 */
+
+.hero-img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--generic-spacing-xx-sm);
+}
+
+.hero-img__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+  flex: 1;
+  align-self: stretch;
+  min-height: 480px;
+  padding: var(--generic-spacing-lg);
+  border-radius: 32px;
+  overflow: hidden;
+  background: var(--surface-muted);
+}
+
+.hero-img--gradient.hero-img--purple .hero-img__inner { background: var(--container-fill-gradient-product-card-purple); }
+.hero-img--gradient.hero-img--pool .hero-img__inner { background: var(--container-fill-gradient-product-card-pool); }
+.hero-img--gradient.hero-img--mint .hero-img__inner { background: var(--container-fill-gradient-product-card-mint); }
+.hero-img--gradient.hero-img--lava .hero-img__inner { background: var(--container-fill-gradient-product-card-lava); }
+.hero-img--gradient.hero-img--mustard .hero-img__inner { background: var(--container-fill-gradient-product-card-mustard); }
+
+.hero-img--image.hero-img--purple .hero-img__inner { background: var(--surface-purple-light, var(--colors-purple-02)); }
+.hero-img--image.hero-img--pool .hero-img__inner { background: var(--colors-pool-02); }
+.hero-img--image.hero-img--mint .hero-img__inner { background: var(--colors-mint-02); }
+.hero-img--image.hero-img--lava .hero-img__inner { background: var(--colors-lava-02); }
+.hero-img--image.hero-img--mustard .hero-img__inner { background: var(--colors-mustard-02); }
+.hero-img--image.hero-img--grass .hero-img__inner { background: var(--colors-grass-02); }
+
+.hero-img__inner > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

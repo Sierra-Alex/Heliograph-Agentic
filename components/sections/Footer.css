@@ -1,0 +1,306 @@
+/* ---- Base ---- */
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--stack-page-bottom);
+  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-plus-margin) var(--layout-grid-desktop-plus-margin);
+  border-radius: var(--border-radius-lg-outer);
+  overflow: clip;
+
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -251px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 678px;
+  height: 558px;
+  border-radius: 50%;
+  background: var(--surface-light);
+  filter: blur(var(--blur-100));
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---- CTA ---- */
+
+.footer__cta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ---- Card ---- */
+
+.footer__card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-lg);
+  width: 100%;
+  max-width: 1344px;
+  padding: var(--stack-page-bottom) var(--generic-spacing-md) var(--generic-spacing-md);
+  border: var(--standard) solid var(--cards-on-dark-border);
+  border-radius: var(--border-radius-sm-outer);
+  background-clip: padding-box;
+}
+
+/* ---- Nav ---- */
+
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 37px;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-sm);
+}
+
+.footer__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+.footer__group-header {
+  font: var(--body-b5);
+  color: var(--colors-absolute-alpha-70);
+  letter-spacing: var(--letter-spacing-2);
+  padding: 0 var(--generic-spacing-xx-sm);
+}
+
+.footer__group-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Link ---- */
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+  padding: var(--generic-spacing-xx-sm);
+  border-radius: var(--border-radius-control);
+  text-decoration: none;
+  color: var(--colors-absolute-white);
+  transition: opacity 0.15s;
+}
+
+.footer__link:hover {
+  background: var(--colors-absolute-alpha-10);
+  color: var(--colors-absolute-white);
+}
+
+.footer__link:hover .footer__link-arrow {
+  transform: translateX(2px);
+}
+
+.footer__link-text {
+  font: var(--body-b5);
+  letter-spacing: var(--letter-spacing-2);
+  white-space: nowrap;
+}
+
+.footer__link-arrow {
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* ---- Pill link ---- */
+
+.footer__link-pill-wrap {
+  padding: var(--generic-spacing-xx-sm) 0;
+}
+
+.footer__link--pill {
+  background: var(--colors-absolute-alpha-30);
+  border-radius: var(--border-radius-pill);
+  padding: var(--generic-spacing-xx-sm) var(--generic-spacing-x-sm);
+}
+
+/* ---- Legal ---- */
+
+.footer__legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer__legal-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+.footer__logo {
+  height: 33px;
+  width: auto;
+}
+
+.footer__copyright {
+  font: var(--body-b5);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--surface-default);
+  margin: 0;
+}
+
+.footer__legal-links {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+.footer__legal-item {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+.footer__legal-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--surface-default);
+}
+
+.footer__legal-link {
+  font: var(--body-b5);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--surface-default);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.footer__legal-link:hover {
+  opacity: 0.8;
+}
+
+/* ---- Color: Purple ---- */
+
+.footer--purple {
+  background:
+    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    var(--container-fill-gradient-hero-dark-purple);
+}
+
+.footer--purple .footer__card {
+  background: var(--cards-on-dark-fill-purple);
+}
+
+/* ---- Color: Pool ---- */
+
+.footer--pool {
+  background:
+    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    var(--container-fill-gradient-hero-dark-pool);
+}
+
+.footer--pool .footer__card {
+  background: var(--cards-on-dark-fill-pool);
+}
+
+/* ---- Color: Mint ---- */
+
+.footer--mint {
+  background:
+    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    var(--container-fill-gradient-hero-dark-mint);
+}
+
+.footer--mint .footer__card {
+  background: var(--cards-on-dark-fill-mint);
+}
+
+/* ---- Color: Lava ---- */
+
+.footer--lava {
+  background:
+    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    var(--container-fill-gradient-hero-dark-lava);
+}
+
+.footer--lava .footer__card {
+  background: var(--cards-on-dark-fill-lava);
+}
+
+/* ---- Color: Mustard ---- */
+
+.footer--mustard {
+  background:
+    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    var(--container-fill-gradient-hero-dark-mustard);
+}
+
+.footer--mustard .footer__card {
+  background: var(--cards-on-dark-fill-mustard);
+}
+
+/* ---- Color: Grass ---- */
+
+.footer--grass {
+  background:
+    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    var(--container-fill-gradient-hero-dark-grass);
+}
+
+.footer--grass .footer__card {
+  background: var(--cards-on-dark-fill-grass);
+}
+
+/* ---- Responsive: Desktop ---- */
+
+.footer--desktop {
+  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-margin) var(--layout-grid-desktop-margin);
+}
+
+/* ---- Responsive: Tablet ---- */
+
+.footer--tablet {
+  padding: var(--generic-spacing-x-lg) var(--layout-grid-tablet-margin) var(--layout-grid-tablet-margin);
+}
+
+.footer--tablet .footer__nav {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer--tablet .footer__legal {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--generic-spacing-sm);
+}
+
+.footer--tablet .footer__legal-links {
+  flex-wrap: wrap;
+}
+
+/* ---- Responsive: Phone ---- */
+
+.footer--phone {
+  padding: var(--generic-spacing-lg) var(--layout-grid-phone-margin) var(--layout-grid-phone-margin);
+}
+
+.footer--phone .footer__nav {
+  grid-template-columns: 1fr;
+}
+
+.footer--phone .footer__legal {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--generic-spacing-sm);
+}
+
+.footer--phone .footer__legal-links {
+  flex-wrap: wrap;
+}

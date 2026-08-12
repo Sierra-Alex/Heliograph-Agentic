@@ -1,0 +1,182 @@
+/* ---- Base ---- */
+
+.lh {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-light);
+  overflow: clip;
+  width: var(--breakpoints-1440);
+}
+
+/* ---- Banner ---- */
+
+.lh__banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--generic-spacing-lg);
+  padding: var(--stack-section-lg) var(--spacing-24) var(--spacing-24);
+  border-radius: var(--border-radius-sm-outer);
+  overflow: clip;
+  position: relative;
+  margin: 0 var(--generic-spacing-x-sm);
+}
+
+/* ---- Decorative ellipse ---- */
+
+.lh__ellipse {
+  position: absolute;
+  width: 1403px;
+  height: 1113px;
+  top: -589px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--surface-light);
+  filter: blur(var(--blur-100));
+  pointer-events: none;
+}
+
+/* ---- Text lockup ---- */
+
+.lh__lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+  max-width: 100%;
+  position: relative;
+}
+
+/* ---- Image ---- */
+
+.lh__image {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  border-radius: var(--border-radius-content);
+  flex-shrink: 0;
+}
+
+.lh__image-placeholder {
+  position: absolute;
+  inset: 0;
+  background: var(--surface-muted);
+  border-radius: inherit;
+  opacity: 0.4;
+}
+
+/* ---- Simple gradient ---- */
+
+.lh--purple.lh--simple .lh__banner {
+  background: var(--container-fill-gradient-hero-dark-purple);
+}
+
+.lh--pool.lh--simple .lh__banner {
+  background: var(--container-fill-gradient-hero-dark-pool);
+}
+
+.lh--mint.lh--simple .lh__banner {
+  background: var(--container-fill-gradient-hero-dark-mint);
+}
+
+.lh--lava.lh--simple .lh__banner {
+  background: var(--container-fill-gradient-hero-dark-lava);
+}
+
+.lh--mustard.lh--simple .lh__banner {
+  background: var(--container-fill-gradient-hero-dark-mustard);
+}
+
+.lh--grass.lh--simple .lh__banner {
+  background: var(--container-fill-gradient-hero-dark-grass);
+}
+
+/* ---- Sliced gradient ---- */
+
+.lh__slices {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lh__slice {
+  position: absolute;
+  bottom: 0;
+}
+
+.lh--purple .lh__slice {
+  background: var(--container-fill-gradient-hero-dark-purple);
+}
+
+.lh--pool .lh__slice {
+  background: var(--container-fill-gradient-hero-dark-pool);
+}
+
+.lh--mint .lh__slice {
+  background: var(--container-fill-gradient-hero-dark-mint);
+}
+
+.lh--lava .lh__slice {
+  background: var(--container-fill-gradient-hero-dark-lava);
+}
+
+.lh--mustard .lh__slice {
+  background: var(--container-fill-gradient-hero-dark-mustard);
+}
+
+.lh--grass .lh__slice {
+  background: var(--container-fill-gradient-hero-dark-grass);
+}
+
+/* ---- Responsive: Desktop ---- */
+
+.lh--desktop {
+  width: var(--breakpoints-1200);
+}
+
+.lh--desktop .lh__lockup {
+  width: 750px;
+}
+
+.lh--desktop .lh__image {
+  height: 600px;
+}
+
+/* ---- Responsive: Tablet ---- */
+
+.lh--tablet {
+  width: var(--breakpoints-808);
+}
+
+.lh--tablet .lh__banner {
+  margin: 0 var(--generic-spacing-xx-sm);
+  padding: var(--generic-spacing-x-lg) var(--spacing-16) var(--spacing-16);
+}
+
+.lh--tablet .lh__lockup {
+  width: 100%;
+}
+
+.lh--tablet .lh__image {
+  height: 400px;
+}
+
+/* ---- Responsive: Phone ---- */
+
+.lh--phone {
+  width: var(--breakpoints-384);
+}
+
+.lh--phone .lh__banner {
+  margin: 0 var(--generic-spacing-xx-sm);
+  padding: var(--generic-spacing-lg) var(--spacing-8) var(--spacing-8);
+}
+
+.lh--phone .lh__lockup {
+  width: 100%;
+}
+
+.lh--phone .lh__image {
+  height: 280px;
+}
