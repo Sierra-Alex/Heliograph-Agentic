@@ -1,0 +1,55 @@
+/* h3-variations-components (bullet points) — Figma node 127:12701 */
+
+.blist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--generic-spacing-md);
+}
+
+.blist--center {
+  align-items: center;
+}
+
+.blist__rule {
+  align-self: stretch;
+  height: var(--thin);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.blist__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+  align-self: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blist__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+  min-height: 30px;
+}
+
+.blist--center .blist__item {
+  justify-content: center;
+}
+
+.blist__text {
+  flex: 1;
+  font: var(--body-b4);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-body);
+  text-wrap: pretty;
+}
+
+.blist--center .blist__text {
+  flex: 0 1 auto;
+}
+
+.blist--on-dark .blist__rule { background: var(--divider-on-dark); }
+.blist--on-dark .blist__text { color: var(--text-on-dark-body); }

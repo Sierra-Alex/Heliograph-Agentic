@@ -1,0 +1,100 @@
+/* lg product section — Figma node 1191:20609 */
+
+.lps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--surface-light);
+}
+
+.lps--default { background: var(--surface-default); }
+.lps--muted { background: var(--surface-muted); }
+.lps--purple { background: var(--surface-purple-dark); }
+.lps--pool { background: var(--surface-pool-dark); }
+.lps--mint { background: var(--surface-mint-dark); }
+.lps--lava { background: var(--surface-lava-dark); }
+.lps--mustard { background: var(--surface-mustard-dark); }
+.lps--grass { background: var(--surface-grass-dark); }
+
+.lps__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--generic-spacing-lg);
+  align-self: stretch;
+  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-plus-margin);
+}
+
+.lps__lockup {
+  align-self: stretch;
+  max-width: 960px;
+}
+
+.lps__panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+  align-self: stretch;
+  aspect-ratio: 2 / 1;
+  padding: var(--generic-spacing-lg);
+  border-radius: var(--border-radius-content);
+  overflow: hidden;
+}
+
+.lps__panel--purple { background: var(--container-fill-gradient-product-card-purple); }
+.lps__panel--pool { background: var(--container-fill-gradient-product-card-pool); }
+.lps__panel--mint { background: var(--container-fill-gradient-product-card-mint); }
+.lps__panel--lava { background: var(--container-fill-gradient-product-card-lava); }
+.lps__panel--mustard { background: var(--container-fill-gradient-product-card-mustard); }
+
+.lps__panel > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lps__blocks {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: var(--generic-spacing-lg);
+  align-self: stretch;
+}
+
+.lps__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+.lps__block-headline {
+  margin: 0;
+  font: var(--headline-h5);
+  font-size: 18px;
+  color: var(--text-on-light-headline);
+}
+
+.lps__block-subhead {
+  margin: 0;
+  font: var(--body-b4);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-body);
+  text-wrap: pretty;
+}
+
+.lps--purple .lps__block-headline,
+.lps--pool .lps__block-headline,
+.lps--mint .lps__block-headline,
+.lps--lava .lps__block-headline,
+.lps--mustard .lps__block-headline,
+.lps--grass .lps__block-headline { color: var(--colors-absolute-white); }
+
+.lps--purple .lps__block-subhead,
+.lps--pool .lps__block-subhead,
+.lps--mint .lps__block-subhead,
+.lps--lava .lps__block-subhead,
+.lps--mustard .lps__block-subhead,
+.lps--grass .lps__block-subhead { color: var(--text-on-dark-body); }

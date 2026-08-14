@@ -1,0 +1,52 @@
+/* Form Lockups — Figma node 127:14598 */
+
+.fl {
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+  border-radius: var(--border-radius-sm-outer);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.5), 0 4px 30px 0 rgba(176, 148, 255, 0.2);
+}
+
+.fl__container {
+  align-self: stretch;
+  padding: var(--generic-spacing-md);
+  border-radius: var(--border-radius-sm-outer);
+  background: var(--colors-absolute-white);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.06);
+}
+
+.fl__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--generic-spacing-lg);
+}
+
+.fl__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+  align-self: stretch;
+}
+
+.fl__row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--generic-spacing-sm);
+}
+
+.fl__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+  flex: 1;
+  min-width: 0;
+}
+
+.fl__label {
+  font: var(--body-b4);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-headline);
+}

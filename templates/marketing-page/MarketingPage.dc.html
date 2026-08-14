@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Marketing page" description="Mixpanel marketing page: top nav, gradient hero, feature rows, product cards and the full site footer." -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="width:1440px;margin:0 auto;background:var(--surface-light)">
+<x-import component-from-global-scope="HeliographMixpanelDesignSystem_8500f4.LgHero" color="purple" gradient-style="sliced" headline="Product analytics everyone on the team can use" subhead="Ask a question, get an answer in seconds. Mixpanel turns raw events into the reports, funnels and cohorts your team actually acts on." hint-size="1440px,1100px"></x-import>
+<x-import component-from-global-scope="HeliographMixpanelDesignSystem_8500f4.ZLayout" color="pool" image-position="right" page-background="standard" tag-text="Warehouse" headline="Your warehouse, your source of truth" subhead="Sync modelled tables straight from Snowflake, BigQuery or Databricks and analyse them alongside product events." hint-size="1440px,620px"></x-import>
+<x-import component-from-global-scope="HeliographMixpanelDesignSystem_8500f4.ZLayout" color="mint" image-position="left" page-background="light" tag-text="AI" headline="Answers in plain language" subhead="Ask Mixpanel Agent a question and get a chart, a cohort and the query behind it." hint-size="1440px,620px"></x-import>
+<x-import component-from-global-scope="HeliographMixpanelDesignSystem_8500f4.MdProductCardLockup" color="purple" page-background="standard" headline="One platform, every question" subhead="Reports, boards and alerts built on the same event stream." hint-size="1440px,900px"></x-import>
+<x-import component-from-global-scope="HeliographMixpanelDesignSystem_8500f4.Footer" color="purple" logo-src="../../assets/mixpanel-logo.svg" cta-headline="Ready to see what your product data can do?" cta-subhead="Start free with 1M monthly events. No credit card required." hint-size="1440px,1200px"></x-import>
+</div>
+</x-dc>
+</body>
+</html>

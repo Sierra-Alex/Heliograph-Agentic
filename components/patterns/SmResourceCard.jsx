@@ -1,0 +1,22 @@
+import React from "react";
+import { Tag } from "../core/Tag.jsx";
+import { Button } from "../core/Button.jsx";
+const cx=(...a)=>a.filter(Boolean).join(" ");
+const DARK=new Set(["purple","pool","mint","lava","mustard","grass"]);
+export function SmResourceCard({color="gray",tagText="Label",headline="Headline goes here",subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",primaryLabel="Click Me",secondaryLabel="Click Me",children,className}){
+  const isDark=DARK.has(color);
+  return (<div className={cx("src","src--"+color,className)}>
+    <div className="src__image">{children||<div className="src__image-placeholder"/>}</div>
+    <div className="src__content">
+      <div className="src__text">
+        <Tag color={isDark?color:"purple"} size="lg" onDark={isDark}>{tagText}</Tag>
+        <h5 className={cx("src__headline",isDark&&"src__headline--"+color)}>{headline}</h5>
+        <p className={cx("src__subhead",isDark&&"src__subhead--dark")}>{subhead}</p>
+      </div>
+      <div className="src__actions">
+        <Button variant="primary" size="sm" onDark={isDark}>{primaryLabel}</Button>
+        <Button variant="secondary" size="sm" onDark={isDark}>{secondaryLabel}</Button>
+      </div>
+    </div>
+  </div>);
+}

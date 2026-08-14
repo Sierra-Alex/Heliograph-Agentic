@@ -1,0 +1,32 @@
+/* Nav Link — Figma node 98:937 (State=Default / Active) */
+
+.navlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  opacity: 0.7;
+  color: #1b0b3b;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.navlink__label {
+  font: var(--body-b4);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-2);
+  white-space: nowrap;
+}
+
+.navlink__caret {
+  flex-shrink: 0;
+}
+
+.navlink:hover,
+.navlink--active {
+  opacity: 1;
+}
+
+.navlink--on-dark {
+  color: var(--colors-absolute-white);
+}

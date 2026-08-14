@@ -1,0 +1,69 @@
+/* sm-product-cards — Figma node 132:19820 */
+
+.spc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: var(--generic-spacing-x-sm);
+  overflow: hidden;
+  padding: var(--generic-spacing-xx-sm);
+  border-radius: var(--border-radius-sm-outer);
+  background: var(--surface-default);
+  box-shadow: 0 40px 24px -32px rgba(193, 177, 255, 0.3);
+}
+
+.spc--image-left {
+  flex-direction: row-reverse;
+}
+
+.spc--white { background: var(--surface-light); }
+.spc--dark { background: var(--surface-purple-dark); }
+
+.spc--pool { box-shadow: 0 40px 24px -32px rgba(190, 225, 250, 0.3); }
+.spc--mint { box-shadow: 0 40px 24px -32px rgba(196, 241, 237, 0.3); }
+.spc--lava { box-shadow: 0 40px 24px -32px rgba(255, 191, 177, 0.3); }
+.spc--mustard { box-shadow: 0 40px 24px -32px rgba(252, 224, 165, 0.3); }
+.spc--grass { box-shadow: 0 40px 24px -32px rgba(165, 215, 191, 0.3); }
+
+.spc__type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--generic-spacing-sm);
+  flex: 1;
+  min-width: 0;
+  align-self: stretch;
+  padding: var(--generic-spacing-x-sm);
+}
+
+.spc__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+.spc__headline {
+  margin: 0;
+  font: var(--headline-h5);
+  font-size: 18px;
+  color: var(--text-on-light-headline);
+  text-wrap: pretty;
+}
+
+.spc__subhead {
+  margin: 0;
+  font: var(--body-b4);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-body);
+  text-wrap: pretty;
+}
+
+.spc__image {
+  flex: 0 0 408px;
+  align-self: stretch;
+}
+
+.spc--dark .spc__headline { color: var(--colors-absolute-white); }
+.spc--dark .spc__subhead { color: var(--text-on-dark-body); }

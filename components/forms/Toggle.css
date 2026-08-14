@@ -1,0 +1,103 @@
+/* ---- Base ---- */
+
+.toggle {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle__track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  border: 1px solid var(--interactive-component-toggle-border-default);
+  border-radius: 12px;
+  background-color: var(--interactive-component-toggle-bg-default);
+  padding: 0 2px;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.toggle__thumb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--interactive-component-toggle-fill-default);
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.toggle__check {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+/* ---- Hover ---- */
+
+.toggle:hover .toggle__track {
+  border-color: var(--interactive-component-toggle-border-hover);
+}
+
+/* ---- Focus ---- */
+
+.toggle__input:focus-visible + .toggle__track {
+  border-color: var(--interactive-component-toggle-border-focus);
+  box-shadow: 0px 0px 0px 4px rgba(120, 86, 255, 0.3);
+  overflow: clip;
+}
+
+/* ---- Checked ---- */
+
+.toggle__input:checked + .toggle__track {
+  background-color: var(--interactive-component-toggle-border-active);
+  border-color: var(--interactive-component-toggle-border-active);
+}
+
+.toggle__input:checked + .toggle__track .toggle__thumb {
+  transform: translateX(24px);
+  background-color: var(--interactive-component-toggle-fill-active-circle);
+}
+
+.toggle__input:checked + .toggle__track .toggle__check {
+  opacity: 1;
+}
+
+/* ---- Error ---- */
+
+.toggle--error .toggle__track {
+  background-color: var(--interactive-component-toggle-bg-error);
+  border-color: var(--interactive-component-toggle-border-error);
+}
+
+/* ---- Disabled ---- */
+
+.toggle:has(.toggle__input:disabled) {
+  cursor: not-allowed;
+}
+
+.toggle__input:disabled + .toggle__track {
+  background-color: var(--interactive-component-toggle-bg-disabled);
+  border-color: var(--interactive-component-toggle-border-disabled);
+}
+
+.toggle__input:disabled + .toggle__track .toggle__thumb {
+  background-color: var(--interactive-component-toggle-fill-disabled);
+}
+
+.toggle:hover .toggle__input:disabled + .toggle__track {
+  border-color: var(--interactive-component-toggle-border-disabled);
+}

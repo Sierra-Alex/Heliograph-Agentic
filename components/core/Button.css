@@ -1,0 +1,218 @@
+/* ---- Base ---- */
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: visible;
+  outline: none;
+  transition:
+    background-color 0.4s cubic-bezier(0.2, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* ---- Size ---- */
+
+.btn--lg {
+  font: var(--component-button-lg-button);
+  padding: var(--inset-button-lg-button-top-bottom)
+    calc(var(--inset-button-lg-button-right) + var(--inset-button-lg-button-icon-gap) + 7px)
+    var(--inset-button-lg-button-top-bottom)
+    var(--inset-button-lg-button-left);
+}
+
+.btn--sm {
+  font: var(--component-button-sm-button);
+  padding: var(--inset-button-sm-button-top-bottom)
+    calc(var(--inset-button-sm-button-right) + var(--inset-button-sm-button-icon-gap) + 5px)
+    var(--inset-button-sm-button-top-bottom)
+    var(--inset-button-sm-button-left);
+}
+
+/* ---- Variant x Theme ---- */
+
+.btn--primary:not(.btn--on-dark) {
+  background-color: var(--interactive-component-primary-on-light-fill-standard);
+  color: var(--interactive-component-primary-on-light-text);
+}
+
+.btn--primary:not(.btn--on-dark):hover:not(:disabled) {
+  background-color: var(--interactive-component-primary-on-light-fill-hover);
+}
+
+.btn--primary:not(.btn--on-dark):focus-visible {
+  box-shadow: inset 0 0 0 1px var(--interactive-component-primary-on-light-focus-border), 0 0 0 4px rgba(120, 86, 255, 0.3);
+}
+
+.btn--primary.btn--on-dark {
+  background-color: var(--interactive-component-primary-on-dark-fill-standard);
+  color: var(--interactive-component-primary-on-dark-text);
+}
+
+.btn--primary.btn--on-dark:hover:not(:disabled) {
+  background-color: var(--interactive-component-primary-on-dark-fill-hover);
+}
+
+.btn--primary.btn--on-dark:focus-visible {
+  box-shadow: inset 0 0 0 1px var(--interactive-component-primary-on-dark-focus-border), 0 0 0 4px rgba(120, 86, 255, 0.3);
+}
+
+.btn--secondary:not(.btn--on-dark) {
+  background-color: var(--interactive-component-secondary-on-light-fill-standard);
+  color: var(--interactive-component-secondary-on-light-text);
+}
+
+.btn--secondary:not(.btn--on-dark):hover:not(:disabled) {
+  background-color: var(--interactive-component-secondary-on-light-fill-hover);
+}
+
+.btn--secondary:not(.btn--on-dark):focus-visible {
+  box-shadow: inset 0 0 0 1px var(--interactive-component-secondary-on-light-focus-border), 0 0 0 4px rgba(120, 86, 255, 0.3);
+}
+
+.btn--secondary.btn--on-dark {
+  background-color: var(--interactive-component-secondary-on-dark-fill-standard);
+  color: var(--interactive-component-secondary-on-dark-text);
+}
+
+.btn--secondary.btn--on-dark:hover:not(:disabled) {
+  background-color: var(--interactive-component-secondary-on-dark-fill-hover);
+}
+
+.btn--secondary.btn--on-dark:focus-visible {
+  box-shadow: inset 0 0 0 1px var(--interactive-component-secondary-on-dark-focus-border), 0 0 0 4px rgba(120, 86, 255, 0.3);
+}
+
+.btn--tertiary {
+  background-color: transparent;
+}
+
+.btn--tertiary:hover:not(:disabled) {
+  background-color: transparent;
+}
+
+.btn--tertiary:not(.btn--on-dark) {
+  color: var(--interactive-component-tertiary-on-light-text);
+}
+
+.btn--tertiary:not(.btn--on-dark):focus-visible {
+  background-color: var(--interactive-component-tertiary-on-light-bg-focus);
+  box-shadow: inset 0 0 0 1px var(--interactive-component-tertiary-on-light-border-focus), 0 0 0 4px rgba(120, 86, 255, 0.3);
+}
+
+.btn--tertiary.btn--on-dark {
+  color: var(--interactive-component-tertiary-on-dark-text);
+}
+
+.btn--tertiary.btn--on-dark:focus-visible {
+  background-color: var(--interactive-component-tertiary-on-dark-bg-focus);
+  box-shadow: inset 0 0 0 1px var(--interactive-component-tertiary-on-dark-border-focus), 0 0 0 4px rgba(120, 86, 255, 0.3);
+}
+
+.btn--tertiary.btn--lg {
+  padding: var(--inset-button-tertiary-top-bottom)
+    calc(var(--inset-button-tertiary-right-left) + 4px + 7px)
+    var(--inset-button-tertiary-top-bottom)
+    var(--inset-button-tertiary-right-left);
+}
+
+.btn--tertiary.btn--sm {
+  padding: var(--inset-button-tertiary-top-bottom)
+    calc(var(--inset-button-tertiary-right-left) + 4px + 5px)
+    var(--inset-button-tertiary-top-bottom)
+    var(--inset-button-tertiary-right-left);
+}
+
+/* ---- Interactive states ---- */
+
+.btn:active:not(:disabled) {
+  opacity: 0.8;
+}
+
+.btn:disabled {
+  opacity: calc(var(--alpha-60) / 100);
+  cursor: not-allowed;
+}
+
+/* ---- Arrow (lg) ---- */
+
+.btn__arrow--lg {
+  position: absolute;
+  right: var(--inset-button-lg-button-right);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.btn--tertiary .btn__arrow--lg {
+  right: var(--inset-button-tertiary-right-left);
+}
+
+.btn__arrow-head--lg {
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.btn__arrow-line--lg {
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.btn:hover:not(:disabled) .btn__arrow-head--lg,
+.btn:active:not(:disabled) .btn__arrow-head--lg {
+  transform: translateX(2px);
+}
+
+.btn:hover:not(:disabled) .btn__arrow-line--lg,
+.btn:active:not(:disabled) .btn__arrow-line--lg {
+  opacity: 1;
+}
+
+/* ---- Arrow (sm) ---- */
+
+.btn__arrow--sm {
+  position: absolute;
+  right: var(--inset-button-sm-button-right);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.btn--tertiary .btn__arrow--sm {
+  right: var(--inset-button-tertiary-right-left);
+}
+
+.btn__arrow-line--sm {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn:hover:not(:disabled) .btn__arrow-head--sm,
+.btn:active:not(:disabled) .btn__arrow-head--sm {
+  transform: translateX(1.5px);
+}
+
+.btn:hover:not(:disabled) .btn__arrow-line--sm,
+.btn:active:not(:disabled) .btn__arrow-line--sm {
+  opacity: 1;
+  transform: translateY(-50%) scaleX(1);
+}

@@ -1,0 +1,19 @@
+/* logo-mark / MXP - Main Logo */
+
+.logomark {
+  display: block;
+  width: auto;
+  height: 24px;
+}
+
+.logomark--full {
+  height: 33px;
+}
+
+.logomark--dark {
+  filter: grayscale(1) brightness(0);
+}
+
+.logomark--light {
+  filter: grayscale(1) brightness(0) invert(1);
+}

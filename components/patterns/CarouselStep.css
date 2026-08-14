@@ -1,0 +1,68 @@
+/* Md-product-carousel-components — Figma node 127:15487 */
+
+.cstep {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--generic-spacing-x-sm);
+  padding-bottom: var(--generic-spacing-x-sm);
+  cursor: pointer;
+}
+
+.cstep__type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--generic-spacing-xx-sm);
+  align-self: stretch;
+}
+
+.cstep__head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+  min-height: 32px;
+  align-self: stretch;
+}
+
+.cstep__headline {
+  font: var(--headline-h5);
+  font-size: 18px;
+  color: var(--text-on-light-headline);
+  opacity: 0.6;
+  transition: opacity 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.cstep--active .cstep__headline,
+.cstep:hover .cstep__headline {
+  opacity: 1;
+}
+
+.cstep__subhead {
+  margin: 0;
+  font: var(--body-b4);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-body);
+  text-wrap: pretty;
+}
+
+.cstep__rule {
+  position: relative;
+  align-self: stretch;
+  height: var(--standard);
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.cstep__progress {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  background: var(--text-on-light-headline);
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.cstep--on-dark .cstep__headline { color: var(--colors-absolute-white); }
+.cstep--on-dark .cstep__subhead { color: var(--text-on-dark-body); }
+.cstep--on-dark .cstep__rule { background: var(--colors-absolute-alpha-30); }
+.cstep--on-dark .cstep__progress { background: var(--colors-absolute-white); }

@@ -1,0 +1,90 @@
+/* ---- Base ---- */
+
+.text-input {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  border: 1px solid var(--interactive-component-text-input-border-default);
+  border-radius: var(--border-radius-control);
+  background-color: var(--interactive-component-text-input-bg-default);
+  padding: 0 12px;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s;
+}
+
+.text-input__field {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-family-primary), system-ui, sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
+  letter-spacing: 0.24px;
+  line-height: 1.68;
+  color: var(--interactive-component-text-input-fg-default);
+  caret-color: #7856ff;
+}
+
+.text-input__field::placeholder {
+  color: var(--interactive-component-text-input-fg-placeholder);
+}
+
+.text-input__icon {
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* ---- Hover ---- */
+
+.text-input:hover {
+  border-color: var(--interactive-component-text-input-border-hover);
+}
+
+/* ---- Focus ---- */
+
+.text-input:focus-within {
+  border-color: var(--interactive-component-text-input-border-focus);
+  box-shadow: 0px 0px 0px 4px rgba(120, 86, 255, 0.3);
+  overflow: clip;
+}
+
+/* ---- Valid ---- */
+
+.text-input--valid {
+  border-color: var(--interactive-component-text-input-border-active);
+}
+
+.text-input--valid:hover {
+  border-color: var(--interactive-component-text-input-border-active);
+}
+
+/* ---- Error ---- */
+
+.text-input--error {
+  background-color: var(--interactive-component-text-input-bg-error);
+  border-color: var(--interactive-component-text-input-border-error);
+}
+
+.text-input--error:hover {
+  border-color: var(--interactive-component-text-input-border-error);
+}
+
+/* ---- Disabled ---- */
+
+.text-input--disabled {
+  background-color: var(--interactive-component-text-input-bg-disabled);
+  border-color: var(--interactive-component-text-input-border-disabled);
+  cursor: not-allowed;
+}
+
+.text-input--disabled:hover {
+  border-color: var(--interactive-component-text-input-border-disabled);
+}
+
+.text-input--disabled .text-input__field {
+  color: var(--interactive-component-text-input-fg-disabled);
+  cursor: not-allowed;
+}

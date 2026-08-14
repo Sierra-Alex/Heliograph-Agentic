@@ -1,0 +1,40 @@
+/* layout-grid — Figma node 186:27050; values from the layout-grid tokens */
+
+.lg {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--layout-grid-desktop-plus-gutter);
+  padding: 0 var(--layout-grid-desktop-plus-margin);
+  max-width: var(--layout-grid-desktop-plus-max-width);
+}
+
+.lg--desktop {
+  gap: var(--layout-grid-desktop-gutter);
+  padding: 0 var(--layout-grid-desktop-margin);
+  max-width: var(--layout-grid-desktop-max-width);
+}
+
+.lg--tablet {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--layout-grid-tablet-gutter);
+  padding: 0 var(--layout-grid-tablet-margin);
+  max-width: none;
+}
+
+.lg--phone {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--layout-grid-phone-gutter);
+  padding: 0 var(--layout-grid-phone-margin);
+  max-width: none;
+}
+
+.lg--overlay {
+  pointer-events: none;
+}
+
+.lg--overlay .lg__col {
+  min-height: 100%;
+  background: var(--colors-purple-alpha-20, rgba(120, 86, 255, 0.2));
+}

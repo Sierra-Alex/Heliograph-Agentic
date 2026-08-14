@@ -1,0 +1,120 @@
+/* ---- Base ---- */
+
+.rib {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.15s;
+}
+
+/* ---- Size ---- */
+
+.rib--lg {
+  width: var(--round-icon-button-lg);
+  height: var(--round-icon-button-lg);
+}
+
+.rib--sm {
+  width: var(--round-icon-button-sm);
+  height: var(--round-icon-button-sm);
+}
+
+/* ---- Arrow ---- */
+
+.rib__arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.rib--lg.rib--left .rib__arrow {
+  transform: rotate(180deg) translateX(2px);
+}
+
+.rib--lg.rib--right .rib__arrow {
+  transform: translateX(2px);
+}
+
+.rib--sm.rib--left .rib__arrow {
+  transform: rotate(180deg) translateX(1.5px);
+}
+
+.rib--sm.rib--right .rib__arrow {
+  transform: translateX(1.5px);
+}
+
+.rib__arrow-head {
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.rib__arrow-line {
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.rib--lg:hover:not(:disabled) .rib__arrow-head,
+.rib--lg:active:not(:disabled) .rib__arrow-head {
+  transform: translateX(2px);
+}
+
+.rib--sm:hover:not(:disabled) .rib__arrow-head,
+.rib--sm:active:not(:disabled) .rib__arrow-head {
+  transform: translateX(1.5px);
+}
+
+.rib:hover:not(:disabled) .rib__arrow-line,
+.rib:active:not(:disabled) .rib__arrow-line {
+  opacity: 1;
+}
+
+.rib__arrow-line--sm {
+  left: -0.5px;
+}
+
+/* ---- Theme: on-light ---- */
+
+.rib:not(.rib--on-dark) {
+  background-color: var(--interactive-component-secondary-on-light-fill-standard);
+  color: var(--interactive-component-secondary-on-light-text);
+}
+
+.rib:not(.rib--on-dark):hover:not(:disabled) {
+  background-color: var(--interactive-component-secondary-on-light-fill-hover);
+}
+
+.rib:not(.rib--on-dark):focus-visible {
+  box-shadow: inset 0 0 0 1px var(--interactive-component-secondary-on-light-focus-border), 0 0 0 4px rgba(120, 86, 255, 0.3);
+  overflow: clip;
+}
+
+/* ---- Theme: on-dark ---- */
+
+.rib.rib--on-dark {
+  background-color: var(--interactive-component-secondary-on-dark-fill-standard);
+  color: var(--interactive-component-secondary-on-dark-text);
+}
+
+.rib.rib--on-dark:hover:not(:disabled) {
+  background-color: var(--interactive-component-secondary-on-dark-fill-hover);
+}
+
+.rib.rib--on-dark:focus-visible {
+  box-shadow: inset 0 0 0 1px var(--interactive-component-tertiary-on-dark-border-focus), 0 0 0 4px rgba(120, 86, 255, 0.3);
+  overflow: clip;
+}
+
+/* ---- Interactive states ---- */
+
+.rib:disabled {
+  opacity: calc(var(--alpha-60) / 100);
+  cursor: not-allowed;
+}

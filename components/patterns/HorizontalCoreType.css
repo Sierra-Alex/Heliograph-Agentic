@@ -1,0 +1,98 @@
+/* ---- Base ---- */
+
+.hct {
+  display: flex;
+  gap: var(--generic-spacing-sm);
+  align-items: flex-end;
+}
+
+.hct__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+.hct__headline {
+  color: var(--text-on-light-headline);
+  margin: 0;
+}
+
+.hct__subhead {
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-body);
+  margin: 0;
+}
+
+.hct__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+  flex-shrink: 0;
+}
+
+/* ---- Heading: H1 ---- */
+
+.hct--h1 .hct__headline {
+  font: var(--headline-h1);
+  letter-spacing: var(--letter-spacing-negative-2);
+}
+
+.hct--h1 .hct__subhead {
+  font: var(--body-b3);
+}
+
+/* ---- Heading: H2 ---- */
+
+.hct--h2 .hct__headline {
+  font: var(--headline-h2);
+  letter-spacing: var(--letter-spacing-negative-2);
+}
+
+.hct--h2 .hct__subhead {
+  font: var(--body-b3);
+}
+
+/* ---- Heading: H3 ---- */
+
+.hct--h3 .hct__headline {
+  font: var(--headline-h3);
+  letter-spacing: var(--letter-spacing-negative-2);
+}
+
+.hct--h3 .hct__subhead {
+  font: var(--body-b4);
+}
+
+/* ---- Heading: H4 ---- */
+
+.hct--h4 .hct__headline {
+  font: var(--headline-h4);
+  letter-spacing: var(--letter-spacing-negative-1);
+}
+
+.hct--h4 .hct__subhead {
+  font: var(--body-b4);
+}
+
+/* ---- Heading: H5 ---- */
+
+.hct--h5 .hct__headline {
+  font: var(--headline-h5);
+  letter-spacing: var(--letter-spacing-0);
+}
+
+.hct--h5 .hct__subhead {
+  font: var(--body-b4);
+}
+
+/* ---- Heading: H6 ---- */
+
+.hct--h6 .hct__headline {
+  font: var(--headline-h5);
+  letter-spacing: var(--letter-spacing-0);
+}
+
+.hct--h6 .hct__subhead {
+  font: var(--body-b4);
+}

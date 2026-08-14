@@ -1,0 +1,11 @@
+/* teams — Figma node 127:4932 */
+
+.teams-icon {
+  flex-shrink: 0;
+}
+
+.teams-icon__side { fill: var(--colors-purple-06); }
+.teams-icon__lead { fill: var(--colors-purple-04); }
+
+.teams-icon--on-dark .teams-icon__side { fill: var(--colors-purple-03); }
+.teams-icon--on-dark .teams-icon__lead { fill: var(--colors-purple-05); }

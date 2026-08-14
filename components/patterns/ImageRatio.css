@@ -1,0 +1,18 @@
+/* Image Ratios — Figma nodes 127:4028 (1:1) / 127:4030 (1:2) */
+
+.imr {
+  overflow: hidden;
+  border-radius: var(--border-radius-content);
+  background: var(--surface-muted);
+}
+
+.imr--1-1 { aspect-ratio: 1 / 1; }
+.imr--1-2 { aspect-ratio: 2 / 1; }
+
+.imr > img,
+.imr > picture > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,59 @@
+/* Type primitives and the semantic type scale (font shorthands)
+   Verbatim from Heliograph build/css/variables.css (Style Dictionary output of tokens.json).
+   Source of truth: mixpanel/Heliograph. Do not hand-edit values. */
+:root{
+  --font-family-primary: garnett; /* @kind font */
+  --font-family-quote: arizona; /* @kind font */
+  --font-weight-medium: 500; /* @kind font */
+  --font-weight-regular: 400; /* @kind font */
+  --font-weight-light-italic-weight: 300; /* @kind font */
+  --font-weight-light-italic-style: italic; /* @kind font */
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-22: 22px;
+  --font-size-28: 28px;
+  --font-size-36: 36px;
+  --font-size-48: 48px;
+  --font-size-60: 60px;
+  --line-height-75: 0.75; /* @kind font */
+  --line-height-120: 1.2; /* @kind font */
+  --line-height-140: 1.4; /* @kind font */
+  --line-height-160: 1.6; /* @kind font */
+  --line-height-168: 1.68; /* @kind font */
+  --letter-spacing-2: 0.02em; /* @kind font */
+  --letter-spacing-0: 0; /* @kind font */
+  --letter-spacing-negative-1: -0.01em; /* @kind font */
+  --letter-spacing-negative-2: -0.02em; /* @kind font */
+  --paragraph-spacing-12: 12px; /* @kind font */
+  --paragraph-spacing-14: 14px; /* @kind font */
+  --paragraph-spacing-16: 16px; /* @kind font */
+  --paragraph-spacing-18: 18px; /* @kind font */
+  --paragraph-spacing-24: 24px; /* @kind font */
+  --text-case-none: none; /* @kind other */
+  --text-case-title: title; /* @kind other */
+  --text-decoration-underline: underline; /* @kind other */
+  --text-decoration-none: none; /* @kind other */
+  --headline-h1: 500 60px/1.2 garnett; /* @kind font */
+  --headline-h2: 500 48px/1.2 garnett; /* @kind font */
+  --headline-h3: 500 36px/1.2 garnett; /* @kind font */
+  --headline-h4: 500 28px/1.2 garnett; /* @kind font */
+  --headline-h5: 500 22px/1.4 garnett; /* @kind font */
+  --body-b1: 400 22px/1.6 garnett; /* @kind font */
+  --body-b1-medium: 500 22px/1.6 garnett; /* @kind font */
+  --body-b2: 400 18px/1.6 garnett; /* @kind font */
+  --body-b2-medium: 500 18px/1.6 garnett; /* @kind font */
+  --body-b3: 400 16px/1.6 garnett; /* @kind font */
+  --body-b3-medium: 500 16px/1.6 garnett; /* @kind font */
+  --body-b4: 400 14px/1.68 garnett; /* @kind font */
+  --body-b4-medium: 500 14px/1.68 garnett; /* @kind font */
+  --body-b5: 400 12px/1.68 garnett; /* @kind font */
+  --body-b5-medium: 500 12px/1.68 garnett; /* @kind font */
+  --component-button-lg-button: 500 16px/0.75 garnett; /* @kind font */
+  --component-button-sm-button: 500 12px/0.75 garnett; /* @kind font */
+  --component-tag-lg-tag: 400 14px/0.75 garnett; /* @kind font */
+  --component-tag-sm-tag: 400 12px/0.75 garnett; /* @kind font */
+  --component-form-label: 500 16px/1.6 garnett; /* @kind font */
+  --component-form-placeholder: 400 16px/1.6 garnett; /* @kind font */
+}

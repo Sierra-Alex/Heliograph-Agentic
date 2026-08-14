@@ -1,0 +1,63 @@
+/* ---- Base ---- */
+
+.rmb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--border-radius-pill);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.15s;
+}
+
+/* ---- Size ---- */
+
+.rmb--lg {
+  width: var(--round-icon-button-lg);
+  height: var(--round-icon-button-lg);
+}
+
+.rmb--sm {
+  width: var(--round-icon-button-sm);
+  height: var(--round-icon-button-sm);
+}
+
+/* ---- Theme: on-light ---- */
+
+.rmb:not(.rmb--on-dark) {
+  background-color: var(--interactive-component-secondary-on-light-fill-standard);
+  color: var(--interactive-component-secondary-on-light-text);
+}
+
+.rmb:not(.rmb--on-dark):hover:not(:disabled) {
+  background-color: var(--interactive-component-secondary-on-light-fill-hover);
+}
+
+.rmb:not(.rmb--on-dark):focus-visible {
+  box-shadow: inset 0 0 0 1px var(--interactive-component-secondary-on-light-focus-border), 0 0 0 4px rgba(120, 86, 255, 0.3);
+  overflow: clip;
+}
+
+/* ---- Theme: on-dark ---- */
+
+.rmb.rmb--on-dark {
+  background-color: var(--interactive-component-secondary-on-dark-fill-standard);
+  color: var(--interactive-component-secondary-on-dark-text);
+}
+
+.rmb.rmb--on-dark:hover:not(:disabled) {
+  background-color: var(--interactive-component-secondary-on-dark-fill-hover);
+}
+
+.rmb.rmb--on-dark:focus-visible {
+  box-shadow: inset 0 0 0 1px var(--interactive-component-tertiary-on-dark-border-focus), 0 0 0 4px rgba(120, 86, 255, 0.3);
+  overflow: clip;
+}
+
+/* ---- Interactive states ---- */
+
+.rmb:disabled {
+  opacity: calc(var(--alpha-60) / 100);
+  cursor: not-allowed;
+}
