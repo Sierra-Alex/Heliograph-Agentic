@@ -1,5 +1,7 @@
 # LgProductSection
 
-The biggest single-product section: lockup capped at 960px, one full-width 1:2 gradient panel at 16px radius, and up to three caption blocks under it.
+Full-width product section with a headline lockup capped at 960px (centered) or full-width (horizontal), one 2:1 gradient panel, and up to three sub-text blocks underneath.
 
-`headlineLayout="centered"` is the default the file uses most; `horizontal` puts the headline left with the button right. The panel gradient hue and the page surface are set separately — a light page with a purple panel is the common pairing.
+Uses the standard `color`/`onDark`/`hue` surface pattern. Light surfaces pair `color` with `--surface-{light|default|muted}`. Dark surfaces set `onDark` and `hue` to fill with `--surface-{hue}-dark`. The panel gradient always matches `hue`.
+
+Sub-text blocks render as `CoreTypeLockup` at H6 level — pass structured `blocks` for custom content or set `subTextBlocks` for placeholder count.

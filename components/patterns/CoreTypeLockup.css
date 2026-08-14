@@ -137,3 +137,16 @@
 .ctl--h6 .ctl__subhead {
   font: var(--body-b4);
 }
+
+/* ---- On Dark ---- */
+
+.ctl--on-dark .ctl__subhead {
+  color: var(--text-on-dark-body);
+}
+
+.ctl--on-dark.ctl--purple .ctl__headline { color: var(--text-on-dark-headline-purple); }
+.ctl--on-dark.ctl--pool .ctl__headline { color: var(--text-on-dark-headline-pool); }
+.ctl--on-dark.ctl--mint .ctl__headline { color: var(--text-on-dark-headline-mint); }
+.ctl--on-dark.ctl--lava .ctl__headline { color: var(--text-on-dark-headline-lava); }
+.ctl--on-dark.ctl--mustard .ctl__headline { color: var(--text-on-dark-headline-mustard); }
+.ctl--on-dark.ctl--grass .ctl__headline { color: var(--text-on-dark-headline-grass); }

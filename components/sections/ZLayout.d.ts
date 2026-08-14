@@ -1,18 +1,18 @@
 /**
- * Alternating feature row — text one side, square gradient panel the other. Stack several and flip imagePosition.
+ * Alternating feature row — text lockup one side, square gradient panel the other.
+ * Stack several and flip imagePosition to create a zigzag reading flow.
  */
 export interface ZLayoutProps {
-  /** @default "purple" */
+  /** Accent hue — drives gradient, tag and on-dark surface. @default "purple" */
   color?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
   /** @default "right" */
   imagePosition?: "left" | "right";
   /** @default "light" */
   pageBackground?: "light" | "standard" | "muted" | "dark";
-  /** @default "desktop-plus" */
-  viewport?: "desktop-plus" | "desktop" | "tablet" | "phone";
   tagText?: string;
   headline?: string;
   subhead?: string;
+  /** Content rendered inside the image panel. Gradient shows behind. */
   children?: React.ReactNode;
   className?: string;
 }

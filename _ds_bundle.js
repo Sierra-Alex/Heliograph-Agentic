@@ -684,7 +684,7 @@ function CoreTypeLockup({
   alignment = "left",
   tag = false,
   tagText = "Label",
-  tagColor = "purple",
+  hue = "purple",
   button = false,
   includeSecondary = true,
   onDark = false,
@@ -699,11 +699,11 @@ function CoreTypeLockup({
   const visual = desktopSize === "tablet" ? TABLET_HEADING[heading] : desktopSize === "phone" ? PHONE_HEADING[heading] : heading;
   const buttonSize = visual === "H5" || visual === "H6" ? "sm" : "lg";
   return /*#__PURE__*/React.createElement("div", {
-    className: cx("ctl", "ctl--" + visual.toLowerCase(), "ctl--" + alignment, className)
+    className: cx("ctl", "ctl--" + visual.toLowerCase(), "ctl--" + alignment, onDark && "ctl--on-dark", onDark && "ctl--" + hue, className)
   }, /*#__PURE__*/React.createElement("div", {
     className: "ctl__text"
   }, tag && /*#__PURE__*/React.createElement(__ds_scope.Tag, {
-    color: tagColor,
+    color: hue,
     size: "lg",
     onDark: onDark
   }, tagText), /*#__PURE__*/React.createElement(HeadingTag, {
@@ -2248,7 +2248,6 @@ function ZLayout({
   color = "purple",
   imagePosition = "right",
   pageBackground = "light",
-  viewport = "desktop-plus",
   tagText = "Label",
   headline = "Headline goes here",
   subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
@@ -2257,25 +2256,26 @@ function ZLayout({
 }) {
   const isDark = pageBackground === "dark";
   return /*#__PURE__*/React.createElement("section", {
-    className: cx("zl", "zl--" + color, "zl--bg-" + pageBackground, "zl--img-" + imagePosition, "zl--" + viewport, className)
+    className: cx("zl", "zl--" + color, "zl--bg-" + pageBackground, imagePosition === "left" && "zl--img-left", className)
   }, /*#__PURE__*/React.createElement("div", {
-    className: "zl__card"
+    className: "zl__container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "zl__content"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "zl__content-inner"
   }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockup, {
     heading: "H3",
     alignment: "left",
+    hue: color,
     tag: true,
     tagText: tagText,
-    tagColor: color,
     button: true,
     includeSecondary: true,
     onDark: isDark,
     headline: headline,
     subhead: subhead,
-    desktopSize: viewport,
-    className: "zl__type"
-  })), /*#__PURE__*/React.createElement("div", {
+    className: "zl__lockup"
+  }))), /*#__PURE__*/React.createElement("div", {
     className: "zl__image"
   }, children)));
 }

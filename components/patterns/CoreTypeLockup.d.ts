@@ -9,7 +9,8 @@ export interface CoreTypeLockupProps {
   /** Show the eyebrow tag. @default false */
   tag?: boolean;
   tagText?: string;
-  tagColor?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
+  /** Accent hue — drives tag color and on-dark headline tint. @default "purple" */
+  hue?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
   /** Show the button row. @default false */
   button?: boolean;
   /** @default true */

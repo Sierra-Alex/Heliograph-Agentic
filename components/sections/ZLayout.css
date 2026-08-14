@@ -1,18 +1,20 @@
 /* ---- Base ---- */
 
 .zl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: var(--stack-section-md) var(--layout-grid-desktop-plus-margin);
   overflow: clip;
 }
 
-/* ---- Card ---- */
+/* ---- Container ---- */
 
-.zl__card {
+.zl__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--inset-card-border-spacing);
-  border: var(--standard) solid var(--cards-on-light-border);
+  width: 100%;
   border-radius: var(--border-radius-sm-outer);
   overflow: clip;
 }
@@ -21,15 +23,24 @@
 
 .zl__content {
   flex: 1 0 0;
+  min-width: 0;
+  align-self: stretch;
   display: flex;
   align-items: center;
+}
+
+.zl__content-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
   min-width: 0;
-  min-height: 0;
-  align-self: stretch;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
   padding: 0 var(--generic-spacing-x-lg);
 }
 
-.zl__type {
+.zl__lockup {
   width: 100%;
 }
 
@@ -42,87 +53,16 @@
   border-radius: var(--border-radius-content);
 }
 
-/* ---- Image Position: Left ---- */
+/* ---- Image Position ---- */
 
-.zl--img-left .zl__card {
+.zl--img-left .zl__container {
   flex-direction: row-reverse;
 }
-
-/* ---- Viewport: Desktop ---- */
-
-.zl--desktop {
-  padding: var(--stack-section-md) var(--layout-grid-desktop-margin);
-}
-
-/* ---- Viewport: Tablet ---- */
-
-.zl--tablet {
-  padding: var(--stack-section-md) var(--layout-grid-tablet-margin);
-}
-
-.zl--tablet .zl__card {
-  flex-direction: column;
-}
-
-.zl--tablet.zl--img-left .zl__card {
-  flex-direction: column-reverse;
-}
-
-.zl--tablet .zl__content {
-  flex: none;
-  width: 100%;
-  padding: var(--generic-spacing-lg);
-}
-
-.zl--tablet .zl__image {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  flex: none;
-}
-
-/* ---- Viewport: Phone ---- */
-
-.zl--phone {
-  padding: var(--stack-section-md) var(--layout-grid-phone-margin);
-}
-
-.zl--phone .zl__card {
-  flex-direction: column;
-}
-
-.zl--phone.zl--img-left .zl__card {
-  flex-direction: column-reverse;
-}
-
-.zl--phone .zl__content {
-  flex: none;
-  width: 100%;
-  padding: var(--generic-spacing-md) var(--generic-spacing-sm);
-}
-
-.zl--phone .zl__image {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  flex: none;
-}
-
-/* ---- Color Gradients ---- */
-
-.zl--purple .zl__image { background: var(--container-fill-gradient-product-card-purple); }
-.zl--pool .zl__image { background: var(--container-fill-gradient-product-card-pool); }
-.zl--mint .zl__image { background: var(--container-fill-gradient-product-card-mint); }
-.zl--lava .zl__image { background: var(--container-fill-gradient-product-card-lava); }
-.zl--mustard .zl__image { background: var(--container-fill-gradient-product-card-mustard); }
-.zl--grass .zl__image { background: var(--container-fill-gradient-product-card-mustard-copy); }
 
 /* ---- Page Background: Light ---- */
 
 .zl--bg-light {
   background: var(--surface-light);
-}
-
-.zl--bg-light .zl__card {
-  background: var(--cards-on-light-fill-on-white);
 }
 
 /* ---- Page Background: Standard ---- */
@@ -131,47 +71,26 @@
   background: var(--surface-default);
 }
 
-.zl--bg-standard .zl__card {
-  background: var(--cards-on-light-fill-on-gray);
-}
-
 /* ---- Page Background: Muted ---- */
 
 .zl--bg-muted {
   background: var(--surface-muted);
 }
 
-.zl--bg-muted .zl__card {
-  background: var(--cards-on-light-fill-on-gray);
-}
-
 /* ---- Page Background: Dark ---- */
 
-.zl--bg-dark {
-  border-color: var(--cards-on-dark-border);
-}
-
-.zl--bg-dark .zl__card {
-  border-color: var(--cards-on-dark-border);
-}
-
 .zl--bg-dark.zl--purple { background: var(--surface-purple-dark); }
-.zl--bg-dark.zl--purple .zl__card { background: var(--cards-on-dark-fill-purple); }
 .zl--bg-dark.zl--pool { background: var(--surface-pool-dark); }
-.zl--bg-dark.zl--pool .zl__card { background: var(--cards-on-dark-fill-pool); }
 .zl--bg-dark.zl--mint { background: var(--surface-mint-dark); }
-.zl--bg-dark.zl--mint .zl__card { background: var(--cards-on-dark-fill-mint); }
 .zl--bg-dark.zl--lava { background: var(--surface-lava-dark); }
-.zl--bg-dark.zl--lava .zl__card { background: var(--cards-on-dark-fill-lava); }
 .zl--bg-dark.zl--mustard { background: var(--surface-mustard-dark); }
-.zl--bg-dark.zl--mustard .zl__card { background: var(--cards-on-dark-fill-mustard); }
 .zl--bg-dark.zl--grass { background: var(--surface-grass-dark); }
-.zl--bg-dark.zl--grass .zl__card { background: var(--cards-on-dark-fill-grass); }
 
-.zl--bg-dark .ctl__headline {
-  color: var(--colors-absolute-white);
-}
+/* ---- Image Gradient ---- */
 
-.zl--bg-dark .ctl__subhead {
-  color: var(--text-on-dark-body);
-}
+.zl--purple .zl__image { background: var(--container-fill-gradient-product-card-purple); }
+.zl--pool .zl__image { background: var(--container-fill-gradient-product-card-pool); }
+.zl--mint .zl__image { background: var(--container-fill-gradient-product-card-mint); }
+.zl--lava .zl__image { background: var(--container-fill-gradient-product-card-lava); }
+.zl--mustard .zl__image { background: var(--container-fill-gradient-product-card-mustard); }
+.zl--grass .zl__image { background: var(--container-fill-gradient-product-card-mustard-copy); }
