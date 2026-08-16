@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--generic-spacing-lg);
-  padding: var(--stack-section-lg) var(--spacing-24) var(--spacing-24);
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin) var(--layout-grid-desktop-plus-margin);
   border-radius: var(--border-radius-sm-outer);
   overflow: clip;
   position: relative;
@@ -143,6 +143,10 @@
   height: 600px;
 }
 
+.lh--desktop .lh__banner {
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-margin) var(--layout-grid-desktop-margin);
+}
+
 /* ---- Responsive: Tablet ---- */
 
 .lh--tablet {
@@ -151,7 +155,7 @@
 
 .lh--tablet .lh__banner {
   margin: 0 var(--generic-spacing-xx-sm);
-  padding: var(--generic-spacing-x-lg) var(--spacing-16) var(--spacing-16);
+  padding: var(--generic-spacing-x-lg) var(--layout-grid-tablet-margin) var(--layout-grid-tablet-margin);
 }
 
 .lh--tablet .lh__lockup {
@@ -170,7 +174,7 @@
 
 .lh--phone .lh__banner {
   margin: 0 var(--generic-spacing-xx-sm);
-  padding: var(--generic-spacing-lg) var(--spacing-8) var(--spacing-8);
+  padding: var(--generic-spacing-lg) var(--layout-grid-phone-margin) var(--layout-grid-phone-margin);
 }
 
 .lh--phone .lh__lockup {

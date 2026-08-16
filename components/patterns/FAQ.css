@@ -1,0 +1,57 @@
+/* FAQ item — Figma nodes 172:25756 (closed) / 172:25647 (open) */
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+  padding: var(--generic-spacing-x-sm);
+  border-radius: var(--border-radius-content);
+  background: var(--cards-on-light-fill-on-gray);
+  border: var(--standard) solid var(--cards-on-light-border);
+}
+
+.faq-item__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--generic-spacing-x-sm);
+  min-height: 32px;
+}
+
+.faq-item__question {
+  font: var(--body-b3);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-headline);
+}
+
+.faq-item__rule {
+  height: var(--thin);
+  background: var(--divider-on-light);
+}
+
+.faq-item__answer {
+  margin: 0;
+  font: var(--body-b4);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-body);
+  text-wrap: pretty;
+}
+
+.faq-item--on-dark {
+  background: transparent;
+  border-color: var(--cards-on-dark-border);
+}
+
+.faq-item--on-dark .faq-item__question {
+  color: var(--colors-absolute-white);
+}
+
+.faq-item--on-dark .faq-item__rule {
+  background: var(--divider-on-dark);
+}
+
+.faq-item--on-dark .faq-item__answer {
+  color: var(--text-on-dark-body);
+}

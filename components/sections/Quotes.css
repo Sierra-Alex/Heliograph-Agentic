@@ -1,0 +1,145 @@
+/* Video & Quote Carousel — Figma node 127:16159 */
+
+.qc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-plus-margin);
+  background: var(--surface-purple-dark);
+}
+
+.qc--pool { background: var(--surface-pool-dark); }
+.qc--mint { background: var(--surface-mint-dark); }
+.qc--lava { background: var(--surface-lava-dark); }
+.qc--mustard { background: var(--surface-mustard-dark); }
+.qc--grass { background: var(--surface-grass-dark); }
+
+.qc__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--generic-spacing-lg);
+  align-self: stretch;
+}
+
+.qc__quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--generic-spacing-lg);
+  flex: 1;
+  min-width: 0;
+  padding: var(--generic-spacing-sm) var(--generic-spacing-lg) var(--generic-spacing-sm) var(--generic-spacing-md);
+}
+
+.qc__type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--generic-spacing-x-sm);
+  align-self: stretch;
+}
+
+.qc__text {
+  margin: 0;
+  font: var(--headline-h4);
+  letter-spacing: var(--letter-spacing-negative-1);
+  color: var(--colors-absolute-white);
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.qc__attribution {
+  display: flex
+  ;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  align-self: stretch;
+  min-height: 24px;
+}
+
+.qc__name,
+.qc__role {
+  font: var(--body-b4);
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--colors-absolute-white);
+}
+
+.qc__role {
+  font-weight: 400;
+  color: var(--text-on-dark-body);
+}
+
+.qc__dash {
+  width: 4px;
+  height: var(--standard);
+  background: var(--colors-absolute-white);
+}
+
+.qc__logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--generic-spacing-sm);
+  align-self: stretch;
+  justify-content: center;
+}
+
+.qc__logo {
+  width: 112px;
+  height: 27px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-input);
+  background: var(--colors-absolute-alpha-30);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.qc__logo:hover,
+.qc__logo--active {
+  opacity: 1;
+}
+
+.qc__media {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius-sm-outer);
+}
+
+.qc__media > img,
+.qc__media > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Responsive ---- */
+
+.qc--desktop {
+  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-margin);
+}
+
+.qc--tablet {
+  padding: var(--generic-spacing-x-lg) var(--layout-grid-tablet-margin);
+}
+
+.qc--tablet .qc__row {
+  flex-direction: column;
+}
+
+.qc--phone {
+  padding: var(--generic-spacing-lg) var(--layout-grid-phone-margin);
+}
+
+.qc--phone .qc__row {
+  flex-direction: column;
+}

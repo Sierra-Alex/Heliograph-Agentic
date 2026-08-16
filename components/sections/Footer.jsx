@@ -1,5 +1,5 @@
 import React from "react";
-import { CoreTypeLockup } from "../patterns/CoreTypeLockup.jsx";
+import { CoreTypeLockups } from "../patterns/CoreTypeLockups.jsx";
 const cx=(...a)=>a.filter(Boolean).join(" ");
 const FOOTER_NAV=[
 [{header:"PLATFORM",links:[{text:"Product Analytics"},{text:"Web Analytics"},{text:"Mobile Analytics"},{text:"Experiments"},{text:"Metric Trends"},{text:"Session Replay"},{text:"Security & Privacy"},{text:"Pricing",pill:true}]},
@@ -21,7 +21,7 @@ function FooterLinkItem({text,pill}){
 export function Footer({color="purple",includeCta=true,legalFooter=true,fullNav=true,desktopSize="desktop-plus",ctaHeadline="Headline goes here",ctaSubhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",logoSrc="assets/mixpanel-logo.svg",className}){
   return (<div className={cx("footer","footer--"+color,"footer--"+desktopSize,className)}>
     {includeCta&&<div className="footer__cta">
-      <CoreTypeLockup heading="H2" alignment="center" button tag={false} includeSecondary desktopSize={desktopSize} headline={ctaHeadline} subhead={ctaSubhead}/>
+      <CoreTypeLockups heading="H2" alignment="center" button tag={false} includeSecondary desktopSize={desktopSize} headline={ctaHeadline} subhead={ctaSubhead}/>
     </div>}
     <div className="footer__card">
       {fullNav&&<div className="footer__nav">{FOOTER_NAV.map((col,ci)=>(

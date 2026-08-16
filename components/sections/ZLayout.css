@@ -94,3 +94,33 @@
 .zl--lava .zl__image { background: var(--container-fill-gradient-product-card-lava); }
 .zl--mustard .zl__image { background: var(--container-fill-gradient-product-card-mustard); }
 .zl--grass .zl__image { background: var(--container-fill-gradient-product-card-mustard-copy); }
+
+/* ---- Responsive ---- */
+
+.zl--desktop {
+  padding: var(--stack-section-md) var(--layout-grid-desktop-margin);
+}
+
+.zl--tablet {
+  padding: var(--stack-section-md) var(--layout-grid-tablet-margin);
+}
+
+.zl--tablet .zl__container {
+  flex-direction: column;
+}
+
+.zl--tablet .zl--img-left .zl__container {
+  flex-direction: column;
+}
+
+.zl--phone {
+  padding: var(--generic-spacing-sm) var(--layout-grid-phone-margin);
+}
+
+.zl--phone .zl__container {
+  flex-direction: column;
+}
+
+.zl--phone .zl--img-left .zl__container {
+  flex-direction: column;
+}

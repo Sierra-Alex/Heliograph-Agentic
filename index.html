@@ -112,12 +112,13 @@ pre{margin:0;padding:14px 16px;border-radius:12px;background:#150040;color:#e8e6
 </head><body><div id="root"></div>
 <script type="text/babel">
 const NS=window.HeliographMixpanelDesignSystem_8500f4;
-const {Button,RoundIconButton,RoundPlusButton,RoundMinusButton,Tag,Checkbox,Radio,Toggle,TextInput,CoreTypeLockup,HorizontalCoreType,LogoCarousel,ProductCard,ResourceCard,SmResourceCard,Footer,LgHero,LgProductSection,MdProductCardLockup,SmHero,TopNav,ZLayout}=NS;
+const {Button,CircleCheck,LogoMark,NavLink,PlayHead,RoundIconButton,RoundPlusButton,RoundMinusButton,Tag,TeamsIcon,Checkbox,Radio,Toggle,TextInput,AddedContent,BulletList,ButtonLockup,CarouselStep,ContentCard,CoreTypeLockups,CustomerLogo,FAQ,FormLockup,HeroImage,HorizontalCoreType,ImageRatio,Stat,LayoutGrid,LogoCarousel,MdResourceCards,MdProductCards,LgResourceCards,SmProductCard,SmResourceCard,SmContentCardLockup,FAQs,Footer,LgHero,LgProductCard,LgProductSection,LgContentCallout,MdProductCardLockup,Quotes,SmHero,FullTopNav,LimitedTopNav,StatLockup,VideoLockup,ZLayout}=NS;
 const {useState,useEffect,useMemo,useRef,useLayoutEffect}=React;
 
 /* Per-component preview: [designWidth|null, node]. null width = flows at natural size with padding. */
 const HUES=["purple","pool","mint","lava","peach","mustard","grass"];
 const PREVIEW={
+  AddedContent:[null,<div style={{display:"flex",flexDirection:"column",gap:32,maxWidth:520}}><AddedContent content="logos"/><AddedContent content="stats" value="10" suffix="M" description="Monthly tracked users"/><AddedContent content="bullets"/><AddedContent content="form"/></div>],
   Button:[null,<div style={{display:"flex",gap:16,flexWrap:"wrap",alignItems:"center"}}><Button>Get Started</Button><Button variant="secondary">Learn More</Button><Button variant="tertiary">Read Docs</Button><Button size="sm">Small</Button><Button disabled>Disabled</Button></div>],
   RoundIconButton:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><RoundIconButton direction="left"/><RoundIconButton direction="right"/><RoundIconButton size="sm" direction="right"/></div>],
   RoundPlusButton:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><RoundPlusButton/><RoundPlusButton size="sm"/></div>],
@@ -127,19 +128,36 @@ const PREVIEW={
   Radio:[null,<div style={{display:"flex",gap:20,alignItems:"center"}}><Radio name="p"/><Radio name="p" defaultChecked/><Radio error/><Radio disabled/></div>],
   Toggle:[null,<div style={{display:"flex",gap:20,alignItems:"center"}}><Toggle/><Toggle defaultChecked/><Toggle disabled/></div>],
   TextInput:[null,<div style={{display:"flex",gap:16,flexWrap:"wrap"}}><TextInput placeholder="Work email"/><TextInput valid defaultValue="ana@acme.com"/><TextInput error defaultValue="not-an-email"/></div>],
-  CoreTypeLockup:[null,<div style={{maxWidth:520}}><CoreTypeLockup heading="H3" tag tagText="Label" button headline="Headline goes here" subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak."/></div>],
-  HorizontalCoreType:[900,<HorizontalCoreType heading="H3" headline="Headline goes here" subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham."/>],
+  CoreTypeLockups:[null,<div style={{maxWidth:520}}><CoreTypeLockups heading="H3" tag tagText="Label" button headline="Headline goes here" subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak."/></div>],
+  HorizontalCoreType:[900,<HorizontalCoreType heading="H3" button includeSecondary headline="Headline goes here" subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham."/>],
   LogoCarousel:[1200,<LogoCarousel stackSizing="sm"/>],
-  ProductCard:[1100,<ProductCard color="pool" background="white"/>],
-  ResourceCard:[1100,<ResourceCard color="purple" imagePosition="left" alignment="left" largeImage={false}/>],
-  SmResourceCard:[null,<div style={{maxWidth:420}}><SmResourceCard color="gray"/></div>],
-  TopNav:[1440,<TopNav desktopSize="desktop-plus" logoSrc="assets/logo.svg" caretSrc="assets/icons/caret-down.svg" burgerSrc="assets/icons/burger-menu.svg"/>],
+  MdProductCards:[1100,<MdProductCards color="pool" background="white"/>],
+  LgResourceCards:[1100,<LgResourceCards color="purple" imagePosition="left" alignment="left" largeImage={false}/>],
+  SmResourceCard:[null,<div style={{maxWidth:420}}><SmResourceCard color="gray" bigImage={true}/></div>],
+  Stat:[null,<div style={{maxWidth:300}}><Stat value="10" suffix="M" description="Monthly tracked users"/></div>],
+  FullTopNav:[1440,<FullTopNav desktopSize="desktop-plus" logoSrc="assets/logo.svg" caretSrc="assets/icons/caret-down.svg" burgerSrc="assets/icons/burger-menu.svg"/>],
+  LimitedTopNav:[1440,<LimitedTopNav desktopSize="login-primary-secondary" logoSrc="assets/logo.svg"/>],
   LgHero:[1440,<LgHero color="purple" includeNav={false} tagText="Platform" headline="Headline goes here"/>],
   SmHero:[1440,<SmHero color="mint" includeNav={false} tagText="Product" headline="Headline goes here"/>],
   ZLayout:[1440,<ZLayout color="pool" imagePosition="left" pageBackground="standard"/>],
+  LgProductCard:[1440,<LgProductCard hue="purple" headline="Understand your users" tagText="Analytics"/>],
   LgProductSection:[1440,<LgProductSection hue="purple" headline="Headline goes here" tagText="Platform"/>],
   MdProductCardLockup:[1440,<MdProductCardLockup color="lava"/>],
   Footer:[1440,<Footer color="purple" logoSrc="assets/mixpanel-logo.svg" includeCta={false}/>],
+  CircleCheck:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><CircleCheck baseColor="dark" size={16}/><CircleCheck baseColor="dark" size={24}/><CircleCheck baseColor="light" size={16}/></div>],
+  LogoMark:[null,<div style={{display:"flex",gap:24,alignItems:"center"}}><LogoMark variant="full" color="color" height={28}/><LogoMark variant="mark" color="color" height={28}/></div>],
+  NavLink:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><NavLink active>Platform</NavLink><NavLink caret>Solutions</NavLink><NavLink>Pricing</NavLink></div>],
+  PlayHead:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><PlayHead/><PlayHead disabled/></div>],
+  TeamsIcon:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><TeamsIcon size={16}/><TeamsIcon size={24}/><TeamsIcon size={32}/></div>],
+  ButtonLockup:[null,<ButtonLockup size="lg" primaryLabel="Get Started" secondaryLabel="Learn More"/>],
+  FAQ:[null,<div style={{maxWidth:600}}><FAQ question="How does pricing work?" answer="Plans start at free for up to 20M events per month." open/></div>],
+  SmContentCardLockup:[1440,<SmContentCardLockup cards={3} headline="Latest resources" tagText="Blog"/>],
+  FAQs:[1440,<FAQs items={[{question:"How does pricing work?",answer:"Plans start at free."},{question:"Can I import data?",answer:"Yes, from any source."},{question:"Is there a free trial?",answer:"Yes, 14 days."}]}/>],
+  LgContentCallout:[1440,<LgContentCallout pageColor="purple" headline="The definitive guide to product analytics"/>],
+  MdResourceCards:[null,<div style={{maxWidth:520}}><MdResourceCards pageBackground="light" tagText="Resources" headline="Read the guide"/></div>],
+  Quotes:[1440,<Quotes color="purple" quotes={[{quote:"Mixpanel helps us enable our customers for success.",name:"Janna Sheng",role:"Product Manager"}]}/>],
+  StatLockup:[1440,<StatLockup numberOfStats={3} addHeadline/>],
+  VideoLockup:[1440,<VideoLockup includeHeadline/>],
 };
 
 function Frame({width,children}){
@@ -317,7 +335,7 @@ function TokenGroup({list,resolvedMap,say}){
       const rank={headline:0,body:1,component:2};
       const order=Object.keys(g).sort((a,b)=>(rank[a]??9)-(rank[b]??9)||a.localeCompare(b));
       const LBL={headline:"Headlines",body:"Body",component:"Component styles"};
-      const NOTE={headline:"Display and heading steps. H1 60px down to H5 22px — the ramp stops at H5; there is no H6 or H7 token.",
+      const NOTE={headline:"Display and heading steps. H1 60px down to H6 18px.",
                   body:"Paragraph and caption steps, each with a 400 regular and a 500 medium cut.",
                   component:"Fixed styles baked into components — button labels, tags, inputs. Prefer the component over the token."};
       return <div className="kind" key={k}>
@@ -374,7 +392,7 @@ function TokenGroup({list,resolvedMap,say}){
 
 function App(){
   const [data,setData]=useState(null),[err,setErr]=useState(null),[q,setQ]=useState(""),[toast,setToast]=useState(null),[sideOpen,setSideOpen]=useState(true);
-  useEffect(()=>{fetch("library-data.json").then(r=>r.json()).then(setData).catch(e=>setErr(String(e)))},[]);
+  useEffect(()=>{fetch("library-data.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(setData).catch(e=>setErr(String(e)))},[]);
   const say=m=>{setToast(m);clearTimeout(window.__tt);window.__tt=setTimeout(()=>setToast(null),1600)};
   const resolvedMap=useMemo(()=>{const cs=getComputedStyle(document.documentElement),m={};for(const t of (data?data.tokens:[]))m[t.name]=(cs.getPropertyValue(t.name)||"").trim()||t.value;return m},[data]);
   if(err)return <div className="empty">Could not load <code>library-data.json</code> — {err}</div>;
@@ -423,7 +441,7 @@ function App(){
       </div>
       <div className="howto">
         <div><h5>1 · Find it</h5><p>Search by component name, prop name or token name. Every card shows the live component, not a screenshot.</p></div>
-        <div><h5>2 · Copy the name</h5><p>Component names are the shared vocabulary. “Use a ZLayout with a ProductCard below it” is a complete instruction.</p></div>
+        <div><h5>2 · Copy the name</h5><p>Component names are the shared vocabulary. "Use a ZLayout with a MdProductCards below it" is a complete instruction.</p></div>
         <div><h5>3 · Paste into Claude</h5><p>With this design system attached, Claude resolves those names to the real implementations and token values.</p></div>
       </div>
       {tGroups.map(([g,list])=><section className="sec" id={"t-"+g} key={g}>
@@ -442,7 +460,7 @@ function App(){
         <div className="sechead"><h2>Templates</h2><p>{TEMPLATES.length} starting point{TEMPLATES.length>1?"s":""} · templates/</p></div>
         <div className="tiles">{TEMPLATES.map(t=><TemplateTile key={t.name} t={t}/>)}</div>
       </section>}
-      {!comps.length&&!toks.length&&<div className="empty">Nothing matches “{q}”.</div>}
+      {!comps.length&&!toks.length&&<div className="empty">Nothing matches "{q}".</div>}
     </main>
     {toast&&<div className="toast">{toast}</div>}
   </div>;

@@ -1,0 +1,219 @@
+/* ---- Base ---- */
+
+.pc {
+  display: flex;
+  align-items: stretch;
+  padding: var(--inset-card-border-spacing);
+  gap: var(--generic-spacing-x-sm);
+  border: var(--standard) solid var(--cards-on-light-border);
+  border-radius: var(--border-radius-sm-outer);
+  overflow: clip;
+  width: 100%;
+}
+
+/* ---- Content ---- */
+
+.pc__content {
+  flex: 1 0 0;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: var(--generic-spacing-x-sm) var(--generic-spacing-lg);
+}
+
+.pc__lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--generic-spacing-x-sm);
+  width: 100%;
+}
+
+.pc__lockup-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+  width: 100%;
+  text-align: center;
+}
+
+.pc__headline {
+  font: var(--headline-h4);
+  letter-spacing: var(--letter-spacing-negative-1);
+  color: var(--text-on-light-headline);
+  margin: 0;
+}
+
+.pc__subhead {
+  font: var(--body-b4);
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--text-on-light-body);
+  margin: 0;
+}
+
+.pc__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--generic-spacing-xx-sm);
+}
+
+/* ---- Image ---- */
+
+.pc__image {
+  flex: 1 0 0;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--border-radius-content);
+}
+
+/* ---- Alignment ---- */
+
+.pc--align-left .pc__lockup {
+  align-items: flex-start;
+}
+
+.pc--align-left .pc__lockup-text {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* ---- Color: Purple ---- */
+
+.pc--purple {
+  box-shadow: var(--shadow-glow-on-light-purple);
+}
+
+.pc--purple .pc__image {
+  background: var(--container-fill-gradient-product-card-purple);
+}
+
+.pc__headline--purple {
+  color: var(--text-on-dark-headline-purple);
+}
+
+/* ---- Color: Pool ---- */
+
+.pc--pool {
+  box-shadow: var(--shadow-glow-on-light-pool);
+}
+
+.pc--pool .pc__image {
+  background: var(--container-fill-gradient-product-card-pool);
+}
+
+.pc__headline--pool {
+  color: var(--text-on-dark-headline-pool);
+}
+
+/* ---- Color: Mint ---- */
+
+.pc--mint {
+  box-shadow: var(--shadow-glow-on-light-mint);
+}
+
+.pc--mint .pc__image {
+  background: var(--container-fill-gradient-product-card-mint);
+}
+
+.pc__headline--mint {
+  color: var(--text-on-dark-headline-mint);
+}
+
+/* ---- Color: Lava ---- */
+
+.pc--lava {
+  box-shadow: var(--shadow-glow-on-light-lava);
+}
+
+.pc--lava .pc__image {
+  background: var(--container-fill-gradient-product-card-lava);
+}
+
+.pc__headline--lava {
+  color: var(--text-on-dark-headline-lava);
+}
+
+/* ---- Color: Mustard ---- */
+
+.pc--mustard {
+  box-shadow: var(--shadow-glow-on-light-mustard);
+}
+
+.pc--mustard .pc__image {
+  background: var(--container-fill-gradient-product-card-mustard);
+}
+
+.pc__headline--mustard {
+  color: var(--text-on-dark-headline-mustard);
+}
+
+/* ---- Color: Grass ---- */
+
+.pc--grass {
+  box-shadow: var(--shadow-glow-on-light-grass);
+}
+
+.pc--grass .pc__image {
+  background: var(--container-fill-gradient-product-card-mustard-copy);
+}
+
+.pc__headline--grass {
+  color: var(--text-on-dark-headline-grass);
+}
+
+/* ---- Background: Gray ---- */
+
+.pc--bg-gray {
+  background: var(--cards-on-light-fill-on-white);
+  border-color: var(--cards-on-light-border);
+}
+
+/* ---- Background: White ---- */
+
+.pc--bg-white {
+  background: var(--cards-on-light-fill-on-gray);
+  border-color: var(--cards-on-light-border);
+}
+
+/* ---- Background: Dark (per-color overrides) ---- */
+
+.pc--bg-dark {
+  border-color: var(--cards-on-dark-border);
+}
+
+.pc--bg-dark.pc--purple {
+  background: var(--cards-on-dark-fill-purple);
+  box-shadow: var(--shadow-glow-on-dark-purple);
+}
+
+.pc--bg-dark.pc--pool {
+  background: var(--cards-on-dark-fill-pool);
+  box-shadow: var(--shadow-glow-on-dark-pool);
+}
+
+.pc--bg-dark.pc--mint {
+  background: var(--cards-on-dark-fill-mint);
+  box-shadow: var(--shadow-glow-on-dark-mint);
+}
+
+.pc--bg-dark.pc--lava {
+  background: var(--cards-on-dark-fill-lava);
+  box-shadow: var(--shadow-glow-on-dark-lava);
+}
+
+.pc--bg-dark.pc--mustard {
+  background: var(--cards-on-dark-fill-mustard);
+  box-shadow: var(--shadow-glow-on-dark-mustard);
+}
+
+.pc--bg-dark.pc--grass {
+  background: var(--cards-on-dark-fill-grass);
+  box-shadow: var(--shadow-glow-on-dark-grass);
+}
+
+/* ---- Dark body text ---- */
+
+.pc__subhead--dark {
+  color: var(--text-on-dark-body);
+}

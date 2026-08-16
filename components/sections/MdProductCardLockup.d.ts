@@ -11,7 +11,7 @@ export interface MdProductCardLockupProps {
   /** @default "light" */
   pageBackground?: "light" | "standard" | "muted" | "dark";
   /** @default "desktop-plus" */
-  viewport?: "desktop-plus" | "desktop" | "tablet" | "phone";
+  desktopSize?: "desktop-plus" | "desktop" | "tablet" | "phone";
   headline?: string;
   subhead?: string;
   className?: string;

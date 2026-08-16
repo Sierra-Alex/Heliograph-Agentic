@@ -112,3 +112,25 @@
 .lps--lava .lps__block-subhead,
 .lps--mustard .lps__block-subhead,
 .lps--grass .lps__block-subhead { color: var(--text-on-dark-body); }
+
+/* ---- Responsive ---- */
+
+.lps--desktop .lps__inner {
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-margin);
+}
+
+.lps--tablet .lps__inner {
+  padding: var(--stack-section-lg) var(--layout-grid-tablet-margin);
+}
+
+.lps--tablet .lps__blocks {
+  flex-direction: column;
+}
+
+.lps--phone .lps__inner {
+  padding: var(--stack-section-md) var(--layout-grid-phone-margin);
+}
+
+.lps--phone .lps__blocks {
+  flex-direction: column;
+}

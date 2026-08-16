@@ -1,0 +1,80 @@
+/* Lg Resource Callout — Figma node 127:15849 */
+
+.lrc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--generic-spacing-x-lg);
+  padding: var(--generic-spacing-lg) var(--layout-grid-desktop-plus-margin);
+  background: var(--surface-purple-dark);
+}
+
+.lrc--image-right {
+  flex-direction: row-reverse;
+}
+
+.lrc--white { background: var(--surface-light); }
+.lrc--default { background: var(--surface-default); }
+.lrc--muted { background: var(--surface-muted); }
+.lrc--pool { background: var(--surface-pool-dark); }
+.lrc--mint { background: var(--surface-mint-dark); }
+.lrc--lava { background: var(--surface-lava-dark); }
+.lrc--mustard { background: var(--surface-mustard-dark); }
+.lrc--grass { background: var(--surface-grass-dark); }
+
+.lrc__frame {
+  display: flex;
+  align-items: center;
+  flex: 1 1 664px;
+  min-width: 0;
+  align-self: stretch;
+  min-height: 560px;
+  padding: var(--generic-spacing-xx-sm);
+  border-radius: var(--border-radius-sm-outer);
+  background: inherit;
+}
+
+.lrc__image {
+  flex: 1;
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: var(--border-radius-content);
+  background: var(--surface-muted);
+}
+
+.lrc__image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lrc__lockup {
+  flex: 0 0 600px;
+  max-width: 600px;
+  align-self: stretch;
+}
+
+/* ---- Responsive ---- */
+
+.lrc--desktop {
+  padding: var(--generic-spacing-lg) var(--layout-grid-desktop-margin);
+}
+
+.lrc--tablet {
+  padding: var(--generic-spacing-lg) var(--layout-grid-tablet-margin);
+  flex-direction: column;
+}
+
+.lrc--tablet.lrc--image-right {
+  flex-direction: column;
+}
+
+.lrc--phone {
+  padding: var(--generic-spacing-md) var(--layout-grid-phone-margin);
+  flex-direction: column;
+}
+
+.lrc--phone.lrc--image-right {
+  flex-direction: column;
+}

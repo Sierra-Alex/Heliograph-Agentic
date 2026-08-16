@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"HeliographMixpanelDesignSystem_8500f4","components":[{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"CircleCheck","sourcePath":"components/core/CircleCheck.jsx"},{"name":"LogoMark","sourcePath":"components/core/LogoMark.jsx"},{"name":"NavLink","sourcePath":"components/core/NavLink.jsx"},{"name":"RoundIconButton","sourcePath":"components/core/RoundIconButton.jsx"},{"name":"RoundMinusButton","sourcePath":"components/core/RoundMinusButton.jsx"},{"name":"RoundPlusButton","sourcePath":"components/core/RoundPlusButton.jsx"},{"name":"PlayHead","sourcePath":"components/core/PlayHead.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"TeamsIcon","sourcePath":"components/core/TeamsIcon.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"TextInput","sourcePath":"components/forms/TextInput.jsx"},{"name":"Toggle","sourcePath":"components/forms/Toggle.jsx"},{"name":"BulletList","sourcePath":"components/patterns/BulletList.jsx"},{"name":"ButtonLockup","sourcePath":"components/patterns/ButtonLockup.jsx"},{"name":"CarouselStep","sourcePath":"components/patterns/CarouselStep.jsx"},{"name":"ContentCard","sourcePath":"components/patterns/ContentCard.jsx"},{"name":"CoreTypeLockup","sourcePath":"components/patterns/CoreTypeLockup.jsx"},{"name":"CustomerLogo","sourcePath":"components/patterns/CustomerLogo.jsx"},{"name":"FaqItem","sourcePath":"components/patterns/FaqItem.jsx"},{"name":"FormLockup","sourcePath":"components/patterns/FormLockup.jsx"},{"name":"HeroImage","sourcePath":"components/patterns/HeroImage.jsx"},{"name":"HorizontalCoreType","sourcePath":"components/patterns/HorizontalCoreType.jsx"},{"name":"ImageRatio","sourcePath":"components/patterns/ImageRatio.jsx"},{"name":"LayoutGrid","sourcePath":"components/patterns/LayoutGrid.jsx"},{"name":"LogoCarousel","sourcePath":"components/patterns/LogoCarousel.jsx"},{"name":"ProductCard","sourcePath":"components/patterns/ProductCard.jsx"},{"name":"ResourceCard","sourcePath":"components/patterns/ResourceCard.jsx"},{"name":"SmProductCard","sourcePath":"components/patterns/SmProductCard.jsx"},{"name":"SmResourceCard","sourcePath":"components/patterns/SmResourceCard.jsx"},{"name":"ContentCardLockup","sourcePath":"components/sections/ContentCardLockup.jsx"},{"name":"Faqs","sourcePath":"components/sections/Faqs.jsx"},{"name":"Footer","sourcePath":"components/sections/Footer.jsx"},{"name":"FullWidthHeadline","sourcePath":"components/sections/FullWidthHeadline.jsx"},{"name":"HorizontalHeadline","sourcePath":"components/sections/HorizontalHeadline.jsx"},{"name":"LgHero","sourcePath":"components/sections/LgHero.jsx"},{"name":"LgProductCarousel","sourcePath":"components/sections/LgProductCarousel.jsx"},{"name":"LgProductSection","sourcePath":"components/sections/LgProductSection.jsx"},{"name":"LgResourceCallout","sourcePath":"components/sections/LgResourceCallout.jsx"},{"name":"MdProductCardLockup","sourcePath":"components/sections/MdProductCardLockup.jsx"},{"name":"MdProductCarousel","sourcePath":"components/sections/MdProductCarousel.jsx"},{"name":"QuoteCarousel","sourcePath":"components/sections/QuoteCarousel.jsx"},{"name":"ResourceCardLockup","sourcePath":"components/sections/ResourceCardLockup.jsx"},{"name":"SmHero","sourcePath":"components/sections/SmHero.jsx"},{"name":"TopNav","sourcePath":"components/sections/TopNav.jsx"},{"name":"ZLayout","sourcePath":"components/sections/ZLayout.jsx"}],"sourceHashes":{"components/core/Button.jsx":"d1ced39f3b38","components/core/CircleCheck.jsx":"249e51ed79d3","components/core/LogoMark.jsx":"efa608faea36","components/core/NavLink.jsx":"2129bbeff7e6","components/core/RoundIconButton.jsx":"ae873660963b","components/core/RoundMinusButton.jsx":"74c261177f81","components/core/RoundPlusButton.jsx":"0dccd5be593f","components/core/Tag.jsx":"8667f5e90c32","components/core/TeamsIcon.jsx":"9cf3cc19596c","components/forms/Checkbox.jsx":"f4306c9159bb","components/forms/Radio.jsx":"4e9365a059f3","components/forms/TextInput.jsx":"fe4d57a126eb","components/forms/Toggle.jsx":"17e87865911a","components/patterns/BulletList.jsx":"5e3a96b1f52d","components/patterns/ButtonLockup.jsx":"2d70b5fdf268","components/patterns/CarouselStep.jsx":"3ec4811d9c57","components/patterns/ContentCard.jsx":"0fc5d3aa0ef7","components/patterns/CoreTypeLockup.jsx":"401f97ad2f2f","components/patterns/CustomerLogo.jsx":"f2a687bf74e0","components/patterns/FaqItem.jsx":"6b641cae0f3b","components/patterns/FormLockup.jsx":"59d0a6ec9ffb","components/patterns/HeroImage.jsx":"b9a08aa7450f","components/patterns/HorizontalCoreType.jsx":"cf6b70a5d548","components/patterns/ImageRatio.jsx":"2d6e8ffd1b85","components/patterns/LayoutGrid.jsx":"997ff94854e9","components/patterns/LogoCarousel.jsx":"ec62cd5a97f9","components/patterns/ProductCard.jsx":"e331eb3cc667","components/patterns/ResourceCard.jsx":"1ea6afd9dfbd","components/patterns/SmProductCard.jsx":"ba0db1490474","components/patterns/SmResourceCard.jsx":"47d7d19ab9b8","components/sections/ContentCardLockup.jsx":"bb70f24934c5","components/sections/Faqs.jsx":"73d0996eff64","components/sections/Footer.jsx":"ee83cadcc2fd","components/sections/FullWidthHeadline.jsx":"8682ba81912b","components/sections/HorizontalHeadline.jsx":"55dcd5b18525","components/sections/LgHero.jsx":"8909b6ebd454","components/sections/LgProductCarousel.jsx":"0219714bc062","components/sections/LgProductSection.jsx":"57361928dc85","components/sections/LgResourceCallout.jsx":"b95565d34857","components/sections/MdProductCardLockup.jsx":"4527f0f1b09d","components/sections/MdProductCarousel.jsx":"748293dcb584","components/sections/QuoteCarousel.jsx":"897dc806743c","components/sections/ResourceCardLockup.jsx":"d261513cc205","components/sections/SmHero.jsx":"dea53cf4a697","components/sections/TopNav.jsx":"707229ec3c0b","components/sections/ZLayout.jsx":"a00247eac14a","ui_kits/marketing_site/Home.jsx":"220c2fbd10f0","ui_kits/marketing_site/Pricing.jsx":"e0c55a7a91b2","ui_kits/marketing_site/Product.jsx":"cb225a520fa8","ui_kits/marketing_site/Resources.jsx":"196922f7d084"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"HeliographMixpanelDesignSystem_8500f4","components":[{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"CircleCheck","sourcePath":"components/core/CircleCheck.jsx"},{"name":"LogoMark","sourcePath":"components/core/LogoMark.jsx"},{"name":"NavLink","sourcePath":"components/core/NavLink.jsx"},{"name":"RoundIconButton","sourcePath":"components/core/RoundIconButton.jsx"},{"name":"RoundMinusButton","sourcePath":"components/core/RoundMinusButton.jsx"},{"name":"RoundPlusButton","sourcePath":"components/core/RoundPlusButton.jsx"},{"name":"PlayHead","sourcePath":"components/core/PlayHead.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"TeamsIcon","sourcePath":"components/core/TeamsIcon.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"TextInput","sourcePath":"components/forms/TextInput.jsx"},{"name":"Toggle","sourcePath":"components/forms/Toggle.jsx"},{"name":"BulletList","sourcePath":"components/patterns/BulletList.jsx"},{"name":"ButtonLockup","sourcePath":"components/patterns/ButtonLockup.jsx"},{"name":"CarouselStep","sourcePath":"components/patterns/CarouselStep.jsx"},{"name":"ContentCard","sourcePath":"components/patterns/ContentCard.jsx"},{"name":"CoreTypeLockups","sourcePath":"components/patterns/CoreTypeLockups.jsx"},{"name":"CustomerLogo","sourcePath":"components/patterns/CustomerLogo.jsx"},{"name":"FAQ","sourcePath":"components/patterns/FAQ.jsx"},{"name":"FormLockup","sourcePath":"components/patterns/FormLockup.jsx"},{"name":"HeroImage","sourcePath":"components/patterns/HeroImage.jsx"},{"name":"HorizontalCoreType","sourcePath":"components/patterns/HorizontalCoreType.jsx"},{"name":"ImageRatio","sourcePath":"components/patterns/ImageRatio.jsx"},{"name":"Stat","sourcePath":"components/patterns/Stat.jsx"},{"name":"LayoutGrid","sourcePath":"components/patterns/LayoutGrid.jsx"},{"name":"LogoCarousel","sourcePath":"components/patterns/LogoCarousel.jsx"},{"name":"MdProductCards","sourcePath":"components/patterns/MdProductCards.jsx"},{"name":"LgResourceCards","sourcePath":"components/patterns/LgResourceCards.jsx"},{"name":"SmProductCard","sourcePath":"components/patterns/SmProductCard.jsx"},{"name":"SmResourceCard","sourcePath":"components/patterns/SmResourceCard.jsx"},{"name":"AddedContent","sourcePath":"components/patterns/AddedContent.jsx"},{"name":"MdResourceCards","sourcePath":"components/patterns/MdResourceCards.jsx"},{"name":"SmContentCardLockup","sourcePath":"components/sections/SmContentCardLockup.jsx"},{"name":"FAQs","sourcePath":"components/sections/FAQs.jsx"},{"name":"Footer","sourcePath":"components/sections/Footer.jsx"},{"name":"LgHero","sourcePath":"components/sections/LgHero.jsx"},{"name":"LgProductCard","sourcePath":"components/sections/LgProductCard.jsx"},{"name":"LgProductSection","sourcePath":"components/sections/LgProductSection.jsx"},{"name":"LgContentCallout","sourcePath":"components/sections/LgContentCallout.jsx"},{"name":"MdProductCardLockup","sourcePath":"components/sections/MdProductCardLockup.jsx"},{"name":"Quotes","sourcePath":"components/sections/Quotes.jsx"},{"name":"SmHero","sourcePath":"components/sections/SmHero.jsx"},{"name":"FullTopNav","sourcePath":"components/sections/FullTopNav.jsx"},{"name":"ZLayout","sourcePath":"components/sections/ZLayout.jsx"},{"name":"LimitedTopNav","sourcePath":"components/sections/LimitedTopNav.jsx"},{"name":"StatLockup","sourcePath":"components/sections/StatLockup.jsx"},{"name":"VideoLockup","sourcePath":"components/sections/VideoLockup.jsx"}],"sourceHashes":{"components/core/Button.jsx":"d1ced39f3b38","components/core/CircleCheck.jsx":"249e51ed79d3","components/core/LogoMark.jsx":"efa608faea36","components/core/NavLink.jsx":"2129bbeff7e6","components/core/RoundIconButton.jsx":"ae873660963b","components/core/RoundMinusButton.jsx":"74c261177f81","components/core/RoundPlusButton.jsx":"0dccd5be593f","components/core/Tag.jsx":"8667f5e90c32","components/core/TeamsIcon.jsx":"9cf3cc19596c","components/forms/Checkbox.jsx":"f4306c9159bb","components/forms/Radio.jsx":"4e9365a059f3","components/forms/TextInput.jsx":"fe4d57a126eb","components/forms/Toggle.jsx":"17e87865911a","components/patterns/BulletList.jsx":"5e3a96b1f52d","components/patterns/ButtonLockup.jsx":"2d70b5fdf268","components/patterns/CarouselStep.jsx":"3ec4811d9c57","components/patterns/ContentCard.jsx":"0fc5d3aa0ef7","components/patterns/CoreTypeLockups.jsx":"401f97ad2f2f","components/patterns/CustomerLogo.jsx":"f2a687bf74e0","components/patterns/FAQ.jsx":"6b641cae0f3b","components/patterns/FormLockup.jsx":"59d0a6ec9ffb","components/patterns/HeroImage.jsx":"b9a08aa7450f","components/patterns/HorizontalCoreType.jsx":"cf6b70a5d548","components/patterns/ImageRatio.jsx":"2d6e8ffd1b85","components/patterns/Stat.jsx":"63368912cee5","components/patterns/LayoutGrid.jsx":"997ff94854e9","components/patterns/LogoCarousel.jsx":"ec62cd5a97f9","components/patterns/MdProductCards.jsx":"e331eb3cc667","components/patterns/LgResourceCards.jsx":"1ea6afd9dfbd","components/patterns/SmProductCard.jsx":"ba0db1490474","components/patterns/SmResourceCard.jsx":"570a2e705740","components/patterns/AddedContent.jsx":"000000000000","components/patterns/MdResourceCards.jsx":"000000000001","components/sections/SmContentCardLockup.jsx":"bb70f24934c5","components/sections/FAQs.jsx":"73d0996eff64","components/sections/Footer.jsx":"ee83cadcc2fd","components/sections/LgHero.jsx":"8909b6ebd454","components/sections/LgProductCard.jsx":"def335a736c4","components/sections/LgProductSection.jsx":"57361928dc85","components/sections/LgContentCallout.jsx":"b95565d34857","components/sections/MdProductCardLockup.jsx":"4527f0f1b09d","components/sections/Quotes.jsx":"897dc806743c","components/sections/SmHero.jsx":"dea53cf4a697","components/sections/FullTopNav.jsx":"707229ec3c0b","components/sections/ZLayout.jsx":"a00247eac14a","components/sections/LimitedTopNav.jsx":"000000000002","components/sections/StatLockup.jsx":"000000000003","components/sections/VideoLockup.jsx":"000000000004","ui_kits/marketing_site/Home.jsx":"220c2fbd10f0","ui_kits/marketing_site/Pricing.jsx":"e0c55a7a91b2","ui_kits/marketing_site/Product.jsx":"cb225a520fa8","ui_kits/marketing_site/Resources.jsx":"196922f7d084"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -685,7 +685,7 @@ function ContentCard({
 Object.assign(__ds_scope, { ContentCard });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/ContentCard.jsx", error: String((e && e.message) || e) }); }
 
-// components/patterns/CoreTypeLockup.jsx
+// components/patterns/CoreTypeLockups.jsx
 try { (() => {
 const cx = (...a) => a.filter(Boolean).join(" ");
 const TABLET_HEADING = {
@@ -712,7 +712,7 @@ const HEADING_TAG_MAP = {
   H5: "h5",
   H6: "h6"
 };
-function CoreTypeLockup({
+function CoreTypeLockups({
   heading = "H1",
   alignment = "left",
   tag = false,
@@ -755,8 +755,8 @@ function CoreTypeLockup({
     onDark: onDark
   }, secondaryLabel)));
 }
-Object.assign(__ds_scope, { CoreTypeLockup });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/CoreTypeLockup.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { CoreTypeLockups });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/CoreTypeLockups.jsx", error: String((e && e.message) || e) }); }
 
 // components/patterns/CustomerLogo.jsx
 try { (() => {
@@ -823,11 +823,11 @@ function CustomerLogo({
 Object.assign(__ds_scope, { CustomerLogo });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/CustomerLogo.jsx", error: String((e && e.message) || e) }); }
 
-// components/patterns/FaqItem.jsx
+// components/patterns/FAQ.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const cx = (...a) => a.filter(Boolean).join(" ");
-function FaqItem({
+function FAQ({
   question = "Add question in here...",
   answer,
   open = false,
@@ -855,8 +855,8 @@ function FaqItem({
     className: "faq-item__answer"
   }, answer)));
 }
-Object.assign(__ds_scope, { FaqItem });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/FaqItem.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { FAQ });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/FAQ.jsx", error: String((e && e.message) || e) }); }
 
 // components/patterns/FormLockup.jsx
 try { (() => {
@@ -1021,6 +1021,34 @@ function ImageRatio({
 Object.assign(__ds_scope, { ImageRatio });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/ImageRatio.jsx", error: String((e && e.message) || e) }); }
 
+// components/patterns/Stat.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const cx = (...a) => a.filter(Boolean).join(" ");
+function Stat({
+  value = "00",
+  suffix = "X",
+  description = "Short statement about the stat",
+  onDark = false,
+  hue = "purple",
+  className,
+  ...props
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: cx("ist", onDark && "ist--on-dark", onDark && "ist--" + hue, className)
+  }, props), /*#__PURE__*/React.createElement("div", {
+    className: "ist__value-row"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "ist__value"
+  }, value), /*#__PURE__*/React.createElement("span", {
+    className: "ist__suffix"
+  }, suffix)), /*#__PURE__*/React.createElement("p", {
+    className: "ist__description"
+  }, description));
+}
+Object.assign(__ds_scope, { Stat });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/Stat.jsx", error: String((e && e.message) || e) }); }
+
 // components/patterns/LayoutGrid.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -1081,10 +1109,10 @@ function LogoCarousel({
 Object.assign(__ds_scope, { LogoCarousel });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/LogoCarousel.jsx", error: String((e && e.message) || e) }); }
 
-// components/patterns/ProductCard.jsx
+// components/patterns/MdProductCards.jsx
 try { (() => {
 const cx = (...a) => a.filter(Boolean).join(" ");
-function ProductCard({
+function MdProductCards({
   background = "gray",
   color = "purple",
   leftAligned = true,
@@ -1121,14 +1149,14 @@ function ProductCard({
     className: "pc__image"
   }));
 }
-Object.assign(__ds_scope, { ProductCard });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/ProductCard.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { MdProductCards });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/MdProductCards.jsx", error: String((e && e.message) || e) }); }
 
-// components/patterns/ResourceCard.jsx
+// components/patterns/LgResourceCards.jsx
 try { (() => {
 const cx = (...a) => a.filter(Boolean).join(" ");
 const DARK = new Set(["purple", "pool", "mint", "lava", "mustard", "grass"]);
-function ResourceCard({
+function LgResourceCards({
   color = "gray",
   imagePosition = "right",
   alignment = "center",
@@ -1171,8 +1199,8 @@ function ResourceCard({
     className: cx("rc", "rc--" + color, "rc--img-" + imagePosition, "rc--align-" + alignment, className)
   }, imagePosition === "left" ? /*#__PURE__*/React.createElement(React.Fragment, null, image, content) : /*#__PURE__*/React.createElement(React.Fragment, null, content, image));
 }
-Object.assign(__ds_scope, { ResourceCard });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/ResourceCard.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { LgResourceCards });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/LgResourceCards.jsx", error: String((e && e.message) || e) }); }
 
 // components/patterns/SmProductCard.jsx
 try { (() => {
@@ -1224,7 +1252,8 @@ const cx = (...a) => a.filter(Boolean).join(" ");
 const DARK = new Set(["purple", "pool", "mint", "lava", "mustard", "grass"]);
 function SmResourceCard({
   color = "gray",
-  tagText = "Label",
+  bigImage = true,
+  includeButton = true,
   headline = "Headline goes here",
   subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
   primaryLabel = "Click Me",
@@ -1234,24 +1263,26 @@ function SmResourceCard({
 }) {
   const isDark = DARK.has(color);
   return /*#__PURE__*/React.createElement("div", {
-    className: cx("src", "src--" + color, className)
-  }, /*#__PURE__*/React.createElement("div", {
+    className: cx("src", "src--" + color, bigImage ? "src--big-image" : "src--icon", className)
+  }, bigImage && /*#__PURE__*/React.createElement("div", {
     className: "src__image"
   }, children || /*#__PURE__*/React.createElement("div", {
     className: "src__image-placeholder"
   })), /*#__PURE__*/React.createElement("div", {
     className: "src__content"
+  }, !bigImage && /*#__PURE__*/React.createElement("div", {
+    className: "src__icon"
+  }, children || /*#__PURE__*/React.createElement("div", {
+    className: "src__icon-placeholder"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "src__lockup"
   }, /*#__PURE__*/React.createElement("div", {
     className: "src__text"
-  }, /*#__PURE__*/React.createElement(__ds_scope.Tag, {
-    color: isDark ? color : "purple",
-    size: "lg",
-    onDark: isDark
-  }, tagText), /*#__PURE__*/React.createElement("h5", {
+  }, /*#__PURE__*/React.createElement("h6", {
     className: cx("src__headline", isDark && "src__headline--" + color)
   }, headline), /*#__PURE__*/React.createElement("p", {
     className: cx("src__subhead", isDark && "src__subhead--dark")
-  }, subhead)), /*#__PURE__*/React.createElement("div", {
+  }, subhead)), includeButton && /*#__PURE__*/React.createElement("div", {
     className: "src__actions"
   }, /*#__PURE__*/React.createElement(__ds_scope.Button, {
     variant: "primary",
@@ -1261,12 +1292,141 @@ function SmResourceCard({
     variant: "secondary",
     size: "sm",
     onDark: isDark
-  }, secondaryLabel))));
+  }, secondaryLabel)))));
 }
 Object.assign(__ds_scope, { SmResourceCard });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/SmResourceCard.jsx", error: String((e && e.message) || e) }); }
 
-// components/sections/ContentCardLockup.jsx
+// components/patterns/AddedContent.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const cx = (...a) => a.filter(Boolean).join(" ");
+function AddedContent({
+  content = "logos",
+  onDark = false,
+  hue = "purple",
+  logoCount = 4,
+  headline = "Trusted by",
+  quote = "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”",
+  quoteName = "Full Name",
+  quoteTitle = "Job Title",
+  items = ["Bullet point 01", "Bullet point 02", "Bullet point 03"],
+  value = "00",
+  suffix = "X",
+  description = "Short statement about the stat",
+  submitLabel = "Click Me",
+  className,
+  ...props
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: cx("ac", "ac--" + content, onDark && "ac--on-dark", onDark && "ac--" + hue, className)
+  }, props), content === "logos" && /*#__PURE__*/React.createElement("div", {
+    className: "ac__logos"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "ac__logos-label"
+  }, headline), /*#__PURE__*/React.createElement("div", {
+    className: "ac__logos-strip"
+  }, Array.from({
+    length: logoCount
+  }).map((_, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    className: "ac__logo-placeholder"
+  })))), content === "quote" && /*#__PURE__*/React.createElement("div", {
+    className: "ac__quote"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "ac__quote-avatar"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "ac__quote-body"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "ac__quote-text"
+  }, quote), /*#__PURE__*/React.createElement("div", {
+    className: "ac__quote-attribution"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "ac__quote-name"
+  }, quoteName), /*#__PURE__*/React.createElement("span", {
+    className: "ac__quote-sep"
+  }, "-"), /*#__PURE__*/React.createElement("span", {
+    className: "ac__quote-title"
+  }, quoteTitle)))), content === "form" && /*#__PURE__*/React.createElement("div", {
+    className: "ac__form"
+  }, /*#__PURE__*/React.createElement("label", {
+    className: "ac__form-label"
+  }, "Email", /*#__PURE__*/React.createElement("span", {
+    className: "ac__form-required"
+  }, "*")), /*#__PURE__*/React.createElement(__ds_scope.TextInput, {
+    placeholder: "Placeholder..."
+  }), /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "primary",
+    size: "lg",
+    onDark: onDark
+  }, submitLabel)), content === "stats" && /*#__PURE__*/React.createElement("div", {
+    className: "ac__stat"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "ac__stat-row"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "ac__stat-value"
+  }, value), /*#__PURE__*/React.createElement("span", {
+    className: "ac__stat-suffix"
+  }, suffix)), /*#__PURE__*/React.createElement("p", {
+    className: "ac__stat-desc"
+  }, description)), content === "bullets" && /*#__PURE__*/React.createElement("div", {
+    className: "ac__bullets"
+  }, items.map((item, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    className: "ac__bullet"
+  }, /*#__PURE__*/React.createElement(__ds_scope.CircleCheck, {
+    baseColor: onDark ? "light" : "dark",
+    size: 16
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "ac__bullet-text"
+  }, item)))));
+}
+Object.assign(__ds_scope, { AddedContent });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/AddedContent.jsx", error: String((e && e.message) || e) }); }
+
+// components/patterns/MdResourceCards.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const cx = (...a) => a.filter(Boolean).join(" ");
+const DARK = new Set(["purple", "pool", "mint", "lava", "mustard", "grass"]);
+function MdResourceCards({
+  pageBackground = "light",
+  tagText = "Text",
+  headline = "Headline goes here",
+  subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon. Buffalo jowl brisket meatloaf pancetta boudin, corned beef leberkas rump drumstick shoulder.",
+  primaryLabel = "Click Me",
+  secondaryLabel = "Click Me",
+  children,
+  className,
+  ...props
+}) {
+  const isDark = DARK.has(pageBackground);
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: cx("mrc", "mrc--" + pageBackground, className)
+  }, props), /*#__PURE__*/React.createElement("div", {
+    className: "mrc__image"
+  }, children || /*#__PURE__*/React.createElement("div", {
+    className: "mrc__image-placeholder"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mrc__content"
+  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
+    heading: "H4",
+    tag: true,
+    tagText: tagText,
+    button: true,
+    includeSecondary: true,
+    headline: headline,
+    subhead: subhead,
+    primaryLabel: primaryLabel,
+    secondaryLabel: secondaryLabel,
+    onDark: isDark,
+    hue: isDark ? pageBackground : undefined
+  })));
+}
+Object.assign(__ds_scope, { MdResourceCards });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/MdResourceCards.jsx", error: String((e && e.message) || e) }); }
+
+// components/sections/SmContentCardLockup.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const cx = (...a) => a.filter(Boolean).join(" ");
@@ -1277,7 +1437,7 @@ const ROWS = {
   4: [2, 2],
   5: [3, 2]
 };
-function ContentCardLockup({
+function SmContentCardLockup({
   cards = 3,
   includeHeadline = true,
   headlineType = "left",
@@ -1288,6 +1448,7 @@ function ContentCardLockup({
   tagText = "Resources",
   items = [],
   pageBackground = "light",
+  desktopSize = "desktop-plus",
   className,
   ...props
 }) {
@@ -1295,13 +1456,13 @@ function ContentCardLockup({
   const {
     ContentCard,
     HorizontalCoreType,
-    CoreTypeLockup
+    CoreTypeLockups
   } = NS;
-  const Lockup = headlineType === "centered" ? CoreTypeLockup : HorizontalCoreType;
+  const Lockup = headlineType === "centered" ? CoreTypeLockups : HorizontalCoreType;
   const rows = ROWS[cards] || ROWS[3];
   let n = -1;
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("ccl", "ccl--" + pageBackground, className)
+    className: cx("ccl", "ccl--" + pageBackground, "ccl--" + desktopSize, className)
   }, props), includeHeadline && Lockup && /*#__PURE__*/React.createElement(Lockup, {
     heading: "H2",
     tag: true,
@@ -1330,10 +1491,10 @@ function ContentCardLockup({
     }) : null;
   })))));
 }
-Object.assign(__ds_scope, { ContentCardLockup });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/ContentCardLockup.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { SmContentCardLockup });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/SmContentCardLockup.jsx", error: String((e && e.message) || e) }); }
 
-// components/sections/Faqs.jsx
+// components/sections/FAQs.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const cx = (...a) => a.filter(Boolean).join(" ");
@@ -1341,28 +1502,29 @@ const DEFAULTS = [{
   question: "Add question in here...",
   answer: "Add answer in here..."
 }];
-function Faqs({
+function FAQs({
   title = "FAQs",
   items = DEFAULTS,
   pageColor = "white",
   onDark = false,
   defaultOpen = 0,
+  desktopSize = "desktop-plus",
   className,
   ...props
 }) {
   const [open, setOpen] = React.useState(defaultOpen);
   const {
-    FaqItem
+    FAQ
   } = window.HeliographMixpanelDesignSystem_8500f4 || {};
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("faqs", "faqs--" + pageColor, onDark && "faqs--on-dark", className)
+    className: cx("faqs", "faqs--" + pageColor, onDark && "faqs--on-dark", "faqs--" + desktopSize, className)
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "faqs__card"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "faqs__title"
   }, title), /*#__PURE__*/React.createElement("div", {
     className: "faqs__list"
-  }, items.map((it, i) => FaqItem ? /*#__PURE__*/React.createElement(FaqItem, {
+  }, items.map((it, i) => FAQ ? /*#__PURE__*/React.createElement(FAQ, {
     key: i,
     question: it.question,
     answer: it.answer,
@@ -1371,8 +1533,8 @@ function Faqs({
     onToggle: () => setOpen(open === i ? -1 : i)
   }) : null))));
 }
-Object.assign(__ds_scope, { Faqs });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/Faqs.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { FAQs });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/FAQs.jsx", error: String((e && e.message) || e) }); }
 
 // components/sections/Footer.jsx
 try { (() => {
@@ -1569,7 +1731,7 @@ function Footer({
     className: cx("footer", "footer--" + color, "footer--" + desktopSize, className)
   }, includeCta && /*#__PURE__*/React.createElement("div", {
     className: "footer__cta"
-  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockup, {
+  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H2",
     alignment: "center",
     button: true,
@@ -1619,115 +1781,49 @@ function Footer({
 Object.assign(__ds_scope, { Footer });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/Footer.jsx", error: String((e && e.message) || e) }); }
 
-// components/sections/FullWidthHeadline.jsx
+// components/sections/LgProductCard.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const cx = (...a) => a.filter(Boolean).join(" ");
-function FullWidthHeadline({
-  color = "purple",
-  darkTheme = true,
-  children = "Accessible data, across your organization.",
-  className,
-  ...props
-}) {
-  return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("fwh", "fwh--" + color, darkTheme && "fwh--dark", className)
-  }, props), /*#__PURE__*/React.createElement("p", {
-    className: "fwh__headline"
-  }, children));
-}
-Object.assign(__ds_scope, { FullWidthHeadline });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/FullWidthHeadline.jsx", error: String((e && e.message) || e) }); }
-
-// components/sections/HorizontalHeadline.jsx
-try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-const cx = (...a) => a.filter(Boolean).join(" ");
-function HorizontalHeadline({
-  size = "h2",
+function LgProductCard({
+  color = "light",
   onDark = false,
+  hue = "purple",
+  imagePosition = "right",
+  tagText = "Text",
   headline = "Headline goes here",
-  buttonLabel = "Learn More",
-  includeButton = true,
-  className,
-  ...props
-}) {
-  const {
-    Button
-  } = window.HeliographMixpanelDesignSystem_8500f4 || {};
-  return /*#__PURE__*/React.createElement("div", _extends({
-    className: cx("hh", "hh--" + size, onDark && "hh--on-dark", className)
-  }, props), /*#__PURE__*/React.createElement("h2", {
-    className: "hh__headline"
-  }, headline), includeButton && Button && /*#__PURE__*/React.createElement(Button, {
-    size: "lg",
-    variant: "primary",
-    onDark: onDark,
-    className: "hh__button"
-  }, buttonLabel));
-}
-Object.assign(__ds_scope, { HorizontalHeadline });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/HorizontalHeadline.jsx", error: String((e && e.message) || e) }); }
-
-// components/sections/LgProductCarousel.jsx
-try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-const cx = (...a) => a.filter(Boolean).join(" ");
-const DEFAULT_ITEMS = [{
-  headline: "Headline goes here"
-}, {
-  headline: "Headline goes here"
-}, {
-  headline: "Headline goes here"
-}];
-function LgProductCarousel({
-  color = "purple",
-  backgroundColor = "dark",
-  headline = "Accessible data, across your organization.",
-  items = DEFAULT_ITEMS,
-  active = 0,
-  onSelect,
+  subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon. Buffalo jowl brisket meatloaf pancetta boudin, corned beef leberkas rump drumstick shoulder.",
+  primaryLabel = "Click Me",
+  secondaryLabel = "Click Me",
+  desktopSize = "desktop-plus",
   className,
   children,
   ...props
 }) {
-  const NS = window.HeliographMixpanelDesignSystem_8500f4 || {};
-  const {
-    FullWidthHeadline,
-    ImageRatio
-  } = NS;
-  const dark = backgroundColor === "dark";
-  const [current, setCurrent] = React.useState(active);
-  const pick = i => {
-    setCurrent(i);
-    if (onSelect) onSelect(i);
-  };
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("lpc", "lpc--" + backgroundColor, dark && "lpc--" + color, className)
-  }, props), FullWidthHeadline && /*#__PURE__*/React.createElement(FullWidthHeadline, {
-    color: color,
-    darkTheme: dark,
-    className: "lpc__headline"
-  }, headline), /*#__PURE__*/React.createElement("div", {
-    className: "lpc__body"
-  }, ImageRatio && /*#__PURE__*/React.createElement(ImageRatio, {
-    ratio: "1:2",
+    className: cx("lpc", "lpc--" + hue, onDark ? "lpc--on-dark" : "lpc--" + color, imagePosition === "left" && "lpc--image-left", "lpc--" + desktopSize, className)
+  }, props), /*#__PURE__*/React.createElement("div", {
+    className: "lpc__card"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "lpc__content"
+  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
+    heading: "H3",
+    tag: true,
+    tagText: tagText,
+    button: true,
+    headline: headline,
+    subhead: subhead,
+    primaryLabel: primaryLabel,
+    secondaryLabel: secondaryLabel,
+    onDark: onDark,
+    hue: hue,
+    className: "lpc__lockup"
+  })), /*#__PURE__*/React.createElement("div", {
     className: "lpc__image"
-  }, children), /*#__PURE__*/React.createElement("div", {
-    className: "lpc__tabs"
-  }, items.map((it, i) => /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    key: i,
-    className: cx("lpc__tab", current === i && "lpc__tab--active"),
-    onClick: () => pick(i)
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "lpc__tab-headline"
-  }, it.headline), it.subhead && /*#__PURE__*/React.createElement("span", {
-    className: "lpc__tab-subhead"
-  }, it.subhead))))));
+  }, children)));
 }
-Object.assign(__ds_scope, { LgProductCarousel });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/LgProductCarousel.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { LgProductCard });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/LgProductCard.jsx", error: String((e && e.message) || e) }); }
 
 // components/sections/LgProductSection.jsx
 try { (() => {
@@ -1753,13 +1849,13 @@ function LgProductSection({
 }) {
   const NS = window.HeliographMixpanelDesignSystem_8500f4 || {};
   const {
-    CoreTypeLockup,
+    CoreTypeLockups,
     HorizontalCoreType
   } = NS;
-  const Lockup = headlineLayout === "horizontal" ? HorizontalCoreType : CoreTypeLockup;
+  const Lockup = headlineLayout === "horizontal" ? HorizontalCoreType : CoreTypeLockups;
   const count = subTextBlocks || blocks.length;
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("lps", onDark ? "lps--" + hue : "lps--" + color, headlineLayout === "horizontal" && "lps--horizontal", className)
+    className: cx("lps", onDark ? "lps--" + hue : "lps--" + color, headlineLayout === "horizontal" && "lps--horizontal", "lps--" + desktopSize, className)
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "lps__inner"
   }, Lockup && /*#__PURE__*/React.createElement(Lockup, {
@@ -1795,33 +1891,34 @@ function LgProductSection({
 Object.assign(__ds_scope, { LgProductSection });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/LgProductSection.jsx", error: String((e && e.message) || e) }); }
 
-// components/sections/LgResourceCallout.jsx
+// components/sections/LgContentCallout.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const cx = (...a) => a.filter(Boolean).join(" ");
-function LgResourceCallout({
+function LgContentCallout({
   pageColor = "purple",
   imagePosition = "left",
   tagText = "Resource",
   headline = "Headline goes here",
   subhead,
   ctaLabel = "Learn More",
+  desktopSize = "desktop-plus",
   className,
   children,
   ...props
 }) {
   const NS = window.HeliographMixpanelDesignSystem_8500f4 || {};
   const {
-    CoreTypeLockup
+    CoreTypeLockups
   } = NS;
   const dark = !["white", "default", "muted"].includes(pageColor);
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("lrc", "lrc--" + pageColor, imagePosition === "right" && "lrc--image-right", className)
+    className: cx("lrc", "lrc--" + pageColor, imagePosition === "right" && "lrc--image-right", "lrc--" + desktopSize, className)
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "lrc__frame"
   }, /*#__PURE__*/React.createElement("div", {
     className: "lrc__image"
-  }, children)), CoreTypeLockup && /*#__PURE__*/React.createElement(CoreTypeLockup, {
+  }, children)), CoreTypeLockups && /*#__PURE__*/React.createElement(CoreTypeLockups, {
     heading: "H3",
     tag: true,
     tagText: tagText,
@@ -1833,8 +1930,8 @@ function LgResourceCallout({
     className: "lrc__lockup"
   }));
 }
-Object.assign(__ds_scope, { LgResourceCallout });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/LgResourceCallout.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { LgContentCallout });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/LgContentCallout.jsx", error: String((e && e.message) || e) }); }
 
 // components/sections/MdProductCardLockup.jsx
 try { (() => {
@@ -1850,7 +1947,7 @@ function MdProductCardLockup({
   cardCount = 3,
   cards,
   pageBackground = "light",
-  viewport = "desktop-plus",
+  desktopSize = "desktop-plus",
   headline = "Headline goes here",
   subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
   className
@@ -1860,10 +1957,10 @@ function MdProductCardLockup({
     length: cardCount
   }, () => ({}));
   return /*#__PURE__*/React.createElement("section", {
-    className: cx("mpcl", "mpcl--" + color, "mpcl--bg-" + pageBackground, "mpcl--" + viewport, className)
+    className: cx("mpcl", "mpcl--" + color, "mpcl--bg-" + pageBackground, "mpcl--" + desktopSize, className)
   }, /*#__PURE__*/React.createElement("div", {
     className: "mpcl__inner"
-  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockup, {
+  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H3",
     alignment: "left",
     button: true,
@@ -1873,7 +1970,7 @@ function MdProductCardLockup({
     className: "mpcl__type"
   }), /*#__PURE__*/React.createElement("div", {
     className: "mpcl__cards"
-  }, items.map((c, i) => /*#__PURE__*/React.createElement(__ds_scope.ProductCard, {
+  }, items.map((c, i) => /*#__PURE__*/React.createElement(__ds_scope.MdProductCards, {
     key: i,
     color: c.color || color,
     background: cardBg,
@@ -1885,72 +1982,7 @@ function MdProductCardLockup({
 Object.assign(__ds_scope, { MdProductCardLockup });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/MdProductCardLockup.jsx", error: String((e && e.message) || e) }); }
 
-// components/sections/MdProductCarousel.jsx
-try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-const cx = (...a) => a.filter(Boolean).join(" ");
-const DEFAULT_STEPS = [{
-  headline: "Headline goes here",
-  subhead: "Bacon ipsum dolor amet flank brisket prosciutto."
-}, {
-  headline: "Headline goes here"
-}, {
-  headline: "Headline goes here"
-}, {
-  headline: "Headline goes here"
-}];
-function MdProductCarousel({
-  color = "purple",
-  pageBackground = "light",
-  includeHeadline = true,
-  headline = "Headline goes here",
-  imagePlacement = "right",
-  steps = DEFAULT_STEPS,
-  active = 0,
-  progress = 0,
-  onSelect,
-  className,
-  children,
-  ...props
-}) {
-  const NS = window.HeliographMixpanelDesignSystem_8500f4 || {};
-  const {
-    HorizontalHeadline,
-    CarouselStep
-  } = NS;
-  const [current, setCurrent] = React.useState(active);
-  const pick = i => {
-    setCurrent(i);
-    if (onSelect) onSelect(i);
-  };
-  return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("mpc", "mpc--" + pageBackground, className)
-  }, props), /*#__PURE__*/React.createElement("div", {
-    className: "mpc__panel"
-  }, includeHeadline && HorizontalHeadline && /*#__PURE__*/React.createElement(HorizontalHeadline, {
-    headline: headline,
-    className: "mpc__headline"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: cx("mpc__row", imagePlacement === "left" && "mpc__row--image-left")
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "mpc__steps"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "mpc__steps-inner"
-  }, steps.map((s, i) => CarouselStep ? /*#__PURE__*/React.createElement(CarouselStep, {
-    key: i,
-    headline: s.headline,
-    subhead: s.subhead,
-    active: current === i,
-    progress: current === i ? progress : 0,
-    onClick: () => pick(i)
-  }) : null))), /*#__PURE__*/React.createElement("div", {
-    className: cx("mpc__image", "mpc__image--" + color)
-  }, children))));
-}
-Object.assign(__ds_scope, { MdProductCarousel });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/MdProductCarousel.jsx", error: String((e && e.message) || e) }); }
-
-// components/sections/QuoteCarousel.jsx
+// components/sections/Quotes.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const cx = (...a) => a.filter(Boolean).join(" ");
@@ -1959,12 +1991,13 @@ const DEFAULT_QUOTES = [{
   name: "Janna Sheng",
   role: "Product Manager"
 }];
-function QuoteCarousel({
+function Quotes({
   color = "purple",
   quotes = DEFAULT_QUOTES,
   active = 0,
   logoCount = 3,
   onSelect,
+  desktopSize = "desktop-plus",
   className,
   children,
   ...props
@@ -1976,7 +2009,7 @@ function QuoteCarousel({
     if (onSelect) onSelect(i);
   };
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("qc", "qc--" + color, className)
+    className: cx("qc", "qc--" + color, "qc--" + desktopSize, className)
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "qc__row"
   }, /*#__PURE__*/React.createElement("div", {
@@ -2007,86 +2040,10 @@ function QuoteCarousel({
     className: "qc__media"
   }, children)));
 }
-Object.assign(__ds_scope, { QuoteCarousel });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/QuoteCarousel.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { Quotes });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/Quotes.jsx", error: String((e && e.message) || e) }); }
 
-// components/sections/ResourceCardLockup.jsx
-try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-const cx = (...a) => a.filter(Boolean).join(" ");
-const CARD_COLOR = {
-  light: "gray",
-  default: "white",
-  muted: "white",
-  purple: "purple",
-  pool: "pool",
-  mint: "mint",
-  lava: "lava",
-  mustard: "mustard",
-  grass: "grass"
-};
-function ResourceCardLockup({
-  resources = "3-sm",
-  withHeadline = true,
-  pageBackground = "light",
-  headline = "Headline goes here",
-  subhead,
-  tagText = "Resources",
-  className,
-  ...props
-}) {
-  const NS = window.HeliographMixpanelDesignSystem_8500f4 || {};
-  const {
-    HorizontalCoreType,
-    ResourceCard,
-    SmResourceCard
-  } = NS;
-  const color = CARD_COLOR[pageBackground] || "gray";
-  const [lg, sm] = (() => {
-    switch (resources) {
-      case "1-lg":
-        return [1, 0];
-      case "1-lg/2-sm":
-        return [1, 2];
-      case "1-lg/3-sm":
-        return [1, 3];
-      case "2-sm":
-        return [0, 2];
-      case "4-sm":
-        return [0, 4];
-      case "6-sm":
-        return [0, 6];
-      default:
-        return [0, 3];
-    }
-  })();
-  return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("rcl", "rcl--" + pageBackground, className)
-  }, props), withHeadline && HorizontalCoreType && /*#__PURE__*/React.createElement(HorizontalCoreType, {
-    heading: "H2",
-    tag: true,
-    tagText: tagText,
-    button: true,
-    headline: headline,
-    subhead: subhead,
-    className: "rcl__headline"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: cx("rcl__row", sm > 3 && "rcl__row--wrap")
-  }, lg > 0 && ResourceCard && /*#__PURE__*/React.createElement(ResourceCard, {
-    color: color,
-    className: "rcl__lg"
-  }), Array.from({
-    length: sm
-  }).map((_, i) => SmResourceCard ? /*#__PURE__*/React.createElement(SmResourceCard, {
-    key: i,
-    color: color,
-    className: "rcl__sm"
-  }) : null)));
-}
-Object.assign(__ds_scope, { ResourceCardLockup });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/ResourceCardLockup.jsx", error: String((e && e.message) || e) }); }
-
-// components/sections/TopNav.jsx
+// components/sections/FullTopNav.jsx
 try { (() => {
 const cx = (...a) => a.filter(Boolean).join(" ");
 const NAV_LINKS = [{
@@ -2102,7 +2059,7 @@ const NAV_LINKS = [{
   label: "Pricing",
   dropdown: false
 }];
-function TopNav({
+function FullTopNav({
   desktopSize = "desktop-plus",
   links = NAV_LINKS,
   logoSrc = "assets/logo.svg",
@@ -2170,8 +2127,8 @@ function TopNav({
     alt: "Menu"
   })))));
 }
-Object.assign(__ds_scope, { TopNav });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/TopNav.jsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { FullTopNav });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/FullTopNav.jsx", error: String((e && e.message) || e) }); }
 
 // components/sections/LgHero.jsx
 try { (() => {
@@ -2193,7 +2150,7 @@ function LgHero({
 }) {
   return /*#__PURE__*/React.createElement("div", {
     className: cx("lh", "lh--" + color, "lh--" + gradientStyle, "lh--" + desktopSize, className)
-  }, includeNav && /*#__PURE__*/React.createElement(__ds_scope.TopNav, {
+  }, includeNav && /*#__PURE__*/React.createElement(__ds_scope.FullTopNav, {
     desktopSize: desktopSize
   }), /*#__PURE__*/React.createElement("div", {
     className: "lh__banner"
@@ -2213,7 +2170,7 @@ function LgHero({
     className: "lh__ellipse"
   }), /*#__PURE__*/React.createElement("div", {
     className: "lh__lockup"
-  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockup, {
+  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H1",
     alignment: "center",
     tag: false,
@@ -2253,7 +2210,7 @@ function SmHero({
   const stacked = desktopSize === "tablet" || desktopSize === "phone";
   return /*#__PURE__*/React.createElement("div", {
     className: cx("sh", "sh--" + color, "sh--" + gradientStyle, "sh--" + desktopSize, className)
-  }, includeNav && /*#__PURE__*/React.createElement(__ds_scope.TopNav, {
+  }, includeNav && /*#__PURE__*/React.createElement(__ds_scope.FullTopNav, {
     desktopSize: desktopSize
   }), /*#__PURE__*/React.createElement("div", {
     className: "sh__banner"
@@ -2271,7 +2228,7 @@ function SmHero({
     }
   }))), /*#__PURE__*/React.createElement("div", {
     className: "sh__content"
-  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockup, {
+  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H1",
     alignment: stacked ? "center" : "left",
     tag: true,
@@ -2301,18 +2258,19 @@ function ZLayout({
   headline = "Headline goes here",
   subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
   children,
+  desktopSize = "desktop-plus",
   className
 }) {
   const isDark = pageBackground === "dark";
   return /*#__PURE__*/React.createElement("section", {
-    className: cx("zl", "zl--" + color, "zl--bg-" + pageBackground, imagePosition === "left" && "zl--img-left", className)
+    className: cx("zl", "zl--" + color, "zl--bg-" + pageBackground, imagePosition === "left" && "zl--img-left", "zl--" + desktopSize, className)
   }, /*#__PURE__*/React.createElement("div", {
     className: "zl__container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "zl__content"
   }, /*#__PURE__*/React.createElement("div", {
     className: "zl__content-inner"
-  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockup, {
+  }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H3",
     alignment: "left",
     hue: color,
@@ -2330,6 +2288,136 @@ function ZLayout({
 }
 Object.assign(__ds_scope, { ZLayout });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/ZLayout.jsx", error: String((e && e.message) || e) }); }
+
+// components/sections/LimitedTopNav.jsx
+try { (() => {
+const cx = (...a) => a.filter(Boolean).join(" ");
+function LimitedTopNav({
+  desktopSize = "login-primary-secondary",
+  logoSrc = "assets/logo.svg",
+  primaryLabel = "Click Me",
+  secondaryLabel = "Click Me",
+  viewport = "desktop-plus",
+  className,
+  ...props
+}) {
+  const showLogin = desktopSize === "login-primary-secondary";
+  const showSecondary = desktopSize === "login-primary-secondary" || desktopSize === "primary-secondary";
+  const showPrimary = desktopSize !== "empty";
+  return /*#__PURE__*/React.createElement("nav", {
+    className: cx("ltn", "ltn--" + viewport, className),
+    ...props
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "ltn__left"
+  }, /*#__PURE__*/React.createElement("img", {
+    className: "ltn__logo",
+    src: logoSrc,
+    alt: "Mixpanel"
+  })), showPrimary && /*#__PURE__*/React.createElement("div", {
+    className: "ltn__right"
+  }, showLogin && /*#__PURE__*/React.createElement("button", {
+    className: "ltn__login"
+  }, "Login"), /*#__PURE__*/React.createElement("div", {
+    className: "ltn__actions"
+  }, /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "primary",
+    size: "sm"
+  }, primaryLabel), showSecondary && /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "secondary",
+    size: "sm"
+  }, secondaryLabel))));
+}
+Object.assign(__ds_scope, { LimitedTopNav });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/LimitedTopNav.jsx", error: String((e && e.message) || e) }); }
+
+// components/sections/StatLockup.jsx
+try { (() => {
+const cx = (...a) => a.filter(Boolean).join(" ");
+function StatLockup({
+  color = "light",
+  numberOfStats = 2,
+  addHeadline = false,
+  tagText = "Text",
+  headline = "Headline goes here",
+  subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
+  primaryLabel = "Click Me",
+  secondaryLabel = "Click Me",
+  value = "00",
+  suffix = "X",
+  description = "Short statement about the stat",
+  stats,
+  desktopSize = "desktop-plus",
+  className,
+  ...props
+}) {
+  const count = Number(numberOfStats) || 2;
+  const items = stats || Array.from({length: count}, () => ({value, suffix, description}));
+  return /*#__PURE__*/React.createElement("section", {
+    className: cx("stl", "stl--" + color, "stl--" + desktopSize, className),
+    ...props
+  }, addHeadline && /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
+    heading: "H3",
+    alignment: "center",
+    tag: true,
+    tagText: tagText,
+    button: true,
+    includeSecondary: true,
+    headline: headline,
+    subhead: subhead,
+    primaryLabel: primaryLabel,
+    secondaryLabel: secondaryLabel
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "stl__row"
+  }, items.map((s, i) => /*#__PURE__*/React.createElement(__ds_scope.Stat, {
+    key: i,
+    value: s.value,
+    suffix: s.suffix,
+    description: s.description
+  }))));
+}
+Object.assign(__ds_scope, { StatLockup });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/StatLockup.jsx", error: String((e && e.message) || e) }); }
+
+// components/sections/VideoLockup.jsx
+try { (() => {
+const cx = (...a) => a.filter(Boolean).join(" ");
+function VideoLockup({
+  color = "light",
+  includeHeadline = false,
+  tagText = "Text",
+  headline = "Headline goes here",
+  subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
+  primaryLabel = "Click Me",
+  secondaryLabel = "Click Me",
+  children,
+  desktopSize = "desktop-plus",
+  className,
+  ...props
+}) {
+  return /*#__PURE__*/React.createElement("section", {
+    className: cx("vl", "vl--" + color, "vl--" + desktopSize, className),
+    ...props
+  }, includeHeadline && /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
+    heading: "H3",
+    alignment: "center",
+    tag: true,
+    tagText: tagText,
+    button: true,
+    includeSecondary: true,
+    headline: headline,
+    subhead: subhead,
+    primaryLabel: primaryLabel,
+    secondaryLabel: secondaryLabel
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "vl__frame"
+  }, children || /*#__PURE__*/React.createElement("div", {
+    className: "vl__placeholder"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "vl__play"
+  }, /*#__PURE__*/React.createElement(__ds_scope.PlayHead, null))));
+}
+Object.assign(__ds_scope, { VideoLockup });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/sections/VideoLockup.jsx", error: String((e && e.message) || e) }); }
 
 // ui_kits/marketing_site/Home.jsx
 try { (() => {
@@ -2590,7 +2678,7 @@ try { (() => {
 const {
   SmHero,
   ZLayout,
-  ProductCard,
+  MdProductCards,
   HorizontalCoreType
 } = window.HeliographMixpanelDesignSystem_8500f4;
 function ProductPage() {
@@ -2615,14 +2703,14 @@ function ProductPage() {
     primaryLabel: "See Pricing",
     headline: "Built for the whole product team",
     subhead: "Every plan includes replays, funnels and unlimited seats."
-  }), /*#__PURE__*/React.createElement(ProductCard, {
+  }), /*#__PURE__*/React.createElement(MdProductCards, {
     color: "mint",
     background: "white",
     headline: "Replay, in context",
     subhead: "Open a replay from any point in a funnel and see exactly where the drop-off happened.",
     primaryLabel: "Get Started",
     secondaryLabel: "Read Docs"
-  }), /*#__PURE__*/React.createElement(ProductCard, {
+  }), /*#__PURE__*/React.createElement(MdProductCards, {
     color: "pool",
     background: "white",
     headline: "Privacy by default",
@@ -2647,7 +2735,7 @@ const {
   SmHero,
   HorizontalCoreType,
   SmResourceCard,
-  ResourceCard
+  LgResourceCards
 } = window.HeliographMixpanelDesignSystem_8500f4;
 const POSTS = [{
   tag: "Guide",
@@ -2698,7 +2786,7 @@ function ResourcesPage() {
     subhead: p.subhead,
     primaryLabel: "Read",
     secondaryLabel: "Share"
-  }))), /*#__PURE__*/React.createElement(ResourceCard, {
+  }))), /*#__PURE__*/React.createElement(LgResourceCards, {
     color: "lava",
     imagePosition: "left",
     alignment: "left",
@@ -2748,11 +2836,11 @@ __ds_ns.CarouselStep = __ds_scope.CarouselStep;
 
 __ds_ns.ContentCard = __ds_scope.ContentCard;
 
-__ds_ns.CoreTypeLockup = __ds_scope.CoreTypeLockup;
+__ds_ns.CoreTypeLockups = __ds_scope.CoreTypeLockups;
 
 __ds_ns.CustomerLogo = __ds_scope.CustomerLogo;
 
-__ds_ns.FaqItem = __ds_scope.FaqItem;
+__ds_ns.FAQ = __ds_scope.FAQ;
 
 __ds_ns.FormLockup = __ds_scope.FormLockup;
 
@@ -2762,48 +2850,52 @@ __ds_ns.HorizontalCoreType = __ds_scope.HorizontalCoreType;
 
 __ds_ns.ImageRatio = __ds_scope.ImageRatio;
 
+__ds_ns.Stat = __ds_scope.Stat;
+
 __ds_ns.LayoutGrid = __ds_scope.LayoutGrid;
 
 __ds_ns.LogoCarousel = __ds_scope.LogoCarousel;
 
-__ds_ns.ProductCard = __ds_scope.ProductCard;
+__ds_ns.MdProductCards = __ds_scope.MdProductCards;
 
-__ds_ns.ResourceCard = __ds_scope.ResourceCard;
+__ds_ns.LgResourceCards = __ds_scope.LgResourceCards;
 
 __ds_ns.SmProductCard = __ds_scope.SmProductCard;
 
 __ds_ns.SmResourceCard = __ds_scope.SmResourceCard;
 
-__ds_ns.ContentCardLockup = __ds_scope.ContentCardLockup;
+__ds_ns.AddedContent = __ds_scope.AddedContent;
 
-__ds_ns.Faqs = __ds_scope.Faqs;
+__ds_ns.MdResourceCards = __ds_scope.MdResourceCards;
+
+__ds_ns.SmContentCardLockup = __ds_scope.SmContentCardLockup;
+
+__ds_ns.FAQs = __ds_scope.FAQs;
 
 __ds_ns.Footer = __ds_scope.Footer;
 
-__ds_ns.FullWidthHeadline = __ds_scope.FullWidthHeadline;
-
-__ds_ns.HorizontalHeadline = __ds_scope.HorizontalHeadline;
-
 __ds_ns.LgHero = __ds_scope.LgHero;
 
-__ds_ns.LgProductCarousel = __ds_scope.LgProductCarousel;
+__ds_ns.LgProductCard = __ds_scope.LgProductCard;
 
 __ds_ns.LgProductSection = __ds_scope.LgProductSection;
 
-__ds_ns.LgResourceCallout = __ds_scope.LgResourceCallout;
+__ds_ns.LgContentCallout = __ds_scope.LgContentCallout;
 
 __ds_ns.MdProductCardLockup = __ds_scope.MdProductCardLockup;
 
-__ds_ns.MdProductCarousel = __ds_scope.MdProductCarousel;
-
-__ds_ns.QuoteCarousel = __ds_scope.QuoteCarousel;
-
-__ds_ns.ResourceCardLockup = __ds_scope.ResourceCardLockup;
+__ds_ns.Quotes = __ds_scope.Quotes;
 
 __ds_ns.SmHero = __ds_scope.SmHero;
 
-__ds_ns.TopNav = __ds_scope.TopNav;
+__ds_ns.FullTopNav = __ds_scope.FullTopNav;
 
 __ds_ns.ZLayout = __ds_scope.ZLayout;
+
+__ds_ns.LimitedTopNav = __ds_scope.LimitedTopNav;
+
+__ds_ns.StatLockup = __ds_scope.StatLockup;
+
+__ds_ns.VideoLockup = __ds_scope.VideoLockup;
 
 })();

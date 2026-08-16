@@ -89,7 +89,7 @@
 /* ---- Heading: H6 ---- */
 
 .hct--h6 .hct__headline {
-  font: var(--headline-h5);
+  font: var(--headline-h6);
   letter-spacing: var(--letter-spacing-0);
 }
 

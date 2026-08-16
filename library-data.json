@@ -40,6 +40,179 @@
       ]
     },
     {
+      "name": "CircleCheck",
+      "group": "Core",
+      "dir": "core",
+      "summary": "Small circular checkmark icon used in bullet lists and feature callouts.",
+      "desc": "SVG circle with an animated check \u2014 used inside BulletList items.",
+      "extends": null,
+      "props": [
+        {
+          "name": "baseColor",
+          "required": false,
+          "type": "\"dark\" | \"light\"",
+          "doc": "Fill pairing for light or dark surfaces.",
+          "def": "\"dark\""
+        },
+        {
+          "name": "size",
+          "required": false,
+          "type": "number",
+          "doc": "Width and height in px.",
+          "def": "16"
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<CircleCheck baseColor=\"dark\" size={16} />",
+      "notes": "Always pair with a text label. Use baseColor=\"light\" on dark surfaces.",
+      "files": [
+        "components/core/CircleCheck.jsx",
+        "components/core/CircleCheck.css",
+        "components/core/CircleCheck.d.ts"
+      ]
+    },
+    {
+      "name": "LogoMark",
+      "group": "Core",
+      "dir": "core",
+      "summary": "Mixpanel logo rendered as an image \u2014 full wordmark or standalone mark.",
+      "desc": "Renders the Mixpanel logo from an asset file.",
+      "extends": null,
+      "props": [
+        {
+          "name": "variant",
+          "required": false,
+          "type": "\"full\" | \"mark\"",
+          "doc": "Full wordmark or just the logomark.",
+          "def": "\"full\""
+        },
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"color\" | \"white\" | \"black\"",
+          "doc": "Logo colour variant.",
+          "def": "\"color\""
+        },
+        {
+          "name": "height",
+          "required": false,
+          "type": "number",
+          "doc": "Fixed height in px.",
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<LogoMark variant=\"full\" color=\"color\" />",
+      "notes": "Renders an <img> tag. Height scales proportionally when set.",
+      "files": [
+        "components/core/LogoMark.jsx",
+        "components/core/LogoMark.css",
+        "components/core/LogoMark.d.ts"
+      ]
+    },
+    {
+      "name": "NavLink",
+      "group": "Core",
+      "dir": "core",
+      "summary": "Inline text link with optional dropdown caret for navigation bars.",
+      "desc": "Anchor-based nav link used in FullTopNav.",
+      "extends": null,
+      "props": [
+        {
+          "name": "href",
+          "required": false,
+          "type": "string",
+          "doc": "Link target.",
+          "def": "\"#\""
+        },
+        {
+          "name": "active",
+          "required": false,
+          "type": "boolean",
+          "doc": "Visually highlight as current page.",
+          "def": "false"
+        },
+        {
+          "name": "caret",
+          "required": false,
+          "type": "boolean",
+          "doc": "Show a dropdown caret arrow.",
+          "def": "false"
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": "Invert for dark surfaces.",
+          "def": "false"
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<NavLink href=\"/pricing\" active>Pricing</NavLink>",
+      "notes": "Labels are children. Caret indicates a dropdown menu exists.",
+      "files": [
+        "components/core/NavLink.jsx",
+        "components/core/NavLink.css",
+        "components/core/NavLink.d.ts"
+      ]
+    },
+    {
+      "name": "PlayHead",
+      "group": "Core",
+      "dir": "core",
+      "summary": "48px circular play button for video and media triggers.",
+      "desc": "Pill-shaped play button with a rotated triangle icon.",
+      "extends": "React.ButtonHTMLAttributes<HTMLButtonElement>",
+      "props": [
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": "Invert for dark surfaces.",
+          "def": "false"
+        },
+        {
+          "name": "disabled",
+          "required": false,
+          "type": "boolean",
+          "doc": "Disable interaction.",
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<PlayHead onDark={false} />\n<PlayHead onDark disabled />",
+      "notes": "Follows RoundIconButton interactive token pattern. 48px fixed size with pill radius.",
+      "files": [
+        "components/core/PlayHead.jsx",
+        "components/core/PlayHead.css",
+        "components/core/PlayHead.d.ts"
+      ]
+    },
+    {
       "name": "RoundIconButton",
       "group": "Core",
       "dir": "core",
@@ -178,6 +351,44 @@
       ]
     },
     {
+      "name": "TeamsIcon",
+      "group": "Core",
+      "dir": "core",
+      "summary": "Three-person icon for team-related features and pricing tiers.",
+      "desc": "SVG people icon with a lead figure and two side figures.",
+      "extends": null,
+      "props": [
+        {
+          "name": "size",
+          "required": false,
+          "type": "number",
+          "doc": "Width and height in px.",
+          "def": "16"
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": "Invert for dark surfaces.",
+          "def": "false"
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<TeamsIcon size={16} />",
+      "notes": "Uses fill=\"currentColor\" pattern. Colour inherits from parent.",
+      "files": [
+        "components/core/TeamsIcon.jsx",
+        "components/core/TeamsIcon.css",
+        "components/core/TeamsIcon.d.ts"
+      ]
+    },
+    {
       "name": "Checkbox",
       "group": "Forms",
       "dir": "forms",
@@ -281,7 +492,7 @@
       ]
     },
     {
-      "name": "CoreTypeLockup",
+      "name": "CoreTypeLockups",
       "group": "Patterns",
       "dir": "patterns",
       "summary": "The standard vertical text lockup \u2014 use it inside heroes, Z-layouts, footers and cards rather than hand-building headline stacks.",
@@ -387,12 +598,12 @@
           "def": null
         }
       ],
-      "example": "<CoreTypeLockup heading=\"H2\" alignment=\"center\" button includeSecondary\n  headline=\"Analytics everyone can use\" subhead=\"Answer product questions in seconds.\" />",
+      "example": "<CoreTypeLockups heading=\"H2\" alignment=\"center\" button includeSecondary\n  headline=\"Analytics everyone can use\" subhead=\"Answer product questions in seconds.\" />",
       "notes": "Max width 720px. Heading levels step down automatically at tablet and phone via `desktopSize`.",
       "files": [
-        "components/patterns/CoreTypeLockup.jsx",
-        "components/patterns/CoreTypeLockup.css",
-        "components/patterns/CoreTypeLockup.d.ts"
+        "components/patterns/CoreTypeLockups.jsx",
+        "components/patterns/CoreTypeLockups.css",
+        "components/patterns/CoreTypeLockups.d.ts"
       ]
     },
     {
@@ -504,127 +715,103 @@
       ]
     },
     {
-      "name": "LogoCarousel",
+      "name": "AddedContent",
       "group": "Patterns",
       "dir": "patterns",
-      "summary": "Customer logo strip; 36s linear loop, masked at both edges. Logo slots are 112x27 placeholders \u2014 swap in real customer marks when licensed.",
-      "desc": "Infinite-scrolling customer logo strip with edge mask.",
-      "extends": null,
+      "summary": "Flexible content slot that renders logos, quote, form, stats, or bullet list inside a section lockup.",
+      "desc": "Switchable content block for embedding supplementary content (logo strip, inline quote, email form, stat, or bullet list) within larger sections.",
+      "extends": "React.HTMLAttributes<HTMLDivElement>",
       "props": [
         {
-          "name": "includeHeadline",
+          "name": "content",
           "required": false,
-          "type": "boolean",
-          "doc": null,
-          "def": "true"
-        },
-        {
-          "name": "headline",
-          "required": false,
-          "type": "string",
-          "doc": null,
-          "def": null
+          "type": "\"logos\" | \"quote\" | \"form\" | \"stats\" | \"bullets\"",
+          "doc": "Which content variant to render.",
+          "def": "\"logos\""
         },
         {
           "name": "onDark",
           "required": false,
           "type": "boolean",
-          "doc": null,
+          "doc": "Invert for dark surfaces.",
           "def": "false"
         },
         {
-          "name": "size",
+          "name": "hue",
           "required": false,
-          "type": "\"full\" | \"tight\"",
-          "doc": "tight caps the row at 960px.",
-          "def": "\"full\""
-        },
-        {
-          "name": "stackSizing",
-          "required": false,
-          "type": "\"lg\" | \"sm\"",
-          "doc": "Vertical padding: lg = 80px, sm = 40px.",
-          "def": "\"lg\""
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Accent hue for on-dark headline tokens.",
+          "def": "\"purple\""
         },
         {
           "name": "logoCount",
           "required": false,
           "type": "number",
-          "doc": null,
-          "def": "11"
-        },
-        {
-          "name": "className",
-          "required": false,
-          "type": "string",
-          "doc": null,
-          "def": null
-        }
-      ],
-      "example": "<LogoCarousel headline=\"Trusted by 29,000+ paying customers\" />",
-      "notes": "",
-      "files": [
-        "components/patterns/LogoCarousel.jsx",
-        "components/patterns/LogoCarousel.css",
-        "components/patterns/LogoCarousel.d.ts"
-      ]
-    },
-    {
-      "name": "ProductCard",
-      "group": "Patterns",
-      "dir": "patterns",
-      "summary": "Product card \u2014 24px outer radius, 8px inner border spacing, 1:1 gradient panel, coloured glow shadow.",
-      "desc": "Wide product card: text lockup on one side, a square gradient panel on the other.",
-      "extends": null,
-      "props": [
-        {
-          "name": "background",
-          "required": false,
-          "type": "\"gray\" | \"white\" | \"dark\"",
-          "doc": "Surface the card sits on.",
-          "def": "\"gray\""
-        },
-        {
-          "name": "color",
-          "required": false,
-          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
-          "doc": "Gradient hue for the image panel.",
-          "def": "\"purple\""
-        },
-        {
-          "name": "leftAligned",
-          "required": false,
-          "type": "boolean",
-          "doc": null,
-          "def": "true"
+          "doc": "Number of logo placeholders.",
+          "def": "4"
         },
         {
           "name": "headline",
           "required": false,
           "type": "string",
-          "doc": null,
+          "doc": "Label above logos.",
+          "def": "\"Trusted by\""
+        },
+        {
+          "name": "quote",
+          "required": false,
+          "type": "string",
+          "doc": "Quote text for quote variant.",
           "def": null
         },
         {
-          "name": "subhead",
+          "name": "quoteName",
           "required": false,
           "type": "string",
-          "doc": null,
-          "def": null
+          "doc": "Attribution name.",
+          "def": "\"Full Name\""
         },
         {
-          "name": "primaryLabel",
+          "name": "quoteTitle",
           "required": false,
           "type": "string",
-          "doc": null,
-          "def": null
+          "doc": "Attribution title.",
+          "def": "\"Job Title\""
         },
         {
-          "name": "secondaryLabel",
+          "name": "items",
+          "required": false,
+          "type": "string[]",
+          "doc": "Bullet text strings.",
+          "def": "[\"Bullet point 01\",\"Bullet point 02\",\"Bullet point 03\"]"
+        },
+        {
+          "name": "value",
           "required": false,
           "type": "string",
-          "doc": null,
-          "def": null
+          "doc": "Stat value.",
+          "def": "\"00\""
+        },
+        {
+          "name": "suffix",
+          "required": false,
+          "type": "string",
+          "doc": "Stat suffix.",
+          "def": "\"X\""
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "doc": "Stat description.",
+          "def": "\"Short statement about the stat\""
+        },
+        {
+          "name": "submitLabel",
+          "required": false,
+          "type": "string",
+          "doc": "Form submit button label.",
+          "def": "\"Click Me\""
         },
         {
           "name": "className",
@@ -634,16 +821,16 @@
           "def": null
         }
       ],
-      "example": "<ProductCard color=\"pool\" background=\"gray\" headline=\"Session Replay\" />",
-      "notes": "The gradient panel stands in for product imagery. Drop a real screenshot in its place when you have one.",
+      "example": "<AddedContent content=\"logos\" />\n<AddedContent content=\"stats\" value=\"10\" suffix=\"M\" description=\"Monthly tracked users\" />\n<AddedContent content=\"bullets\" items={[\"Unlimited reports\",\"Team dashboards\",\"Data governance\"]} />",
+      "notes": "Designed to slot into CoreTypeLockups or hero sections as supplementary content. Uses Button, CircleCheck, and TextInput internally.",
       "files": [
-        "components/patterns/ProductCard.jsx",
-        "components/patterns/ProductCard.css",
-        "components/patterns/ProductCard.d.ts"
+        "components/patterns/AddedContent.jsx",
+        "components/patterns/AddedContent.css",
+        "components/patterns/AddedContent.d.ts"
       ]
     },
     {
-      "name": "ResourceCard",
+      "name": "LgResourceCards",
       "group": "Patterns",
       "dir": "patterns",
       "summary": "Full-width resource / feature card. Light variants (gray, white) use a bordered surface; the six hue variants use the dark card gradient.",
@@ -724,17 +911,90 @@
       "example": "<ResourceCard color=\"purple\" imagePosition=\"left\" alignment=\"left\" headline=\"Read the guide\" />",
       "notes": "",
       "files": [
-        "components/patterns/ResourceCard.jsx",
-        "components/patterns/ResourceCard.css",
-        "components/patterns/ResourceCard.d.ts"
+        "components/patterns/LgResourceCards.jsx",
+        "components/patterns/LgResourceCards.css",
+        "components/patterns/LgResourceCards.d.ts"
+      ]
+    },
+    {
+      "name": "MdResourceCards",
+      "group": "Patterns",
+      "dir": "patterns",
+      "summary": "Medium resource card with image, H4 headline, tag, subhead, and button lockup.",
+      "desc": "Mid-size card with an image at top and CoreTypeLockups below. Supports light, muted, and six dark hue variants.",
+      "extends": "React.HTMLAttributes<HTMLDivElement>",
+      "props": [
+        {
+          "name": "pageBackground",
+          "required": false,
+          "type": "\"light\" | \"muted\" | \"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Card surface. Hue values switch to dark gradient fill.",
+          "def": "\"light\""
+        },
+        {
+          "name": "tagText",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Text\""
+        },
+        {
+          "name": "headline",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Headline goes here\""
+        },
+        {
+          "name": "subhead",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "primaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Click Me\""
+        },
+        {
+          "name": "secondaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Click Me\""
+        },
+        {
+          "name": "children",
+          "required": false,
+          "type": "React.ReactNode",
+          "doc": "Replace the image placeholder.",
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<MdResourceCard pageBackground=\"light\" tagText=\"Resources\" headline=\"Read the guide\" />\n<MdResourceCard pageBackground=\"purple\" headline=\"Dark variant\" />",
+      "notes": "Uses CoreTypeLockups (H4) internally. Card follows standard 24px outer radius, 8px border spacing, 16px image radius.",
+      "files": [
+        "components/patterns/MdResourceCards.jsx",
+        "components/patterns/MdResourceCards.css",
+        "components/patterns/MdResourceCards.d.ts"
       ]
     },
     {
       "name": "SmResourceCard",
       "group": "Patterns",
       "dir": "patterns",
-      "summary": "Grid card \u2014 three across on desktop. 6px outer padding, 16px image radius, 24px content padding, sm buttons.",
-      "desc": "Vertical card for grids \u2014 3:2 image above a tag/headline/subhead/actions stack.",
+      "summary": "Grid card \u2014 two variants: big-image (320px image area) or icon (24px icon). H6 headline, sm buttons.",
+      "desc": "Vertical card for grids \u2014 big-image variant has a full-width image above content; icon variant has a small icon inline with the text lockup.",
       "extends": null,
       "props": [
         {
@@ -743,6 +1003,180 @@
           "type": "\"gray\" | \"white\" | \"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
           "doc": null,
           "def": "\"gray\""
+        },
+        {
+          "name": "bigImage",
+          "required": false,
+          "type": "boolean",
+          "doc": "When true, renders a 320px image area above the content. When false, renders a 24px icon.",
+          "def": "true"
+        },
+        {
+          "name": "includeButton",
+          "required": false,
+          "type": "boolean",
+          "doc": "When false, hides the action buttons.",
+          "def": "true"
+        },
+        {
+          "name": "headline",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "subhead",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "primaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "secondaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "children",
+          "required": false,
+          "type": "React.ReactNode",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<SmResourceCard color=\"gray\" bigImage={true} headline=\"Retention, explained\" />",
+      "notes": "",
+      "files": [
+        "components/patterns/SmResourceCard.jsx",
+        "components/patterns/SmResourceCard.css",
+        "components/patterns/SmResourceCard.d.ts"
+      ]
+    },
+    {
+      "name": "MdProductCards",
+      "group": "Patterns",
+      "dir": "patterns",
+      "summary": "Product card \u2014 24px outer radius, 8px inner border spacing, 1:1 gradient panel, coloured glow shadow.",
+      "desc": "Wide product card: text lockup on one side, a square gradient panel on the other.",
+      "extends": null,
+      "props": [
+        {
+          "name": "background",
+          "required": false,
+          "type": "\"gray\" | \"white\" | \"dark\"",
+          "doc": "Surface the card sits on.",
+          "def": "\"gray\""
+        },
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Gradient hue for the image panel.",
+          "def": "\"purple\""
+        },
+        {
+          "name": "leftAligned",
+          "required": false,
+          "type": "boolean",
+          "doc": null,
+          "def": "true"
+        },
+        {
+          "name": "headline",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "subhead",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "primaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "secondaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<ProductCard color=\"pool\" background=\"gray\" headline=\"Session Replay\" />",
+      "notes": "The gradient panel stands in for product imagery. Drop a real screenshot in its place when you have one.",
+      "files": [
+        "components/patterns/MdProductCards.jsx",
+        "components/patterns/MdProductCards.css",
+        "components/patterns/MdProductCards.d.ts"
+      ]
+    },
+    {
+      "name": "LgProductCard",
+      "group": "Patterns",
+      "dir": "patterns",
+      "summary": "Full-width section with a large horizontal product card. CoreTypeLockups (H3, tag, buttons) + 1:1 gradient image.",
+      "desc": "Page-level section containing a single large card with content on one side and a square gradient image on the other. Uses CoreTypeLockups internally.",
+      "extends": "React.HTMLAttributes<HTMLElement>",
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"light\" | \"default\" | \"muted\"",
+          "doc": "Neutral page surface.",
+          "def": "\"light\""
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": null,
+          "def": "false"
+        },
+        {
+          "name": "hue",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": null,
+          "def": "\"purple\""
+        },
+        {
+          "name": "imagePosition",
+          "required": false,
+          "type": "\"right\" | \"left\"",
+          "doc": null,
+          "def": "\"right\""
         },
         {
           "name": "tagText",
@@ -792,14 +1226,382 @@
           "type": "string",
           "doc": null,
           "def": null
+        },
+        {
+          "name": "desktopSize",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive viewport class",
+          "required": false
         }
       ],
-      "example": "<SmResourceCard color=\"gray\" tagText=\"Blog\" headline=\"Retention, explained\" />",
+      "example": "<LgProductCard hue=\"purple\" headline=\"Understand your users\" tagText=\"Analytics\" />",
+      "notes": "Card has colored shadow glow per hue. Image area uses product-card gradient tokens. imagePosition flips content/image sides.",
+      "files": [
+        "components/sections/LgProductCard.jsx",
+        "components/sections/LgProductCard.css",
+        "components/sections/LgProductCard.d.ts"
+      ]
+    },
+    {
+      "name": "LogoCarousel",
+      "group": "Patterns",
+      "dir": "patterns",
+      "summary": "Customer logo strip; 36s linear loop, masked at both edges. Logo slots are 112x27 placeholders \u2014 swap in real customer marks when licensed.",
+      "desc": "Infinite-scrolling customer logo strip with edge mask.",
+      "extends": null,
+      "props": [
+        {
+          "name": "includeHeadline",
+          "required": false,
+          "type": "boolean",
+          "doc": null,
+          "def": "true"
+        },
+        {
+          "name": "headline",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": null,
+          "def": "false"
+        },
+        {
+          "name": "size",
+          "required": false,
+          "type": "\"full\" | \"tight\"",
+          "doc": "tight caps the row at 960px.",
+          "def": "\"full\""
+        },
+        {
+          "name": "stackSizing",
+          "required": false,
+          "type": "\"lg\" | \"sm\"",
+          "doc": "Vertical padding: lg = 80px, sm = 40px.",
+          "def": "\"lg\""
+        },
+        {
+          "name": "logoCount",
+          "required": false,
+          "type": "number",
+          "doc": null,
+          "def": "11"
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<LogoCarousel headline=\"Trusted by 29,000+ paying customers\" />",
       "notes": "",
       "files": [
-        "components/patterns/SmResourceCard.jsx",
-        "components/patterns/SmResourceCard.css",
-        "components/patterns/SmResourceCard.d.ts"
+        "components/patterns/LogoCarousel.jsx",
+        "components/patterns/LogoCarousel.css",
+        "components/patterns/LogoCarousel.d.ts"
+      ]
+    },
+    {
+      "name": "FAQ",
+      "group": "Patterns",
+      "dir": "patterns",
+      "summary": "Single expandable FAQ row with question, answer, and plus/minus toggle.",
+      "desc": "Accordion-style FAQ item with RoundPlusButton/RoundMinusButton toggle.",
+      "extends": null,
+      "props": [
+        {
+          "name": "question",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Add question in here...\""
+        },
+        {
+          "name": "answer",
+          "required": false,
+          "type": "string",
+          "doc": "Shown when expanded.",
+          "def": null
+        },
+        {
+          "name": "open",
+          "required": false,
+          "type": "boolean",
+          "doc": "Whether this item is expanded.",
+          "def": "false"
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": "Invert for dark surfaces.",
+          "def": "false"
+        },
+        {
+          "name": "onToggle",
+          "required": false,
+          "type": "() => void",
+          "doc": "Callback to toggle open/closed.",
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<FAQ question=\"How does pricing work?\" answer=\"Plans start at...\" open />",
+      "notes": "Controlled component \u2014 parent manages which item is open via onToggle. Uses RoundPlusButton and RoundMinusButton internally.",
+      "files": [
+        "components/patterns/FAQ.jsx",
+        "components/patterns/FAQ.css",
+        "components/patterns/FAQ.d.ts"
+      ]
+    },
+    {
+      "name": "ButtonLockup",
+      "group": "Patterns",
+      "dir": "patterns",
+      "summary": "Paired primary + secondary buttons in a horizontal row.",
+      "desc": "Standard CTA button pair used across lockups and sections.",
+      "extends": null,
+      "props": [
+        {
+          "name": "size",
+          "required": false,
+          "type": "\"lg\" | \"sm\"",
+          "doc": "Button size.",
+          "def": "\"lg\""
+        },
+        {
+          "name": "includeSecondary",
+          "required": false,
+          "type": "boolean",
+          "doc": "Show the secondary button.",
+          "def": "true"
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": "Invert for dark surfaces.",
+          "def": "false"
+        },
+        {
+          "name": "primaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Get Started\""
+        },
+        {
+          "name": "secondaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Learn More\""
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<ButtonLockup size=\"lg\" primaryLabel=\"Get Started\" secondaryLabel=\"Learn More\" />",
+      "notes": "Renders Button components internally. Pass children to override the default pair.",
+      "files": [
+        "components/patterns/ButtonLockup.jsx",
+        "components/patterns/ButtonLockup.css",
+        "components/patterns/ButtonLockup.d.ts"
+      ]
+    },
+    {
+      "name": "Stat",
+      "group": "Patterns",
+      "dir": "patterns",
+      "summary": "Large stat number with suffix and description. H2 value + B1-medium suffix, B4 description.",
+      "desc": "Displays a prominent stat value with an inline suffix and a short description line below. Supports on-dark with per-hue headline colours.",
+      "extends": "React.HTMLAttributes<HTMLDivElement>",
+      "props": [
+        {
+          "name": "value",
+          "required": false,
+          "type": "string",
+          "doc": "The stat number.",
+          "def": "\"00\""
+        },
+        {
+          "name": "suffix",
+          "required": false,
+          "type": "string",
+          "doc": "Unit or label after the value.",
+          "def": "\"X\""
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "doc": "Short sentence describing the stat.",
+          "def": "\"Short statement about the stat\""
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": null,
+          "def": "false"
+        },
+        {
+          "name": "hue",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": null,
+          "def": "\"purple\""
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<Stat value=\"10\" suffix=\"M\" description=\"monthly tracked users\" />",
+      "notes": "Typography: H2 value + B1-medium suffix baseline-aligned, B4 description. On-dark uses per-hue headline tokens.",
+      "files": [
+        "components/patterns/Stat.jsx",
+        "components/patterns/Stat.css",
+        "components/patterns/Stat.d.ts"
+      ]
+    },
+    {
+      "name": "FullTopNav",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "The marketing site header. Translucent white with a blur, 1px bottom divider, sm buttons on the right.",
+      "desc": "Sticky marketing top navigation \u2014 64px tall, 80% white with an 18px backdrop blur.",
+      "extends": null,
+      "props": [
+        {
+          "name": "desktopSize",
+          "required": false,
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "doc": "Responsive tier; controls horizontal margin and which controls show.",
+          "def": "\"desktop-plus\""
+        },
+        {
+          "name": "links",
+          "required": false,
+          "type": "{ label: string; dropdown: boolean }[]",
+          "doc": "Nav items.",
+          "def": "[{label:\"Platform\",dropdown:true},{label:\"Solutions\",dropdown:true},{label:\"Resources\",dropdown:true},{label:\"Pricing\",dropdown:false}]"
+        },
+        {
+          "name": "logoSrc",
+          "required": false,
+          "type": "string",
+          "doc": "Path to the Mixpanel wordmark.",
+          "def": "\"assets/logo.svg\""
+        },
+        {
+          "name": "caretSrc",
+          "required": false,
+          "type": "string",
+          "doc": "Path to the dropdown caret icon.",
+          "def": "\"assets/icons/caret-down.svg\""
+        },
+        {
+          "name": "burgerSrc",
+          "required": false,
+          "type": "string",
+          "doc": "Path to the burger menu icon.",
+          "def": "\"assets/icons/burger-menu.svg\""
+        },
+        {
+          "name": "onNavigate",
+          "required": false,
+          "type": "(label: string) => void",
+          "doc": "Callback when a nav link is clicked.",
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<FullTopNav desktopSize=\"desktop-plus\" logoSrc=\"assets/logo.svg\" />",
+      "notes": "Tablet and phone tiers collapse the link row into the burger. Link labels are 14px medium at 70% opacity, full opacity on hover.",
+      "files": [
+        "components/sections/FullTopNav.jsx",
+        "components/sections/FullTopNav.css",
+        "components/sections/FullTopNav.d.ts"
+      ]
+    },
+    {
+      "name": "LimitedTopNav",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "Simplified top nav with logo and optional action buttons.",
+      "desc": "Minimal navigation bar without nav links. Shows logo on left with optional login link and button lockup on right.",
+      "extends": "HTMLElement",
+      "props": [
+        {
+          "name": "desktopSize",
+          "type": "\"login-primary-secondary\" | \"primary-secondary\" | \"primary\" | \"empty\"",
+          "def": "\"login-primary-secondary\"",
+          "doc": "Controls which buttons appear",
+          "required": false
+        },
+        {
+          "name": "logoSrc",
+          "type": "string",
+          "def": "\"assets/logo.svg\"",
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "primaryLabel",
+          "type": "string",
+          "def": "\"Click Me\"",
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "secondaryLabel",
+          "type": "string",
+          "def": "\"Click Me\"",
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "viewport",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive layout class",
+          "required": false
+        }
+      ],
+      "example": "<LimitedTopNav desktopSize=\"login-primary-secondary\" logoSrc=\"assets/logo.svg\" />",
+      "notes": "Uses same visual treatment as FullTopNav (blur backdrop, 64px height, border-bottom) but without nav links or burger menu.",
+      "files": [
+        "components/sections/LimitedTopNav.jsx",
+        "components/sections/LimitedTopNav.css",
+        "components/sections/LimitedTopNav.d.ts"
       ]
     },
     {
@@ -883,6 +1685,86 @@
       ]
     },
     {
+      "name": "SmHero",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "Sub-page hero. Uses the *light* hero gradient (fades to the hue at the bottom) rather than the dark homepage one.",
+      "desc": "Sub-page hero: left text lockup beside a square image, on a light vertical gradient.",
+      "extends": null,
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": null,
+          "def": "\"purple\""
+        },
+        {
+          "name": "gradientStyle",
+          "required": false,
+          "type": "\"simple\" | \"sliced\"",
+          "doc": null,
+          "def": "\"simple\""
+        },
+        {
+          "name": "desktopSize",
+          "required": false,
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "doc": null,
+          "def": "\"desktop-plus\""
+        },
+        {
+          "name": "tagText",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "headline",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "subhead",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "includeNav",
+          "required": false,
+          "type": "boolean",
+          "doc": null,
+          "def": "true"
+        },
+        {
+          "name": "children",
+          "required": false,
+          "type": "React.ReactNode",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<SmHero color=\"mint\" tagText=\"Product\" headline=\"Session Replay\" />",
+      "notes": "",
+      "files": [
+        "components/sections/SmHero.jsx",
+        "components/sections/SmHero.css",
+        "components/sections/SmHero.d.ts"
+      ]
+    },
+    {
       "name": "LgHero",
       "group": "Sections",
       "dir": "sections",
@@ -953,6 +1835,159 @@
         "components/sections/LgHero.jsx",
         "components/sections/LgHero.css",
         "components/sections/LgHero.d.ts"
+      ]
+    },
+    {
+      "name": "MdProductCardLockup",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "Product overview section \u2014 the lockup sticks at 80px while the card column scrolls.",
+      "desc": "Sticky text column beside a stacked column of ProductCards.",
+      "extends": null,
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": null,
+          "def": "\"purple\""
+        },
+        {
+          "name": "cardCount",
+          "required": false,
+          "type": "3 | 4 | 5",
+          "doc": "Ignored when cards is supplied.",
+          "def": "3"
+        },
+        {
+          "name": "cards",
+          "required": false,
+          "type": "{ color?: string; headline?: string; subhead?: string }[]",
+          "doc": "Per-card content overrides.",
+          "def": null
+        },
+        {
+          "name": "pageBackground",
+          "required": false,
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
+          "doc": null,
+          "def": "\"light\""
+        },
+        {
+          "name": "desktopSize",
+          "required": false,
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "doc": "Responsive viewport class",
+          "def": "\"desktop-plus\""
+        },
+        {
+          "name": "headline",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Headline goes here\""
+        },
+        {
+          "name": "subhead",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.\""
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        }
+      ],
+      "example": "<MdProductCardLockup color=\"pool\" cards={[{headline:\"Reports\"},{headline:\"Boards\"},{headline:\"Alerts\"}]} />",
+      "notes": "",
+      "files": [
+        "components/sections/MdProductCardLockup.jsx",
+        "components/sections/MdProductCardLockup.css",
+        "components/sections/MdProductCardLockup.d.ts"
+      ]
+    },
+    {
+      "name": "ZLayout",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "Alternating feature row with text lockup and gradient image panel.",
+      "desc": "Alternating feature row \u2014 text lockup one side, square gradient panel the other. Stack several and flip imagePosition to create a zigzag reading flow.",
+      "extends": null,
+      "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": null,
+          "def": "\"purple\""
+        },
+        {
+          "name": "imagePosition",
+          "required": false,
+          "type": "\"left\" | \"right\"",
+          "doc": null,
+          "def": "\"right\""
+        },
+        {
+          "name": "pageBackground",
+          "required": false,
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
+          "doc": null,
+          "def": "\"light\""
+        },
+        {
+          "name": "tagText",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "headline",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "subhead",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "children",
+          "required": false,
+          "type": "React.ReactNode",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "desktopSize",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive viewport class",
+          "required": false
+        }
+      ],
+      "example": "<ZLayout color=\"lava\" imagePosition=\"left\" headline=\"Warehouse Connectors\" />",
+      "notes": "",
+      "files": [
+        "components/sections/ZLayout.jsx",
+        "components/sections/ZLayout.css",
+        "components/sections/ZLayout.d.ts"
       ]
     },
     {
@@ -1071,141 +2106,82 @@
       ]
     },
     {
-      "name": "MdProductCardLockup",
+      "name": "SmContentCardLockup",
       "group": "Sections",
       "dir": "sections",
-      "summary": "Product overview section \u2014 the lockup sticks at 80px while the card column scrolls.",
-      "desc": "Sticky text column beside a stacked column of ProductCards.",
+      "summary": "Section layout of ContentCards in 1\u20135 card grids with an optional headline lockup.",
+      "desc": "Full-width section that renders ContentCards in responsive row layouts.",
       "extends": null,
       "props": [
         {
-          "name": "color",
+          "name": "cards",
           "required": false,
-          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
-          "doc": null,
-          "def": "\"purple\""
-        },
-        {
-          "name": "cardCount",
-          "required": false,
-          "type": "3 | 4 | 5",
-          "doc": "Ignored when `cards` is supplied.",
+          "type": "1 | 2 | 3 | 4 | 5",
+          "doc": "Number of cards to render.",
           "def": "3"
         },
         {
-          "name": "cards",
+          "name": "includeHeadline",
           "required": false,
-          "type": "{ color?: string",
-          "doc": "Per-card content overrides.",
-          "def": null
+          "type": "boolean",
+          "doc": "Show the headline lockup above cards.",
+          "def": "true"
+        },
+        {
+          "name": "headlineType",
+          "required": false,
+          "type": "\"left\" | \"centered\"",
+          "doc": "Headline layout style.",
+          "def": "\"left\""
+        },
+        {
+          "name": "buttonInHeadline",
+          "required": false,
+          "type": "\"primary\" | \"both\" | \"none\"",
+          "doc": "CTA buttons in the headline.",
+          "def": "\"primary\""
+        },
+        {
+          "name": "largeImage",
+          "required": false,
+          "type": "boolean",
+          "doc": "Use tall (1:2) images in cards.",
+          "def": "true"
         },
         {
           "name": "headline",
           "required": false,
           "type": "string",
           "doc": null,
-          "def": null
+          "def": "\"Headline goes here\""
         },
         {
           "name": "subhead",
           "required": false,
-          "type": "string }[]",
-          "doc": null,
-          "def": null
-        },
-        {
-          "name": "pageBackground",
-          "required": false,
-          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
-          "doc": null,
-          "def": "\"light\""
-        },
-        {
-          "name": "viewport",
-          "required": false,
-          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
-          "doc": null,
-          "def": "\"desktop-plus\""
-        },
-        {
-          "name": "className",
-          "required": false,
           "type": "string",
           "doc": null,
           "def": null
-        }
-      ],
-      "example": "<MdProductCardLockup color=\"pool\" cards={[{headline:\"Reports\"},{headline:\"Boards\"},{headline:\"Alerts\"}]} />",
-      "notes": "",
-      "files": [
-        "components/sections/MdProductCardLockup.jsx",
-        "components/sections/MdProductCardLockup.css",
-        "components/sections/MdProductCardLockup.d.ts"
-      ]
-    },
-    {
-      "name": "SmHero",
-      "group": "Sections",
-      "dir": "sections",
-      "summary": "Sub-page hero. Uses the *light* hero gradient (fades to the hue at the bottom) rather than the dark homepage one.",
-      "desc": "Sub-page hero: left text lockup beside a square image, on a light vertical gradient.",
-      "extends": null,
-      "props": [
-        {
-          "name": "color",
-          "required": false,
-          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
-          "doc": null,
-          "def": "\"purple\""
-        },
-        {
-          "name": "gradientStyle",
-          "required": false,
-          "type": "\"simple\" | \"sliced\"",
-          "doc": null,
-          "def": "\"simple\""
-        },
-        {
-          "name": "desktopSize",
-          "required": false,
-          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
-          "doc": null,
-          "def": "\"desktop-plus\""
         },
         {
           "name": "tagText",
           "required": false,
           "type": "string",
           "doc": null,
-          "def": null
+          "def": "\"Resources\""
         },
         {
-          "name": "headline",
+          "name": "items",
           "required": false,
-          "type": "string",
-          "doc": null,
-          "def": null
+          "type": "{ headline?: string; subhead?: string }[]",
+          "doc": "Per-card content.",
+          "def": "[]"
         },
         {
-          "name": "subhead",
+          "name": "pageBackground",
           "required": false,
-          "type": "string",
-          "doc": null,
-          "def": null
-        },
-        {
-          "name": "includeNav",
-          "required": false,
-          "type": "boolean",
-          "doc": null,
-          "def": "true"
-        },
-        {
-          "name": "children",
-          "required": false,
-          "type": "React.ReactNode",
-          "doc": null,
-          "def": null
+          "type": "\"light\" | \"default\" | \"muted\"",
+          "doc": "Surface colour.",
+          "def": "\"light\""
         },
         {
           "name": "className",
@@ -1213,72 +2189,65 @@
           "type": "string",
           "doc": null,
           "def": null
+        },
+        {
+          "name": "desktopSize",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive viewport class",
+          "required": false
         }
       ],
-      "example": "<SmHero color=\"mint\" tagText=\"Product\" headline=\"Session Replay\" />",
-      "notes": "",
+      "example": "<SmContentCardLockup cards={3} headline=\"Latest resources\" tagText=\"Blog\" />",
+      "notes": "Row layout: 1=[1], 2=[2], 3=[3], 4=[2,2], 5=[3,2]. Uses HorizontalCoreType or CoreTypeLockups for the headline.",
       "files": [
-        "components/sections/SmHero.jsx",
-        "components/sections/SmHero.css",
-        "components/sections/SmHero.d.ts"
+        "components/sections/SmContentCardLockup.jsx",
+        "components/sections/SmContentCardLockup.css",
+        "components/sections/SmContentCardLockup.d.ts"
       ]
     },
     {
-      "name": "TopNav",
+      "name": "FAQs",
       "group": "Sections",
       "dir": "sections",
-      "summary": "The marketing site header. Translucent white with a blur, 1px bottom divider, sm buttons on the right.",
-      "desc": "Sticky marketing top navigation \u2014 64px tall, 80% white with an 18px backdrop blur.",
+      "summary": "Accordion FAQ section with a title and expandable question-answer items.",
+      "desc": "Full-width FAQ section with FAQ accordion rows.",
       "extends": null,
       "props": [
         {
-          "name": "desktopSize",
-          "required": false,
-          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
-          "doc": "Responsive tier; controls horizontal margin and which controls show.",
-          "def": "\"desktop-plus\""
-        },
-        {
-          "name": "links",
-          "required": false,
-          "type": "{ label: string",
-          "doc": "Nav items.  / Solutions / Resources / Pricing",
-          "def": "Platform"
-        },
-        {
-          "name": "dropdown",
-          "required": false,
-          "type": "boolean }[]",
-          "doc": null,
-          "def": null
-        },
-        {
-          "name": "logoSrc",
+          "name": "title",
           "required": false,
           "type": "string",
-          "doc": "Path to the Mixpanel wordmark.  \u2014 pass a path relative to YOUR page",
-          "def": "\"assets/logo.svg\""
+          "doc": "Section heading.",
+          "def": "\"FAQs\""
         },
         {
-          "name": "caretSrc",
+          "name": "items",
+          "required": false,
+          "type": "{ question: string; answer: string }[]",
+          "doc": "FAQ entries.",
+          "def": "[{question:\"Add question in here...\",answer:\"Add answer in here...\"}]"
+        },
+        {
+          "name": "pageColor",
           "required": false,
           "type": "string",
-          "doc": null,
-          "def": null
+          "doc": "Background surface colour.",
+          "def": "\"white\""
         },
         {
-          "name": "burgerSrc",
+          "name": "onDark",
           "required": false,
-          "type": "string",
-          "doc": null,
-          "def": null
+          "type": "boolean",
+          "doc": "Invert for dark surfaces.",
+          "def": "false"
         },
         {
-          "name": "onNavigate",
+          "name": "defaultOpen",
           "required": false,
-          "type": "(label: string) => void",
-          "doc": null,
-          "def": null
+          "type": "number",
+          "doc": "Index of the initially open item.",
+          "def": "0"
         },
         {
           "name": "className",
@@ -1286,58 +2255,284 @@
           "type": "string",
           "doc": null,
           "def": null
+        },
+        {
+          "name": "desktopSize",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive viewport class",
+          "required": false
         }
       ],
-      "example": "<TopNav desktopSize=\"desktop-plus\" logoSrc=\"assets/logo.svg\" />",
-      "notes": "Tablet and phone tiers collapse the link row into the burger. Link labels are 14px medium at 70% opacity, full opacity on hover.",
+      "example": "<FAQs items={[{question:\"How does pricing work?\",answer:\"Plans start at...\"}]} />",
+      "notes": "Only one item is open at a time. Uses FAQ internally.",
       "files": [
-        "components/sections/TopNav.jsx",
-        "components/sections/TopNav.css",
-        "components/sections/TopNav.d.ts"
+        "components/sections/FAQs.jsx",
+        "components/sections/FAQs.css",
+        "components/sections/FAQs.d.ts"
       ]
     },
     {
-      "name": "ZLayout",
+      "name": "Quotes",
       "group": "Sections",
       "dir": "sections",
-      "summary": "Alternating feature row with text lockup and gradient image panel.",
-      "desc": "Alternating feature row \u2014 text lockup one side, square gradient panel the other. Stack several and flip imagePosition to create a zigzag reading flow.",
+      "summary": "Customer quote carousel with attribution and clickable logo dots.",
+      "desc": "Rotating testimonial section with blockquotes and navigation dots.",
       "extends": null,
       "props": [
         {
           "name": "color",
           "required": false,
           "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Accent hue.",
+          "def": "\"purple\""
+        },
+        {
+          "name": "quotes",
+          "required": false,
+          "type": "{ quote: string; name: string; role?: string }[]",
+          "doc": "Array of testimonials.",
+          "def": "[{quote:\"Mixpanel helps us enable our customers for success.\",name:\"Janna Sheng\",role:\"Product Manager\"}]"
+        },
+        {
+          "name": "active",
+          "required": false,
+          "type": "number",
+          "doc": "Initially active quote index.",
+          "def": "0"
+        },
+        {
+          "name": "logoCount",
+          "required": false,
+          "type": "number",
+          "doc": "Number of navigation dots.",
+          "def": "3"
+        },
+        {
+          "name": "onSelect",
+          "required": false,
+          "type": "(index: number) => void",
+          "doc": "Quote selection callback.",
+          "def": null
+        },
+        {
+          "name": "className",
+          "required": false,
+          "type": "string",
           "doc": null,
+          "def": null
+        },
+        {
+          "name": "desktopSize",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive viewport class",
+          "required": false
+        }
+      ],
+      "example": "<Quotes quotes={[{quote:\"Mixpanel changed our workflow.\",name:\"Alex\",role:\"PM\"}]} />",
+      "notes": "Pass children to add a media element beside the quote. Navigation dots act as quote selectors.",
+      "files": [
+        "components/sections/Quotes.jsx",
+        "components/sections/Quotes.css",
+        "components/sections/Quotes.d.ts"
+      ]
+    },
+    {
+      "name": "StatLockup",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "Full-width section displaying a row of Stat components with optional headline.",
+      "desc": "Page section showing 2\u20134 stat items in a flex row. Optionally includes a CoreTypeLockups (H3, center) headline above.",
+      "extends": "HTMLElement",
+      "props": [
+        {
+          "name": "color",
+          "type": "\"light\" | \"default\" | \"muted\"",
+          "def": "\"light\"",
+          "doc": "Neutral background surface",
+          "required": false
+        },
+        {
+          "name": "numberOfStats",
+          "type": "2 | 3 | 4",
+          "def": "2",
+          "doc": "Number of stat items",
+          "required": false
+        },
+        {
+          "name": "addHeadline",
+          "type": "boolean",
+          "def": "false",
+          "doc": "Show CoreTypeLockups above stats",
+          "required": false
+        },
+        {
+          "name": "tagText",
+          "type": "string",
+          "def": "\"Text\"",
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "headline",
+          "type": "string",
+          "def": "\"Headline goes here\"",
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "subhead",
+          "type": "string",
+          "def": null,
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "def": "\"00\"",
+          "doc": "Default stat value",
+          "required": false
+        },
+        {
+          "name": "suffix",
+          "type": "string",
+          "def": "\"X\"",
+          "doc": "Default stat suffix",
+          "required": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "def": "\"Short statement about the stat\"",
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "stats",
+          "type": "Array<{value, suffix, description}>",
+          "def": null,
+          "doc": "Override individual stat data",
+          "required": false
+        },
+        {
+          "name": "desktopSize",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive viewport class",
+          "required": false
+        }
+      ],
+      "example": "<StatLockup numberOfStats={3} addHeadline />",
+      "notes": "Uses Stat and CoreTypeLockups internally. Stats flex equally across the row.",
+      "files": [
+        "components/sections/StatLockup.jsx",
+        "components/sections/StatLockup.css",
+        "components/sections/StatLockup.d.ts"
+      ]
+    },
+    {
+      "name": "VideoLockup",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "Full-width section with a 16:9 video frame, play button, and optional headline.",
+      "desc": "Page section with a centered 900px video frame at 16:9 aspect ratio. PlayHead button overlays the center. Optionally includes a CoreTypeLockups (H3, center) headline above.",
+      "extends": "HTMLElement",
+      "props": [
+        {
+          "name": "color",
+          "type": "\"light\" | \"default\" | \"muted\"",
+          "def": "\"light\"",
+          "doc": "Neutral background surface",
+          "required": false
+        },
+        {
+          "name": "includeHeadline",
+          "type": "boolean",
+          "def": "false",
+          "doc": "Show CoreTypeLockups above video",
+          "required": false
+        },
+        {
+          "name": "tagText",
+          "type": "string",
+          "def": "\"Text\"",
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "headline",
+          "type": "string",
+          "def": "\"Headline goes here\"",
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "subhead",
+          "type": "string",
+          "def": null,
+          "doc": null,
+          "required": false
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "def": null,
+          "doc": "Video or image content",
+          "required": false
+        },
+        {
+          "name": "desktopSize",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive viewport class",
+          "required": false
+        }
+      ],
+      "example": "<VideoLockup includeHeadline />",
+      "notes": "Uses PlayHead and CoreTypeLockups internally. Video frame has 16px border-radius.",
+      "files": [
+        "components/sections/VideoLockup.jsx",
+        "components/sections/VideoLockup.css",
+        "components/sections/VideoLockup.d.ts"
+      ]
+    },
+    {
+      "name": "LgContentCallout",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "Large resource callout with a framed image and CoreTypeLockups text block.",
+      "desc": "Two-column section with an image frame and a text lockup for resource promotion.",
+      "extends": null,
+      "props": [
+        {
+          "name": "pageColor",
+          "required": false,
+          "type": "string",
+          "doc": "Background surface. Dark hue names switch to dark mode.",
           "def": "\"purple\""
         },
         {
           "name": "imagePosition",
           "required": false,
           "type": "\"left\" | \"right\"",
-          "doc": null,
-          "def": "\"right\""
-        },
-        {
-          "name": "pageBackground",
-          "required": false,
-          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
-          "doc": null,
-          "def": "\"light\""
+          "doc": "Which side the image appears on.",
+          "def": "\"left\""
         },
         {
           "name": "tagText",
           "required": false,
           "type": "string",
           "doc": null,
-          "def": null
+          "def": "\"Resource\""
         },
         {
           "name": "headline",
           "required": false,
           "type": "string",
           "doc": null,
-          "def": null
+          "def": "\"Headline goes here\""
         },
         {
           "name": "subhead",
@@ -1347,11 +2542,11 @@
           "def": null
         },
         {
-          "name": "children",
+          "name": "ctaLabel",
           "required": false,
-          "type": "React.ReactNode",
-          "doc": null,
-          "def": null
+          "type": "string",
+          "doc": "Primary button label.",
+          "def": "\"Learn More\""
         },
         {
           "name": "className",
@@ -1359,14 +2554,21 @@
           "type": "string",
           "doc": null,
           "def": null
+        },
+        {
+          "name": "desktopSize",
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "def": "\"desktop-plus\"",
+          "doc": "Responsive viewport class",
+          "required": false
         }
       ],
-      "example": "<ZLayout color=\"lava\" imagePosition=\"left\" headline=\"Warehouse Connectors\" />",
-      "notes": "",
+      "example": "<LgContentCallout pageColor=\"purple\" headline=\"The definitive guide to product analytics\" />",
+      "notes": "Uses CoreTypeLockups internally. Pass children for the image frame content.",
       "files": [
-        "components/sections/ZLayout.jsx",
-        "components/sections/ZLayout.css",
-        "components/sections/ZLayout.d.ts"
+        "components/sections/LgContentCallout.jsx",
+        "components/sections/LgContentCallout.css",
+        "components/sections/LgContentCallout.d.ts"
       ]
     }
   ],

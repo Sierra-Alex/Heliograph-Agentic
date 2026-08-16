@@ -1,0 +1,65 @@
+/* ---- Base ---- */
+
+.vl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--generic-spacing-lg);
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin);
+  overflow: clip;
+  width: 100%;
+}
+
+/* ---- Video frame ---- */
+
+.vl__frame {
+  position: relative;
+  width: 900px;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--border-radius-content);
+  overflow: clip;
+}
+
+.vl__placeholder {
+  position: absolute;
+  inset: 0;
+  background: var(--surface-muted);
+  border-radius: inherit;
+}
+
+.vl__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---- Surface ---- */
+
+.vl--light {
+  background: var(--surface-light);
+}
+
+.vl--default {
+  background: var(--surface-default);
+}
+
+.vl--muted {
+  background: var(--surface-muted);
+}
+
+/* ---- Responsive ---- */
+
+.vl--desktop {
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-margin);
+}
+
+.vl--tablet {
+  padding: var(--stack-section-lg) var(--layout-grid-tablet-margin);
+}
+
+.vl--phone {
+  padding: var(--stack-section-md) var(--layout-grid-phone-margin);
+}

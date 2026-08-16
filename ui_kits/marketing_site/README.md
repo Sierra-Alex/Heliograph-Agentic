@@ -4,7 +4,7 @@ A clickable recreation of the Mixpanel marketing site built entirely from Heliog
 
 | File | Screen |
 |---|---|
-| `index.html` | Shell: sticky TopNav + page switcher + Footer |
+| `index.html` | Shell: sticky FullTopNav + page switcher + Footer |
 | `Home.jsx` | LgHero (sliced gradient), logo carousel, product card lockup, two Z-layouts |
 | `Product.jsx` | SmHero, section header, two ProductCards, dark Z-layout |
 | `Resources.jsx` | SmHero, three-up SmResourceCard grid, wide ResourceCard |

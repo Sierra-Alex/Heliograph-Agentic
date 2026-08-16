@@ -1,11 +1,11 @@
 import React from "react";
-import { CoreTypeLockup } from "../patterns/CoreTypeLockup.jsx";
+import { CoreTypeLockups } from "../patterns/CoreTypeLockups.jsx";
 import { HorizontalCoreType } from "../patterns/HorizontalCoreType.jsx";
 const cx=(...a)=>a.filter(Boolean).join(" ");
 export function LgProductSection({headline="Headline goes here",subhead,headlineLayout="centered",color="light",onDark=false,hue="purple",heading="H2",subTextBlocks=0,blocks=[],tagText="Product",primaryLabel="Get Started",secondaryLabel="Learn More",desktopSize="desktop-plus",className,children,...props}){
-  const Lockup=headlineLayout==="horizontal"?HorizontalCoreType:CoreTypeLockup;
+  const Lockup=headlineLayout==="horizontal"?HorizontalCoreType:CoreTypeLockups;
   const count=subTextBlocks||blocks.length;
-  return (<section className={cx("lps",onDark?"lps--"+hue:"lps--"+color,headlineLayout==="horizontal"&&"lps--horizontal",className)} {...props}>
+  return (<section className={cx("lps",onDark?"lps--"+hue:"lps--"+color,headlineLayout==="horizontal"&&"lps--horizontal","lps--"+desktopSize,className)} {...props}>
     <div className="lps__inner">
       <Lockup heading={heading} tag tagText={tagText} hue={hue} button includeSecondary primaryLabel={primaryLabel} secondaryLabel={secondaryLabel} onDark={onDark} headline={headline} subhead={subhead} alignment={headlineLayout==="centered"?"center":undefined} desktopSize={desktopSize} className="lps__lockup"/>
       <div className={cx("lps__panel","lps__panel--"+hue)}>{children}</div>

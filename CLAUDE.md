@@ -44,7 +44,7 @@ Garnett throughout. Type is applied with the `font` shorthand token + matching `
 font: var(--headline-h3); letter-spacing: var(--letter-spacing-negative-2);
 ```
 
-**CoreTypeLockup is the source of truth** for heading/body/spacing/button pairings:
+**CoreTypeLockups is the source of truth** for heading/body/spacing/button pairings:
 - H1, H2 → B3 body, `--generic-spacing-sm` gap, lg buttons
 - H3, H4 → B4 body, `--generic-spacing-x-sm` gap, lg buttons
 - H5, H6 → B4 body, `--generic-spacing-x-sm` gap, sm buttons
@@ -58,6 +58,31 @@ Responsive step-down: H1→H2 at tablet (808px), all headings drop one level at 
 - Spacing aliases: 8 / 16 / 24 / 32 / 40 / 80
 - Radii: 4px controls, 16px content/images, 24px cards, 40px page shells, 100px pill (buttons)
 - Cards: 8px "border spacing" inset — 24px outer card holds a 16px-round image
+
+### Responsive layout
+
+Sections use a prop-driven responsive system (not media queries) because the library viewer renders components inside a `Frame` that simulates different widths.
+
+Every section accepts a `desktopSize` prop: `"desktop-plus"` | `"desktop"` | `"tablet"` | `"phone"` (default `"desktop-plus"`). The prop maps to a CSS class `--{desktopSize}` that steps down horizontal padding to the grid margin token for that breakpoint:
+
+| Breakpoint | Margin token | Value | Breakpoint token value |
+|---|---|---|---|
+| desktop-plus | `--layout-grid-desktop-plus-margin` | 48px | 1440px |
+| desktop | `--layout-grid-desktop-margin` | 40px | 1200px |
+| tablet | `--layout-grid-tablet-margin` | 32px | 808px |
+| phone | `--layout-grid-phone-margin` | 16px | 384px |
+
+CSS pattern for each section:
+```css
+.prefix { padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin); }
+.prefix--desktop { padding: var(--stack-section-lg) var(--layout-grid-desktop-margin); }
+.prefix--tablet  { padding: var(--stack-section-lg) var(--layout-grid-tablet-margin); }
+.prefix--phone   { padding: var(--stack-section-md) var(--layout-grid-phone-margin); }
+```
+
+At tablet/phone, multi-column layouts (card rows, side-by-side content) should collapse to `flex-direction: column`.
+
+When creating a new section, always include all four breakpoint tiers in both CSS and JSX.
 
 ### Elevation
 
@@ -81,7 +106,7 @@ Never place more than four cards in a single row. If more, the row must wrap.
 - Add emoji anywhere — not in copy, icons, or component defaults
 - Use exclamation marks, rhetorical questions, or "unlock/supercharge/revolutionise" in copy
 - Use `justify-content: center` on preview containers — previews must be left-aligned with `transform-origin: top left`
-- Change InlineStat typography — H3 value + B2-medium suffix is the spec
+- Change Stat typography — H2 value + B1-medium suffix is the spec
 - Hard-code font sizes — always use heading/body tokens
 
 ## Copy and voice
@@ -98,10 +123,10 @@ Never place more than four cards in a single row. If more, the row must wrap.
 Each component has four files: `Name.jsx`, `Name.css`, `Name.d.ts`, `Name.prompt.md`.
 
 Components are organised into:
-- **`components/core/`** — Button, Tag, NavLink, LogoMark, CircleCheck, TeamsIcon, RoundIconButton, RoundPlusButton, RoundMinusButton
+- **`components/core/`** — Button, Tag, NavLink, LogoMark, CircleCheck, TeamsIcon, RoundIconButton, RoundPlusButton, RoundMinusButton, PlayHead
 - **`components/forms/`** — Checkbox, Radio, Toggle, TextInput
-- **`components/patterns/`** — CoreTypeLockup, HorizontalCoreType, ProductCard, ResourceCard, SmResourceCard, LogoCarousel, ButtonLockup, FaqItem, ImageRatio, ContentCard, FormLockup, CarouselStep, LayoutGrid, CustomerLogo, HeroImage, BulletList, SmProductCard, InlineQuote, InlineStat, InlineLogos
-- **`components/sections/`** — TopNav, LgHero, SmHero, ZLayout, MdProductCardLockup, Footer, Faqs, FullWidthHeadline, HorizontalHeadline, ResourceCardLockup, LgProductCarousel, MdProductCarousel, QuoteCarousel, LgProductSection, LgResourceCallout, ContentCardLockup
+- **`components/patterns/`** — CoreTypeLockups, HorizontalCoreType, AddedContent, LgResourceCards, MdResourceCards, SmResourceCard, MdProductCards, LogoCarousel, FAQ, ButtonLockup, Stat, ImageRatio, ContentCard, FormLockup, CarouselStep, LayoutGrid, CustomerLogo, HeroImage, BulletList, SmProductCard
+- **`components/sections/`** — FullTopNav, LimitedTopNav, Footer, SmHero, LgHero, MdProductCardLockup, ZLayout, LgProductSection, SmContentCardLockup, FAQs, Quotes, StatLockup, VideoLockup, LgContentCallout, LgProductCard
 
 ### Update checklist
 

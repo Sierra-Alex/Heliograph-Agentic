@@ -1,0 +1,80 @@
+/* ---- Base ---- */
+
+.mrc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--generic-spacing-xx-sm);
+  padding: var(--inset-card-border-spacing);
+  border: var(--standard) solid var(--cards-on-light-border);
+  border-radius: var(--border-radius-sm-outer);
+  overflow: clip;
+  width: 100%;
+}
+
+/* ---- Image ---- */
+
+.mrc__image {
+  position: relative;
+  aspect-ratio: 2 / 1;
+  border-radius: var(--border-radius-content);
+  overflow: clip;
+}
+
+.mrc__image-placeholder {
+  position: absolute;
+  inset: 0;
+  background: var(--surface-muted);
+  border-radius: inherit;
+}
+
+/* ---- Content ---- */
+
+.mrc__content {
+  padding: var(--generic-spacing-sm);
+}
+
+/* ---- Light ---- */
+
+.mrc--light {
+  background: var(--cards-on-light-fill-on-white);
+  border-color: var(--cards-on-light-border);
+}
+
+/* ---- Muted ---- */
+
+.mrc--muted {
+  background: var(--cards-on-light-fill-on-gray);
+  border-color: var(--cards-on-light-border);
+}
+
+/* ---- Dark hue fills ---- */
+
+.mrc--purple {
+  background: var(--cards-on-dark-fill-purple);
+  border-color: var(--cards-on-dark-border);
+}
+
+.mrc--pool {
+  background: var(--cards-on-dark-fill-pool);
+  border-color: var(--cards-on-dark-border);
+}
+
+.mrc--mint {
+  background: var(--cards-on-dark-fill-mint);
+  border-color: var(--cards-on-dark-border);
+}
+
+.mrc--lava {
+  background: var(--cards-on-dark-fill-lava);
+  border-color: var(--cards-on-dark-border);
+}
+
+.mrc--mustard {
+  background: var(--cards-on-dark-fill-mustard);
+  border-color: var(--cards-on-dark-border);
+}
+
+.mrc--grass {
+  background: var(--cards-on-dark-fill-grass);
+  border-color: var(--cards-on-dark-border);
+}

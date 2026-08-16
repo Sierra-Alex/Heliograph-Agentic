@@ -14,6 +14,8 @@ export interface ZLayoutProps {
   subhead?: string;
   /** Content rendered inside the image panel. Gradient shows behind. */
   children?: React.ReactNode;
+  /** @default "desktop-plus" */
+  desktopSize?: "desktop-plus" | "desktop" | "tablet" | "phone";
   className?: string;
 }
 export function ZLayout(props: ZLayoutProps): JSX.Element;

@@ -12,12 +12,12 @@
 <script type="text/babel" src="./Resources.jsx"></script>
 <script type="text/babel" src="./Pricing.jsx"></script>
 <script type="text/babel">
-const {TopNav,Footer}=window.HeliographMixpanelDesignSystem_8500f4;
+const {FullTopNav,Footer}=window.HeliographMixpanelDesignSystem_8500f4;
 function Site(){
   const [page,setPage]=React.useState("Platform");
   const Page={Platform:window.HomePage,Solutions:window.ProductPage,Resources:window.ResourcesPage,Pricing:window.PricingPage}[page]||window.HomePage;
   return (<div className="kit">
-    <div className="kit-nav"><TopNav desktopSize="desktop-plus" logoSrc="../../assets/logo.svg" caretSrc="../../assets/icons/caret-down.svg" burgerSrc="../../assets/icons/burger-menu.svg" onNavigate={setPage}/></div>
+    <div className="kit-nav"><FullTopNav desktopSize="desktop-plus" logoSrc="../../assets/logo.svg" caretSrc="../../assets/icons/caret-down.svg" burgerSrc="../../assets/icons/burger-menu.svg" onNavigate={setPage}/></div>
     <Page/>
     <Footer color={page==="Pricing"?"pool":"purple"} logoSrc="../../assets/mixpanel-logo.svg" ctaHeadline="Ready to see what your product data can do?" ctaSubhead="Start free with 1M monthly events. No credit card required."/>
   </div>);
