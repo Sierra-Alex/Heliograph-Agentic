@@ -105,14 +105,16 @@ Components are organised into:
 
 ### Update checklist
 
-When modifying a component, update **all** of:
+When adding or modifying a component, update **all** of:
 1. `Name.jsx` — source component
 2. `Name.css` — styles
 3. `Name.d.ts` — TypeScript props contract
 4. `_ds_bundle.js` — pre-compiled bundle (must stay in sync with JSX)
 5. `library-data.json` — component metadata for the library viewer
-6. `index.html` — if preview or destructuring references changed
+6. `index.html` — **always** add/update the preview tile (destructuring + PREVIEW entry)
 7. `section.html` — if preview background rules needed
+
+Every new component must appear in `index.html` with a live preview tile. Every prop or name change must update the existing tile. The library index is the single source of truth for what exists in the system — if it's not in `index.html`, it doesn't exist.
 
 ### Preview backgrounds (section.html)
 

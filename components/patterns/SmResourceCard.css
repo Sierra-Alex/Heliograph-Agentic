@@ -16,7 +16,7 @@
 
 .src__image {
   position: relative;
-  aspect-ratio: 1 / 2;
+  aspect-ratio: 2 / 1;
   border-radius: var(--border-radius-content);
   overflow: clip;
 }

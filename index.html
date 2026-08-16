@@ -112,7 +112,7 @@ pre{margin:0;padding:14px 16px;border-radius:12px;background:#150040;color:#e8e6
 </head><body><div id="root"></div>
 <script type="text/babel">
 const NS=window.HeliographMixpanelDesignSystem_8500f4;
-const {Button,RoundIconButton,RoundPlusButton,RoundMinusButton,Tag,Checkbox,Radio,Toggle,TextInput,CoreTypeLockup,HorizontalCoreType,LogoCarousel,ProductCard,ResourceCard,SmResourceCard,Footer,LgHero,MdProductCardLockup,SmHero,TopNav,ZLayout}=NS;
+const {Button,RoundIconButton,RoundPlusButton,RoundMinusButton,Tag,Checkbox,Radio,Toggle,TextInput,CoreTypeLockup,HorizontalCoreType,LogoCarousel,ProductCard,ResourceCard,SmResourceCard,Footer,LgHero,LgProductSection,MdProductCardLockup,SmHero,TopNav,ZLayout}=NS;
 const {useState,useEffect,useMemo,useRef,useLayoutEffect}=React;
 
 /* Per-component preview: [designWidth|null, node]. null width = flows at natural size with padding. */
@@ -137,6 +137,7 @@ const PREVIEW={
   LgHero:[1440,<LgHero color="purple" includeNav={false} tagText="Platform" headline="Headline goes here"/>],
   SmHero:[1440,<SmHero color="mint" includeNav={false} tagText="Product" headline="Headline goes here"/>],
   ZLayout:[1440,<ZLayout color="pool" imagePosition="left" pageBackground="standard"/>],
+  LgProductSection:[1440,<LgProductSection hue="purple" headline="Headline goes here" tagText="Platform"/>],
   MdProductCardLockup:[1440,<MdProductCardLockup color="lava"/>],
   Footer:[1440,<Footer color="purple" logoSrc="assets/mixpanel-logo.svg" includeCta={false}/>],
 };

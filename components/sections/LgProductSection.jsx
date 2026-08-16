@@ -1,14 +1,14 @@
 import React from "react";
 const cx=(...a)=>a.filter(Boolean).join(" ");
-export function LgProductSection({headline="Headline goes here",subhead,headlineLayout="centered",surfaceColor="light",color="purple",subTextBlocks=0,blocks=[],tagText="Product",className,children,...props}){
+export function LgProductSection({headline="Headline goes here",subhead,headlineLayout="centered",color="light",onDark=false,hue="purple",heading="H2",subTextBlocks=0,blocks=[],tagText="Product",primaryLabel="Get Started",secondaryLabel="Learn More",desktopSize="desktop-plus",className,children,...props}){
   const NS=window.HeliographMixpanelDesignSystem_8500f4||{};
   const {CoreTypeLockup,HorizontalCoreType}=NS;
   const Lockup=headlineLayout==="horizontal"?HorizontalCoreType:CoreTypeLockup;
   const count=subTextBlocks||blocks.length;
-  return (<section className={cx("lps","lps--"+surfaceColor,className)} {...props}>
+  return (<section className={cx("lps",onDark?"lps--"+hue:"lps--"+color,headlineLayout==="horizontal"&&"lps--horizontal",className)} {...props}>
     <div className="lps__inner">
-      {Lockup&&<Lockup heading="H2" tag tagText={tagText} button headline={headline} subhead={subhead} alignment={headlineLayout==="centered"?"center":undefined} className="lps__lockup"/>}
-      <div className={cx("lps__panel","lps__panel--"+color)}>{children}</div>
+      {Lockup&&<Lockup heading={heading} tag tagText={tagText} hue={hue} button includeSecondary primaryLabel={primaryLabel} secondaryLabel={secondaryLabel} onDark={onDark} headline={headline} subhead={subhead} alignment={headlineLayout==="centered"?"center":undefined} desktopSize={desktopSize} className="lps__lockup"/>}
+      <div className={cx("lps__panel","lps__panel--"+hue)}>{children}</div>
       {count>0&&<div className="lps__blocks">
         {Array.from({length:count}).map((_,i)=>(<div className="lps__block" key={i}>
           <h3 className="lps__block-headline">{(blocks[i]&&blocks[i].headline)||"Headline goes here"}</h3>

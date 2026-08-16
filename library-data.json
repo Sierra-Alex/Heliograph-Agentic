@@ -425,6 +425,13 @@
           "def": null
         },
         {
+          "name": "hue",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Accent hue \u2014 drives tag color and on-dark headline tint.",
+          "def": "\"purple\""
+        },
+        {
           "name": "button",
           "required": false,
           "type": "boolean",
@@ -437,6 +444,13 @@
           "type": "boolean",
           "doc": null,
           "def": null
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": null,
+          "def": "false"
         },
         {
           "name": "headline",
@@ -939,6 +953,121 @@
         "components/sections/LgHero.jsx",
         "components/sections/LgHero.css",
         "components/sections/LgHero.d.ts"
+      ]
+    },
+    {
+      "name": "LgProductSection",
+      "group": "Sections",
+      "dir": "sections",
+      "summary": "Large product section: headline lockup above a 2:1 gradient panel with optional sub-text blocks.",
+      "desc": "Large product section with headline lockup, gradient panel, and optional caption blocks. Supports centered and horizontal layouts with the standard light/dark surface pattern.",
+      "extends": "React.HTMLAttributes<HTMLElement>",
+      "props": [
+        {
+          "name": "headline",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Headline goes here\""
+        },
+        {
+          "name": "subhead",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "headlineLayout",
+          "required": false,
+          "type": "\"centered\" | \"horizontal\"",
+          "doc": "Centred lockup or headline-left with button right.",
+          "def": "\"centered\""
+        },
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"light\" | \"default\" | \"muted\"",
+          "doc": "Background surface.",
+          "def": "\"light\""
+        },
+        {
+          "name": "onDark",
+          "required": false,
+          "type": "boolean",
+          "doc": null,
+          "def": "false"
+        },
+        {
+          "name": "hue",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Accent hue \u2014 drives on-dark surface, panel gradient, and tag color.",
+          "def": "\"purple\""
+        },
+        {
+          "name": "heading",
+          "required": false,
+          "type": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\"",
+          "doc": "Heading level passed to the lockup.",
+          "def": "\"H2\""
+        },
+        {
+          "name": "subTextBlocks",
+          "required": false,
+          "type": "0 | 1 | 2 | 3",
+          "doc": "How many caption blocks sit under the panel.",
+          "def": "0"
+        },
+        {
+          "name": "blocks",
+          "required": false,
+          "type": "{ headline?: string; subhead?: string }[]",
+          "doc": null,
+          "def": null
+        },
+        {
+          "name": "tagText",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Product\""
+        },
+        {
+          "name": "primaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Get Started\""
+        },
+        {
+          "name": "secondaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Learn More\""
+        },
+        {
+          "name": "desktopSize",
+          "required": false,
+          "type": "\"desktop-plus\" | \"desktop\" | \"tablet\" | \"phone\"",
+          "doc": "Drives the responsive heading step-down.",
+          "def": "\"desktop-plus\""
+        },
+        {
+          "name": "children",
+          "required": false,
+          "type": "React.ReactNode",
+          "doc": "Content for the gradient panel.",
+          "def": null
+        }
+      ],
+      "example": "<LgProductSection hue=\"purple\" headline=\"Headline goes here\" tagText=\"Platform\" />",
+      "notes": "",
+      "files": [
+        "components/sections/LgProductSection.jsx",
+        "components/sections/LgProductSection.css",
+        "components/sections/LgProductSection.d.ts"
       ]
     },
     {

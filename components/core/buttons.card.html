@@ -7,11 +7,11 @@
 <style>body{background:var(--surface-light);padding:32px;display:flex;flex-direction:column;gap:28px}.row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.dark{background:var(--surface-purple-dark);border-radius:24px;padding:24px}</style>
 </head><body><div id="root"></div>
 <script type="text/babel">
-const {Button,RoundIconButton,RoundPlusButton,RoundMinusButton,Tag}=window.HeliographMixpanelDesignSystem_8500f4;
+const {Button,RoundIconButton,RoundPlusButton,RoundMinusButton,PlayHead,Tag}=window.HeliographMixpanelDesignSystem_8500f4;
 function App(){return(<>
 <div className="row"><Button>Get Started</Button><Button variant="secondary">Learn More</Button><Button variant="tertiary">Read Docs</Button><Button disabled>Disabled</Button></div>
-<div className="row"><Button size="sm">Get Started</Button><Button size="sm" variant="secondary">Get Demo</Button><Button size="sm" variant="tertiary">Docs</Button><RoundIconButton direction="left"/><RoundIconButton direction="right"/><RoundPlusButton/><RoundMinusButton/><RoundIconButton size="sm" direction="right"/><RoundPlusButton size="sm"/></div>
-<div className="row dark"><Button onDark>Get Started</Button><Button onDark variant="secondary">Learn More</Button><Button onDark variant="tertiary">Docs</Button><RoundIconButton onDark direction="right"/></div>
+<div className="row"><Button size="sm">Get Started</Button><Button size="sm" variant="secondary">Get Demo</Button><Button size="sm" variant="tertiary">Docs</Button><RoundIconButton direction="left"/><RoundIconButton direction="right"/><RoundPlusButton/><RoundMinusButton/><RoundIconButton size="sm" direction="right"/><RoundPlusButton size="sm"/><PlayHead/></div>
+<div className="row dark"><Button onDark>Get Started</Button><Button onDark variant="secondary">Learn More</Button><Button onDark variant="tertiary">Docs</Button><RoundIconButton onDark direction="right"/><PlayHead onDark/></div>
 <div className="row">{["purple","pool","mint","lava","peach","mustard","grass"].map(c=><Tag key={c} color={c}>{c}</Tag>)}</div>
 <div className="row dark">{["purple","pool","mint","lava","peach","mustard","grass"].map(c=><Tag key={c} color={c} size="sm" onDark>{c}</Tag>)}</div>
 </>);}

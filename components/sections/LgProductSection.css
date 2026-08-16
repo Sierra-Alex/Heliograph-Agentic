@@ -1,4 +1,4 @@
-/* lg product section — Figma node 1191:20609 */
+/* ---- Base ---- */
 
 .lps {
   display: flex;
@@ -7,8 +7,11 @@
   background: var(--surface-light);
 }
 
+/* ---- Surface ---- */
+
 .lps--default { background: var(--surface-default); }
 .lps--muted { background: var(--surface-muted); }
+
 .lps--purple { background: var(--surface-purple-dark); }
 .lps--pool { background: var(--surface-pool-dark); }
 .lps--mint { background: var(--surface-mint-dark); }
@@ -16,29 +19,36 @@
 .lps--mustard { background: var(--surface-mustard-dark); }
 .lps--grass { background: var(--surface-grass-dark); }
 
+/* ---- Inner ---- */
+
 .lps__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--generic-spacing-lg);
-  align-self: stretch;
-  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-plus-margin);
+  width: 100%;
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin);
 }
 
+/* ---- Lockup ---- */
+
 .lps__lockup {
-  align-self: stretch;
+  width: 100%;
   max-width: 960px;
 }
 
+.lps--horizontal .lps__lockup {
+  max-width: none;
+}
+
+/* ---- Panel ---- */
+
 .lps__panel {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  gap: var(--generic-spacing-xx-sm);
-  align-self: stretch;
+  justify-content: center;
+  width: 100%;
   aspect-ratio: 2 / 1;
-  padding: var(--generic-spacing-lg);
   border-radius: var(--border-radius-content);
   overflow: hidden;
 }
@@ -48,6 +58,7 @@
 .lps__panel--mint { background: var(--container-fill-gradient-product-card-mint); }
 .lps__panel--lava { background: var(--container-fill-gradient-product-card-lava); }
 .lps__panel--mustard { background: var(--container-fill-gradient-product-card-mustard); }
+.lps__panel--grass { background: var(--container-fill-gradient-product-card-mustard-copy); }
 
 .lps__panel > img {
   display: block;
@@ -56,24 +67,26 @@
   object-fit: cover;
 }
 
+/* ---- Sub-text blocks ---- */
+
 .lps__blocks {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(0, 1fr);
-  gap: var(--generic-spacing-lg);
-  align-self: stretch;
+  display: flex;
+  gap: var(--generic-spacing-sm);
+  align-items: flex-start;
+  width: 100%;
 }
 
 .lps__block {
+  flex: 1 0 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--generic-spacing-xx-sm);
+  gap: var(--generic-spacing-x-sm);
 }
 
 .lps__block-headline {
   margin: 0;
   font: var(--headline-h5);
-  font-size: 18px;
   color: var(--text-on-light-headline);
 }
 
@@ -82,8 +95,9 @@
   font: var(--body-b4);
   letter-spacing: var(--letter-spacing-2);
   color: var(--text-on-light-body);
-  text-wrap: pretty;
 }
+
+/* ---- Dark block text ---- */
 
 .lps--purple .lps__block-headline,
 .lps--pool .lps__block-headline,

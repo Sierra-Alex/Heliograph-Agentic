@@ -43,8 +43,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 900px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 980px;
   position: relative;
 }
 

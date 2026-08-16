@@ -2,7 +2,6 @@
 
 .mpcl {
   padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin);
-  overflow: clip;
 }
 
 .mpcl__inner {

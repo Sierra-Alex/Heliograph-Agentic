@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"HeliographMixpanelDesignSystem_8500f4","components":[{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"CircleCheck","sourcePath":"components/core/CircleCheck.jsx"},{"name":"LogoMark","sourcePath":"components/core/LogoMark.jsx"},{"name":"NavLink","sourcePath":"components/core/NavLink.jsx"},{"name":"RoundIconButton","sourcePath":"components/core/RoundIconButton.jsx"},{"name":"RoundMinusButton","sourcePath":"components/core/RoundMinusButton.jsx"},{"name":"RoundPlusButton","sourcePath":"components/core/RoundPlusButton.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"TeamsIcon","sourcePath":"components/core/TeamsIcon.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"TextInput","sourcePath":"components/forms/TextInput.jsx"},{"name":"Toggle","sourcePath":"components/forms/Toggle.jsx"},{"name":"BulletList","sourcePath":"components/patterns/BulletList.jsx"},{"name":"ButtonLockup","sourcePath":"components/patterns/ButtonLockup.jsx"},{"name":"CarouselStep","sourcePath":"components/patterns/CarouselStep.jsx"},{"name":"ContentCard","sourcePath":"components/patterns/ContentCard.jsx"},{"name":"CoreTypeLockup","sourcePath":"components/patterns/CoreTypeLockup.jsx"},{"name":"CustomerLogo","sourcePath":"components/patterns/CustomerLogo.jsx"},{"name":"FaqItem","sourcePath":"components/patterns/FaqItem.jsx"},{"name":"FormLockup","sourcePath":"components/patterns/FormLockup.jsx"},{"name":"HeroImage","sourcePath":"components/patterns/HeroImage.jsx"},{"name":"HorizontalCoreType","sourcePath":"components/patterns/HorizontalCoreType.jsx"},{"name":"ImageRatio","sourcePath":"components/patterns/ImageRatio.jsx"},{"name":"LayoutGrid","sourcePath":"components/patterns/LayoutGrid.jsx"},{"name":"LogoCarousel","sourcePath":"components/patterns/LogoCarousel.jsx"},{"name":"ProductCard","sourcePath":"components/patterns/ProductCard.jsx"},{"name":"ResourceCard","sourcePath":"components/patterns/ResourceCard.jsx"},{"name":"SmProductCard","sourcePath":"components/patterns/SmProductCard.jsx"},{"name":"SmResourceCard","sourcePath":"components/patterns/SmResourceCard.jsx"},{"name":"ContentCardLockup","sourcePath":"components/sections/ContentCardLockup.jsx"},{"name":"Faqs","sourcePath":"components/sections/Faqs.jsx"},{"name":"Footer","sourcePath":"components/sections/Footer.jsx"},{"name":"FullWidthHeadline","sourcePath":"components/sections/FullWidthHeadline.jsx"},{"name":"HorizontalHeadline","sourcePath":"components/sections/HorizontalHeadline.jsx"},{"name":"LgHero","sourcePath":"components/sections/LgHero.jsx"},{"name":"LgProductCarousel","sourcePath":"components/sections/LgProductCarousel.jsx"},{"name":"LgProductSection","sourcePath":"components/sections/LgProductSection.jsx"},{"name":"LgResourceCallout","sourcePath":"components/sections/LgResourceCallout.jsx"},{"name":"MdProductCardLockup","sourcePath":"components/sections/MdProductCardLockup.jsx"},{"name":"MdProductCarousel","sourcePath":"components/sections/MdProductCarousel.jsx"},{"name":"QuoteCarousel","sourcePath":"components/sections/QuoteCarousel.jsx"},{"name":"ResourceCardLockup","sourcePath":"components/sections/ResourceCardLockup.jsx"},{"name":"SmHero","sourcePath":"components/sections/SmHero.jsx"},{"name":"TopNav","sourcePath":"components/sections/TopNav.jsx"},{"name":"ZLayout","sourcePath":"components/sections/ZLayout.jsx"}],"sourceHashes":{"components/core/Button.jsx":"d1ced39f3b38","components/core/CircleCheck.jsx":"249e51ed79d3","components/core/LogoMark.jsx":"efa608faea36","components/core/NavLink.jsx":"2129bbeff7e6","components/core/RoundIconButton.jsx":"ae873660963b","components/core/RoundMinusButton.jsx":"74c261177f81","components/core/RoundPlusButton.jsx":"0dccd5be593f","components/core/Tag.jsx":"8667f5e90c32","components/core/TeamsIcon.jsx":"9cf3cc19596c","components/forms/Checkbox.jsx":"f4306c9159bb","components/forms/Radio.jsx":"4e9365a059f3","components/forms/TextInput.jsx":"fe4d57a126eb","components/forms/Toggle.jsx":"17e87865911a","components/patterns/BulletList.jsx":"5e3a96b1f52d","components/patterns/ButtonLockup.jsx":"2d70b5fdf268","components/patterns/CarouselStep.jsx":"3ec4811d9c57","components/patterns/ContentCard.jsx":"0fc5d3aa0ef7","components/patterns/CoreTypeLockup.jsx":"401f97ad2f2f","components/patterns/CustomerLogo.jsx":"f2a687bf74e0","components/patterns/FaqItem.jsx":"6b641cae0f3b","components/patterns/FormLockup.jsx":"59d0a6ec9ffb","components/patterns/HeroImage.jsx":"b9a08aa7450f","components/patterns/HorizontalCoreType.jsx":"cf6b70a5d548","components/patterns/ImageRatio.jsx":"2d6e8ffd1b85","components/patterns/LayoutGrid.jsx":"997ff94854e9","components/patterns/LogoCarousel.jsx":"ec62cd5a97f9","components/patterns/ProductCard.jsx":"e331eb3cc667","components/patterns/ResourceCard.jsx":"1ea6afd9dfbd","components/patterns/SmProductCard.jsx":"ba0db1490474","components/patterns/SmResourceCard.jsx":"47d7d19ab9b8","components/sections/ContentCardLockup.jsx":"bb70f24934c5","components/sections/Faqs.jsx":"73d0996eff64","components/sections/Footer.jsx":"ee83cadcc2fd","components/sections/FullWidthHeadline.jsx":"8682ba81912b","components/sections/HorizontalHeadline.jsx":"55dcd5b18525","components/sections/LgHero.jsx":"8909b6ebd454","components/sections/LgProductCarousel.jsx":"0219714bc062","components/sections/LgProductSection.jsx":"57361928dc85","components/sections/LgResourceCallout.jsx":"b95565d34857","components/sections/MdProductCardLockup.jsx":"4527f0f1b09d","components/sections/MdProductCarousel.jsx":"748293dcb584","components/sections/QuoteCarousel.jsx":"897dc806743c","components/sections/ResourceCardLockup.jsx":"d261513cc205","components/sections/SmHero.jsx":"dea53cf4a697","components/sections/TopNav.jsx":"707229ec3c0b","components/sections/ZLayout.jsx":"a00247eac14a","ui_kits/marketing_site/Home.jsx":"220c2fbd10f0","ui_kits/marketing_site/Pricing.jsx":"e0c55a7a91b2","ui_kits/marketing_site/Product.jsx":"cb225a520fa8","ui_kits/marketing_site/Resources.jsx":"196922f7d084"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"HeliographMixpanelDesignSystem_8500f4","components":[{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"CircleCheck","sourcePath":"components/core/CircleCheck.jsx"},{"name":"LogoMark","sourcePath":"components/core/LogoMark.jsx"},{"name":"NavLink","sourcePath":"components/core/NavLink.jsx"},{"name":"RoundIconButton","sourcePath":"components/core/RoundIconButton.jsx"},{"name":"RoundMinusButton","sourcePath":"components/core/RoundMinusButton.jsx"},{"name":"RoundPlusButton","sourcePath":"components/core/RoundPlusButton.jsx"},{"name":"PlayHead","sourcePath":"components/core/PlayHead.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"TeamsIcon","sourcePath":"components/core/TeamsIcon.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"TextInput","sourcePath":"components/forms/TextInput.jsx"},{"name":"Toggle","sourcePath":"components/forms/Toggle.jsx"},{"name":"BulletList","sourcePath":"components/patterns/BulletList.jsx"},{"name":"ButtonLockup","sourcePath":"components/patterns/ButtonLockup.jsx"},{"name":"CarouselStep","sourcePath":"components/patterns/CarouselStep.jsx"},{"name":"ContentCard","sourcePath":"components/patterns/ContentCard.jsx"},{"name":"CoreTypeLockup","sourcePath":"components/patterns/CoreTypeLockup.jsx"},{"name":"CustomerLogo","sourcePath":"components/patterns/CustomerLogo.jsx"},{"name":"FaqItem","sourcePath":"components/patterns/FaqItem.jsx"},{"name":"FormLockup","sourcePath":"components/patterns/FormLockup.jsx"},{"name":"HeroImage","sourcePath":"components/patterns/HeroImage.jsx"},{"name":"HorizontalCoreType","sourcePath":"components/patterns/HorizontalCoreType.jsx"},{"name":"ImageRatio","sourcePath":"components/patterns/ImageRatio.jsx"},{"name":"LayoutGrid","sourcePath":"components/patterns/LayoutGrid.jsx"},{"name":"LogoCarousel","sourcePath":"components/patterns/LogoCarousel.jsx"},{"name":"ProductCard","sourcePath":"components/patterns/ProductCard.jsx"},{"name":"ResourceCard","sourcePath":"components/patterns/ResourceCard.jsx"},{"name":"SmProductCard","sourcePath":"components/patterns/SmProductCard.jsx"},{"name":"SmResourceCard","sourcePath":"components/patterns/SmResourceCard.jsx"},{"name":"ContentCardLockup","sourcePath":"components/sections/ContentCardLockup.jsx"},{"name":"Faqs","sourcePath":"components/sections/Faqs.jsx"},{"name":"Footer","sourcePath":"components/sections/Footer.jsx"},{"name":"FullWidthHeadline","sourcePath":"components/sections/FullWidthHeadline.jsx"},{"name":"HorizontalHeadline","sourcePath":"components/sections/HorizontalHeadline.jsx"},{"name":"LgHero","sourcePath":"components/sections/LgHero.jsx"},{"name":"LgProductCarousel","sourcePath":"components/sections/LgProductCarousel.jsx"},{"name":"LgProductSection","sourcePath":"components/sections/LgProductSection.jsx"},{"name":"LgResourceCallout","sourcePath":"components/sections/LgResourceCallout.jsx"},{"name":"MdProductCardLockup","sourcePath":"components/sections/MdProductCardLockup.jsx"},{"name":"MdProductCarousel","sourcePath":"components/sections/MdProductCarousel.jsx"},{"name":"QuoteCarousel","sourcePath":"components/sections/QuoteCarousel.jsx"},{"name":"ResourceCardLockup","sourcePath":"components/sections/ResourceCardLockup.jsx"},{"name":"SmHero","sourcePath":"components/sections/SmHero.jsx"},{"name":"TopNav","sourcePath":"components/sections/TopNav.jsx"},{"name":"ZLayout","sourcePath":"components/sections/ZLayout.jsx"}],"sourceHashes":{"components/core/Button.jsx":"d1ced39f3b38","components/core/CircleCheck.jsx":"249e51ed79d3","components/core/LogoMark.jsx":"efa608faea36","components/core/NavLink.jsx":"2129bbeff7e6","components/core/RoundIconButton.jsx":"ae873660963b","components/core/RoundMinusButton.jsx":"74c261177f81","components/core/RoundPlusButton.jsx":"0dccd5be593f","components/core/Tag.jsx":"8667f5e90c32","components/core/TeamsIcon.jsx":"9cf3cc19596c","components/forms/Checkbox.jsx":"f4306c9159bb","components/forms/Radio.jsx":"4e9365a059f3","components/forms/TextInput.jsx":"fe4d57a126eb","components/forms/Toggle.jsx":"17e87865911a","components/patterns/BulletList.jsx":"5e3a96b1f52d","components/patterns/ButtonLockup.jsx":"2d70b5fdf268","components/patterns/CarouselStep.jsx":"3ec4811d9c57","components/patterns/ContentCard.jsx":"0fc5d3aa0ef7","components/patterns/CoreTypeLockup.jsx":"401f97ad2f2f","components/patterns/CustomerLogo.jsx":"f2a687bf74e0","components/patterns/FaqItem.jsx":"6b641cae0f3b","components/patterns/FormLockup.jsx":"59d0a6ec9ffb","components/patterns/HeroImage.jsx":"b9a08aa7450f","components/patterns/HorizontalCoreType.jsx":"cf6b70a5d548","components/patterns/ImageRatio.jsx":"2d6e8ffd1b85","components/patterns/LayoutGrid.jsx":"997ff94854e9","components/patterns/LogoCarousel.jsx":"ec62cd5a97f9","components/patterns/ProductCard.jsx":"e331eb3cc667","components/patterns/ResourceCard.jsx":"1ea6afd9dfbd","components/patterns/SmProductCard.jsx":"ba0db1490474","components/patterns/SmResourceCard.jsx":"47d7d19ab9b8","components/sections/ContentCardLockup.jsx":"bb70f24934c5","components/sections/Faqs.jsx":"73d0996eff64","components/sections/Footer.jsx":"ee83cadcc2fd","components/sections/FullWidthHeadline.jsx":"8682ba81912b","components/sections/HorizontalHeadline.jsx":"55dcd5b18525","components/sections/LgHero.jsx":"8909b6ebd454","components/sections/LgProductCarousel.jsx":"0219714bc062","components/sections/LgProductSection.jsx":"57361928dc85","components/sections/LgResourceCallout.jsx":"b95565d34857","components/sections/MdProductCardLockup.jsx":"4527f0f1b09d","components/sections/MdProductCarousel.jsx":"748293dcb584","components/sections/QuoteCarousel.jsx":"897dc806743c","components/sections/ResourceCardLockup.jsx":"d261513cc205","components/sections/SmHero.jsx":"dea53cf4a697","components/sections/TopNav.jsx":"707229ec3c0b","components/sections/ZLayout.jsx":"a00247eac14a","ui_kits/marketing_site/Home.jsx":"220c2fbd10f0","ui_kits/marketing_site/Pricing.jsx":"e0c55a7a91b2","ui_kits/marketing_site/Product.jsx":"cb225a520fa8","ui_kits/marketing_site/Resources.jsx":"196922f7d084"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -314,6 +314,39 @@ function RoundPlusButton({
 }
 Object.assign(__ds_scope, { RoundPlusButton });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/RoundPlusButton.jsx", error: String((e && e.message) || e) }); }
+
+// components/core/PlayHead.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const cx = (...a) => a.filter(Boolean).join(" ");
+function PlayIcon() {
+  return /*#__PURE__*/React.createElement("span", {
+    className: "ph__icon"
+  }, /*#__PURE__*/React.createElement("svg", {
+    className: "ph__triangle",
+    width: "12.12",
+    height: "10.5",
+    viewBox: "0 0 12.1244 10.5",
+    fill: "none",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M6.06218 0L12.1244 10.5H0L6.06218 0Z",
+    fill: "currentColor"
+  })));
+}
+function PlayHead({
+  onDark = false,
+  className,
+  disabled,
+  ...props
+}) {
+  return /*#__PURE__*/React.createElement("button", _extends({
+    className: cx("ph", onDark && "ph--on-dark", className),
+    disabled: disabled
+  }, props), /*#__PURE__*/React.createElement(PlayIcon, null));
+}
+Object.assign(__ds_scope, { PlayHead });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/PlayHead.jsx", error: String((e && e.message) || e) }); }
 
 // components/core/Tag.jsx
 try { (() => {
@@ -930,8 +963,10 @@ function HorizontalCoreType({
   heading = "H1",
   tag = false,
   tagText = "Label",
+  hue = "purple",
   button = false,
   includeSecondary = true,
+  onDark = false,
   headline = "Headline goes here",
   subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
   primaryLabel = "Get Started",
@@ -943,12 +978,13 @@ function HorizontalCoreType({
   const visual = desktopSize === "tablet" ? TABLET_HEADING[heading] : desktopSize === "phone" ? PHONE_HEADING[heading] : heading;
   const buttonSize = visual === "H5" || visual === "H6" ? "sm" : "lg";
   return /*#__PURE__*/React.createElement("div", {
-    className: cx("hct", "hct--" + visual.toLowerCase(), className)
+    className: cx("hct", "hct--" + visual.toLowerCase(), onDark && "hct--on-dark", onDark && "hct--" + hue, className)
   }, /*#__PURE__*/React.createElement("div", {
     className: "hct__text"
   }, tag && /*#__PURE__*/React.createElement(__ds_scope.Tag, {
-    color: "purple",
-    size: "lg"
+    color: hue,
+    size: "lg",
+    onDark: onDark
   }, tagText), /*#__PURE__*/React.createElement(HeadingTag, {
     className: "hct__headline"
   }, headline), /*#__PURE__*/React.createElement("p", {
@@ -957,10 +993,12 @@ function HorizontalCoreType({
     className: "hct__actions"
   }, /*#__PURE__*/React.createElement(__ds_scope.Button, {
     variant: "primary",
-    size: buttonSize
+    size: buttonSize,
+    onDark: onDark
   }, primaryLabel), includeSecondary && /*#__PURE__*/React.createElement(__ds_scope.Button, {
     variant: "secondary",
-    size: buttonSize
+    size: buttonSize,
+    onDark: onDark
   }, secondaryLabel)));
 }
 Object.assign(__ds_scope, { HorizontalCoreType });
@@ -1699,11 +1737,16 @@ function LgProductSection({
   headline = "Headline goes here",
   subhead,
   headlineLayout = "centered",
-  surfaceColor = "light",
-  color = "purple",
+  color = "light",
+  onDark = false,
+  hue = "purple",
+  heading = "H2",
   subTextBlocks = 0,
   blocks = [],
   tagText = "Product",
+  primaryLabel = "Get Started",
+  secondaryLabel = "Learn More",
+  desktopSize = "desktop-plus",
   className,
   children,
   ...props
@@ -1716,20 +1759,26 @@ function LgProductSection({
   const Lockup = headlineLayout === "horizontal" ? HorizontalCoreType : CoreTypeLockup;
   const count = subTextBlocks || blocks.length;
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("lps", "lps--" + surfaceColor, className)
+    className: cx("lps", onDark ? "lps--" + hue : "lps--" + color, headlineLayout === "horizontal" && "lps--horizontal", className)
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "lps__inner"
   }, Lockup && /*#__PURE__*/React.createElement(Lockup, {
-    heading: "H2",
+    heading: heading,
     tag: true,
     tagText: tagText,
+    hue: hue,
     button: true,
+    includeSecondary: true,
+    primaryLabel: primaryLabel,
+    secondaryLabel: secondaryLabel,
+    onDark: onDark,
     headline: headline,
     subhead: subhead,
     alignment: headlineLayout === "centered" ? "center" : undefined,
+    desktopSize: desktopSize,
     className: "lps__lockup"
   }), /*#__PURE__*/React.createElement("div", {
-    className: cx("lps__panel", "lps__panel--" + color)
+    className: cx("lps__panel", "lps__panel--" + hue)
   }, children), count > 0 && /*#__PURE__*/React.createElement("div", {
     className: "lps__blocks"
   }, Array.from({
@@ -2676,6 +2725,8 @@ __ds_ns.RoundIconButton = __ds_scope.RoundIconButton;
 __ds_ns.RoundMinusButton = __ds_scope.RoundMinusButton;
 
 __ds_ns.RoundPlusButton = __ds_scope.RoundPlusButton;
+
+__ds_ns.PlayHead = __ds_scope.PlayHead;
 
 __ds_ns.Tag = __ds_scope.Tag;
 

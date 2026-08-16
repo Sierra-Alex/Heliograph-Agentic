@@ -96,3 +96,16 @@
 .hct--h6 .hct__subhead {
   font: var(--body-b4);
 }
+
+/* ---- On Dark ---- */
+
+.hct--on-dark .hct__subhead {
+  color: var(--text-on-dark-body);
+}
+
+.hct--on-dark.hct--purple .hct__headline { color: var(--text-on-dark-headline-purple); }
+.hct--on-dark.hct--pool .hct__headline { color: var(--text-on-dark-headline-pool); }
+.hct--on-dark.hct--mint .hct__headline { color: var(--text-on-dark-headline-mint); }
+.hct--on-dark.hct--lava .hct__headline { color: var(--text-on-dark-headline-lava); }
+.hct--on-dark.hct--mustard .hct__headline { color: var(--text-on-dark-headline-mustard); }
+.hct--on-dark.hct--grass .hct__headline { color: var(--text-on-dark-headline-grass); }

@@ -82,7 +82,7 @@
   --z-index-200: 200; /* @kind other */
   --z-index-300: 300; /* @kind other */
   --aspect-ratio-1-1: 1:1; /* @kind other */
-  --aspect-ratio-1-2: 1:2; /* @kind other */
+  --aspect-ratio-2-1: 2:1; /* @kind other */
   --aspect-ratio-16-9: 16:9; /* @kind other */
   --favicon-main: url("favicon-main"); /* @kind other */
   --full-logo-black: url("full-logo-black"); /* @kind other */
