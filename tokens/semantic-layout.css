@@ -73,6 +73,11 @@
   --elevation-card-default-on-light: 0 40px 36px -48px rgba(120, 86, 255, 0.3);
   --elevation-card-default-on-dark: 0 40px 24px -38px rgba(120, 86, 255, 0.3);
   --focus: 0 0 0 4px rgba(120, 86, 255, 0.3); /* @kind shadow */
+  --aspect-ratio-sm-product-image: 2:1; /* @kind other */
+  --aspect-ratio-md-product-image: 1:1; /* @kind other */
+  --aspect-ratio-lg-product-image: 2:1; /* @kind other */
+  --aspect-ratio-video: 2:1; /* @kind other */
+  --aspect-ratio-lg-resource: 3:4; /* @kind other */
   --thin: 0.5px; /* @kind spacing */
   --standard: 1px; /* @kind spacing */
   --none: 0px; /* @kind spacing */

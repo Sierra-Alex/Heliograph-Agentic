@@ -143,5 +143,5 @@ ui_kits/marketing_site/ <- four-page site recreation
 ## Known gaps
 
 - `--font-family-quote: arizona` is declared as a token but no Arizona font file exists
-- H6 (18px) and H7 (16px) exist in design but tokens only define H1–H5; components fall back to H5
+- H7 (16px) exists in design but tokens only define H1–H6; components fall back to H5 for H7
 - `blur.100` exists in `tokens.json` but was missing from Style Dictionary output; re-declared manually in `tokens/primitives.css`
