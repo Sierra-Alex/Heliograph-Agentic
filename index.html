@@ -93,9 +93,63 @@ pre{margin:0;padding:14px 16px;border-radius:12px;background:#150040;color:#e8e6
 .typerow{padding:16px 16px 14px;color:var(--text-on-light-headline);border-bottom:1px solid var(--cards-on-light-border);overflow:hidden}
 .typerow span{display:block;white-space:nowrap}
 .sizebar{height:8px;border-radius:4px;background:var(--colors-purple-05);flex-shrink:0}
+.size-icon{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer}
+.size-icon__box{width:72px;height:72px;border-radius:12px;border:1px solid var(--cards-on-light-border);background:var(--surface-light);display:flex;align-items:center;justify-content:center;transition:border-color .12s}
+.size-icon:hover .size-icon__box{border-color:var(--colors-purple-05)}
+.size-icon__bar{background:var(--colors-purple-05);border-radius:2px}
+.size-icon__label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08)}
+.size-icon__name{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;line-height:1.3;color:var(--text-on-light-headline);text-align:center;max-width:80px;overflow-wrap:anywhere}
+.size-icons{display:flex;flex-wrap:wrap;gap:14px;padding:4px 0}
 .tokname{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:1.45;color:var(--text-on-light-headline);white-space:normal;overflow-wrap:anywhere}
 .tokval{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;line-height:1.45;color:var(--colors-gray-08);white-space:normal;overflow-wrap:anywhere}
 .tokval.num{font-variant-numeric:tabular-nums;flex-shrink:0;white-space:nowrap}
+.palette{background:var(--surface-light);border:1px solid var(--cards-on-light-border);border-radius:16px;padding:20px 24px 24px}
+.palette+.palette{margin-top:12px}
+.palette__head{margin:0 0 14px;font:500 11px/1.4 garnett;letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-headline)}
+.palette__row{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}
+.palette__row--auto{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px}
+.palette__chip{display:flex;flex-direction:column;gap:5px;cursor:pointer}
+.palette__chip:hover .palette__swatch{outline:2px solid var(--colors-purple-05);outline-offset:-1px}
+.palette__swatch{height:64px;border-radius:10px;border:1px solid rgba(0,0,0,.06)}
+.palette__swatch--alpha{position:relative;overflow:hidden;background-image:linear-gradient(45deg,#e0e0e0 25%,transparent 25%),linear-gradient(-45deg,#e0e0e0 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e0e0e0 75%),linear-gradient(-45deg,transparent 75%,#e0e0e0 75%);background-size:8px 8px;background-position:0 0,0 4px,4px -4px,-4px 0}
+.palette__label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;line-height:1.3;color:var(--text-on-light-headline);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.palette__val{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;line-height:1.3;color:var(--colors-gray-08);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.palette__alpha{margin-top:14px}
+.palette__alpha-label{margin:0 0 10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08);letter-spacing:var(--letter-spacing-2)}
+.alpha-ramp{display:flex;gap:10px}
+.alpha-ramp__chip{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;flex:1 1 0;min-width:0}
+.alpha-ramp__chip:hover .alpha-ramp__swatch{outline:2px solid var(--colors-purple-05);outline-offset:-1px}
+.alpha-ramp__swatch{width:100%;aspect-ratio:1/1;border-radius:10px;border:1px solid rgba(0,0,0,.06);overflow:hidden;background-image:linear-gradient(45deg,#ccc 25%,transparent 25%),linear-gradient(-45deg,#ccc 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ccc 75%),linear-gradient(-45deg,transparent 75%,#ccc 75%);background-size:12px 12px;background-position:0 0,0 6px,6px -6px,-6px 0}
+.alpha-ramp__label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08)}
+.spacing-ramp{display:flex;align-items:flex-end;gap:10px;overflow-x:auto;padding:12px 0 4px}
+.spacing-ramp__chip{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;flex-shrink:0}
+.spacing-ramp__chip:hover .spacing-ramp__swatch{outline:2px solid var(--colors-purple-05);outline-offset:-1px}
+.spacing-ramp__swatch{background:var(--colors-gray-10);border-radius:2px}
+.spacing-ramp__label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08)}
+.radius-ramp{display:flex;align-items:flex-end;gap:16px;padding:12px 0 4px}
+.radius-ramp__chip{display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer}
+.radius-ramp__chip:hover .radius-ramp__swatch{border-color:var(--colors-purple-05)}
+.radius-ramp__swatch{width:140px;height:140px;border:1.5px solid var(--colors-gray-06);background:transparent}
+.radius-ramp__label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08)}
+.ratio-ramp{display:flex;align-items:flex-start;gap:16px;padding:12px 0 4px}
+.ratio-ramp__chip{display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;width:160px;flex-shrink:0}
+.ratio-ramp__chip:hover .ratio-ramp__swatch{outline:2px solid var(--colors-purple-05);outline-offset:-1px}
+.ratio-ramp__swatch{width:100%;border-radius:12px;background:var(--surface-muted);border:1px solid var(--cards-on-light-border)}
+.ratio-ramp__label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08)}
+.blur-ramp__swatch{width:140px;height:140px;border-radius:16px;border:1.5px solid var(--colors-gray-04);position:relative;overflow:hidden;background:#fff}
+.blur-ramp__circle{position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:100px;height:100px;border-radius:50%;background:var(--colors-purple-06)}
+.blur-ramp__frost{position:absolute;inset:0;background:rgba(255,255,255,0.4)}
+.shadow-group{display:flex;flex-direction:column;gap:24px;margin-top:12px}
+.shadow-section__head{margin:0 0 20px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:1.4;color:var(--text-on-light-body)}
+.shadow-row{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.shadow-chip{display:flex;flex-direction:column;gap:10px;cursor:pointer}
+.shadow-chip:hover .shadow-surface{outline:2px solid var(--colors-purple-05);outline-offset:-1px}
+.shadow-surface{border-radius:24px;padding:16px 16px 48px}
+.shadow-surface--light{background:var(--surface-light)}
+.shadow-card{width:100%;aspect-ratio:5/6;border-radius:16px}
+.shadow-card--light{background:var(--surface-default);border:1px solid rgba(0,0,0,.04)}
+.shadow-card--dark{border:1px solid rgba(255,255,255,.08)}
+.shadow-label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08);text-align:center}
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--surface-purple-dark);color:#fff;padding:12px 20px;border-radius:999px;font:var(--body-b5);letter-spacing:var(--letter-spacing-2);z-index:50;box-shadow:var(--shadow-glow-on-light-purple)}
 .empty{padding:28px;color:var(--colors-gray-08);font:var(--body-b5)}
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;margin-top:20px}
@@ -254,7 +308,7 @@ function Lazy({minHeight,children}){
   return <div ref={ref} style={on?undefined:{minHeight}}>{on?children:null}</div>;
 }
 
-const HUES_ORDER=["gray","purple","pool","mint","lava","peach","mustard","grass","white","black"];
+const HUES_ORDER=["purple","pool","mint","lava","peach","mustard","grass","gray","absolute","white","black"];
 function family(t){
   if(t.file==="colors.css"){
     const m=t.name.match(/^--colors-([a-z]+)/);
@@ -265,8 +319,9 @@ function family(t){
   return seg;
 }
 const FAMILY_LABEL={gray:"Gray",purple:"Purple",pool:"Pool",mint:"Mint",lava:"Lava",peach:"Peach",mustard:"Mustard",grass:"Grass",white:"White",black:"Black",
-  surface:"Surface",text:"Text",cards:"Cards",tag:"Tag",interactive:"Interactive",container:"Container fills",divider:"Dividers",status:"Status",absolute:"Absolute",other:"Other"};
-function familyRank(f){const i=HUES_ORDER.indexOf(f);return i<0?100+f.charCodeAt(0):i}
+  surface:"Surface",text:"Text",cards:"Cards",tag:"Tag",interactive:"Interactive",container:"Container fills",divider:"Dividers",status:"Status",absolute:"Absolutes",other:"Other"};
+const SEM_ORDER=["surface","text","cards","container","tag","interactive","divider","status"];
+function familyRank(f){const i=HUES_ORDER.indexOf(f);if(i>=0)return i;const s=SEM_ORDER.indexOf(f);return s>=0?50+s:100+f.charCodeAt(0)}
 function stepNum(name){const m=name.match(/-(\d+)$/);return m?parseInt(m[1],10):999}
 function isAlpha(name){return /-alpha-\d+$/.test(name)}
 function bySt3p(a,b){return stepNum(a[0].name)-stepNum(b[0].name)||a[0].name.localeCompare(b[0].name)}
@@ -313,20 +368,83 @@ function TokenChip({t,resolved,kind,maxSize,say}){
   }
   if(kind==="size"){
     const n=parseFloat(resolved)||0;
-    const w=maxSize>0?Math.max(2,Math.min(48,(n/maxSize)*48)):0;
-    return <div className="tok flat" onClick={click} title={tip}>
-      <div className="tokbody"><div className="tokname">{t.name}</div></div>
-      {/px|rem|em/.test(resolved)&&<div className="sizebar" style={{width:w}}/>}
-      <div className="tokval num">{resolved}</div>
+    const clamped=Math.max(4,Math.min(48,n));
+    return <div className="size-icon" onClick={click} title={tip}>
+      <div className="size-icon__box">
+        {/px|rem|em/.test(resolved)&&<div className="size-icon__bar" style={{width:clamped,height:clamped}}/>}
+        {!/px|rem|em/.test(resolved)&&<div className="tokval num">{resolved}</div>}
+      </div>
+      <div className="size-icon__label">{resolved}</div>
+      <div className="size-icon__name">{t.name.replace(/^--/,"")}</div>
     </div>;
   }
   return <div className="tok flat" onClick={click} title={tip}>{body}</div>;
 }
 
+function isGridToken(t){return /^--(breakpoints-|columns-|max-width-|layout-grid-)/.test(t.name)}
+function GridTable({tokens,resolvedMap,say}){
+  const TIERS=["desktop-plus","desktop","tablet","phone"];
+  const LABELS={"desktop-plus":"Desktop+",desktop:"Desktop",tablet:"Tablet",phone:"Phone"};
+  const PROPS=["breakpoint","columns","margin","gutter","max-width"];
+  const isPrim=tokens.some(t=>t.name.startsWith("--breakpoints-"));
+  const find=(tier,prop)=>{
+    if(isPrim){
+      if(prop==="breakpoint"){const v={"desktop-plus":"1440","desktop":"1200",tablet:"808",phone:"384"}[tier];return tokens.find(t=>t.name==="--breakpoints-"+v)}
+      if(prop==="columns"){const v={"desktop-plus":"12","desktop":"12",tablet:"6",phone:"2"}[tier];return tokens.find(t=>t.name==="--columns-"+v)}
+      if(prop==="max-width"){const v={"desktop-plus":"1520","desktop":"1360",tablet:"none",phone:"none"}[tier];return tokens.find(t=>t.name==="--max-width-"+v)}
+      return null;
+    }
+    return tokens.find(t=>t.name==="--layout-grid-"+tier+"-"+prop);
+  };
+  const val=t=>{if(!t)return"—";const v=(resolvedMap[t.name]||t.value);return(v==="none")?"none":v};
+  const clean=v=>v.replace("px","");
+  const cols=isPrim?["breakpoint","columns","max-width"]:PROPS.filter(p=>TIERS.some(tier=>find(tier,p)));
+  const COL_LABELS={breakpoint:"Breakpoint",columns:"Columns",margin:"Margin",gutter:"Gutter","max-width":"Max Width"};
+  const rows=TIERS.map(tier=>{
+    const cells=cols.map(p=>{const t=find(tier,p);return {token:t,value:t?clean(val(t)):"—"}});
+    return {tier,label:LABELS[tier],cells};
+  });
+  const w=Math.floor(80/cols.length)+"%";
+  return <div className="kind">
+    <div className="kindhead"><h3>Grid System</h3><span>{tokens.length}</span></div>
+    <table><thead><tr><th style={{width:"20%"}}>Tier</th>{cols.map(p=><th key={p} style={{width:w}}>{COL_LABELS[p]}</th>)}</tr></thead>
+    <tbody>{rows.map(r=><tr key={r.tier}>
+      <td>{r.label}</td>
+      {r.cells.map((c,i)=><td key={cols[i]} className="n" style={{cursor:c.token?"pointer":undefined}} onClick={c.token?()=>copy("var("+c.token.name+")",say):undefined} title={c.token?c.token.name:""}>{c.value}</td>)}
+    </tr>)}</tbody></table>
+  </div>;
+}
+
+const TYPO_SIZE_PREFIXES=["font-size","line-height","letter-spacing","font-weight","paragraph-spacing"];
+function isTypoSizeToken(t){return TYPO_SIZE_PREFIXES.some(p=>t.name==="--"+p||t.name.startsWith("--"+p+"-"))}
+function TypoSizeTable({tokens,resolvedMap,say}){
+  const groups=TYPO_SIZE_PREFIXES.map(p=>{
+    const toks=tokens.filter(t=>t.name==="--"+p||t.name.startsWith("--"+p+"-"));
+    if(!toks.length)return null;
+    toks.sort((a,b)=>{const na=parseFloat(resolvedMap[a.name]||a.value)||0,nb=parseFloat(resolvedMap[b.name]||b.value)||0;return na-nb||a.name.localeCompare(b.name)});
+    return {prefix:p,label:titleize(p),toks};
+  }).filter(Boolean);
+  const total=tokens.length;
+  return <div className="kind">
+    <div className="kindhead"><h3>Typography Sizes</h3><span>{total}</span></div>
+    {groups.map(g=><div className="fam" key={g.prefix}>
+      <div className="famhead"><h4>{g.label}</h4><span>{g.toks.length}</span></div>
+      <table><thead><tr><th style={{width:"55%"}}>Token</th><th style={{width:"45%"}}>Value</th></tr></thead>
+      <tbody>{g.toks.map(t=>{const v=resolvedMap[t.name]||t.value;return <tr key={t.name}>
+        <td className="n" style={{cursor:"pointer"}} onClick={()=>copy("var("+t.name+")",say)} title={t.name}>{t.name}</td>
+        <td className="d">{v}</td>
+      </tr>})}</tbody></table>
+    </div>)}
+  </div>;
+}
+
 function TokenGroup({list,resolvedMap,say}){
+  const gridTokens=list.filter(isGridToken);
+  const typoSizeTokens=list.filter(t=>!isGridToken(t)&&isTypoSizeToken(t));
+  const rest=list.filter(t=>!isGridToken(t)&&!isTypoSizeToken(t));
   const buckets={};
-  for(const t of list){const v=resolvedMap[t.name]||t.value;(buckets[classify(v)]=buckets[classify(v)]||[]).push([t,v])}
-  return <>{KIND_ORDER.filter(k=>buckets[k]).map(k=>{
+  for(const t of rest){const v=resolvedMap[t.name]||t.value;const k=t.group==="Semantic colours"?"color":classify(v);(buckets[k]=buckets[k]||[]).push([t,v])}
+  return <>{gridTokens.length>0&&<GridTable tokens={gridTokens} resolvedMap={resolvedMap} say={say}/>}{typoSizeTokens.length>0&&<TypoSizeTable tokens={typoSizeTokens} resolvedMap={resolvedMap} say={say}/>}{KIND_ORDER.filter(k=>buckets[k]).map(k=>{
     const rows=buckets[k];
     const maxSize=k==="size"?Math.max(...rows.map(([,v])=>parseFloat(v)||0)):0;
     if(k==="type"){
@@ -350,12 +468,95 @@ function TokenGroup({list,resolvedMap,say}){
     if(k==="size"||k==="other"){
       const g={};
       for(const r of rows){const p=prefixOf(r[0].name);(g[p]=g[p]||[]).push(r)}
-      const order=Object.keys(g).sort((a,b)=>a.localeCompare(b));
+      const SIZE_ORDER=["alpha","spacing","border-radius","border-width","blur","aspect-ratio"];
+      const sizeRank=p=>{const i=SIZE_ORDER.indexOf(p);return i<0?SIZE_ORDER.length:i};
+      const order=Object.keys(g).sort((a,b)=>sizeRank(a)-sizeRank(b)||a.localeCompare(b));
       return <div className="kind" key={k}>
         <div className="kindhead"><h3>{KIND_LABEL[k]}</h3><span>{rows.length}</span></div>
         {order.map(p=>{
           const rs=g[p].slice().sort((a,b)=>(parseFloat(a[1])||0)-(parseFloat(b[1])||0)||a[0].name.localeCompare(b[0].name));
+          if(p==="alpha"){
+            return <div className="fam" key={p}>
+              <div className="famhead"><h4>Alpha</h4><span>{rs.length}</span></div>
+              <div className="alpha-ramp">{rs.map(([t,v])=>
+                <div key={t.name} className="alpha-ramp__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                  <div className="alpha-ramp__swatch"><div style={{background:"rgba(255,255,255,"+(parseFloat(v)||0)/100+")",width:"100%",height:"100%",borderRadius:"inherit"}}/></div>
+                  <div className="alpha-ramp__label">{v}</div>
+                </div>
+              )}</div>
+            </div>;
+          }
+          if(p==="spacing"){
+            return <div className="fam" key={p}>
+              <div className="famhead"><h4>Spacing</h4><span>{rs.length}</span></div>
+              <div className="spacing-ramp">{rs.map(([t,v])=>{
+                const px=parseFloat(v)||0;
+                return <div key={t.name} className="spacing-ramp__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                  {px>0&&<div className="spacing-ramp__swatch" style={{width:px,height:px}}/>}
+                  <div className="spacing-ramp__label">{parseInt(v)}</div>
+                </div>;
+              })}</div>
+            </div>;
+          }
+          if(p==="blur"){
+            return <div className="fam" key={p}>
+              <div className="famhead"><h4>Blur</h4><span>{rs.length}</span></div>
+              <div className="radius-ramp">{rs.map(([t,v])=>{
+                const px=parseFloat(v)||0;
+                return <div key={t.name} className="radius-ramp__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                  <div className="blur-ramp__swatch">
+                    <div className="blur-ramp__circle"/>
+                    <div className="blur-ramp__frost" style={{WebkitBackdropFilter:"blur("+px+"px)",backdropFilter:"blur("+px+"px)"}}/>
+                  </div>
+                  <div className="radius-ramp__label">{parseInt(v)}</div>
+                </div>;
+              })}</div>
+            </div>;
+          }
+          if(p==="border-width"){
+            return <div className="fam" key={p}>
+              <div className="famhead"><h4>Border Width</h4><span>{rs.length}</span></div>
+              <div className="radius-ramp">{rs.map(([t,v])=>{
+                const px=parseFloat(v)||0;
+                const style=px===0?{border:"1.5px dashed var(--colors-gray-04)"}:{borderWidth:px,borderStyle:"solid",borderColor:"var(--colors-gray-06)"};
+                return <div key={t.name} className="radius-ramp__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                  <div className="radius-ramp__swatch" style={style}/>
+                  <div className="radius-ramp__label">{v.replace("px","")}</div>
+                </div>;
+              })}</div>
+            </div>;
+          }
+          if(p==="border-radius"){
+            return <div className="fam" key={p}>
+              <div className="famhead"><h4>Border Radius</h4><span>{rs.length}</span></div>
+              <div className="radius-ramp">{rs.map(([t,v])=>{
+                const px=parseFloat(v)||0;
+                return <div key={t.name} className="radius-ramp__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                  <div className="radius-ramp__swatch" style={{borderRadius:px}}/>
+                  <div className="radius-ramp__label">{parseInt(v)}</div>
+                </div>;
+              })}</div>
+            </div>;
+          }
+          if(p==="aspect-ratio"){
+            return <div className="fam" key={p}>
+              <div className="famhead"><h4>Aspect Ratio</h4><span>{rs.length}</span></div>
+              <div className="ratio-ramp">{rs.map(([t,v])=>{
+                const ar=v.replace(":","/");
+                return <div key={t.name} className="ratio-ramp__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                  <div className="ratio-ramp__swatch" style={{aspectRatio:ar}}/>
+                  <div className="ratio-ramp__label">{v}</div>
+                </div>;
+              })}</div>
+            </div>;
+          }
           const mx=Math.max(...rs.map(([,v])=>parseFloat(v)||0));
+          if(k==="size"){
+            return <div className="fam" key={p}>
+              <div className="famhead"><h4>{titleize(p)}</h4><span>{rs.length}</span></div>
+              <div className="size-icons">{rs.map(([t,v])=><TokenChip key={t.name} t={t} resolved={v} kind={k} maxSize={mx} say={say}/>)}</div>
+            </div>;
+          }
           return <div className="fam" key={p}>
             <div className="famhead"><h4>{titleize(p)}</h4><span>{rs.length}</span></div>
             <div className={"toks "+KIND_COLS[k]}>{rs.map(([t,v])=><TokenChip key={t.name} t={t} resolved={v} kind={k} maxSize={mx} say={say}/>)}</div>
@@ -367,20 +568,75 @@ function TokenGroup({list,resolvedMap,say}){
       const fams={};
       for(const r of rows){const f=family(r[0]);(fams[f]=fams[f]||[]).push(r)}
       const order=Object.keys(fams).sort((a,b)=>familyRank(a)-familyRank(b));
+      const shortName=n=>{if(n.startsWith("--colors-")){const s=n.replace(/^--colors-/,"");return /^absolute-/.test(s)?s.replace("absolute-",""):s}return n.replace(/^--/,"")};
+      const alphaLabel=n=>{const m=n.match(/-alpha-(\d+)$/);return m?m[1]+"%":""};
+      const isPrimary=n=>/-(0?6)$/.test(n)&&!n.includes("alpha")&&!n.includes("absolute")&&!n.includes("gray");
       return <div className="kind" key={k}>
         <div className="kindhead"><h3>{KIND_LABEL[k]}</h3><span>{rows.length}</span></div>
         {order.map(f=>{
-          const base=fams[f].filter(r=>!isAlpha(r[0].name)).sort(bySt3p);
-          const alpha=fams[f].filter(r=>isAlpha(r[0].name)).sort(bySt3p);
-          return <div className="fam" key={f}>
-            <div className="famhead"><h4>{FAMILY_LABEL[f]||f}</h4><span>{fams[f].length}</span></div>
-            {base.length>0&&<div className={"toks "+KIND_COLS[k]}>{base.map(([t,v])=><TokenChip key={t.name} t={t} resolved={v} kind={k} say={say}/>)}</div>}
-            {alpha.length>0&&<div className="alphas">
-              <p className="callout">{alphaNote(f,alpha)}</p>
-              <div className={"toks "+KIND_COLS[k]}>{alpha.map(([t,v])=><TokenChip key={t.name} t={t} resolved={v} kind={k} say={say}/>)}</div>
+          const all=fams[f];
+          const isPrim=all[0][0].file==="colors.css";
+          const base=all.filter(r=>!isAlpha(r[0].name)).sort(isPrim?bySt3p:(a,b)=>a[0].name.localeCompare(b[0].name));
+          const alpha=all.filter(r=>isAlpha(r[0].name)).sort(bySt3p);
+          const rowCls=isPrim?"palette__row":"palette__row palette__row--auto";
+          return <div className="palette" key={f}>
+            <h4 className="palette__head">{FAMILY_LABEL[f]||f}</h4>
+            {base.length>0&&<div className={rowCls}>{base.map(([t,v])=>
+              <div key={t.name} className="palette__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                <div className="palette__label">{shortName(t.name)}{isPrimary(t.name)?"(primary)":""}</div>
+                <div className="palette__swatch" style={{background:v}}/>
+                <div className="palette__val">{v}</div>
+              </div>
+            )}</div>}
+            {alpha.length>0&&<div className="palette__alpha">
+              <div className="palette__alpha-label">Alpha</div>
+              <div className={rowCls}>{alpha.map(([t,v])=>
+                <div key={t.name} className="palette__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                  <div className="palette__label">{alphaLabel(t.name)}</div>
+                  <div className="palette__swatch palette__swatch--alpha"><div style={{background:v,width:"100%",height:"100%",borderRadius:"inherit"}}/></div>
+                  <div className="palette__val">{v}</div>
+                </div>
+              )}</div>
             </div>}
           </div>;
         })}
+      </div>;
+    }
+    if(k==="shadow"){
+      const SHADOW_HUES=["purple","pool","mint","lava","mustard","grass"];
+      const onLight=rows.filter(([t])=>/on-light/.test(t.name));
+      const onDark=rows.filter(([t])=>/on-dark/.test(t.name));
+      const hueOf=n=>{const m=n.match(/-(purple|pool|mint|lava|mustard|grass)$/);return m?m[1]:""};
+      const sortByHue=(a,b)=>SHADOW_HUES.indexOf(hueOf(a[0].name))-SHADOW_HUES.indexOf(hueOf(b[0].name));
+      onLight.sort(sortByHue);onDark.sort(sortByHue);
+      return <div className="kind" key={k}>
+        <div className="kindhead"><h3>{KIND_LABEL[k]}</h3><span>{rows.length}</span></div>
+        <div className="shadow-group">
+          <div>
+            <div className="shadow-section__head">glow.on-light</div>
+            <div className="shadow-row">{onLight.map(([t,v])=>{
+              const hue=hueOf(t.name);
+              return <div key={t.name} className="shadow-chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                <div className="shadow-surface shadow-surface--light">
+                  <div className="shadow-card shadow-card--light" style={{boxShadow:v}}/>
+                </div>
+                <div className="shadow-label">{hue}</div>
+              </div>;
+            })}</div>
+          </div>
+          <div>
+            <div className="shadow-section__head">glow.on-dark</div>
+            <div className="shadow-row">{onDark.map(([t,v])=>{
+              const hue=hueOf(t.name);
+              return <div key={t.name} className="shadow-chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+                <div className="shadow-surface shadow-surface--dark" style={{background:"var(--surface-"+hue+"-dark)"}}>
+                  <div className="shadow-card shadow-card--dark" style={{boxShadow:v,background:"var(--surface-"+hue+"-dark)"}}/>
+                </div>
+                <div className="shadow-label">{hue}</div>
+              </div>;
+            })}</div>
+          </div>
+        </div>
       </div>;
     }
     return <div className="kind" key={k}>
