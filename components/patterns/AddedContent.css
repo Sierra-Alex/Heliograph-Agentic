@@ -21,13 +21,25 @@
   color: var(--text-on-light-headline);
 }
 
-.ac__logos-strip {
+.ac__logos-row {
+  width: 100%;
+  max-width: 512px;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.ac__logos-track {
   display: flex;
   align-items: center;
   gap: var(--generic-spacing-sm);
-  max-width: 512px;
-  overflow: clip;
-  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  width: max-content;
+  animation: ac-logo-scroll 36s linear infinite;
+}
+
+@keyframes ac-logo-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .ac__logo-placeholder {

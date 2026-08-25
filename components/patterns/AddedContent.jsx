@@ -7,8 +7,11 @@ export function AddedContent({content="logos",onDark=false,hue="purple",logoCoun
   return (<div className={cx("ac","ac--"+content,onDark&&"ac--on-dark",onDark&&"ac--"+hue,className)} {...props}>
     {content==="logos"&&(<div className="ac__logos">
       <span className="ac__logos-label">{headline}</span>
-      <div className="ac__logos-strip">
-        {Array.from({length:logoCount}).map((_,i)=><div key={i} className="ac__logo-placeholder"/>)}
+      <div className="ac__logos-row">
+        <div className="ac__logos-track">
+          {Array.from({length:logoCount}).map((_,i)=><div key={i} className="ac__logo-placeholder"/>)}
+          {Array.from({length:logoCount}).map((_,i)=><div key={"d"+i} className="ac__logo-placeholder"/>)}
+        </div>
       </div>
     </div>)}
     {content==="quote"&&(<div className="ac__quote">

@@ -1325,13 +1325,20 @@ function AddedContent({
   }, /*#__PURE__*/React.createElement("span", {
     className: "ac__logos-label"
   }, headline), /*#__PURE__*/React.createElement("div", {
-    className: "ac__logos-strip"
+    className: "ac__logos-row"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "ac__logos-track"
   }, Array.from({
     length: logoCount
   }).map((_, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "ac__logo-placeholder"
-  })))), content === "quote" && /*#__PURE__*/React.createElement("div", {
+  })), Array.from({
+    length: logoCount
+  }).map((_, i) => /*#__PURE__*/React.createElement("div", {
+    key: "d" + i,
+    className: "ac__logo-placeholder"
+  }))))), content === "quote" && /*#__PURE__*/React.createElement("div", {
     className: "ac__quote"
   }, /*#__PURE__*/React.createElement("div", {
     className: "ac__quote-avatar"

@@ -11,34 +11,41 @@ html,body{margin:0;padding:0}
 body{background:var(--surface-default);color:var(--text-on-light-body);font-family:var(--font-family-primary);-webkit-font-smoothing:antialiased}
 a{color:var(--text-on-light-link);text-decoration:none}
 a:hover{color:var(--text-on-light-headline);text-decoration:underline}
-.app{display:grid;grid-template-columns:264px minmax(0,1fr);min-height:100vh;transition:grid-template-columns .25s ease}
+.app{display:grid;grid-template-columns:272px minmax(0,1fr);min-height:100vh;transition:grid-template-columns .25s ease}
 .app.collapsed{grid-template-columns:48px minmax(0,1fr)}
-.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid var(--cards-on-light-border);background:var(--surface-light);padding:28px 20px 48px;display:flex;flex-direction:column;gap:22px;transition:padding .25s ease;min-width:0;overflow-x:hidden}
+.side{position:sticky;top:0;height:100vh;overflow-y:auto;border-right:var(--standard) solid var(--divider-on-dark);background:var(--surface-purple-dark);padding:40px 24px;display:flex;flex-direction:column;gap:40px;transition:padding .25s ease;min-width:0;overflow-x:hidden}
 .app.collapsed .side{padding:12px 10px 48px;align-items:center}
-.side-inner{display:flex;flex-direction:column;gap:22px;transition:opacity .2s ease;min-width:0}
+.side-inner{display:flex;flex-direction:column;gap:40px;transition:opacity .2s ease;min-width:0}
 .app.collapsed .side-inner{opacity:0;pointer-events:none;height:0;overflow:hidden}
-.sidebar-toggle{align-self:flex-end;flex-shrink:0;width:28px;height:28px;border-radius:8px;border:1px solid var(--cards-on-light-border);background:var(--surface-default);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .12s}
-.sidebar-toggle:hover{background:var(--surface-muted)}
-.sidebar-toggle svg{width:14px;height:14px;color:var(--text-on-light-body);transition:transform .25s ease}
+.sidebar-toggle{position:absolute;bottom:20px;left:24px;z-index:1;width:28px;height:28px;border-radius:8px;border:1px solid var(--colors-absolute-alpha-10);background:rgba(255,255,255,0.06);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .12s}
+.sidebar-toggle:hover{background:rgba(255,255,255,0.12)}
+.sidebar-toggle svg{width:14px;height:14px;color:var(--colors-absolute-alpha-70);transition:transform .25s ease}
 .app.collapsed .sidebar-toggle svg{transform:rotate(180deg)}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{height:26px;width:auto}
-.brand span{font:var(--body-b5);letter-spacing:var(--letter-spacing-2);color:var(--colors-gray-09)}
-.search{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--cards-on-light-border);background:var(--surface-default);font:var(--body-b5);font-family:var(--font-family-primary);color:var(--text-on-light-headline)}
-.search:focus{outline:none;border-color:var(--colors-purple-06)}
-.navgroup{display:flex;flex-direction:column;gap:6px}
-.navgroup h4{margin:0 0 4px;font:500 11px/1.4 garnett;letter-spacing:var(--letter-spacing-2);text-transform:uppercase;color:var(--colors-gray-08)}
-.navlink{display:flex;justify-content:space-between;gap:8px;padding:5px 8px;border-radius:8px;font:var(--body-b5);letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-body);cursor:pointer;border:none;background:none;text-align:left;font-family:var(--font-family-primary)}
-.navlink:hover{background:var(--surface-muted);color:var(--text-on-light-headline)}
-.navlink em{font-style:normal;color:var(--colors-gray-08);font-variant-numeric:tabular-nums}
-main{padding:48px 56px 120px;max-width:1180px}
-.hero{display:flex;flex-direction:column;gap:14px;padding-bottom:36px;border-bottom:1px solid var(--cards-on-light-border)}
-.hero h1{margin:0;font:var(--headline-h2);letter-spacing:var(--letter-spacing-negative-2);color:var(--text-on-light-headline)}
-.hero p{margin:0;max-width:64ch;font:var(--body-b4);letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-body);text-wrap:pretty}
-.howto{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0 8px}
-.howto div{background:var(--surface-light);border:1px solid var(--cards-on-light-border);border-radius:16px;padding:18px 20px}
-.howto h5{margin:0 0 6px;font:var(--body-b5);letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-headline)}
-.howto p{margin:0;font:var(--body-b5);letter-spacing:var(--letter-spacing-2);color:var(--colors-gray-08);text-wrap:pretty}
+.brand{display:flex;flex-direction:column;gap:8px}
+.brand img{width:214px;height:auto;align-self:flex-start}
+.brand-sub{font-family:var(--font-family-primary);font-size:12px;letter-spacing:var(--letter-spacing-2);color:var(--text-on-dark-body)}
+.nav-divider{height:1px;background:var(--divider-on-dark);margin:0;width:117px}
+.nav-list{display:flex;flex-direction:column}
+.navgroup{display:flex;flex-direction:column;gap:10px}
+.navgroup h4{margin:0;font:500 8px/1.4 garnett;letter-spacing:1.04px;text-transform:uppercase;color:var(--text-on-dark-headline-purple)}
+.navlink{display:flex;justify-content:space-between;gap:8px;padding:0;border-radius:0;font-family:var(--font-family-primary);font-size:12px;letter-spacing:var(--letter-spacing-2);color:var(--text-on-dark-body);cursor:pointer;border:none;background:none;text-align:left;line-height:normal}
+.navlink:hover{background:none;color:var(--colors-purple-04);text-decoration:none}
+.navlink em{font-style:normal;color:var(--colors-absolute-alpha-70);font-variant-numeric:tabular-nums}
+main{padding:0;background:var(--surface-default)}
+.hero{background:var(--surface-purple-dark);display:flex;align-items:center;height:400px;padding:var(--generic-spacing-sm) var(--generic-spacing-lg)}
+.hero__content{display:flex;flex-direction:column;gap:var(--generic-spacing-xx-sm);max-width:720px}
+.hero h1{margin:0;font:var(--headline-h1);letter-spacing:var(--letter-spacing-negative-2);color:var(--text-on-dark-headline-purple)}
+.hero p{margin:0;font:var(--body-b3);letter-spacing:var(--letter-spacing-2);color:var(--text-on-dark-body)}
+.content-panel{padding:var(--generic-spacing-lg) var(--generic-spacing-lg) 120px}
+.chapter{padding-top:64px;scroll-margin-top:24px}
+.chapter:first-child{padding-top:0}
+.chapter-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.chapter-head h2{margin:0;font:var(--headline-h3);letter-spacing:var(--letter-spacing-negative-2);color:var(--text-on-light-headline)}
+.chapter-num{font-family:var(--font-family-primary);font-size:14px;font-weight:normal;letter-spacing:0.28px;color:var(--colors-purple-06)}
+.chapter-desc{margin:0 0 var(--stack-section-md);font-family:var(--font-family-primary);font-size:14px;font-weight:normal;letter-spacing:0.28px;line-height:1.68;color:var(--text-on-light-body)}
+.chapter-sub{margin:24px 0 12px;font:var(--headline-h5);letter-spacing:0;color:var(--text-on-light-headline)}
+.usage-in-code{margin-top:32px;background:var(--colors-purple-10);border-radius:16px;padding:24px 28px}
+.usage-in-code h4{margin:0 0 16px;font:500 11px/1.4 garnett;letter-spacing:var(--letter-spacing-2);text-transform:uppercase;color:var(--colors-absolute-alpha-70)}
 .sec{padding-top:64px;scroll-margin-top:24px}
 .sechead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:8px}
 .sechead h2{margin:0;font:var(--headline-h4);letter-spacing:var(--letter-spacing-negative-1);color:var(--text-on-light-headline)}
@@ -103,19 +110,54 @@ pre{margin:0;padding:14px 16px;border-radius:12px;background:#150040;color:#e8e6
 .tokname{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:1.45;color:var(--text-on-light-headline);white-space:normal;overflow-wrap:anywhere}
 .tokval{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;line-height:1.45;color:var(--colors-gray-08);white-space:normal;overflow-wrap:anywhere}
 .tokval.num{font-variant-numeric:tabular-nums;flex-shrink:0;white-space:nowrap}
-.palette{background:var(--surface-light);border:1px solid var(--cards-on-light-border);border-radius:16px;padding:20px 24px 24px}
-.palette+.palette{margin-top:12px}
-.palette__head{margin:0 0 14px;font:500 11px/1.4 garnett;letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-headline)}
-.palette__row{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}
+.palette{background:var(--surface-light);border:1px solid var(--cards-on-light-border);border-radius:var(--border-radius-16);padding:16px;display:flex;flex-direction:column;gap:var(--generic-spacing-x-sm)}
+.palette+.palette{margin-top:var(--generic-spacing-x-sm)}
+.palette__head{display:flex;gap:16px;align-items:center;margin:0;font-family:var(--font-family-primary);font-size:12px;font-weight:normal;letter-spacing:0.24px;line-height:1.68;color:var(--text-on-light-headline)}
+.palette__divider{flex:1;height:0;border-top:1px solid var(--cards-on-light-border)}
+.palette__row{display:flex;gap:8px}
 .palette__row--auto{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px}
-.palette__chip{display:flex;flex-direction:column;gap:5px;cursor:pointer}
-.palette__chip:hover .palette__swatch{outline:2px solid var(--colors-purple-05);outline-offset:-1px}
-.palette__swatch{height:64px;border-radius:10px;border:1px solid rgba(0,0,0,.06)}
-.palette__swatch--alpha{position:relative;overflow:hidden;background-image:linear-gradient(45deg,#e0e0e0 25%,transparent 25%),linear-gradient(-45deg,#e0e0e0 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e0e0e0 75%),linear-gradient(-45deg,transparent 75%,#e0e0e0 75%);background-size:8px 8px;background-position:0 0,0 4px,4px -4px,-4px 0}
-.palette__label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;line-height:1.3;color:var(--text-on-light-headline);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.palette__val{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;line-height:1.3;color:var(--colors-gray-08);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.palette__alpha{margin-top:14px}
-.palette__alpha-label{margin:0 0 10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08);letter-spacing:var(--letter-spacing-2)}
+.palette__chip{display:flex;flex-direction:column;gap:8px;cursor:pointer;flex:0 1 calc((100% - 72px) / 10);min-width:0;align-items:center}
+.palette__chip:hover .palette__swatch-wrap{outline:2px solid var(--colors-purple-05);outline-offset:-1px;border-radius:var(--border-radius-content)}
+.palette__swatch-wrap{background:var(--cards-on-light-fill-on-gray);border-radius:var(--border-radius-content);overflow:hidden;width:100%}
+.palette__swatch{height:94px;border-radius:var(--border-radius-input);width:100%}
+.palette__swatch--alpha{position:relative;overflow:hidden;background-image:linear-gradient(45deg,#e0e0e0 25%,transparent 25%),linear-gradient(-45deg,#e0e0e0 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e0e0e0 75%),linear-gradient(-45deg,transparent 75%,#e0e0e0 75%);background-size:8px 8px;background-position:0 0,0 4px,4px -4px,-4px 0;border-radius:var(--border-radius-input)}
+.palette__label{font-family:var(--font-family-primary);font-size:8px;font-weight:normal;letter-spacing:0.16px;line-height:1.68;color:var(--text-on-light-headline);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.palette__val{font-family:var(--font-family-primary);font-size:8px;line-height:1.68;color:var(--colors-gray-08);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.palette__alpha{}
+.type-showcase .palette+.palette{margin-top:var(--generic-spacing-x-sm)}
+.type-specimen{color:var(--text-on-light-headline);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.type-rule{width:100%;height:0;border-top:1px solid var(--cards-on-light-border)}
+.type-detail{font-family:var(--font-family-primary);font-size:8px;font-weight:normal;letter-spacing:0.16px;line-height:1.68;color:var(--text-on-light-headline);cursor:pointer}
+.type-detail:hover{color:var(--colors-purple-06)}
+.type-usage{background:var(--surface-purple-dark);border-color:var(--cards-on-dark-border)}
+.type-usage .palette__head span{color:var(--text-on-dark-headline-purple)}
+.type-usage .palette__divider{border-top-color:var(--cards-on-dark-border)}
+.type-usage pre{margin:0;padding:16px 20px;border-radius:var(--border-radius-input);background:var(--colors-purple-10);color:var(--text-on-dark-body);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:1.6}
+.comp-showcase .palette+.palette{margin-top:var(--generic-spacing-x-sm)}
+.comp-sub{display:flex;gap:16px;align-items:center;font-family:var(--font-family-primary);font-size:8px;font-weight:normal;letter-spacing:0.16px;line-height:1.68;color:var(--text-on-light-headline)}
+.comp-row{display:flex;gap:16px;align-items:flex-start;padding:16px;border-radius:8px;width:100%}
+.comp-row--light{background:var(--surface-default)}
+.comp-row--dark{background:var(--surface-purple-dark)}
+.comp-row{align-items:stretch}
+.comp-item{display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:space-between}
+.comp-label{font-family:var(--font-family-primary);font-size:8px;font-weight:normal;letter-spacing:0.16px;line-height:1.68;color:var(--text-on-light-headline);white-space:nowrap;cursor:pointer}
+.comp-label:hover{color:var(--colors-purple-06)}
+.comp-label--dark{color:var(--text-on-dark-body)}
+.comp-label--dark:hover{color:var(--colors-purple-04)}
+.logo-showcase .palette+.palette{margin-top:var(--generic-spacing-x-sm)}
+.logo-item--full{padding-top:20px;align-self:stretch}
+.icon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:16px;padding:16px;background:var(--surface-default);border-radius:8px;width:100%}
+.icon-grid .comp-item{align-items:center}
+.icon-grid .comp-label{max-width:100%;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.icon-grid__icon{cursor:pointer;border-radius:4px;padding:2px}
+.icon-grid__icon:hover{outline:2px solid var(--colors-purple-05);outline-offset:2px}
+.favicon-tab{display:flex;gap:8px;align-items:center;padding:8px;border-radius:10px;width:154px}
+.favicon-tab--light{background:var(--surface-light);border:1px solid var(--cards-on-light-border)}
+.favicon-tab--dark{background:var(--surface-purple-dark)}
+.favicon-tab img{width:20px;height:20px;flex-shrink:0}
+.favicon-tab__name{flex:1;min-width:0;font-family:var(--font-family-primary);font-size:12px;letter-spacing:0.24px;line-height:1.68;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.favicon-tab--light .favicon-tab__name{color:var(--text-on-light-headline)}
+.favicon-tab--dark .favicon-tab__name{color:var(--text-on-dark-body)}
 .alpha-ramp{display:flex;gap:10px}
 .alpha-ramp__chip{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;flex:1 1 0;min-width:0}
 .alpha-ramp__chip:hover .alpha-ramp__swatch{outline:2px solid var(--colors-purple-05);outline-offset:-1px}
@@ -237,6 +279,9 @@ function copy(text,say){
   const done=()=>say(text.length>42?"Copied":"Copied “"+text+"”");
   if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(text).then(done,done);
   else{const t=document.createElement("textarea");t.value=text;document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();done()}
+}
+function copySvg(path,say){
+  fetch(path).then(r=>r.text()).then(svg=>{copy(svg.trim(),say)}).catch(()=>say("Failed to load SVG"));
 }
 
 function ComponentCard({c,say}){
@@ -580,20 +625,20 @@ function TokenGroup({list,resolvedMap,say}){
           const alpha=all.filter(r=>isAlpha(r[0].name)).sort(bySt3p);
           const rowCls=isPrim?"palette__row":"palette__row palette__row--auto";
           return <div className="palette" key={f}>
-            <h4 className="palette__head">{FAMILY_LABEL[f]||f}</h4>
+            <div className="palette__head"><span>{FAMILY_LABEL[f]||f}</span><div className="palette__divider"/></div>
             {base.length>0&&<div className={rowCls}>{base.map(([t,v])=>
               <div key={t.name} className="palette__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
                 <div className="palette__label">{shortName(t.name)}{isPrimary(t.name)?"(primary)":""}</div>
-                <div className="palette__swatch" style={{background:v}}/>
+                <div className="palette__swatch-wrap"><div className="palette__swatch" style={{background:v}}/></div>
                 <div className="palette__val">{v}</div>
               </div>
             )}</div>}
             {alpha.length>0&&<div className="palette__alpha">
-              <div className="palette__alpha-label">Alpha</div>
+              <div className="palette__head"><span>Alpha</span><div className="palette__divider"/></div>
               <div className={rowCls}>{alpha.map(([t,v])=>
                 <div key={t.name} className="palette__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
                   <div className="palette__label">{alphaLabel(t.name)}</div>
-                  <div className="palette__swatch palette__swatch--alpha"><div style={{background:v,width:"100%",height:"100%",borderRadius:"inherit"}}/></div>
+                  <div className="palette__swatch-wrap"><div className="palette__swatch palette__swatch--alpha"><div style={{background:v,width:"100%",height:"100%",borderRadius:"inherit"}}/></div></div>
                   <div className="palette__val">{v}</div>
                 </div>
               )}</div>
@@ -646,20 +691,229 @@ function TokenGroup({list,resolvedMap,say}){
   })}</>;
 }
 
+const CHAPTERS=[
+  {num:"01",title:"Color",id:"color"},
+  {num:"02",title:"Typography",id:"typography"},
+  {num:"03",title:"Components",id:"components"},
+  {num:"04",title:"Spacing & Layout",id:"spacing-layout"},
+  {num:"05",title:"Logo & Icons",id:"logo-icons"},
+  {num:"06",title:"Patterns",id:"patterns"},
+  {num:"07",title:"Templates",id:"templates"},
+  {num:"08",title:"Product Imagery",id:"product-imagery"},
+  {num:"09",title:"Data Viz",id:"data-viz"},
+  {num:"10",title:"Brand Strategy",id:"brand-strategy"},
+  {num:"11",title:"Tone of Voice",id:"tone-of-voice"},
+];
+
+function CompItem({children,label,dark,say}){
+  return <div className="comp-item">
+    {children}
+    <span className={"comp-label"+(dark?" comp-label--dark":"")} onClick={()=>copy(label,say)} title={"Copy: "+label}>{label}</span>
+  </div>;
+}
+
+function ComponentShowcase({say}){
+  return <div className="comp-showcase">
+    <div className="palette">
+      <div className="palette__head"><span>Buttons</span><div className="palette__divider"/></div>
+      <div className="comp-sub"><span>On light</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--light">
+        <CompItem label="<Button>" say={say}><Button>Click Me</Button></CompItem>
+        <CompItem label='<Button variant="secondary">' say={say}><Button variant="secondary">Click Me</Button></CompItem>
+        <CompItem label='<Button size="sm">' say={say}><Button size="sm">Click Me</Button></CompItem>
+        <CompItem label='<Button variant="secondary" size="sm">' say={say}><Button variant="secondary" size="sm">Click Me</Button></CompItem>
+        <CompItem label='<Button variant="tertiary">' say={say}><Button variant="tertiary">Click Me</Button></CompItem>
+        <CompItem label='<Button variant="tertiary" size="sm">' say={say}><Button variant="tertiary" size="sm">Click Me</Button></CompItem>
+      </div>
+      <div className="comp-sub"><span>On dark</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--dark">
+        <CompItem label="<Button onDark>" dark say={say}><Button onDark>Click Me</Button></CompItem>
+        <CompItem label='<Button variant="secondary" onDark>' dark say={say}><Button variant="secondary" onDark>Click Me</Button></CompItem>
+        <CompItem label='<Button size="sm" onDark>' dark say={say}><Button size="sm" onDark>Click Me</Button></CompItem>
+        <CompItem label='<Button variant="secondary" size="sm" onDark>' dark say={say}><Button variant="secondary" size="sm" onDark>Click Me</Button></CompItem>
+        <CompItem label='<Button variant="tertiary" onDark>' dark say={say}><Button variant="tertiary" onDark>Click Me</Button></CompItem>
+        <CompItem label='<Button variant="tertiary" size="sm" onDark>' dark say={say}><Button variant="tertiary" size="sm" onDark>Click Me</Button></CompItem>
+      </div>
+    </div>
+    <div className="palette">
+      <div className="palette__head"><span>Other Buttons</span><div className="palette__divider"/></div>
+      <div className="comp-sub"><span>On light</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--light">
+        <CompItem label="<PlayHead/>" say={say}><PlayHead/></CompItem>
+        <CompItem label='<RoundIconButton direction="left"/>' say={say}><RoundIconButton direction="left"/></CompItem>
+        <CompItem label="<RoundPlusButton/>" say={say}><RoundPlusButton/></CompItem>
+        <CompItem label="<RoundMinusButton/>" say={say}><RoundMinusButton/></CompItem>
+        <CompItem label='<RoundIconButton size="sm" direction="left"/>' say={say}><RoundIconButton size="sm" direction="left"/></CompItem>
+        <CompItem label='<RoundPlusButton size="sm"/>' say={say}><RoundPlusButton size="sm"/></CompItem>
+        <CompItem label='<RoundMinusButton size="sm"/>' say={say}><RoundMinusButton size="sm"/></CompItem>
+      </div>
+      <div className="comp-sub"><span>On dark</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--dark">
+        <CompItem label="<PlayHead onDark/>" dark say={say}><PlayHead onDark/></CompItem>
+        <CompItem label='<RoundIconButton direction="left" onDark/>' dark say={say}><RoundIconButton direction="left" onDark/></CompItem>
+        <CompItem label="<RoundPlusButton onDark/>" dark say={say}><RoundPlusButton onDark/></CompItem>
+        <CompItem label="<RoundMinusButton onDark/>" dark say={say}><RoundMinusButton onDark/></CompItem>
+        <CompItem label='<RoundIconButton size="sm" direction="left" onDark/>' dark say={say}><RoundIconButton size="sm" direction="left" onDark/></CompItem>
+        <CompItem label='<RoundPlusButton size="sm" onDark/>' dark say={say}><RoundPlusButton size="sm" onDark/></CompItem>
+        <CompItem label='<RoundMinusButton size="sm" onDark/>' dark say={say}><RoundMinusButton size="sm" onDark/></CompItem>
+      </div>
+    </div>
+    <div className="palette">
+      <div className="palette__head"><span>Controls</span><div className="palette__divider"/></div>
+      <div className="comp-sub"><span>On light</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--light">
+        <CompItem label="<Toggle/>" say={say}><Toggle/></CompItem>
+        <CompItem label="<Checkbox/>" say={say}><Checkbox/></CompItem>
+        <CompItem label="<Radio/>" say={say}><Radio name="comp-demo"/></CompItem>
+      </div>
+    </div>
+    <div className="palette type-usage">
+      <div className="palette__head"><span>Usage in Code</span><div className="palette__divider"/></div>
+      <pre>{"<Button variant=\"secondary\" size=\"sm\">\n  Learn More\n</Button>\n\n<RoundIconButton direction=\"right\" />\n<Toggle defaultChecked />"}</pre>
+    </div>
+  </div>;
+}
+
+function LogoIconShowcase({say}){
+  const BRAND=["ai","business-size","calendar","cart","check","community","contextual-ai","diamond","edit","expand","folder","grid","grow","hub","industries","info","layer","learn","lock","logo-laptop","media","medicine","node","panels","partnerships","payment","phone-analytics","product","pulse","rows","scale","schedule","shopping-bag","shopping-tag","speed","stack","support","target","teams","tile","web"];
+  const PRODUCT=["boards","experiments","feature-flags","flows","funnels","impact","insights","metric-trees","retention"];
+  const MULTI=new Set(["ai","contextual-ai","diamond","expand","grid","grow","hub","info","layer","node","panels","product","pulse","rows","scale","schedule","speed","stack","support","target","tile"]);
+  function iconDir(name){return MULTI.has(name)?"multipurpose":"brand"}
+  function IconPair({name,dir}){
+    var s="assets/icons/"+dir+"/"+name+"-stroke.svg",f="assets/icons/"+dir+"/"+name+"-fill.svg";
+    return <React.Fragment key={name}>
+      <div className="comp-item"><img src={s} className="icon-grid__icon" style={{width:24,height:24}} alt="" onClick={()=>copySvg(s,say)} title="Copy SVG"/><span className="comp-label" onClick={()=>copy(name+"-stroke",say)} title={"Copy name: "+name+"-stroke"}>{name+"-stroke"}</span></div>
+      <div className="comp-item"><img src={f} className="icon-grid__icon" style={{width:24,height:24}} alt="" onClick={()=>copySvg(f,say)} title="Copy SVG"/><span className="comp-label" onClick={()=>copy(name+"-fill",say)} title={"Copy name: "+name+"-fill"}>{name+"-fill"}</span></div>
+    </React.Fragment>;
+  }
+  return <div className="logo-showcase">
+    <div className="palette">
+      <div className="palette__head"><span>Logos</span><div className="palette__divider"/></div>
+      <div className="comp-sub"><span>On light</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--light">
+        <div className="comp-item"><img src="assets/logos/logo-mark-gray-10.svg" style={{width:80,height:80}} alt="Logo mark"/><span className="comp-label" onClick={()=>copy("logo-mark-gray-10",say)} title="Copy: logo-mark-gray-10">logo-mark-gray-10</span></div>
+        <div className="comp-item logo-item--full"><img src="assets/logos/main-logo-gray-10.svg" style={{width:200,height:"auto"}} alt="Main logo"/><span className="comp-label" onClick={()=>copy("main-logo-gray-10",say)} title="Copy: main-logo-gray-10">main-logo-gray-10</span></div>
+      </div>
+      <div className="comp-sub"><span>On dark</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--dark">
+        <div className="comp-item"><img src="assets/logos/logo-mark-absolute-white.svg" style={{width:80,height:80}} alt="Logo mark white"/><span className="comp-label comp-label--dark" onClick={()=>copy("logo-mark-absolute-white",say)} title="Copy: logo-mark-absolute-white">logo-mark-absolute-white</span></div>
+        <div className="comp-item logo-item--full"><img src="assets/logos/main-logo-absolute-white.svg" style={{width:200,height:"auto"}} alt="Main logo white"/><span className="comp-label comp-label--dark" onClick={()=>copy("main-logo-absolute-white",say)} title="Copy: main-logo-absolute-white">main-logo-absolute-white</span></div>
+      </div>
+    </div>
+    <div className="palette">
+      <div className="palette__head"><span>Favicon</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--light">
+        <div className="comp-item"><div className="favicon-tab favicon-tab--light"><img src="assets/logos/favicon-light.svg" alt="Favicon light"/><span className="favicon-tab__name">Mixpanel</span></div><span className="comp-label" onClick={()=>copy("favicon-light",say)} title="Copy: favicon-light">favicon-light</span></div>
+        <div className="comp-item"><div className="favicon-tab favicon-tab--dark"><img src="assets/logos/favicon-dark.svg" alt="Favicon dark"/><span className="favicon-tab__name">Mixpanel</span></div><span className="comp-label" onClick={()=>copy("favicon-dark",say)} title="Copy: favicon-dark">favicon-dark</span></div>
+      </div>
+    </div>
+    <div className="palette">
+      <div className="palette__head"><span>Icons</span><div className="palette__divider"/></div>
+      <div className="comp-sub"><span>Brand</span><div className="palette__divider"/></div>
+      <div className="icon-grid">
+        {BRAND.map(n=><IconPair key={n} name={n} dir={iconDir(n)}/>)}
+        <div className="comp-item"><img src="assets/icons/brand/logo-fill.svg" className="icon-grid__icon" style={{width:24,height:24}} alt="" onClick={()=>copySvg("assets/icons/brand/logo-fill.svg",say)} title="Copy SVG"/><span className="comp-label" onClick={()=>copy("logo-fill",say)} title="Copy name: logo-fill">logo-fill</span></div>
+      </div>
+      <div className="comp-sub"><span>Product</span><div className="palette__divider"/></div>
+      <div className="icon-grid">
+        {PRODUCT.map(n=><IconPair key={n} name={n} dir="product"/>)}
+      </div>
+      <div className="comp-sub"><span>System</span><div className="palette__divider"/></div>
+      <div className="comp-sub"><span>On light</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--light">
+        <div className="comp-item"><div style={{padding:4}}><CircleCheck baseColor="light" size={16}/></div><span className="comp-label" onClick={()=>copy('<CircleCheck baseColor="light"/>',say)} title='Copy: CircleCheck light'>{`<CircleCheck baseColor="light"/>`}</span></div>
+      </div>
+      <div className="comp-sub"><span>On dark</span><div className="palette__divider"/></div>
+      <div className="comp-row comp-row--dark">
+        <div className="comp-item"><div style={{padding:4}}><CircleCheck baseColor="dark" size={16}/></div><span className="comp-label comp-label--dark" onClick={()=>copy('<CircleCheck baseColor="dark"/>',say)} title='Copy: CircleCheck dark'>{`<CircleCheck baseColor="dark"/>`}</span></div>
+      </div>
+    </div>
+    <div className="palette type-usage">
+      <div className="palette__head"><span>Usage in Code</span><div className="palette__divider"/></div>
+      <pre>{"/* Logo mark (black on light) */\n<img src=\"assets/logos/logo-mark-gray-10.svg\" />\n\n/* Full wordmark (white on dark) */\n<img src=\"assets/logos/main-logo-absolute-white.svg\" />\n\n/* Icon — SVGs use fill=\"currentColor\" */\n<img src=\"assets/icons/product/insights-stroke.svg\" />"}</pre>
+    </div>
+  </div>;
+}
+
+function TypeShowcase({say}){
+  const STYLES=[
+    {label:"Tag",isTag:true},
+    {label:"H1",token:"--headline-h1",ls:"var(--letter-spacing-negative-2)",info:"500 60px/1.2 Garnett Medium · letter-spacing: var(--letter-spacing-negative-2)"},
+    {label:"H2",token:"--headline-h2",ls:"var(--letter-spacing-negative-2)",info:"500 48px/1.2 Garnett Medium · letter-spacing: var(--letter-spacing-negative-2)"},
+    {label:"H3",token:"--headline-h3",ls:"var(--letter-spacing-negative-2)",info:"500 36px/1.2 Garnett Medium · letter-spacing: var(--letter-spacing-negative-2)"},
+    {label:"H4",token:"--headline-h4",ls:"var(--letter-spacing-negative-1)",info:"500 28px/1.2 Garnett Medium · letter-spacing: var(--letter-spacing-negative-1)"},
+    {label:"H5",token:"--headline-h5",ls:"0",info:"500 22px/1.4 Garnett Medium · letter-spacing: 0"},
+    {label:"H6",token:"--headline-h6",ls:"0",info:"500 18px/1.4 Garnett Medium · letter-spacing: 0"},
+    {label:"B1",token:"--body-b1",ls:"var(--letter-spacing-2)",info:"400 22px/1.6 Garnett Regular · letter-spacing: var(--letter-spacing-2)"},
+    {label:"B2",token:"--body-b2",ls:"var(--letter-spacing-2)",info:"400 18px/1.6 Garnett Regular · letter-spacing: var(--letter-spacing-2)"},
+    {label:"B3",token:"--body-b3",ls:"var(--letter-spacing-2)",info:"400 16px/1.6 Garnett Regular · letter-spacing: var(--letter-spacing-2)"},
+    {label:"B4",token:"--body-b4",ls:"var(--letter-spacing-2)",info:"400 14px/1.68 Garnett Regular · letter-spacing: var(--letter-spacing-2)"},
+    {label:"B5",token:"--body-b5",ls:"var(--letter-spacing-2)",info:"400 12px/1.68 Garnett Regular · letter-spacing: var(--letter-spacing-2)"},
+  ];
+  return <div className="type-showcase">
+    {STYLES.map(s=><div className="palette" key={s.label}>
+      <div className="palette__head"><span>{s.label}</span><div className="palette__divider"/></div>
+      {s.isTag
+        ?<Tag color="purple">Tag Headline</Tag>
+        :<>
+          <div className="type-specimen" style={{font:"var("+s.token+")",letterSpacing:s.ls}}>{s.label+" — Build faster, with direction"}</div>
+          <div className="type-rule"/>
+          <div className="type-detail" onClick={()=>copy("var("+s.token+")",say)} title={"Click to copy var("+s.token+")"}>
+            {"var("+s.token+") · "+s.info}
+          </div>
+        </>}
+    </div>)}
+    <div className="palette type-usage">
+      <div className="palette__head"><span>Usage in Code</span><div className="palette__divider"/></div>
+      <pre>{"/* Heading */\nfont: var(--headline-h3);\nletter-spacing: var(--letter-spacing-negative-2);\n\n/* Body */\nfont: var(--body-b4);\nletter-spacing: var(--letter-spacing-2);"}</pre>
+    </div>
+  </div>;
+}
+
+function ColorRamps({tokens,resolvedMap,say}){
+  const HUE_ORDER=["purple","pool","mint","lava","peach","mustard","grass","gray","absolute"];
+  const HUE_LABEL={purple:"Purples",pool:"Pool",mint:"Mint",lava:"Lava",peach:"Peach",mustard:"Mustard",grass:"Grass",gray:"Grays",absolute:"Absolutes"};
+  const byHue={};
+  for(const t of tokens){const m=t.name.match(/^--colors-([a-z]+)/);if(!m)continue;const h=m[1];if(!HUE_ORDER.includes(h))continue;(byHue[h]=byHue[h]||[]).push(t)}
+  const shortName=n=>n.replace(/^--colors-/,"");
+  return <>{HUE_ORDER.filter(h=>byHue[h]).map(hue=>{
+    const all=byHue[hue];
+    const solid=all.filter(t=>!/-alpha-/.test(t.name)).sort((a,b)=>stepNum(a.name)-stepNum(b.name));
+    const alpha=all.filter(t=>/-alpha-/.test(t.name)).sort((a,b)=>stepNum(a.name)-stepNum(b.name));
+    return <div className="palette" key={hue}>
+      <div className="palette__head"><span>{HUE_LABEL[hue]}</span><div className="palette__divider"/></div>
+      <div className="palette__row">{solid.map(t=>{const v=resolvedMap[t.name]||t.value;const isWhite=/^#fff(fff)?$/i.test(v)||v==="white";return <div key={t.name} className="palette__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+        <div className="palette__swatch-wrap"><div className="palette__swatch" style={{background:v,border:isWhite?"1px solid var(--cards-on-light-border)":undefined}}/></div>
+        <div className="palette__label">{shortName(t.name)}</div>
+      </div>})}</div>
+      {alpha.length>0&&<div className="palette__alpha">
+        <div className="palette__head"><span>Alpha Ramp</span><div className="palette__divider"/></div>
+        <div className="palette__row">{alpha.map(t=>{const v=resolvedMap[t.name]||t.value;return <div key={t.name} className="palette__chip" onClick={()=>copy("var("+t.name+")",say)} title={t.name}>
+          <div className="palette__swatch-wrap"><div className="palette__swatch palette__swatch--alpha"><div style={{background:v,width:"100%",height:"100%",borderRadius:"inherit"}}/></div></div>
+          <div className="palette__label">{shortName(t.name)}</div>
+        </div>})}</div>
+      </div>}
+    </div>;
+  })}</>;
+}
+
 function App(){
-  const [data,setData]=useState(null),[err,setErr]=useState(null),[q,setQ]=useState(""),[toast,setToast]=useState(null),[sideOpen,setSideOpen]=useState(true);
+  const [data,setData]=useState(null),[err,setErr]=useState(null),[toast,setToast]=useState(null),[sideOpen,setSideOpen]=useState(true);
   useEffect(()=>{fetch("library-data.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(setData).catch(e=>setErr(String(e)))},[]);
   const say=m=>{setToast(m);clearTimeout(window.__tt);window.__tt=setTimeout(()=>setToast(null),1600)};
   const resolvedMap=useMemo(()=>{const cs=getComputedStyle(document.documentElement),m={};for(const t of (data?data.tokens:[]))m[t.name]=(cs.getPropertyValue(t.name)||"").trim()||t.value;return m},[data]);
   if(err)return <div className="empty">Could not load <code>library-data.json</code> — {err}</div>;
   if(!data)return <div className="empty">Loading library…</div>;
-  const needle=q.trim().toLowerCase();
-  const match=s=>!needle||String(s).toLowerCase().includes(needle);
-  const comps=data.components.filter(c=>match(c.name)||match(c.summary)||match(c.group)||c.props.some(p=>match(p.name)));
-  const toks=data.tokens.filter(t=>match(t.name)||match(t.value));
-  const secList=comps.filter(c=>c.group==="Sections");
-  const cGroups=["Core","Forms","Patterns"].map(g=>[g,comps.filter(c=>c.group===g)]).filter(x=>x[1].length);
-  const tGroups=[...new Set(data.tokens.map(t=>t.group))].map(g=>[g,toks.filter(t=>t.group===g)]).filter(x=>x[1].length);
+  const colorTokens=data.tokens.filter(t=>t.file==="colors.css");
+  const typographyTokens=data.tokens.filter(t=>t.group==="Typography");
+  const primNonColor=data.tokens.filter(t=>t.file==="primitives.css");
+  const semLayout=data.tokens.filter(t=>t.group==="Semantic layout");
+  const isAssetTok=t=>/^--(favicon|full-logo|logo-mark)/.test(t.name);
+  const spacingTokens=[...primNonColor.filter(t=>!isAssetTok(t)),...semLayout];
+  const assetTokens=primNonColor.filter(isAssetTok);
+  const coreComps=data.components.filter(c=>c.group==="Core"||c.group==="Forms");
+  const patternComps=data.components.filter(c=>c.group==="Patterns");
+  const secList=data.components.filter(c=>c.group==="Sections");
   const go=id=>{const el=document.getElementById(id);if(el)window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-16,behavior:"smooth"})};
   return <div className={"app"+(sideOpen?"":" collapsed")}>
     <aside className="side">
@@ -667,56 +921,93 @@ function App(){
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 3L5 8l5 5"/></svg>
       </button>
       <div className="side-inner">
-        <div className="brand"><img src="assets/logo.svg" alt="Mixpanel"/><span>Heliograph</span></div>
-        <input className="search" placeholder="Search components & tokens…" value={q} onChange={e=>setQ(e.target.value)}/>
-        <div className="navgroup"><h4>Tokens</h4>
-          {tGroups.map(([g,list])=><button key={g} className="navlink" onClick={()=>go("t-"+g)}>{g}<em>{list.length}</em></button>)}
+        <div className="brand">
+          <img src="assets/logos/main-logo-absolute-white.svg" alt="Mixpanel"/>
+          <span className="brand-sub">Heliograph Design System</span>
         </div>
-        <div className="navgroup"><h4>Components</h4>
-          {cGroups.map(([g,list])=><button key={g} className="navlink" onClick={()=>go("g-"+g)}>{g}<em>{list.length}</em></button>)}
-        </div>
-        <div className="navgroup"><h4>Sections</h4>
-          <button className="navlink" onClick={()=>go("sections")}>Page sections<em>{secList.length}</em></button>
-          <button className="navlink" onClick={()=>go("templates")}>Templates<em>{TEMPLATES.length}</em></button>
-        </div>
-        <div className="navgroup"><h4>Elsewhere</h4>
-          <a className="navlink" href="readme.md">Readme</a>
-          <a className="navlink" href="ui_kits/marketing_site/index.html">Marketing site kit</a>
-          <a className="navlink" href="guidelines/design-guidelines.md">Design guidelines</a>
+        <div className="navgroup">
+          <h4>Contents</h4>
+          <div className="nav-divider"/>
+          <div className="nav-list">
+            {CHAPTERS.map(ch=><button key={ch.id} className="navlink" onClick={()=>go(ch.id)}>{ch.num} {ch.title}</button>)}
+          </div>
+          <div className="nav-divider"/>
+          <div className="nav-list">
+            <button className="navlink" onClick={()=>go("primitives")}>List of primitives</button>
+            <button className="navlink" onClick={()=>go("semantics")}>List of semantics</button>
+          </div>
         </div>
       </div>
     </aside>
     <main>
       <div className="hero">
-        <h1>Heliograph library</h1>
-        <p>Every component and token in Mixpanel’s marketing design system, in one browsable page. Names here are the standard names — copy one, paste it into Claude, and it will build against the real system.</p>
-        <div className="acts">
-          <button className="mini on" onClick={()=>copy(data.components.map(c=>c.name).join(", "),say)}>Copy all {data.components.length} component names</button>
-          <button className="mini" onClick={()=>copy("Use the Heliograph design system. Components available: "+data.components.map(c=>c.name).join(", ")+". Style everything with the Heliograph CSS custom properties (var(--…)) — never hard-coded hex or px values.",say)}>Copy a starter prompt</button>
+        <div className="hero__content">
+          <Tag color="purple" onDark>Heliograph</Tag>
+          <h1>Agentic Design System</h1>
+          <p>{"Build and ready to use by your agents. "}</p>
         </div>
       </div>
-      <div className="howto">
-        <div><h5>1 · Find it</h5><p>Search by component name, prop name or token name. Every card shows the live component, not a screenshot.</p></div>
-        <div><h5>2 · Copy the name</h5><p>Component names are the shared vocabulary. "Use a ZLayout with a MdProductCards below it" is a complete instruction.</p></div>
-        <div><h5>3 · Paste into Claude</h5><p>With this design system attached, Claude resolves those names to the real implementations and token values.</p></div>
+      <div className="content-panel">
+        <section className="chapter" id="color">
+          <div className="chapter-head"><span className="chapter-num">01</span><h2>Colors</h2></div>
+          <p className="chapter-desc">Primitive colour ramps across eight hues, each with ten solid steps and five alpha variants. Click any swatch to copy its var().</p>
+          <ColorRamps tokens={colorTokens} resolvedMap={resolvedMap} say={say}/>
+          <div className="usage-in-code">
+            <h4>Usage in Code</h4>
+            <pre>{"/* Always use semantic tokens in component CSS */\ncolor: var(--text-on-light-body);\nbackground: var(--surface-purple-dark);\n\n/* Primitive colours are for reference — semantic tokens resolve to them */\n/* --colors-purple-06  →  #7856ff */"}</pre>
+          </div>
+        </section>
+        <section className="chapter" id="typography">
+          <div className="chapter-head"><span className="chapter-num">02</span><h2>Typography</h2></div>
+          <p className="chapter-desc">Garnett throughout — six headline steps, five body steps, each with matching letter-spacing. Click any style detail to copy its var().</p>
+          <TypeShowcase say={say}/>
+        </section>
+        <section className="chapter" id="components">
+          <div className="chapter-head"><span className="chapter-num">03</span><h2>Components</h2></div>
+          <p className="chapter-desc">Buttons, round icon buttons, and form controls — the atomic building blocks of Heliograph. Click any label to copy.</p>
+          <ComponentShowcase say={say}/>
+        </section>
+        <section className="chapter" id="spacing-layout">
+          <div className="chapter-head"><span className="chapter-num">04</span><h2>Spacing & Layout</h2></div>
+          <p className="chapter-desc">{spacingTokens.length} tokens — grid system, spacing scale, border radii, shadows and layout semantics.</p>
+          <TokenGroup list={spacingTokens} resolvedMap={resolvedMap} say={say}/>
+        </section>
+        <section className="chapter" id="logo-icons">
+          <div className="chapter-head"><span className="chapter-num">05</span><h2>Logo & Icons</h2></div>
+          <p className="chapter-desc">Logo marks, wordmarks, favicons and the full icon set. SVG icons use fill="currentColor".</p>
+          <LogoIconShowcase say={say}/>
+        </section>
+        <section className="chapter" id="patterns">
+          <div className="chapter-head"><span className="chapter-num">06</span><h2>Patterns</h2></div>
+          <p className="chapter-desc">Composable content blocks and full-width page sections.</p>
+          {patternComps.length>0&&<div className="grid">{patternComps.map(c=><ComponentCard key={c.name} c={c} say={say}/>)}</div>}
+          {secList.length>0&&<>
+            <h3 className="chapter-sub">Page Sections</h3>
+            <div className="tiles">{secList.map(c=><SectionTile key={c.name} c={c}/>)}</div>
+          </>}
+        </section>
+        <section className="chapter" id="templates">
+          <div className="chapter-head"><span className="chapter-num">07</span><h2>Templates</h2></div>
+          <p className="chapter-desc">Starting points for full marketing pages, pre-wired to Heliograph components.</p>
+          <div className="tiles">{TEMPLATES.map(t=><TemplateTile key={t.name} t={t}/>)}</div>
+        </section>
+        <section className="chapter" id="product-imagery">
+          <div className="chapter-head"><span className="chapter-num">08</span><h2>Product Imagery</h2></div>
+          <p className="chapter-desc">Coming soon.</p>
+        </section>
+        <section className="chapter" id="data-viz">
+          <div className="chapter-head"><span className="chapter-num">09</span><h2>Data Viz</h2></div>
+          <p className="chapter-desc">Coming soon.</p>
+        </section>
+        <section className="chapter" id="brand-strategy">
+          <div className="chapter-head"><span className="chapter-num">10</span><h2>Brand Strategy</h2></div>
+          <p className="chapter-desc">Coming soon.</p>
+        </section>
+        <section className="chapter" id="tone-of-voice">
+          <div className="chapter-head"><span className="chapter-num">11</span><h2>Tone of Voice</h2></div>
+          <p className="chapter-desc">Coming soon.</p>
+        </section>
       </div>
-      {tGroups.map(([g,list])=><section className="sec" id={"t-"+g} key={g}>
-        <div className="sechead"><h2>{g}</h2><p>{list.length} tokens · tokens/{list[0].file} · click any token to copy its var()</p></div>
-        <TokenGroup list={list} resolvedMap={resolvedMap} say={say}/>
-      </section>)}
-      {cGroups.map(([g,list])=><section className="sec" id={"g-"+g} key={g}>
-        <div className="sechead"><h2>{g}</h2><p>{list.length} component{list.length>1?"s":""} · components/{list[0].dir}/</p></div>
-        <div className="grid">{list.map(c=><ComponentCard key={c.name} c={c} say={say}/>)}</div>
-      </section>)}
-      {secList.length>0&&<section className="sec" id="sections">
-        <div className="sechead"><h2>Sections</h2><p>{secList.length} full-width page sections · click one to open it with its controls</p></div>
-        <div className="tiles">{secList.map(c=><SectionTile key={c.name} c={c}/>)}</div>
-      </section>}
-      {!needle&&<section className="sec" id="templates">
-        <div className="sechead"><h2>Templates</h2><p>{TEMPLATES.length} starting point{TEMPLATES.length>1?"s":""} · templates/</p></div>
-        <div className="tiles">{TEMPLATES.map(t=><TemplateTile key={t.name} t={t}/>)}</div>
-      </section>}
-      {!comps.length&&!toks.length&&<div className="empty">Nothing matches "{q}".</div>}
     </main>
     {toast&&<div className="toast">{toast}</div>}
   </div>;

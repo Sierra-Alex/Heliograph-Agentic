@@ -85,11 +85,12 @@
   --aspect-ratio-2-1: 2:1; /* @kind other */
   --aspect-ratio-3-4: 3:4; /* @kind other */
   --aspect-ratio-16-9: 16:9; /* @kind other */
-  --favicon-main: url("favicon-main"); /* @kind other */
-  --full-logo-black: url("full-logo-black"); /* @kind other */
-  --full-logo-white: url("full-logo-white"); /* @kind other */
-  --full-logo-purple: url("full-logo-purple"); /* @kind other */
-  --logo-mark-black: url("logo-mark-black"); /* @kind other */
-  --logo-mark-white: url("logo-mark-white"); /* @kind other */
-  --logo-mark-purple: url("logo-mark-purple"); /* @kind other */
+  --favicon-light: url("../assets/logos/favicon-light.svg"); /* @kind asset */
+  --favicon-dark: url("../assets/logos/favicon-dark.svg"); /* @kind asset */
+  --full-logo-black: url("../assets/logos/main-logo-gray-10.svg"); /* @kind asset */
+  --full-logo-white: url("../assets/logos/main-logo-absolute-white.svg"); /* @kind asset */
+  --full-logo-purple: url("../assets/logos/main-logo-purple-06.svg"); /* @kind asset */
+  --logo-mark-black: url("../assets/logos/logo-mark-gray-10.svg"); /* @kind asset */
+  --logo-mark-white: url("../assets/logos/logo-mark-absolute-white.svg"); /* @kind asset */
+  --logo-mark-purple: url("../assets/logos/logo-mark-purple-06.svg"); /* @kind asset */
 }

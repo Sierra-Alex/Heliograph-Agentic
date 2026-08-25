@@ -3715,51 +3715,58 @@
       "group": "Primitives"
     },
     {
-      "name": "--favicon-main",
-      "value": "url(\"favicon-main\")",
-      "kind": "other",
+      "name": "--favicon-light",
+      "value": "url(\"../assets/logos/favicon-light.svg\")",
+      "kind": "asset",
+      "file": "primitives.css",
+      "group": "Primitives"
+    },
+    {
+      "name": "--favicon-dark",
+      "value": "url(\"../assets/logos/favicon-dark.svg\")",
+      "kind": "asset",
       "file": "primitives.css",
       "group": "Primitives"
     },
     {
       "name": "--full-logo-black",
-      "value": "url(\"full-logo-black\")",
-      "kind": "other",
+      "value": "url(\"../assets/logos/main-logo-gray-10.svg\")",
+      "kind": "asset",
       "file": "primitives.css",
       "group": "Primitives"
     },
     {
       "name": "--full-logo-purple",
-      "value": "url(\"full-logo-purple\")",
-      "kind": "other",
+      "value": "url(\"../assets/logos/main-logo-purple-06.svg\")",
+      "kind": "asset",
       "file": "primitives.css",
       "group": "Primitives"
     },
     {
       "name": "--full-logo-white",
-      "value": "url(\"full-logo-white\")",
-      "kind": "other",
+      "value": "url(\"../assets/logos/main-logo-absolute-white.svg\")",
+      "kind": "asset",
       "file": "primitives.css",
       "group": "Primitives"
     },
     {
       "name": "--logo-mark-black",
-      "value": "url(\"logo-mark-black\")",
-      "kind": "other",
+      "value": "url(\"../assets/logos/logo-mark-gray-10.svg\")",
+      "kind": "asset",
       "file": "primitives.css",
       "group": "Primitives"
     },
     {
       "name": "--logo-mark-purple",
-      "value": "url(\"logo-mark-purple\")",
-      "kind": "other",
+      "value": "url(\"../assets/logos/logo-mark-purple-06.svg\")",
+      "kind": "asset",
       "file": "primitives.css",
       "group": "Primitives"
     },
     {
       "name": "--logo-mark-white",
-      "value": "url(\"logo-mark-white\")",
-      "kind": "other",
+      "value": "url(\"../assets/logos/logo-mark-absolute-white.svg\")",
+      "kind": "asset",
       "file": "primitives.css",
       "group": "Primitives"
     },
