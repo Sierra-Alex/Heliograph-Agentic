@@ -6,9 +6,7 @@ export interface FooterProps {
   color?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
   /** Show the CTA lockup above the card. @default true */
   includeCta?: boolean;
-  /** @default true */
-  legalFooter?: boolean;
-  /** @default true */
+  /** Show the four-column link grid. @default true */
   fullNav?: boolean;
   /** @default "desktop-plus" */
   desktopSize?: "desktop-plus" | "desktop" | "tablet" | "phone";

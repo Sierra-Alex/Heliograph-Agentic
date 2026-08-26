@@ -36,6 +36,8 @@ CSS specificity pattern:
 
 Token mapping on dark: background `--surface-{hue}-dark`, headline `--text-on-dark-headline-{hue}`, body always `--text-on-dark-body`.
 
+**Always verify colour usage against this file.** When building or modifying any component, read this contract first to confirm the correct surface, headline, and body tokens for the component's surface context. Never use `--colors-absolute-white` or other primitives as a shortcut for dark-surface headline colours — always use the per-hue semantic tokens (`--text-on-dark-headline-{hue}`).
+
 ### Typography
 
 Garnett throughout. Type is applied with the `font` shorthand token + matching `letter-spacing` token:

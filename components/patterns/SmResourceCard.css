@@ -26,7 +26,7 @@
 
 .src__image {
   position: relative;
-  height: 320px;
+  aspect-ratio: 2/1;
   border-radius: var(--border-radius-content);
   overflow: clip;
 }
@@ -34,7 +34,8 @@
 .src__image-placeholder {
   position: absolute;
   inset: 0;
-  background: var(--surface-muted);
+  background:
+    repeating-conic-gradient(var(--surface-muted) 0% 25%, var(--surface-light) 0% 50%) 0 0 / 16px 16px;
   border-radius: inherit;
 }
 
@@ -51,6 +52,10 @@
   height: 100%;
   background: var(--surface-muted);
   border-radius: var(--border-radius-controls);
+}
+
+.src__icon-default {
+  color: var(--colors-gray-10);
 }
 
 /* ---- Content ---- */
@@ -184,4 +189,15 @@
 
 .src__subhead--dark {
   color: var(--text-on-dark-body);
+}
+
+/* ---- Dark icon ---- */
+
+.src--purple .src__icon-default,
+.src--pool .src__icon-default,
+.src--mint .src__icon-default,
+.src--lava .src__icon-default,
+.src--mustard .src__icon-default,
+.src--grass .src__icon-default {
+  color: white;
 }

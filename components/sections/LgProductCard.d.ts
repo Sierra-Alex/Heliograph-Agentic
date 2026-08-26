@@ -9,6 +9,8 @@ export interface LgProductCardProps extends React.HTMLAttributes<HTMLElement> {
   onDark?: boolean;
   /** @default "purple" */
   hue?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
+  /** Show hue-tinted drop shadow on the card. @default false */
+  shadow?: boolean;
   /** @default "right" */
   imagePosition?: "right" | "left";
   tagText?: string;

@@ -39,7 +39,7 @@ export function AddedContent({content="logos",onDark=false,hue="purple",logoCoun
     </div>)}
     {content==="bullets"&&(<div className="ac__bullets">
       {items.map((item,i)=>(<div key={i} className="ac__bullet">
-        <CircleCheck baseColor={onDark?"light":"dark"} size={16}/>
+        <CircleCheck baseColor={onDark?"dark":"light"} size={16}/>
         <span className="ac__bullet-text">{item}</span>
       </div>))}
     </div>)}

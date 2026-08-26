@@ -9,7 +9,7 @@ export function HorizontalCoreType({heading="H1",tag=false,tagText="Label",hue="
   const HeadingTag=HEADING_TAG_MAP[heading];
   const visual=desktopSize==="tablet"?TABLET_HEADING[heading]:desktopSize==="phone"?PHONE_HEADING[heading]:heading;
   const buttonSize=(visual==="H5"||visual==="H6")?"sm":"lg";
-  return (<div className={cx("hct","hct--"+visual.toLowerCase(),onDark&&"hct--on-dark",onDark&&"hct--"+hue,className)}>
+  return (<div className={cx("hct","hct--"+visual.toLowerCase(),"hct--"+desktopSize,onDark&&"hct--on-dark",onDark&&"hct--"+hue,className)}>
     <div className="hct__text">
       {tag&&<Tag color={hue} size="lg" onDark={onDark}>{tagText}</Tag>}
       <HeadingTag className="hct__headline">{headline}</HeadingTag>

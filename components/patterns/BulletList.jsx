@@ -6,7 +6,7 @@ export function BulletList({items=["Bullet point 01","Bullet point 02","Bullet p
     {rule&&<div className="blist__rule"></div>}
     <ul className="blist__items">
       {items.map((t,i)=>(<li className="blist__item" key={i}>
-        {<CircleCheck baseColor={onDark?"light":"dark"}/>}
+        {<CircleCheck baseColor={onDark?"dark":"light"}/>}
         <span className="blist__text">{t}</span>
       </li>))}
     </ul>

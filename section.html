@@ -1,9 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Heliograph — section viewer</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=17">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="_ds_bundle.js"></script>
+<script src="_ds_bundle.js?v=17"></script>
 <style>
 *{box-sizing:border-box}html,body{margin:0;padding:0;height:100%}
 body{background:var(--surface-muted);color:var(--text-on-light-body);font-family:var(--font-family-primary);-webkit-font-smoothing:antialiased}
@@ -21,7 +21,7 @@ a{color:var(--text-on-light-link);text-decoration:none}a:hover{color:var(--text-
 .body{display:grid;grid-template-columns:minmax(0,1fr) 340px;min-height:0;transition:grid-template-columns .25s ease}
 .body.collapsed{grid-template-columns:minmax(0,1fr) 48px}
 .canvas{overflow:auto;padding:32px;display:flex;justify-content:center;align-items:flex-start}
-.sheet{background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.10);overflow:hidden;flex-shrink:0}
+.sheet{background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.10);overflow:clip;flex-shrink:0;height:fit-content}
 .panel{border-left:1px solid var(--cards-on-light-border);background:var(--surface-light);overflow-y:auto;padding:22px 20px 60px;display:flex;flex-direction:column;gap:22px;transition:padding .25s ease;min-width:0;overflow-x:hidden}
 .body.collapsed .panel{padding:12px 10px 60px;align-items:center}
 .panel-inner{display:flex;flex-direction:column;gap:22px;transition:opacity .2s ease;min-width:0}
@@ -34,10 +34,8 @@ a{color:var(--text-on-light-link);text-decoration:none}a:hover{color:var(--text-
 .ctl{display:flex;flex-direction:column;gap:7px}
 .ctl label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--text-on-light-headline)}
 .ctl .doc{font:var(--body-b5);font-size:11.5px;color:var(--colors-gray-08);text-wrap:pretty}
-.radios.radios--row{flex-direction:row;flex-wrap:wrap;gap:14px}
 .sw{display:flex;align-items:center;gap:10px}
 .sw span{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--text-on-light-headline)}
-.radios{display:flex;flex-direction:column;gap:8px}
 .radiorow{display:flex;align-items:center;gap:8px;cursor:pointer}
 .radiorow span{font:var(--body-b5);letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-body)}
 .radiorow:hover span{color:var(--text-on-light-headline)}
@@ -46,6 +44,23 @@ a{color:var(--text-on-light-link);text-decoration:none}a:hover{color:var(--text-
 .group{display:flex;flex-direction:column;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--cards-on-light-border)}
 pre{margin:0;padding:12px 14px;border-radius:12px;background:#150040;color:#e8e6f2;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;line-height:1.6;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
 .note{font:var(--body-b5);font-size:11.5px;color:var(--colors-gray-08);text-wrap:pretty}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:6px !important;position:relative}
+.icon-btn svg{width:100%;height:100%;color:var(--text-on-light-body);pointer-events:none}
+.icon-btn.on svg{color:var(--text-on-light-headline)}
+.icon-btn .icon-tip{display:none;position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--surface-purple-dark);color:#fff;font:var(--body-b5);font-size:11px;padding:4px 8px;border-radius:6px;white-space:nowrap;z-index:10;pointer-events:none}
+.icon-btn:hover .icon-tip{display:block}
+.seg{display:flex}
+.seg .mini{border-radius:0;margin-left:-1px}
+.seg .mini:first-child{border-radius:var(--border-radius-control) 0 0 var(--border-radius-control);margin-left:0}
+.seg .mini:last-child{border-radius:0 var(--border-radius-control) var(--border-radius-control) 0}
+.seg .mini.on{z-index:1;position:relative}
+.panel .seg{flex-wrap:wrap;gap:4px}
+.panel .seg .mini{border-radius:var(--border-radius-control);margin-left:0}
+.panel .seg .mini:first-child{border-radius:var(--border-radius-control)}
+.panel .seg .mini:last-child{border-radius:var(--border-radius-control)}
+.mini{font-family:var(--font-family-primary);font-size:12px;letter-spacing:.02em;padding:7px 12px;border-radius:999px;border:1px solid var(--cards-on-light-border);background:var(--surface-default);color:var(--text-on-light-body);cursor:pointer;white-space:nowrap}
+.mini:hover{background:var(--surface-muted);color:var(--text-on-light-headline)}
+.mini.on{background:var(--surface-light);border-color:var(--text-on-light-headline);color:var(--text-on-light-headline)}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--surface-purple-dark);color:#fff;padding:11px 18px;border-radius:999px;font:var(--body-b5);z-index:50}
 .empty{padding:40px;font:var(--body-b5)}
 </style>
@@ -53,7 +68,7 @@ pre{margin:0;padding:12px 14px;border-radius:12px;background:#150040;color:#e8e6
 <script type="text/babel">
 const NS=window.HeliographMixpanelDesignSystem_8500f4;
 const {useState,useEffect,useMemo,useRef,useLayoutEffect}=React;
-const VIEWPORTS={"desktop-plus":1440,desktop:1200,tablet:834,phone:390};
+const VIEWPORTS={"desktop-plus":1440,desktop:1200,tablet:808,phone:384};
 const EXTRA={FullTopNav:{logoSrc:"assets/logo.svg",caretSrc:"assets/icons/caret-down.svg",burgerSrc:"assets/icons/burger-menu.svg"},Footer:{logoSrc:"assets/mixpanel-logo.svg"},LgHero:{logoSrc:"assets/logo.svg"},SmHero:{logoSrc:"assets/logo.svg"}};
 const SKIP=/^(children|className|style|cards|links)$/;
 
@@ -104,7 +119,7 @@ function App(){
   const [fit,setFit]=useState(true);
   const name=new URLSearchParams(location.search).get("c")||"LgHero";
   const box=useRef(null),[scale,setScale]=useState(1);
-  useEffect(()=>{fetch("library-data.json").then(r=>r.json()).then(setData)},[]);
+  useEffect(()=>{fetch("library-data.json?v=17").then(r=>r.json()).then(setData)},[]);
   const say=m=>{setToast(m);clearTimeout(window.__tt);window.__tt=setTimeout(()=>setToast(null),1500)};
   const c=data&&data.components.find(x=>x.name===name);
   const ctls=useMemo(()=>c?controlsFor(c):[],[c]);
@@ -133,10 +148,7 @@ function App(){
       </div>
       {NS.Button&&<NS.Button variant="secondary" size="sm" onClick={()=>copy(name,say)} title={"Copy “"+name+"”"}>Copy</NS.Button>}
       <span className="sp"/>
-      <div className="radios radios--row">{Object.keys(VIEWPORTS).map(k=><label className="radiorow" key={k}>
-        {NS.Radio&&<NS.Radio name="viewport" checked={vp===k} onChange={()=>setVp(k)}/>}
-        <span>{k}</span>
-      </label>)}</div>
+      <div className="seg">{Object.keys(VIEWPORTS).map(k=><button key={k} className={"mini"+(vp===k?" on":"")} onClick={()=>setVp(k)}>{k}</button>)}</div>
       <label className="radiorow">
         {NS.Toggle&&<NS.Toggle checked={fit} onChange={e=>setFit(e.target.checked)}/>}
         <span>Fit</span>
@@ -155,14 +167,11 @@ function App(){
           <h2>Options</h2>
           {ctls.map(p=>{
             const v=vals[p.name];
-            if(p.kind==="enum")return <div className="ctl" key={p.name}>
+            if(p.kind==="enum"){const isIcon=p.name==="icon"&&NS.ICON_PATHS;return <div className="ctl" key={p.name}>
               <label>{p.name}</label>
               {p.doc&&<div className="doc">{p.doc}</div>}
-              <div className="radios">{p.opts.map(o=><label className="radiorow" key={String(o)}>
-                {NS.Radio&&<NS.Radio name={"opt-"+p.name} checked={v===o} onChange={()=>set(p.name,o)}/>}
-                <span>{String(o)}</span>
-              </label>)}</div>
-            </div>;
+              <div className="seg">{p.opts.map(o=>{if(isIcon&&NS.ICON_PATHS[o]){const pp=NS.ICON_PATHS[o];return <button key={String(o)} className={"mini icon-btn"+(v===o?" on":"")} onClick={()=>set(p.name,o)}><svg viewBox="0 0 24 24" fill="none">{pp.map((g,i)=>React.createElement("path",{key:i,d:g.d,fill:"currentColor",fillRule:g.fr||undefined,clipRule:g.fr||undefined}))}</svg><span className="icon-tip">{String(o)}</span></button>}return <button key={String(o)} className={"mini"+(v===o?" on":"")} onClick={()=>set(p.name,o)}>{String(o)}</button>})}</div>
+            </div>;}
             if(p.kind==="bool")return <div className="ctl" key={p.name}>
               <div className="sw">
                 {NS.Toggle&&<NS.Toggle checked={!!v} onChange={e=>set(p.name,e.target.checked)}/>}

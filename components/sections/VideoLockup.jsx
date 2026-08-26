@@ -4,7 +4,7 @@ import { PlayHead } from "../core/PlayHead.jsx";
 const cx=(...a)=>a.filter(Boolean).join(" ");
 export function VideoLockup({color="light",includeHeadline=false,tagText="Text",headline="Headline goes here",subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",primaryLabel="Click Me",secondaryLabel="Click Me",desktopSize="desktop-plus",children,className,...props}){
   return (<section className={cx("vl","vl--"+color,"vl--"+desktopSize,className)} {...props}>
-    {includeHeadline&&<CoreTypeLockups heading="H3" alignment="center" tag tagText={tagText} button includeSecondary headline={headline} subhead={subhead} primaryLabel={primaryLabel} secondaryLabel={secondaryLabel}/>}
+    {includeHeadline&&<CoreTypeLockups heading="H3" alignment="center" tag tagText={tagText} button includeSecondary desktopSize={desktopSize} headline={headline} subhead={subhead} primaryLabel={primaryLabel} secondaryLabel={secondaryLabel}/>}
     <div className="vl__frame">
       {children||<div className="vl__placeholder"/>}
       <div className="vl__play"><PlayHead/></div>

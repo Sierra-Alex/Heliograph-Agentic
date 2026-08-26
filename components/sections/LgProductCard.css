@@ -58,21 +58,23 @@
 .lpc--on-dark.lpc--mustard .lpc__card { background: var(--cards-on-dark-fill-mustard); }
 .lpc--on-dark.lpc--grass .lpc__card { background: var(--cards-on-dark-fill-grass); }
 
-/* ---- Shadow glow ---- */
+/* ---- Shadow glow (opt-in) ---- */
 
-.lpc--purple .lpc__card { box-shadow: var(--shadow-glow-on-light-purple); }
-.lpc--pool .lpc__card { box-shadow: var(--shadow-glow-on-light-pool); }
-.lpc--mint .lpc__card { box-shadow: var(--shadow-glow-on-light-mint); }
-.lpc--lava .lpc__card { box-shadow: var(--shadow-glow-on-light-lava); }
-.lpc--mustard .lpc__card { box-shadow: var(--shadow-glow-on-light-mustard); }
-.lpc--grass .lpc__card { box-shadow: var(--shadow-glow-on-light-grass); }
+.lpc--shadow { overflow: visible; }
 
-.lpc--on-dark.lpc--purple .lpc__card { box-shadow: var(--shadow-glow-on-dark-purple); }
-.lpc--on-dark.lpc--pool .lpc__card { box-shadow: var(--shadow-glow-on-dark-pool); }
-.lpc--on-dark.lpc--mint .lpc__card { box-shadow: var(--shadow-glow-on-dark-mint); }
-.lpc--on-dark.lpc--lava .lpc__card { box-shadow: var(--shadow-glow-on-dark-lava); }
-.lpc--on-dark.lpc--mustard .lpc__card { box-shadow: var(--shadow-glow-on-dark-mustard); }
-.lpc--on-dark.lpc--grass .lpc__card { box-shadow: var(--shadow-glow-on-dark-grass); }
+.lpc--shadow.lpc--purple .lpc__card { box-shadow: var(--shadow-glow-on-light-purple); }
+.lpc--shadow.lpc--pool .lpc__card { box-shadow: var(--shadow-glow-on-light-pool); }
+.lpc--shadow.lpc--mint .lpc__card { box-shadow: var(--shadow-glow-on-light-mint); }
+.lpc--shadow.lpc--lava .lpc__card { box-shadow: var(--shadow-glow-on-light-lava); }
+.lpc--shadow.lpc--mustard .lpc__card { box-shadow: var(--shadow-glow-on-light-mustard); }
+.lpc--shadow.lpc--grass .lpc__card { box-shadow: var(--shadow-glow-on-light-grass); }
+
+.lpc--on-dark.lpc--shadow.lpc--purple .lpc__card { box-shadow: var(--shadow-glow-on-dark-purple); }
+.lpc--on-dark.lpc--shadow.lpc--pool .lpc__card { box-shadow: var(--shadow-glow-on-dark-pool); }
+.lpc--on-dark.lpc--shadow.lpc--mint .lpc__card { box-shadow: var(--shadow-glow-on-dark-mint); }
+.lpc--on-dark.lpc--shadow.lpc--lava .lpc__card { box-shadow: var(--shadow-glow-on-dark-lava); }
+.lpc--on-dark.lpc--shadow.lpc--mustard .lpc__card { box-shadow: var(--shadow-glow-on-dark-mustard); }
+.lpc--on-dark.lpc--shadow.lpc--grass .lpc__card { box-shadow: var(--shadow-glow-on-dark-grass); }
 
 /* ---- Content ---- */
 
@@ -86,7 +88,7 @@
 
 .lpc__lockup {
   width: 100%;
-  padding: 0 var(--generic-spacing-x-lg);
+  padding: 0 var(--generic-spacing-lg);
 }
 
 /* ---- Image ---- */
@@ -132,7 +134,7 @@
 }
 
 .lpc--phone {
-  padding: var(--generic-spacing-sm) var(--layout-grid-phone-margin);
+  padding: var(--stack-section-md) var(--layout-grid-phone-margin);
 }
 
 .lpc--phone .lpc__card {

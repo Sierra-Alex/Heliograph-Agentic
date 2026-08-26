@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--generic-spacing-x-lg);
-  padding: var(--generic-spacing-lg) var(--layout-grid-desktop-plus-margin);
+  padding: var(--stack-section-md) var(--layout-grid-desktop-plus-margin);
   background: var(--surface-light);
 }
 
@@ -59,13 +59,13 @@
 /* ---- Responsive ---- */
 
 .faqs--desktop {
-  padding: var(--generic-spacing-lg) var(--layout-grid-desktop-margin);
+  padding: var(--stack-section-md) var(--layout-grid-desktop-margin);
 }
 
 .faqs--tablet {
-  padding: var(--generic-spacing-lg) var(--layout-grid-tablet-margin);
+  padding: var(--stack-section-md) var(--layout-grid-tablet-margin);
 }
 
 .faqs--phone {
-  padding: var(--generic-spacing-md) var(--layout-grid-phone-margin);
+  padding: var(--stack-section-md) var(--layout-grid-phone-margin);
 }

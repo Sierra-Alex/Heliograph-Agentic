@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "../core/Button.jsx";
 const cx=(...a)=>a.filter(Boolean).join(" ");
-export function MdProductCards({background="gray",color="purple",leftAligned=true,headline="Headline goes here",subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",primaryLabel="Click Me",secondaryLabel="Click Me",className}){
+export function MdProductCards({background="gray",color="purple",leftAligned=true,shadow=false,headline="Headline goes here",subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",primaryLabel="Click Me",secondaryLabel="Click Me",className}){
   const isDark=background==="dark";
-  return (<div className={cx("pc","pc--"+color,"pc--bg-"+background,leftAligned&&"pc--align-left",className)}>
+  return (<div className={cx("pc","pc--"+color,"pc--bg-"+background,leftAligned&&"pc--align-left",shadow&&"pc--shadow",className)}>
     <div className="pc__content"><div className="pc__lockup">
       <div className="pc__lockup-text">
         <h4 className={cx("pc__headline",isDark&&"pc__headline--"+color)}>{headline}</h4>

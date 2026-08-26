@@ -6,7 +6,7 @@ export function StatLockup({color="light",numberOfStats=2,addHeadline=false,tagT
   const count=Number(numberOfStats)||2;
   const items=stats||Array.from({length:count},()=>({value,suffix,description}));
   return (<section className={cx("stl","stl--"+color,"stl--"+desktopSize,className)} {...props}>
-    {addHeadline&&<CoreTypeLockups heading="H3" alignment="center" tag tagText={tagText} button includeSecondary headline={headline} subhead={subhead} primaryLabel={primaryLabel} secondaryLabel={secondaryLabel}/>}
+    {addHeadline&&<CoreTypeLockups heading="H3" alignment="center" tag tagText={tagText} button includeSecondary desktopSize={desktopSize} headline={headline} subhead={subhead} primaryLabel={primaryLabel} secondaryLabel={secondaryLabel}/>}
     <div className="stl__row">
       {items.map((s,i)=><Stat key={i} value={s.value} suffix={s.suffix} description={s.description}/>)}
     </div>

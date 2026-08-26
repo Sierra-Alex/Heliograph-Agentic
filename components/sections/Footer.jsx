@@ -18,8 +18,8 @@ function FooterLinkItem({text,pill}){
   const a=(<a href="#" className={cx("footer__link",pill&&"footer__link--pill")}><span className="footer__link-text">{text}</span><FooterArrow/></a>);
   return pill?<div className="footer__link-pill-wrap">{a}</div>:a;
 }
-export function Footer({color="purple",includeCta=true,legalFooter=true,fullNav=true,desktopSize="desktop-plus",ctaHeadline="Headline goes here",ctaSubhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",logoSrc="assets/mixpanel-logo.svg",className}){
-  return (<div className={cx("footer","footer--"+color,"footer--"+desktopSize,className)}>
+export function Footer({color="purple",includeCta=true,fullNav=true,desktopSize="desktop-plus",ctaHeadline="Headline goes here",ctaSubhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",logoSrc="assets/mixpanel-logo.svg",className}){
+  return (<div className={cx("footer","footer--"+color,"footer--"+desktopSize,!fullNav&&"footer--compact",className)}>
     {includeCta&&<div className="footer__cta">
       <CoreTypeLockups heading="H2" alignment="center" button tag={false} includeSecondary desktopSize={desktopSize} headline={ctaHeadline} subhead={ctaSubhead}/>
     </div>}
@@ -32,15 +32,15 @@ export function Footer({color="purple",includeCta=true,legalFooter=true,fullNav=
           </div>))}
         </div>))}
       </div>}
-      {legalFooter&&<div className="footer__legal">
+      <div className="footer__legal">
         <div className="footer__legal-left">
           <img src={logoSrc} alt="Mixpanel" className="footer__logo"/>
-          <p className="footer__copyright">&copy;2025 Mixpanel. All rights reserved</p>
+          <p className="footer__copyright">&copy;2026 Mixpanel. All rights reserved</p>
         </div>
         <div className="footer__legal-links">{LEGAL_LINKS.map((l,i)=>(
           <span key={l} className="footer__legal-item">{i>0&&<span className="footer__legal-dot"/>}<a href="#" className="footer__legal-link">{l}</a></span>))}
         </div>
-      </div>}
+      </div>
     </div>
   </div>);
 }

@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--stack-page-bottom);
-  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-plus-margin) var(--layout-grid-desktop-plus-margin);
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin) var(--layout-grid-desktop-plus-margin);
   border-radius: var(--border-radius-lg-outer);
   overflow: clip;
 
@@ -25,6 +25,14 @@
   filter: blur(var(--blur-100));
   z-index: 0;
   pointer-events: none;
+}
+
+.footer--compact::before {
+  top: -300px;
+}
+
+.footer--compact.footer--phone::before {
+  top: -251px;
 }
 
 /* ---- CTA ---- */
@@ -48,9 +56,11 @@
   width: 100%;
   max-width: 1344px;
   padding: var(--stack-page-bottom) var(--generic-spacing-md) var(--generic-spacing-md);
-  border: var(--standard) solid var(--cards-on-dark-border);
   border-radius: var(--border-radius-sm-outer);
-  background-clip: padding-box;
+}
+
+.footer--compact .footer__card {
+  padding: var(--generic-spacing-sm) var(--generic-spacing-md);
 }
 
 /* ---- Nav ---- */
@@ -145,8 +155,9 @@
 }
 
 .footer__logo {
-  height: 33px;
-  width: auto;
+  display: block;
+  height: auto;
+  width: 140px;
 }
 
 .footer__copyright {
@@ -262,13 +273,13 @@
 /* ---- Responsive: Desktop ---- */
 
 .footer--desktop {
-  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-margin) var(--layout-grid-desktop-margin);
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-margin) var(--layout-grid-desktop-margin);
 }
 
 /* ---- Responsive: Tablet ---- */
 
 .footer--tablet {
-  padding: var(--generic-spacing-x-lg) var(--layout-grid-tablet-margin) var(--layout-grid-tablet-margin);
+  padding: var(--stack-section-lg) var(--layout-grid-tablet-margin) var(--layout-grid-tablet-margin);
 }
 
 .footer--tablet .footer__nav {
@@ -288,7 +299,7 @@
 /* ---- Responsive: Phone ---- */
 
 .footer--phone {
-  padding: var(--generic-spacing-lg) var(--layout-grid-phone-margin) var(--layout-grid-phone-margin);
+  padding: var(--stack-section-md) var(--layout-grid-phone-margin) var(--layout-grid-phone-margin);
 }
 
 .footer--phone .footer__nav {

@@ -8,6 +8,8 @@ export interface MdProductCardsProps {
   color?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
   /** @default true */
   leftAligned?: boolean;
+  /** Show hue-tinted drop shadow. @default false */
+  shadow?: boolean;
   headline?: string;
   subhead?: string;
   primaryLabel?: string;

@@ -8,7 +8,7 @@ export function MdProductCardLockup({color="purple",cardCount=3,cards,pageBackgr
   const items=cards||Array.from({length:cardCount},()=>({}));
   return (<section className={cx("mpcl","mpcl--"+color,"mpcl--bg-"+pageBackground,"mpcl--"+desktopSize,className)}>
     <div className="mpcl__inner">
-      <CoreTypeLockups heading="H3" alignment="left" button includeSecondary headline={headline} subhead={subhead} className="mpcl__type"/>
+      <CoreTypeLockups heading="H3" alignment="left" button includeSecondary onDark={pageBackground==="dark"} hue={color} desktopSize={desktopSize} headline={headline} subhead={subhead} className="mpcl__type"/>
       <div className="mpcl__cards">{items.map((c,i)=>(<MdProductCards key={i} color={c.color||color} background={cardBg} leftAligned headline={c.headline} subhead={c.subhead}/>))}</div>
     </div>
   </section>);

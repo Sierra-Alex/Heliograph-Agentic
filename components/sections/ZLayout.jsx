@@ -7,7 +7,7 @@ export function ZLayout({color="purple",imagePosition="right",pageBackground="li
     <div className="zl__container">
       <div className="zl__content">
         <div className="zl__content-inner">
-          <CoreTypeLockups heading="H3" alignment="left" hue={color} tag tagText={tagText} button includeSecondary onDark={isDark} headline={headline} subhead={subhead} className="zl__lockup"/>
+          <CoreTypeLockups heading="H3" alignment="left" hue={color} tag tagText={tagText} button includeSecondary onDark={isDark} desktopSize={desktopSize} headline={headline} subhead={subhead} className="zl__lockup"/>
         </div>
       </div>
       <div className="zl__image">{children}</div>

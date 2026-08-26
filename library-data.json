@@ -1012,6 +1012,13 @@
           "def": "true"
         },
         {
+          "name": "icon",
+          "required": false,
+          "type": "\"diamond\" | \"grid\" | \"grow\" | \"speed\" | \"pulse\" | \"target\" | \"stack\" | \"ai\" | \"scale\" | \"rows\" | \"product\" | \"schedule\" | \"business-size\" | \"calendar\" | \"cart\" | \"check\" | \"community\" | \"edit\" | \"folder\" | \"industries\" | \"learn\" | \"lock\" | \"logo\" | \"logo-laptop\" | \"media\" | \"medicine\" | \"partnerships\" | \"payment\" | \"phone-analytics\" | \"shopping-bag\" | \"shopping-tag\" | \"teams\" | \"web\"",
+          "doc": "Icon for the icon layout variant.",
+          "def": "\"diamond\""
+        },
+        {
           "name": "includeButton",
           "required": false,
           "type": "boolean",
@@ -1627,13 +1634,6 @@
           "def": "true"
         },
         {
-          "name": "legalFooter",
-          "required": false,
-          "type": "boolean",
-          "doc": null,
-          "def": "true"
-        },
-        {
           "name": "fullNav",
           "required": false,
           "type": "boolean",
@@ -2022,30 +2022,16 @@
         {
           "name": "color",
           "required": false,
-          "type": "\"light\" | \"default\" | \"muted\"",
-          "doc": "Background surface.",
-          "def": "\"light\""
-        },
-        {
-          "name": "onDark",
-          "required": false,
-          "type": "boolean",
-          "doc": null,
-          "def": "false"
-        },
-        {
-          "name": "hue",
-          "required": false,
           "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
-          "doc": "Accent hue \u2014 drives on-dark surface, panel gradient, and tag color.",
+          "doc": "Accent hue \u2014 drives panel gradient, tag color, and on-dark surface.",
           "def": "\"purple\""
         },
         {
-          "name": "heading",
+          "name": "pageBackground",
           "required": false,
-          "type": "\"H1\" | \"H2\" | \"H3\" | \"H4\" | \"H5\" | \"H6\"",
-          "doc": "Heading level passed to the lockup.",
-          "def": "\"H2\""
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
+          "doc": "Background surface.",
+          "def": "\"light\""
         },
         {
           "name": "subTextBlocks",
@@ -2109,10 +2095,24 @@
       "name": "SmContentCardLockup",
       "group": "Sections",
       "dir": "sections",
-      "summary": "Section layout of ContentCards in 1\u20135 card grids with an optional headline lockup.",
-      "desc": "Full-width section that renders ContentCards in responsive row layouts.",
+      "summary": "Section layout of SmResourceCards with an optional headline lockup.",
+      "desc": "Full-width section that renders SmResourceCards in a responsive flex row.",
       "extends": null,
       "props": [
+        {
+          "name": "color",
+          "required": false,
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Accent hue.",
+          "def": "\"purple\""
+        },
+        {
+          "name": "pageBackground",
+          "required": false,
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
+          "doc": "Page surface.",
+          "def": "\"light\""
+        },
         {
           "name": "cards",
           "required": false,
@@ -2132,7 +2132,7 @@
           "required": false,
           "type": "\"left\" | \"centered\"",
           "doc": "Headline layout style.",
-          "def": "\"left\""
+          "def": "\"centered\""
         },
         {
           "name": "buttonInHeadline",
@@ -2145,8 +2145,22 @@
           "name": "largeImage",
           "required": false,
           "type": "boolean",
-          "doc": "Use tall (1:2) images in cards.",
-          "def": "true"
+          "doc": "Big image cards instead of icon cards.",
+          "def": "false"
+        },
+        {
+          "name": "icon",
+          "required": false,
+          "type": "\"diamond\" | \"grid\" | \"grow\" | \"speed\" | \"pulse\" | \"target\" | \"stack\" | \"ai\" | \"scale\" | \"rows\" | \"product\" | \"schedule\" | \"business-size\" | \"calendar\" | \"cart\" | \"check\" | \"community\" | \"edit\" | \"folder\" | \"industries\" | \"learn\" | \"lock\" | \"logo\" | \"logo-laptop\" | \"media\" | \"medicine\" | \"partnerships\" | \"payment\" | \"phone-analytics\" | \"shopping-bag\" | \"shopping-tag\" | \"teams\" | \"web\"",
+          "doc": "Icon for icon-layout cards.",
+          "def": "\"diamond\""
+        },
+        {
+          "name": "tagText",
+          "required": false,
+          "type": "string",
+          "doc": null,
+          "def": "\"Resources\""
         },
         {
           "name": "headline",
@@ -2163,32 +2177,11 @@
           "def": null
         },
         {
-          "name": "tagText",
-          "required": false,
-          "type": "string",
-          "doc": null,
-          "def": "\"Resources\""
-        },
-        {
           "name": "items",
           "required": false,
           "type": "{ headline?: string; subhead?: string }[]",
           "doc": "Per-card content.",
           "def": "[]"
-        },
-        {
-          "name": "pageBackground",
-          "required": false,
-          "type": "\"light\" | \"default\" | \"muted\"",
-          "doc": "Surface colour.",
-          "def": "\"light\""
-        },
-        {
-          "name": "className",
-          "required": false,
-          "type": "string",
-          "doc": null,
-          "def": null
         },
         {
           "name": "desktopSize",
@@ -2198,8 +2191,8 @@
           "required": false
         }
       ],
-      "example": "<SmContentCardLockup cards={3} headline=\"Latest resources\" tagText=\"Blog\" />",
-      "notes": "Row layout: 1=[1], 2=[2], 3=[3], 4=[2,2], 5=[3,2]. Uses HorizontalCoreType or CoreTypeLockups for the headline.",
+      "example": "<SmContentCardLockup color=\"pool\" pageBackground=\"dark\" cards={3} headline=\"Latest resources\" tagText=\"Blog\" />",
+      "notes": "Uses SmResourceCard components. CoreTypeLockups or HorizontalCoreType for the headline.",
       "files": [
         "components/sections/SmContentCardLockup.jsx",
         "components/sections/SmContentCardLockup.css",
@@ -2502,23 +2495,37 @@
       "name": "LgContentCallout",
       "group": "Sections",
       "dir": "sections",
-      "summary": "Large resource callout with a framed image and CoreTypeLockups text block.",
-      "desc": "Two-column section with an image frame and a text lockup for resource promotion.",
+      "summary": "Large content callout with image panel and CoreTypeLockups + BulletList.",
+      "desc": "Two-column section with a rounded image panel and a text lockup with bullet list for resource promotion.",
       "extends": null,
       "props": [
         {
-          "name": "pageColor",
+          "name": "color",
           "required": false,
-          "type": "string",
-          "doc": "Background surface. Dark hue names switch to dark mode.",
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Accent hue.",
           "def": "\"purple\""
+        },
+        {
+          "name": "pageBackground",
+          "required": false,
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
+          "doc": "Page surface. Dark switches to dark mode with the chosen hue.",
+          "def": "\"light\""
         },
         {
           "name": "imagePosition",
           "required": false,
           "type": "\"left\" | \"right\"",
           "doc": "Which side the image appears on.",
-          "def": "\"left\""
+          "def": "\"right\""
+        },
+        {
+          "name": "content",
+          "required": false,
+          "type": "\"bullets\" | \"logos\" | \"quote\" | \"form\" | \"stats\"",
+          "doc": "Content block below the type lockup.",
+          "def": "\"bullets\""
         },
         {
           "name": "tagText",
@@ -2549,6 +2556,20 @@
           "def": "\"Learn More\""
         },
         {
+          "name": "secondaryLabel",
+          "required": false,
+          "type": "string",
+          "doc": "Secondary button label.",
+          "def": null
+        },
+        {
+          "name": "items",
+          "required": false,
+          "type": "string[]",
+          "doc": "Bullet point strings for the BulletList.",
+          "def": null
+        },
+        {
           "name": "className",
           "required": false,
           "type": "string",
@@ -2563,8 +2584,8 @@
           "required": false
         }
       ],
-      "example": "<LgContentCallout pageColor=\"purple\" headline=\"The definitive guide to product analytics\" />",
-      "notes": "Uses CoreTypeLockups internally. Pass children for the image frame content.",
+      "example": "<LgContentCallout headline=\"The definitive guide to product analytics\" />",
+      "notes": "Uses CoreTypeLockups and BulletList internally. Pass children for the image panel.",
       "files": [
         "components/sections/LgContentCallout.jsx",
         "components/sections/LgContentCallout.css",

@@ -141,7 +141,8 @@
 }
 
 .sh--tablet .sh__image {
-  width: auto;
+  width: 100%;
+  max-width: 400px;
 }
 
 /* ---- Responsive: Phone ---- */
@@ -162,5 +163,5 @@
 }
 
 .sh--phone .sh__image {
-  width: auto;
+  width: 100%;
 }

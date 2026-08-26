@@ -106,10 +106,23 @@
 .mpcl--bg-dark.mpcl--mustard { background: var(--surface-mustard-dark); }
 .mpcl--bg-dark.mpcl--grass { background: var(--surface-grass-dark); }
 
-.mpcl--bg-dark .mpcl__type .ctl__headline {
-  color: var(--colors-absolute-white);
+/* ---- Card phone layout ---- */
+
+.mpcl--phone .pc {
+  flex-direction: column;
 }
 
-.mpcl--bg-dark .mpcl__type .ctl__subhead {
-  color: var(--text-on-dark-body);
+.mpcl--phone .pc__content {
+  padding: var(--generic-spacing-x-sm);
+}
+
+.mpcl--phone .pc__image {
+  order: 1;
+  width: 100%;
+  flex: none;
+}
+
+.mpcl--phone .pc__headline {
+  font: var(--headline-h5);
+  letter-spacing: var(--letter-spacing-0);
 }

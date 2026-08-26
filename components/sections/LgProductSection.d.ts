@@ -8,14 +8,10 @@ export interface LgProductSectionProps extends React.HTMLAttributes<HTMLElement>
   subhead?: string;
   /** Centred lockup or headline-left with the button right. @default "centered" */
   headlineLayout?: "centered" | "horizontal";
+  /** Accent hue — drives panel gradient, tag color, and on-dark surface. @default "purple" */
+  color?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
   /** Background surface. @default "light" */
-  color?: "light" | "default" | "muted";
-  /** @default false */
-  onDark?: boolean;
-  /** Accent hue — drives on-dark surface, panel gradient, and tag color. @default "purple" */
-  hue?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
-  /** Heading level passed to the lockup. @default "H2" */
-  heading?: "H1" | "H2" | "H3" | "H4" | "H5" | "H6";
+  pageBackground?: "light" | "standard" | "muted" | "dark";
   /** How many caption blocks sit under the panel, 0-3. @default 0 */
   subTextBlocks?: 0 | 1 | 2 | 3;
   blocks?: { headline?: string; subhead?: string }[];

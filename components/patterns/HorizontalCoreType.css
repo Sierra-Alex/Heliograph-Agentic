@@ -109,3 +109,10 @@
 .hct--on-dark.hct--lava .hct__headline { color: var(--text-on-dark-headline-lava); }
 .hct--on-dark.hct--mustard .hct__headline { color: var(--text-on-dark-headline-mustard); }
 .hct--on-dark.hct--grass .hct__headline { color: var(--text-on-dark-headline-grass); }
+
+/* ---- Responsive ---- */
+
+.hct--phone {
+  flex-direction: column;
+  align-items: flex-start;
+}

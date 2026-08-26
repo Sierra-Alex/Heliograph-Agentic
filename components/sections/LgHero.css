@@ -155,7 +155,7 @@
 
 .lh--tablet .lh__banner {
   margin: 0 var(--generic-spacing-xx-sm);
-  padding: var(--generic-spacing-x-lg) var(--layout-grid-tablet-margin) var(--layout-grid-tablet-margin);
+  padding: var(--stack-section-lg) var(--layout-grid-tablet-margin) var(--layout-grid-tablet-margin);
 }
 
 .lh--tablet .lh__lockup {
@@ -174,7 +174,7 @@
 
 .lh--phone .lh__banner {
   margin: 0 var(--generic-spacing-xx-sm);
-  padding: var(--generic-spacing-lg) var(--layout-grid-phone-margin) var(--layout-grid-phone-margin);
+  padding: var(--stack-section-md) var(--layout-grid-phone-margin) var(--layout-grid-phone-margin);
 }
 
 .lh--phone .lh__lockup {

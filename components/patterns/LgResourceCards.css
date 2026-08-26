@@ -82,7 +82,8 @@
 .rc__image-placeholder {
   position: absolute;
   inset: 0;
-  background: var(--surface-muted);
+  background:
+    repeating-conic-gradient(var(--surface-muted) 0% 25%, var(--surface-light) 0% 50%) 0 0 / 16px 16px;
   border-radius: inherit;
 }
 

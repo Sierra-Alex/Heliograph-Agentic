@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-plus-margin);
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin);
   background: var(--surface-purple-dark);
 }
 
@@ -125,11 +125,11 @@
 /* ---- Responsive ---- */
 
 .qc--desktop {
-  padding: var(--generic-spacing-x-lg) var(--layout-grid-desktop-margin);
+  padding: var(--stack-section-lg) var(--layout-grid-desktop-margin);
 }
 
 .qc--tablet {
-  padding: var(--generic-spacing-x-lg) var(--layout-grid-tablet-margin);
+  padding: var(--stack-section-lg) var(--layout-grid-tablet-margin);
 }
 
 .qc--tablet .qc__row {
@@ -137,7 +137,7 @@
 }
 
 .qc--phone {
-  padding: var(--generic-spacing-lg) var(--layout-grid-phone-margin);
+  padding: var(--stack-section-md) var(--layout-grid-phone-margin);
 }
 
 .qc--phone .qc__row {

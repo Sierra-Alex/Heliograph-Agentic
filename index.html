@@ -1,10 +1,10 @@
 <!-- @dsCard group="Brand" viewport="1280x900" name="Library index" subtitle="Browsable reference of every component and token, with copy-ready names" -->
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Heliograph Library</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=2">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="_ds_bundle.js"></script>
+<script src="_ds_bundle.js?v=2"></script>
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -59,6 +59,9 @@ main{padding:0;background:var(--surface-default)}
 .mini{font-family:var(--font-family-primary);font-size:12px;letter-spacing:.02em;padding:7px 12px;border-radius:999px;border:1px solid var(--cards-on-light-border);background:var(--surface-default);color:var(--text-on-light-body);cursor:pointer;white-space:nowrap}
 .mini:hover{background:var(--surface-muted);color:var(--text-on-light-headline)}
 .mini.on{background:var(--colors-purple-06);border-color:var(--colors-purple-06);color:#fff}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:6px !important}
+.icon-btn svg{width:100%;height:100%;color:var(--text-on-light-body)}
+.icon-btn.on svg{color:#fff}
 .frame{border-top:1px solid var(--cards-on-light-border);border-bottom:1px solid var(--cards-on-light-border);background:var(--surface-default);overflow:hidden;position:relative}
 .frame.pad{padding:28px 24px}
 .stage{transform-origin:top left}
@@ -157,7 +160,7 @@ pre{margin:0;padding:14px 16px;border-radius:12px;background:#150040;color:#e8e6
 .favicon-tab img{width:20px;height:20px;flex-shrink:0}
 .favicon-tab__name{flex:1;min-width:0;font-family:var(--font-family-primary);font-size:12px;letter-spacing:0.24px;line-height:1.68;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .favicon-tab--light .favicon-tab__name{color:var(--text-on-light-headline)}
-.favicon-tab--dark .favicon-tab__name{color:var(--text-on-dark-body)}
+.favicon-tab--dark .favicon-tab__name{color:var(--colors-absolute-white)}
 .alpha-ramp{display:flex;gap:10px}
 .alpha-ramp__chip{display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;flex:1 1 0;min-width:0}
 .alpha-ramp__chip:hover .alpha-ramp__swatch{outline:2px solid var(--colors-purple-05);outline-offset:-1px}
@@ -192,6 +195,51 @@ pre{margin:0;padding:14px 16px;border-radius:12px;background:#150040;color:#e8e6
 .shadow-card--light{background:var(--surface-default);border:1px solid rgba(0,0,0,.04)}
 .shadow-card--dark{border:1px solid rgba(255,255,255,.08)}
 .shadow-label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--colors-gray-08);text-align:center}
+.pat-preview{background:var(--surface-default);border-radius:var(--border-radius-content);padding:var(--generic-spacing-lg);display:flex;flex-direction:column;gap:var(--generic-spacing-x-sm)}
+.pat-controls{background:var(--surface-light);padding:var(--generic-spacing-xx-sm);display:flex;align-items:center;gap:var(--generic-spacing-xx-sm);flex-wrap:wrap}
+.pat-controls-label{font:var(--body-b5);letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-body);white-space:nowrap}
+.pat-divider{width:100%;height:0;border-top:var(--standard) dashed var(--cards-on-light-border)}
+.pat-stage{background:var(--cards-on-light-fill-on-gray);border:var(--standard) solid var(--cards-on-light-border);border-radius:var(--border-radius-sm-outer);padding:var(--generic-spacing-lg);overflow:hidden}
+.seg{display:flex}
+.seg .mini{border-radius:0;margin-left:-1px}
+.seg .mini:first-child{border-radius:var(--border-radius-control) 0 0 var(--border-radius-control);margin-left:0}
+.seg .mini:last-child{border-radius:0 var(--border-radius-control) var(--border-radius-control) 0}
+.seg .mini.on{z-index:1;position:relative}
+.pat-name{font:var(--body-b5);letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-headline)}
+.sec-list{display:flex;flex-direction:column;gap:var(--generic-spacing-x-sm)}
+.sec-group{background:var(--surface-light);border:var(--standard) solid var(--cards-on-light-border);border-radius:var(--border-radius-content);padding:var(--generic-spacing-x-sm);display:flex;flex-direction:column;gap:var(--generic-spacing-x-sm)}
+.sec-group__rows{background:var(--surface-default);border:var(--standard) solid var(--cards-on-light-border);border-radius:var(--generic-spacing-xx-sm);display:flex;flex-direction:column;width:100%}
+.sec-row{display:flex;align-items:center;justify-content:space-between;padding:var(--generic-spacing-x-sm) var(--generic-spacing-xx-sm);border-bottom:var(--standard) solid var(--divider-on-light);position:relative;cursor:default}
+.sec-row:nth-child(even){background:var(--surface-light)}
+.sec-row:last-child{border-bottom:none}
+.sec-row__name{font:var(--body-b5-medium);letter-spacing:var(--letter-spacing-2);color:var(--text-on-light-headline)}
+.sec-preview{display:none;position:absolute;z-index:10;top:50%;left:50%;transform:translate(-50%,-50%);max-height:300px;padding:var(--inset-card-border-spacing);background:var(--surface-light);border:var(--standard) solid var(--cards-on-light-border);border-radius:var(--border-radius-content);box-shadow:0 4px 20px rgba(0,0,0,0.1);overflow:hidden;pointer-events:none}
+.sec-row:hover .sec-preview{display:block}
+.sec-preview__inner{pointer-events:none}
+.sl-showcase{display:flex;flex-direction:column;gap:var(--generic-spacing-x-sm)}
+.sl-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.sl-table th{text-align:left;font-family:var(--font-family-primary);font-size:12px;font-weight:500;letter-spacing:0.24px;line-height:1.68;color:var(--text-on-light-headline);padding:8px;border-bottom:1px solid var(--divider-on-light);border-right:1px solid var(--divider-on-light)}
+.sl-table th:last-child,.sl-table td:last-child{border-right:none}
+.sl-table td{font-family:var(--font-family-primary);font-size:12px;font-weight:normal;letter-spacing:0.24px;line-height:1.68;color:var(--text-on-light-headline);padding:8px 8px;border-bottom:1px solid var(--divider-on-light);border-right:1px solid var(--divider-on-light);cursor:pointer}
+.sl-table td:hover{color:var(--colors-purple-06)}
+.sl-table tr:last-child td{border-bottom:none}
+.sl-table tr:nth-child(even) td{background:var(--surface-light)}
+.sl-table-wrap{background:var(--surface-default);border:1px solid var(--cards-on-light-border);border-radius:8px;overflow:hidden;padding:0}
+.sl-stack-viz{background:var(--surface-default);border-radius:8px;padding:16px;display:flex;flex-direction:column;align-items:stretch}
+.sl-stack-token{display:flex;align-items:center;justify-content:center;border:1px solid var(--colors-purple-03);border-radius:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--text-on-light-headline);text-align:center;cursor:pointer;transition:border-color .12s}
+.sl-stack-token:hover{border-color:var(--colors-purple-06)}
+.sl-stack-token--lg{background:var(--colors-purple-01);padding:24px 16px}
+.sl-stack-token--page-top{background:var(--colors-purple-01);padding:0 16px;height:64px}
+.sl-stack-token--page-bottom{background:var(--colors-purple-01);padding:0 16px;height:120px}
+.sl-stack-token--section-lg{background:var(--colors-purple-02);padding:0 16px;height:80px}
+.sl-stack-token--section-md{background:var(--colors-purple-02);padding:0 16px;height:40px}
+.sl-stack-token--md{background:var(--colors-purple-02);padding:12px 16px}
+.sl-stack-content{display:flex;align-items:center;justify-content:center;font-family:var(--font-family-primary);font-size:8px;letter-spacing:0.16px;line-height:1.68;color:var(--text-on-light-headline);padding:32px 16px}
+.sl-generic{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;padding:4px 0}
+.sl-generic__chip{display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer}
+.sl-generic__chip:hover .sl-generic__swatch{border-color:var(--colors-purple-06)}
+.sl-generic__swatch{background:var(--colors-purple-01);border:1px solid var(--colors-purple-03);border-radius:4px;transition:border-color .12s}
+.sl-generic__label{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;line-height:1.3;color:var(--text-on-light-headline);text-align:center;max-width:100px;overflow-wrap:anywhere}
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--surface-purple-dark);color:#fff;padding:12px 20px;border-radius:999px;font:var(--body-b5);letter-spacing:var(--letter-spacing-2);z-index:50;box-shadow:var(--shadow-glow-on-light-purple)}
 .empty{padding:28px;color:var(--colors-gray-08);font:var(--body-b5)}
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;margin-top:20px}
@@ -208,7 +256,7 @@ pre{margin:0;padding:14px 16px;border-radius:12px;background:#150040;color:#e8e6
 </head><body><div id="root"></div>
 <script type="text/babel">
 const NS=window.HeliographMixpanelDesignSystem_8500f4;
-const {Button,CircleCheck,LogoMark,NavLink,PlayHead,RoundIconButton,RoundPlusButton,RoundMinusButton,Tag,TeamsIcon,Checkbox,Radio,Toggle,TextInput,AddedContent,BulletList,ButtonLockup,CarouselStep,ContentCard,CoreTypeLockups,CustomerLogo,FAQ,FormLockup,HeroImage,HorizontalCoreType,ImageRatio,Stat,LayoutGrid,LogoCarousel,MdResourceCards,MdProductCards,LgResourceCards,SmProductCard,SmResourceCard,SmContentCardLockup,FAQs,Footer,LgHero,LgProductCard,LgProductSection,LgContentCallout,MdProductCardLockup,Quotes,SmHero,FullTopNav,LimitedTopNav,StatLockup,VideoLockup,ZLayout}=NS;
+const {Button,CircleCheck,LogoMark,NavLink,PlayHead,RoundIconButton,RoundPlusButton,RoundMinusButton,Tag,Checkbox,Radio,Toggle,TextInput,AddedContent,BulletList,ButtonLockup,CarouselStep,ContentCard,CoreTypeLockups,CustomerLogo,FAQ,FormLockup,HeroImage,HorizontalCoreType,ImageRatio,Stat,LayoutGrid,LogoCarousel,MdResourceCards,MdProductCards,LgResourceCards,SmProductCard,SmResourceCard,SmContentCardLockup,FAQs,Footer,LgHero,LgProductCard,LgProductSection,LgContentCallout,MdProductCardLockup,Quotes,SmHero,FullTopNav,LimitedTopNav,StatLockup,VideoLockup,ZLayout}=NS;
 const {useState,useEffect,useMemo,useRef,useLayoutEffect}=React;
 
 /* Per-component preview: [designWidth|null, node]. null width = flows at natural size with padding. */
@@ -244,12 +292,11 @@ const PREVIEW={
   LogoMark:[null,<div style={{display:"flex",gap:24,alignItems:"center"}}><LogoMark variant="full" color="color" height={28}/><LogoMark variant="mark" color="color" height={28}/></div>],
   NavLink:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><NavLink active>Platform</NavLink><NavLink caret>Solutions</NavLink><NavLink>Pricing</NavLink></div>],
   PlayHead:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><PlayHead/><PlayHead disabled/></div>],
-  TeamsIcon:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><TeamsIcon size={16}/><TeamsIcon size={24}/><TeamsIcon size={32}/></div>],
   ButtonLockup:[null,<ButtonLockup size="lg" primaryLabel="Get Started" secondaryLabel="Learn More"/>],
   FAQ:[null,<div style={{maxWidth:600}}><FAQ question="How does pricing work?" answer="Plans start at free for up to 20M events per month." open/></div>],
   SmContentCardLockup:[1440,<SmContentCardLockup cards={3} headline="Latest resources" tagText="Blog"/>],
   FAQs:[1440,<FAQs items={[{question:"How does pricing work?",answer:"Plans start at free."},{question:"Can I import data?",answer:"Yes, from any source."},{question:"Is there a free trial?",answer:"Yes, 14 days."}]}/>],
-  LgContentCallout:[1440,<LgContentCallout pageColor="purple" headline="The definitive guide to product analytics"/>],
+  LgContentCallout:[1440,<LgContentCallout headline="The definitive guide to product analytics"/>],
   MdResourceCards:[null,<div style={{maxWidth:520}}><MdResourceCards pageBackground="light" tagText="Resources" headline="Read the guide"/></div>],
   Quotes:[1440,<Quotes color="purple" quotes={[{quote:"Mixpanel helps us enable our customers for success.",name:"Janna Sheng",role:"Product Manager"}]}/>],
   StatLockup:[1440,<StatLockup numberOfStats={3} addHeadline/>],
@@ -691,6 +738,208 @@ function TokenGroup({list,resolvedMap,say}){
   })}</>;
 }
 
+function SpacingLayoutShowcase({say}){
+  const GRID=[
+    {tier:"Desktop+",bp:"1440px",cols:"12",margin:"48px",gutter:"16px",max:"1520px",tokens:{"bp":"--layout-grid-desktop-plus-breakpoint","cols":"--layout-grid-desktop-plus-columns","margin":"--layout-grid-desktop-plus-margin","gutter":"--layout-grid-desktop-plus-gutter","max":"--layout-grid-desktop-plus-max-width"}},
+    {tier:"Desktop",bp:"1200px",cols:"12",margin:"40px",gutter:"16px",max:"1360px",tokens:{"bp":"--layout-grid-desktop-breakpoint","cols":"--layout-grid-desktop-columns","margin":"--layout-grid-desktop-margin","gutter":"--layout-grid-desktop-gutter","max":"--layout-grid-desktop-max-width"}},
+    {tier:"Tablet",bp:"808px",cols:"6",margin:"32px",gutter:"16px",max:"none",tokens:{"bp":"--layout-grid-tablet-breakpoint","cols":"--layout-grid-tablet-columns","margin":"--layout-grid-tablet-margin","gutter":"--layout-grid-tablet-gutter","max":"--layout-grid-tablet-max-width"}},
+    {tier:"Phone",bp:"384px",cols:"2",margin:"16px",gutter:"16px",max:"none",tokens:{"bp":"--layout-grid-phone-breakpoint","cols":"--layout-grid-phone-columns","margin":"--layout-grid-phone-margin","gutter":"--layout-grid-phone-gutter","max":"--layout-grid-phone-max-width"}},
+  ];
+  const STACK=[
+    {name:"--stack-page-top",value:"64px",label:"stack-page-top",kind:"page-top"},
+    {name:"--stack-section-md",value:"40px",label:"stack-section-md",kind:"section-md"},
+    {name:"--stack-section-lg",value:"80px",label:"stack-section-lg",kind:"section-lg"},
+    {name:"--stack-page-bottom",value:"120px",label:"stack-page-bottom",kind:"page-bottom"},
+  ];
+  const GENERIC=[
+    {name:"--generic-spacing-xx-sm",value:"8px",px:8},
+    {name:"--generic-spacing-x-sm",value:"16px",px:16},
+    {name:"--generic-spacing-sm",value:"24px",px:24},
+    {name:"--generic-spacing-md",value:"32px",px:32},
+    {name:"--generic-spacing-lg",value:"40px",px:40},
+    {name:"--generic-spacing-x-lg",value:"80px",px:80},
+  ];
+  return <div className="sl-showcase">
+    <div className="palette">
+      <div className="palette__head"><span>Grid System</span><div className="palette__divider"/></div>
+      <div className="sl-table-wrap">
+        <table className="sl-table">
+          <thead><tr><th>Device</th><th>Breakpoint</th><th>Columns</th><th>Margin</th><th>Gutter</th><th>Max Width</th></tr></thead>
+          <tbody>{GRID.map(r=><tr key={r.tier}>
+            <td onClick={()=>copy(r.tier,say)} title={r.tier}>{r.tier}</td>
+            <td onClick={()=>copy("var("+r.tokens.bp+")",say)} title={r.tokens.bp}>{r.bp}</td>
+            <td onClick={()=>copy("var("+r.tokens.cols+")",say)} title={r.tokens.cols}>{r.cols}</td>
+            <td onClick={()=>copy("var("+r.tokens.margin+")",say)} title={r.tokens.margin}>{r.margin}</td>
+            <td onClick={()=>copy("var("+r.tokens.gutter+")",say)} title={r.tokens.gutter}>{r.gutter}</td>
+            <td onClick={()=>copy("var("+r.tokens.max+")",say)} title={r.tokens.max}>{r.max}</td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+    </div>
+    <div className="palette">
+      <div className="palette__head"><span>Spacing</span><div className="palette__divider"/></div>
+      <div className="palette__head" style={{fontSize:"8px"}}><span>Stack</span><div className="palette__divider"/></div>
+      <div className="sl-stack-viz">
+        {STACK.map((s,i)=><React.Fragment key={s.name}>
+          <div className={"sl-stack-token sl-stack-token--"+(s.kind)} onClick={()=>copy("var("+s.name+")",say)} title={s.name+" : "+s.value}>
+            {s.name} <span style={{color:"var(--colors-gray-08)",marginLeft:8}}>{s.value}</span>
+          </div>
+          {i<STACK.length-1&&<div className="sl-stack-content">Content</div>}
+        </React.Fragment>)}
+      </div>
+      <div className="palette__head" style={{fontSize:"8px"}}><span>Generic Spacing</span><div className="palette__divider"/></div>
+      <div className="sl-generic">
+        {GENERIC.map(g=><div key={g.name} className="sl-generic__chip" onClick={()=>copy("var("+g.name+")",say)} title={g.name+" : "+g.value}>
+          <div className="sl-generic__swatch" style={{width:g.px,height:g.px}}/>
+          <div className="sl-generic__label">{g.name}</div>
+        </div>)}
+      </div>
+    </div>
+    <div className="palette type-usage">
+      <div className="palette__head"><span>Usage in Code</span><div className="palette__divider"/></div>
+      <pre>{`/* Section padding — grid margins + stack tokens */
+padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin);
+
+/* Step down at each breakpoint */
+padding: var(--stack-section-lg) var(--layout-grid-desktop-margin);  /* desktop */
+padding: var(--stack-section-lg) var(--layout-grid-tablet-margin);   /* tablet */
+padding: var(--stack-section-md) var(--layout-grid-phone-margin);    /* phone */
+
+/* Generic spacing for component gaps */
+gap: var(--generic-spacing-x-sm);   /* 16px */
+gap: var(--generic-spacing-sm);     /* 24px */
+margin-bottom: var(--generic-spacing-lg);  /* 40px */`}</pre>
+    </div>
+  </div>;
+}
+
+function PatternsShowcase({say}){
+  const HEADS=["H1","H2","H3","H4","H5","H6"];
+  const PAT_HUES=["purple","pool","mint","lava","mustard","grass"];
+  const SURFACES=["light","default","muted"];
+  const [head,setHead]=useState("H1");
+  const [tag,setTag]=useState(true);
+  const [btn,setBtn]=useState(true);
+  const [surface,setSurface]=useState("light");
+  const [onDark,setOnDark]=useState(false);
+  const [hue,setHue]=useState("purple");
+  const [cardComp,setCardComp]=useState("MdProductCards");
+  const [cardHue,setCardHue]=useState("purple");
+  const [cardSurface,setCardSurface]=useState("light");
+  const [cardDark,setCardDark]=useState(false);
+  const [cardShadow,setCardShadow]=useState(false);
+  const [cardLargeImage,setCardLargeImage]=useState(false);
+  const [cardBigImage,setCardBigImage]=useState(true);
+  const [cardIcon,setCardIcon]=useState("diamond");
+  const stageRef=useRef(null);
+  const [stageW,setStageW]=useState(0);
+  useEffect(()=>{if(!stageRef.current)return;const ro=new ResizeObserver(([e])=>setStageW(e.contentRect.width));ro.observe(stageRef.current);return()=>ro.disconnect()},[]);
+  const CARDS={MdProductCards:"Md Product Card",LgProductCard:"Lg Product Card",SmResourceCard:"Sm Resource Card",LgResourceCards:"Lg Resource Card"};
+  function renderCard(){
+    switch(cardComp){
+      case "MdProductCards":return <MdProductCards color={cardHue} background={cardDark?"dark":cardSurface==="light"?"gray":"white"} shadow={cardShadow}/>;
+      case "LgResourceCards":return <LgResourceCards color={cardDark?cardHue:cardSurface==="light"?"gray":"white"} imagePosition="left" alignment="left" largeImage={cardLargeImage}/>;
+      case "SmResourceCard":{const c=cardDark?cardHue:cardSurface==="light"?"gray":"white";const sh=cardShadow?(cardDark?"var(--elevation-card-default-on-dark)":"var(--elevation-card-default-on-light)"):undefined;const w={flex:"1 1 200px",minWidth:0,boxShadow:sh,borderRadius:"var(--border-radius-card)"};return <div style={{display:"flex",flexWrap:"wrap",gap:"var(--generic-spacing-xx-sm)",width:"100%"}}><div style={w}><SmResourceCard color={c} bigImage={cardBigImage} icon={cardIcon}/></div><div style={w}><SmResourceCard color={c} bigImage={cardBigImage} icon={cardIcon}/></div><div style={w}><SmResourceCard color={c} bigImage={cardBigImage} icon={cardIcon}/></div></div>;}
+      case "LgProductCard":return <LgProductCard color={cardSurface} onDark={cardDark} hue={cardHue} shadow={cardShadow} headline="Understand your users" tagText="Analytics"/>;
+      default:return null;
+    }
+  }
+  const cardWidth=cardComp==="SmResourceCard"?null:cardComp==="LgProductCard"?1200:cardComp==="MdProductCards"?880:1100;
+  return <div className="sl-showcase">
+    <div className="palette">
+      <div className="palette__head"><span>Type Lockups</span><div className="palette__divider"/></div>
+      <div className="pat-preview">
+        <div className="pat-controls">
+          <span className="pat-controls-label">Heading</span>
+          <div className="seg">{HEADS.map(h=><button key={h} className={"mini"+(head===h?" on":"")} onClick={()=>setHead(h)}>{h}</button>)}</div>
+          <span className="pat-controls-label" style={{marginLeft:"var(--generic-spacing-xx-sm)"}}>Tag</span>
+          <Toggle checked={tag} onChange={()=>setTag(!tag)}/>
+          <span className="pat-controls-label">Buttons</span>
+          <Toggle checked={btn} onChange={()=>setBtn(!btn)}/>
+          <span className="pat-controls-label" style={{marginLeft:"var(--generic-spacing-xx-sm)"}}>Surface</span>
+          <div className="seg">{SURFACES.map(s=><button key={s} className={"mini"+(!onDark&&surface===s?" on":"")} onClick={()=>{setSurface(s);setOnDark(false)}}>{s}</button>)}</div>
+          <div className="seg">{PAT_HUES.map(h=><button key={h} className={"mini"+(onDark&&hue===h?" on":"")} onClick={()=>{setOnDark(true);setHue(h)}}>{h}</button>)}</div>
+        </div>
+        <div className="pat-divider"/>
+        <div className="pat-stage" style={{minHeight:420,display:"flex",alignItems:"center",background:onDark?"var(--surface-"+hue+"-dark)":"var(--surface-"+surface+")",borderColor:onDark?"var(--cards-on-dark-border)":undefined}}>
+          <CoreTypeLockups heading={head} tag={tag} tagText="Label" hue={hue} onDark={onDark} button={btn} headline="Headline goes here" subhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon. Buffalo jowl brisket meatloaf pancetta boudin, corned beef leberkas rump drumstick shoulder."/>
+        </div>
+        <div className="pat-divider"/>
+        <span className="pat-name">CoreTypeLockups — {[tag&&"Tag lg",head,(head==="H1"||head==="H2")?"B3":"B4",btn&&((head==="H5"||head==="H6")?"Sm primary, Sm secondary":"Lg primary, Lg secondary")].filter(Boolean).join(", ")}</span>
+      </div>
+    </div>
+    <div className="palette">
+      <div className="palette__head"><span>Cards</span><div className="palette__divider"/></div>
+      <div className="pat-preview">
+        <div className="pat-controls">
+          <span className="pat-controls-label">Component</span>
+          <div className="seg">{Object.entries(CARDS).map(([k,v])=><button key={k} className={"mini"+(cardComp===k?" on":"")} onClick={()=>setCardComp(k)}>{v}</button>)}</div>
+          <span className="pat-controls-label" style={{marginLeft:"var(--generic-spacing-xx-sm)"}}>Surface</span>
+          <div className="seg">{SURFACES.map(s=><button key={s} className={"mini"+(!cardDark&&cardSurface===s?" on":"")} onClick={()=>{setCardSurface(s);setCardDark(false)}}>{s}</button>)}</div>
+          <div className="seg">{PAT_HUES.map(h=><button key={h} className={"mini"+(cardDark&&cardHue===h?" on":"")} onClick={()=>{setCardDark(true);setCardHue(h)}}>{h}</button>)}</div>
+          <span className="pat-controls-label" style={{marginLeft:"var(--generic-spacing-xx-sm)",whiteSpace:"nowrap",display:"inline-flex",alignItems:"center",gap:"var(--generic-spacing-xx-sm)"}}>Shadow <Toggle checked={cardShadow} onChange={()=>setCardShadow(!cardShadow)}/></span>
+          {cardComp==="LgResourceCards"&&<span className="pat-controls-label" style={{marginLeft:"var(--generic-spacing-xx-sm)",whiteSpace:"nowrap",display:"inline-flex",alignItems:"center",gap:"var(--generic-spacing-xx-sm)"}}>Large Image <Toggle checked={cardLargeImage} onChange={()=>setCardLargeImage(!cardLargeImage)}/></span>}
+          {cardComp==="SmResourceCard"&&<span className="pat-controls-label" style={{marginLeft:"var(--generic-spacing-xx-sm)",whiteSpace:"nowrap",display:"inline-flex",alignItems:"center",gap:"var(--generic-spacing-xx-sm)"}}>Big Image <Toggle checked={cardBigImage} onChange={()=>setCardBigImage(!cardBigImage)}/></span>}
+        </div>
+        {cardComp==="SmResourceCard"&&!cardBigImage&&NS.ICON_PATHS&&<div className="pat-controls" style={{paddingTop:0}}><span className="pat-controls-label">Icon</span><div className="seg" style={{flexWrap:"wrap"}}>{Object.keys(NS.ICON_PATHS).map(k=>{const pp=NS.ICON_PATHS[k];return <button key={k} className={"mini icon-btn"+(cardIcon===k?" on":"")} onClick={()=>setCardIcon(k)} title={k}><svg viewBox="0 0 24 24" fill="none" style={{pointerEvents:"none"}}>{pp.map((g,i)=><path key={i} d={g.d} fill="currentColor" fillRule={g.fr||undefined} clipRule={g.fr||undefined}/>)}</svg></button>})}</div></div>}
+        <div className="pat-divider"/>
+        <div className="pat-stage" ref={stageRef} style={{background:cardDark?"var(--surface-"+cardHue+"-dark)":"var(--surface-"+cardSurface+")",borderColor:cardDark?"var(--cards-on-dark-border)":undefined}}>{cardWidth
+          ?<div style={{transform:"scale("+Math.min(1,(stageW||720)/cardWidth)+")",transformOrigin:"top left",width:cardWidth,boxShadow:cardShadow&&cardComp!=="MdProductCards"&&cardComp!=="LgProductCard"&&cardComp!=="SmResourceCard"?(cardDark?"var(--elevation-card-default-on-dark)":"var(--elevation-card-default-on-light)"):undefined}}>{renderCard()}</div>
+          :<div style={{width:"100%",boxShadow:cardShadow&&cardComp!=="MdProductCards"&&cardComp!=="LgProductCard"&&cardComp!=="SmResourceCard"?(cardDark?"var(--elevation-card-default-on-dark)":"var(--elevation-card-default-on-light)"):undefined}}>{renderCard()}</div>
+        }</div>
+        <div className="pat-divider"/>
+        <span className="pat-name">{CARDS[cardComp]} — color="{cardHue}"</span>
+      </div>
+    </div>
+    <div className="palette type-usage">
+      <div className="palette__head"><span>Usage in Code</span><div className="palette__divider"/></div>
+      <pre>{`<CoreTypeLockups
+  heading="H3"
+  tag tagText="Platform"
+  button
+  headline="Build better products"
+  subhead="Answer any question about how people use your app."
+/>
+
+<MdProductCards color="purple" background="white" />
+
+<LgResourceCards color="pool" imagePosition="left" />`}</pre>
+    </div>
+  </div>;
+}
+
+const SEC_GROUPS=[
+  {label:"Navigation",items:["FullTopNav","LimitedTopNav","Footer"]},
+  {label:"Heroes",items:["SmHero","LgHero"]},
+  {label:"Product",items:["MdProductCardLockup","ZLayout","LgProductSection","LgProductCard"]},
+  {label:"Content",items:["SmContentCardLockup","LgContentCallout","VideoLockup","Quotes","StatLockup","FAQs"]},
+];
+
+function SectionRow({name}){
+  const pv=PREVIEW[name];
+  const z=pv?400/pv[0]:0;
+  return <div className="sec-row">
+    <span className="sec-row__name">{name}</span>
+    <Button variant="tertiary" size="sm" onClick={()=>{location.href="section.html?c="+name}}>Open With Controls</Button>
+    {pv&&<div className="sec-preview"><div className="sec-preview__inner" style={{zoom:z,width:pv[0]}}>{pv[1]}</div></div>}
+  </div>;
+}
+
+function PageSectionsShowcase({secList}){
+  return <div className="sec-list">
+    {SEC_GROUPS.map(g=>{
+      const items=g.items.filter(n=>secList.some(c=>c.name===n));
+      if(!items.length)return null;
+      return <div key={g.label} className="sec-group">
+        <div className="palette__head"><span>{g.label}</span><div className="palette__divider"/></div>
+        <div className="sec-group__rows">
+          {items.map(n=><SectionRow key={n} name={n}/>)}
+        </div>
+      </div>;
+    })}
+  </div>;
+}
+
 const CHAPTERS=[
   {num:"01",title:"Color",id:"color"},
   {num:"02",title:"Typography",id:"typography"},
@@ -698,11 +947,12 @@ const CHAPTERS=[
   {num:"04",title:"Spacing & Layout",id:"spacing-layout"},
   {num:"05",title:"Logo & Icons",id:"logo-icons"},
   {num:"06",title:"Patterns",id:"patterns"},
-  {num:"07",title:"Templates",id:"templates"},
-  {num:"08",title:"Product Imagery",id:"product-imagery"},
-  {num:"09",title:"Data Viz",id:"data-viz"},
-  {num:"10",title:"Brand Strategy",id:"brand-strategy"},
-  {num:"11",title:"Tone of Voice",id:"tone-of-voice"},
+  {num:"07",title:"Page Sections",id:"page-sections"},
+  {num:"08",title:"Templates",id:"templates"},
+  {num:"09",title:"Product Imagery",id:"product-imagery"},
+  {num:"10",title:"Data Viz",id:"data-viz"},
+  {num:"11",title:"Brand Strategy",id:"brand-strategy"},
+  {num:"12",title:"Tone of Voice",id:"tone-of-voice"},
 ];
 
 function CompItem({children,label,dark,say}){
@@ -791,20 +1041,20 @@ function LogoIconShowcase({say}){
       <div className="palette__head"><span>Logos</span><div className="palette__divider"/></div>
       <div className="comp-sub"><span>On light</span><div className="palette__divider"/></div>
       <div className="comp-row comp-row--light">
-        <div className="comp-item"><img src="assets/logos/logo-mark-gray-10.svg" style={{width:80,height:80}} alt="Logo mark"/><span className="comp-label" onClick={()=>copy("logo-mark-gray-10",say)} title="Copy: logo-mark-gray-10">logo-mark-gray-10</span></div>
-        <div className="comp-item logo-item--full"><img src="assets/logos/main-logo-gray-10.svg" style={{width:200,height:"auto"}} alt="Main logo"/><span className="comp-label" onClick={()=>copy("main-logo-gray-10",say)} title="Copy: main-logo-gray-10">main-logo-gray-10</span></div>
+        <div className="comp-item"><img src="assets/logos/logo-mark-gray-10.svg" className="icon-grid__icon" style={{width:80,height:80}} alt="Logo mark" onClick={()=>copySvg("assets/logos/logo-mark-gray-10.svg",say)} title="Copy SVG"/><span className="comp-label" onClick={()=>copy("logo-mark-gray-10",say)} title="Copy: logo-mark-gray-10">logo-mark-gray-10</span></div>
+        <div className="comp-item logo-item--full"><img src="assets/logos/main-logo-gray-10.svg" className="icon-grid__icon" style={{width:200,height:"auto"}} alt="Main logo" onClick={()=>copySvg("assets/logos/main-logo-gray-10.svg",say)} title="Copy SVG"/><span className="comp-label" onClick={()=>copy("main-logo-gray-10",say)} title="Copy: main-logo-gray-10">main-logo-gray-10</span></div>
       </div>
       <div className="comp-sub"><span>On dark</span><div className="palette__divider"/></div>
       <div className="comp-row comp-row--dark">
-        <div className="comp-item"><img src="assets/logos/logo-mark-absolute-white.svg" style={{width:80,height:80}} alt="Logo mark white"/><span className="comp-label comp-label--dark" onClick={()=>copy("logo-mark-absolute-white",say)} title="Copy: logo-mark-absolute-white">logo-mark-absolute-white</span></div>
-        <div className="comp-item logo-item--full"><img src="assets/logos/main-logo-absolute-white.svg" style={{width:200,height:"auto"}} alt="Main logo white"/><span className="comp-label comp-label--dark" onClick={()=>copy("main-logo-absolute-white",say)} title="Copy: main-logo-absolute-white">main-logo-absolute-white</span></div>
+        <div className="comp-item"><img src="assets/logos/logo-mark-absolute-white.svg" className="icon-grid__icon" style={{width:80,height:80}} alt="Logo mark white" onClick={()=>copySvg("assets/logos/logo-mark-absolute-white.svg",say)} title="Copy SVG"/><span className="comp-label comp-label--dark" onClick={()=>copy("logo-mark-absolute-white",say)} title="Copy: logo-mark-absolute-white">logo-mark-absolute-white</span></div>
+        <div className="comp-item logo-item--full"><img src="assets/logos/main-logo-absolute-white.svg" className="icon-grid__icon" style={{width:200,height:"auto"}} alt="Main logo white" onClick={()=>copySvg("assets/logos/main-logo-absolute-white.svg",say)} title="Copy SVG"/><span className="comp-label comp-label--dark" onClick={()=>copy("main-logo-absolute-white",say)} title="Copy: main-logo-absolute-white">main-logo-absolute-white</span></div>
       </div>
     </div>
     <div className="palette">
       <div className="palette__head"><span>Favicon</span><div className="palette__divider"/></div>
       <div className="comp-row comp-row--light">
-        <div className="comp-item"><div className="favicon-tab favicon-tab--light"><img src="assets/logos/favicon-light.svg" alt="Favicon light"/><span className="favicon-tab__name">Mixpanel</span></div><span className="comp-label" onClick={()=>copy("favicon-light",say)} title="Copy: favicon-light">favicon-light</span></div>
-        <div className="comp-item"><div className="favicon-tab favicon-tab--dark"><img src="assets/logos/favicon-dark.svg" alt="Favicon dark"/><span className="favicon-tab__name">Mixpanel</span></div><span className="comp-label" onClick={()=>copy("favicon-dark",say)} title="Copy: favicon-dark">favicon-dark</span></div>
+        <div className="comp-item"><div className="favicon-tab favicon-tab--light icon-grid__icon" onClick={()=>copySvg("assets/logos/favicon-light.svg",say)} title="Copy SVG"><img src="assets/logos/favicon-light.svg" alt="Favicon light"/><span className="favicon-tab__name">Mixpanel</span></div><span className="comp-label" onClick={()=>copy("favicon-light",say)} title="Copy: favicon-light">favicon-light</span></div>
+        <div className="comp-item"><div className="favicon-tab favicon-tab--dark icon-grid__icon" onClick={()=>copySvg("assets/logos/favicon-dark.svg",say)} title="Copy SVG"><img src="assets/logos/favicon-dark.svg" alt="Favicon dark"/><span className="favicon-tab__name">Mixpanel</span></div><span className="comp-label" onClick={()=>copy("favicon-dark",say)} title="Copy: favicon-dark">favicon-dark</span></div>
       </div>
     </div>
     <div className="palette">
@@ -819,13 +1069,9 @@ function LogoIconShowcase({say}){
         {PRODUCT.map(n=><IconPair key={n} name={n} dir="product"/>)}
       </div>
       <div className="comp-sub"><span>System</span><div className="palette__divider"/></div>
-      <div className="comp-sub"><span>On light</span><div className="palette__divider"/></div>
-      <div className="comp-row comp-row--light">
-        <div className="comp-item"><div style={{padding:4}}><CircleCheck baseColor="light" size={16}/></div><span className="comp-label" onClick={()=>copy('<CircleCheck baseColor="light"/>',say)} title='Copy: CircleCheck light'>{`<CircleCheck baseColor="light"/>`}</span></div>
-      </div>
-      <div className="comp-sub"><span>On dark</span><div className="palette__divider"/></div>
-      <div className="comp-row comp-row--dark">
-        <div className="comp-item"><div style={{padding:4}}><CircleCheck baseColor="dark" size={16}/></div><span className="comp-label comp-label--dark" onClick={()=>copy('<CircleCheck baseColor="dark"/>',say)} title='Copy: CircleCheck dark'>{`<CircleCheck baseColor="dark"/>`}</span></div>
+      <div className="icon-grid">
+        <div className="comp-item"><div className="icon-grid__icon" style={{padding:4}} onClick={()=>copy('<CircleCheck baseColor="light"/>',say)} title='Copy: CircleCheck light'><CircleCheck baseColor="light" size={16}/></div><span className="comp-label" onClick={()=>copy('<CircleCheck baseColor="light"/>',say)}>CircleCheck light</span></div>
+        <div className="comp-item"><div className="icon-grid__icon" style={{padding:4,background:"var(--colors-purple-10)",borderRadius:4}} onClick={()=>copy('<CircleCheck baseColor="dark"/>',say)} title='Copy: CircleCheck dark'><CircleCheck baseColor="dark" size={16}/></div><span className="comp-label" onClick={()=>copy('<CircleCheck baseColor="dark"/>',say)}>CircleCheck dark</span></div>
       </div>
     </div>
     <div className="palette type-usage">
@@ -909,7 +1155,8 @@ function App(){
   const primNonColor=data.tokens.filter(t=>t.file==="primitives.css");
   const semLayout=data.tokens.filter(t=>t.group==="Semantic layout");
   const isAssetTok=t=>/^--(favicon|full-logo|logo-mark)/.test(t.name);
-  const spacingTokens=[...primNonColor.filter(t=>!isAssetTok(t)),...semLayout];
+  const isAspectTok=t=>/^--aspect-ratio-/.test(t.name);
+  const spacingTokens=[...primNonColor.filter(t=>!isAssetTok(t)&&!isAspectTok(t)),...semLayout.filter(t=>!isAspectTok(t))];
   const assetTokens=primNonColor.filter(isAssetTok);
   const coreComps=data.components.filter(c=>c.group==="Core"||c.group==="Forms");
   const patternComps=data.components.filter(c=>c.group==="Patterns");
@@ -970,7 +1217,7 @@ function App(){
         <section className="chapter" id="spacing-layout">
           <div className="chapter-head"><span className="chapter-num">04</span><h2>Spacing & Layout</h2></div>
           <p className="chapter-desc">{spacingTokens.length} tokens — grid system, spacing scale, border radii, shadows and layout semantics.</p>
-          <TokenGroup list={spacingTokens} resolvedMap={resolvedMap} say={say}/>
+          <SpacingLayoutShowcase say={say}/>
         </section>
         <section className="chapter" id="logo-icons">
           <div className="chapter-head"><span className="chapter-num">05</span><h2>Logo & Icons</h2></div>
@@ -979,32 +1226,33 @@ function App(){
         </section>
         <section className="chapter" id="patterns">
           <div className="chapter-head"><span className="chapter-num">06</span><h2>Patterns</h2></div>
-          <p className="chapter-desc">Composable content blocks and full-width page sections.</p>
-          {patternComps.length>0&&<div className="grid">{patternComps.map(c=><ComponentCard key={c.name} c={c} say={say}/>)}</div>}
-          {secList.length>0&&<>
-            <h3 className="chapter-sub">Page Sections</h3>
-            <div className="tiles">{secList.map(c=><SectionTile key={c.name} c={c}/>)}</div>
-          </>}
+          <p className="chapter-desc">Composable content blocks that combine tokens, typography and components into reusable layouts.</p>
+          <PatternsShowcase say={say}/>
+        </section>
+        <section className="chapter" id="page-sections">
+          <div className="chapter-head"><span className="chapter-num">07</span><h2>Page Sections</h2></div>
+          <p className="chapter-desc">Full-width page sections that compose patterns into complete content areas.</p>
+          <PageSectionsShowcase secList={secList}/>
         </section>
         <section className="chapter" id="templates">
-          <div className="chapter-head"><span className="chapter-num">07</span><h2>Templates</h2></div>
+          <div className="chapter-head"><span className="chapter-num">08</span><h2>Templates</h2></div>
           <p className="chapter-desc">Starting points for full marketing pages, pre-wired to Heliograph components.</p>
           <div className="tiles">{TEMPLATES.map(t=><TemplateTile key={t.name} t={t}/>)}</div>
         </section>
         <section className="chapter" id="product-imagery">
-          <div className="chapter-head"><span className="chapter-num">08</span><h2>Product Imagery</h2></div>
+          <div className="chapter-head"><span className="chapter-num">09</span><h2>Product Imagery</h2></div>
           <p className="chapter-desc">Coming soon.</p>
         </section>
         <section className="chapter" id="data-viz">
-          <div className="chapter-head"><span className="chapter-num">09</span><h2>Data Viz</h2></div>
+          <div className="chapter-head"><span className="chapter-num">10</span><h2>Data Viz</h2></div>
           <p className="chapter-desc">Coming soon.</p>
         </section>
         <section className="chapter" id="brand-strategy">
-          <div className="chapter-head"><span className="chapter-num">10</span><h2>Brand Strategy</h2></div>
+          <div className="chapter-head"><span className="chapter-num">11</span><h2>Brand Strategy</h2></div>
           <p className="chapter-desc">Coming soon.</p>
         </section>
         <section className="chapter" id="tone-of-voice">
-          <div className="chapter-head"><span className="chapter-num">11</span><h2>Tone of Voice</h2></div>
+          <div className="chapter-head"><span className="chapter-num">12</span><h2>Tone of Voice</h2></div>
           <p className="chapter-desc">Coming soon.</p>
         </section>
       </div>
