@@ -115,8 +115,10 @@ Never place more than four cards in a single row. If more, the row must wrap.
 
 - Second person: "Answer product questions in seconds." Not "we".
 - Title Case for buttons/links under 5 words, otherwise sentence case
+- Mixpanel is always capitalized — never "mixpanel" in copy
 - UPPERCASE only for footer group headers
 - Headlines: one line, one claim, max ~720px
+- Headline punctuation: never end with a period unless the headline contains other punctuation (e.g. commas) or is two sentences
 - Subheads: one or two sentences, explain mechanism not benefit
 - Placeholder copy is bacon ipsum — always replace before shipping
 

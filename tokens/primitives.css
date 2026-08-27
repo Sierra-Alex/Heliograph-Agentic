@@ -2,6 +2,7 @@
    Verbatim from Heliograph build/css/variables.css (Style Dictionary output of tokens.json).
    Source of truth: mixpanel/Heliograph. Do not hand-edit values. */
 :root{
+  --max-width-980: 980px; /* @kind spacing */
   --max-width-1360: 1360px; /* @kind spacing */
   --max-width-1520: 1520px; /* @kind spacing */
   --max-width-none: none; /* @kind other */

@@ -1,9 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Heliograph — section viewer</title>
-<link rel="stylesheet" href="styles.css?v=17">
+<link rel="stylesheet" href="styles.css?v=20">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="_ds_bundle.js?v=17"></script>
+<script src="_ds_bundle.js?v=20"></script>
 <style>
 *{box-sizing:border-box}html,body{margin:0;padding:0;height:100%}
 body{background:var(--surface-muted);color:var(--text-on-light-body);font-family:var(--font-family-primary);-webkit-font-smoothing:antialiased}
@@ -69,7 +69,7 @@ pre{margin:0;padding:12px 14px;border-radius:12px;background:#150040;color:#e8e6
 const NS=window.HeliographMixpanelDesignSystem_8500f4;
 const {useState,useEffect,useMemo,useRef,useLayoutEffect}=React;
 const VIEWPORTS={"desktop-plus":1440,desktop:1200,tablet:808,phone:384};
-const EXTRA={FullTopNav:{logoSrc:"assets/logo.svg",caretSrc:"assets/icons/caret-down.svg",burgerSrc:"assets/icons/burger-menu.svg"},Footer:{logoSrc:"assets/mixpanel-logo.svg"},LgHero:{logoSrc:"assets/logo.svg"},SmHero:{logoSrc:"assets/logo.svg"}};
+const EXTRA={FullTopNav:{logoSrc:"assets/logos/main-logo-gray-10.svg",caretSrc:"assets/icons/caret-down.svg",burgerSrc:"assets/icons/burger-menu.svg"},Footer:{logoSrc:"assets/logos/main-logo-absolute-white.svg"},LgHero:{logoSrc:"assets/logos/main-logo-gray-10.svg"},SmHero:{logoSrc:"assets/logos/main-logo-gray-10.svg"}};
 const SKIP=/^(children|className|style|cards|links)$/;
 
 function enumOf(type){
@@ -119,7 +119,7 @@ function App(){
   const [fit,setFit]=useState(true);
   const name=new URLSearchParams(location.search).get("c")||"LgHero";
   const box=useRef(null),[scale,setScale]=useState(1);
-  useEffect(()=>{fetch("library-data.json?v=17").then(r=>r.json()).then(setData)},[]);
+  useEffect(()=>{fetch("library-data.json?v=20").then(r=>r.json()).then(setData)},[]);
   const say=m=>{setToast(m);clearTimeout(window.__tt);window.__tt=setTimeout(()=>setToast(null),1500)};
   const c=data&&data.components.find(x=>x.name===name);
   const ctls=useMemo(()=>c?controlsFor(c):[],[c]);

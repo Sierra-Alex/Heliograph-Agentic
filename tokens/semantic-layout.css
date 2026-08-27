@@ -32,6 +32,7 @@
   --layout-grid-phone-margin: 16px;
   --layout-grid-phone-gutter: 16px;
   --layout-grid-phone-max-width: none; /* @kind other */
+  --layout-content-max-width: var(--max-width-980); /* @kind other */
   --icon-sm: 16px;
   --icon-default: 24px;
   --control: 16px;

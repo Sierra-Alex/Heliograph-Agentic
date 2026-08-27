@@ -1,10 +1,10 @@
 <!-- @dsCard group="Brand" viewport="1280x900" name="Library index" subtitle="Browsable reference of every component and token, with copy-ready names" -->
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Heliograph Library</title>
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=4">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="_ds_bundle.js?v=2"></script>
+<script src="_ds_bundle.js?v=4"></script>
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -279,15 +279,15 @@ const PREVIEW={
   LgResourceCards:[1100,<LgResourceCards color="purple" imagePosition="left" alignment="left" largeImage={false}/>],
   SmResourceCard:[null,<div style={{maxWidth:420}}><SmResourceCard color="gray" bigImage={true}/></div>],
   Stat:[null,<div style={{maxWidth:300}}><Stat value="10" suffix="M" description="Monthly tracked users"/></div>],
-  FullTopNav:[1440,<FullTopNav desktopSize="desktop-plus" logoSrc="assets/logo.svg" caretSrc="assets/icons/caret-down.svg" burgerSrc="assets/icons/burger-menu.svg"/>],
-  LimitedTopNav:[1440,<LimitedTopNav desktopSize="login-primary-secondary" logoSrc="assets/logo.svg"/>],
+  FullTopNav:[1440,<FullTopNav desktopSize="desktop-plus" logoSrc="assets/logos/main-logo-gray-10.svg" caretSrc="assets/icons/caret-down.svg" burgerSrc="assets/icons/burger-menu.svg"/>],
+  LimitedTopNav:[1440,<LimitedTopNav desktopSize="login-primary-secondary" logoSrc="assets/logos/main-logo-gray-10.svg"/>],
   LgHero:[1440,<LgHero color="purple" includeNav={false} tagText="Platform" headline="Headline goes here"/>],
   SmHero:[1440,<SmHero color="mint" includeNav={false} tagText="Product" headline="Headline goes here"/>],
   ZLayout:[1440,<ZLayout color="pool" imagePosition="left" pageBackground="standard"/>],
   LgProductCard:[1440,<LgProductCard hue="purple" headline="Understand your users" tagText="Analytics"/>],
   LgProductSection:[1440,<LgProductSection hue="purple" headline="Headline goes here" tagText="Platform"/>],
   MdProductCardLockup:[1440,<MdProductCardLockup color="lava"/>],
-  Footer:[1440,<Footer color="purple" logoSrc="assets/mixpanel-logo.svg" includeCta={false}/>],
+  Footer:[1440,<Footer color="purple" logoSrc="assets/logos/main-logo-absolute-white.svg" includeCta={false}/>],
   CircleCheck:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><CircleCheck baseColor="dark" size={16}/><CircleCheck baseColor="dark" size={24}/><CircleCheck baseColor="light" size={16}/></div>],
   LogoMark:[null,<div style={{display:"flex",gap:24,alignItems:"center"}}><LogoMark variant="full" color="color" height={28}/><LogoMark variant="mark" color="color" height={28}/></div>],
   NavLink:[null,<div style={{display:"flex",gap:16,alignItems:"center"}}><NavLink active>Platform</NavLink><NavLink caret>Solutions</NavLink><NavLink>Pricing</NavLink></div>],
@@ -381,14 +381,7 @@ function SectionTile({c}){
   </a>;
 }
 
-const TEMPLATES=[{name:"Marketing page",href:"templates/marketing-page/MarketingPage.dc.html",desc:"Full marketing page starter — nav, hero, Z-layouts, product cards and footer, already wired to Heliograph."}];
 
-function TemplateTile({t}){
-  return <a className="tile" href={t.href}>
-    <Lazy minHeight={190}><Thumb src={t.href}/></Lazy>
-    <div className="tilemeta"><h3>{t.name}</h3><p>{t.desc}</p><em>Open template →</em></div>
-  </a>;
-}
 
 function Lazy({minHeight,children}){
   const ref=useRef(null),[on,setOn]=useState(false);
@@ -948,11 +941,10 @@ const CHAPTERS=[
   {num:"05",title:"Logo & Icons",id:"logo-icons"},
   {num:"06",title:"Patterns",id:"patterns"},
   {num:"07",title:"Page Sections",id:"page-sections"},
-  {num:"08",title:"Templates",id:"templates"},
-  {num:"09",title:"Product Imagery",id:"product-imagery"},
-  {num:"10",title:"Data Viz",id:"data-viz"},
-  {num:"11",title:"Brand Strategy",id:"brand-strategy"},
-  {num:"12",title:"Tone of Voice",id:"tone-of-voice"},
+  {num:"08",title:"Product Imagery",id:"product-imagery"},
+  {num:"09",title:"Data Viz",id:"data-viz"},
+  {num:"10",title:"Brand Strategy",id:"brand-strategy"},
+  {num:"11",title:"Tone of Voice",id:"tone-of-voice"},
 ];
 
 function CompItem({children,label,dark,say}){
@@ -1234,25 +1226,20 @@ function App(){
           <p className="chapter-desc">Full-width page sections that compose patterns into complete content areas.</p>
           <PageSectionsShowcase secList={secList}/>
         </section>
-        <section className="chapter" id="templates">
-          <div className="chapter-head"><span className="chapter-num">08</span><h2>Templates</h2></div>
-          <p className="chapter-desc">Starting points for full marketing pages, pre-wired to Heliograph components.</p>
-          <div className="tiles">{TEMPLATES.map(t=><TemplateTile key={t.name} t={t}/>)}</div>
-        </section>
         <section className="chapter" id="product-imagery">
-          <div className="chapter-head"><span className="chapter-num">09</span><h2>Product Imagery</h2></div>
+          <div className="chapter-head"><span className="chapter-num">08</span><h2>Product Imagery</h2></div>
           <p className="chapter-desc">Coming soon.</p>
         </section>
         <section className="chapter" id="data-viz">
-          <div className="chapter-head"><span className="chapter-num">10</span><h2>Data Viz</h2></div>
+          <div className="chapter-head"><span className="chapter-num">09</span><h2>Data Viz</h2></div>
           <p className="chapter-desc">Coming soon.</p>
         </section>
         <section className="chapter" id="brand-strategy">
-          <div className="chapter-head"><span className="chapter-num">11</span><h2>Brand Strategy</h2></div>
+          <div className="chapter-head"><span className="chapter-num">10</span><h2>Brand Strategy</h2></div>
           <p className="chapter-desc">Coming soon.</p>
         </section>
         <section className="chapter" id="tone-of-voice">
-          <div className="chapter-head"><span className="chapter-num">12</span><h2>Tone of Voice</h2></div>
+          <div className="chapter-head"><span className="chapter-num">11</span><h2>Tone of Voice</h2></div>
           <p className="chapter-desc">Coming soon.</p>
         </section>
       </div>

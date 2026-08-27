@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../core/Button.jsx";
 const cx=(...a)=>a.filter(Boolean).join(" ");
-export function LimitedTopNav({desktopSize="login-primary-secondary",viewport="desktop-plus",logoSrc="assets/logo.svg",primaryLabel="Click Me",secondaryLabel="Click Me",className,...props}){
+export function LimitedTopNav({desktopSize="login-primary-secondary",viewport="desktop-plus",logoSrc="assets/logos/main-logo-gray-10.svg",primaryLabel="Click Me",secondaryLabel="Click Me",className,...props}){
   const showLogin=desktopSize==="login-primary-secondary";
   const showSecondary=desktopSize==="login-primary-secondary"||desktopSize==="primary-secondary";
   const showPrimary=desktopSize!=="empty";

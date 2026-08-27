@@ -124,7 +124,7 @@ function LogoMark({
   className,
   ...props
 }) {
-  const src = variant === "mark" ? "assets/logo.svg" : "assets/mixpanel-logo.svg";
+  const src = variant === "mark" ? "assets/logos/main-logo-gray-10.svg" : "assets/logos/main-logo-absolute-white.svg";
   return /*#__PURE__*/React.createElement("img", _extends({
     className: cx("logomark", "logomark--" + color, "logomark--" + variant, className),
     src: src,
@@ -841,19 +841,27 @@ function FAQ({
   return /*#__PURE__*/React.createElement("div", _extends({
     className: cx("faq-item", open && "faq-item--open", onDark && "faq-item--on-dark", className)
   }, props), /*#__PURE__*/React.createElement("div", {
-    className: "faq-item__row"
+    className: "faq-item__row",
+    role: "button",
+    tabIndex: 0,
+    "aria-expanded": open,
+    onClick: onToggle,
+    onKeyDown: e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onToggle?.(); } }
   }, /*#__PURE__*/React.createElement("span", {
     className: "faq-item__question"
   }, question), Ctrl && /*#__PURE__*/React.createElement(Ctrl, {
     size: "lg",
     onDark: onDark,
-    "aria-expanded": open,
-    onClick: onToggle
-  })), open && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    tabIndex: -1
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "faq-item__body"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "faq-item__body-inner"
+  }, /*#__PURE__*/React.createElement("div", {
     className: "faq-item__rule"
   }), /*#__PURE__*/React.createElement("p", {
     className: "faq-item__answer"
-  }, answer)));
+  }, answer))));
 }
 Object.assign(__ds_scope, { FAQ });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/patterns/FAQ.jsx", error: String((e && e.message) || e) }); }
@@ -1535,25 +1543,38 @@ try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const cx = (...a) => a.filter(Boolean).join(" ");
 const DEFAULTS = [{
-  question: "Add question in here...",
-  answer: "Add answer in here..."
+  question: "What is Mixpanel?",
+  answer: "Mixpanel is a product analytics platform that helps teams understand how people use their products so they can build better experiences and drive growth."
+}, {
+  question: "How does Mixpanel work?",
+  answer: "Mixpanel collects event data from your product and lets you analyze user behavior through interactive reports, funnels, and retention charts."
+}, {
+  question: "What integrations does Mixpanel support?",
+  answer: "Mixpanel integrates with warehouses, CDPs, and hundreds of tools through native connectors and a flexible API."
+}, {
+  question: "Is there a free plan available?",
+  answer: "Yes, Mixpanel offers a generous free plan that includes core analytics features for teams getting started with product analytics."
+}, {
+  question: "How do I get started?",
+  answer: "Sign up for a free account, install the SDK in your product, and start tracking events in minutes."
 }];
 function FAQs({
   title = "FAQs",
   items = DEFAULTS,
-  pageColor = "white",
-  onDark = false,
+  color = "purple",
+  pageBackground = "light",
   defaultOpen = 0,
   desktopSize = "desktop-plus",
   className,
   ...props
 }) {
   const [open, setOpen] = React.useState(defaultOpen);
+  const isDark = pageBackground === "dark";
   const {
     FAQ
   } = window.HeliographMixpanelDesignSystem_8500f4 || {};
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("faqs", "faqs--" + pageColor, onDark && "faqs--on-dark", "faqs--" + desktopSize, className)
+    className: cx("faqs", "faqs--" + color, "faqs--bg-" + pageBackground, "faqs--" + desktopSize, className)
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "faqs__card"
   }, /*#__PURE__*/React.createElement("h2", {
@@ -1565,7 +1586,7 @@ function FAQs({
     question: it.question,
     answer: it.answer,
     open: open === i,
-    onDark: onDark,
+    onDark: isDark,
     onToggle: () => setOpen(open === i ? -1 : i)
   }) : null))));
 }
@@ -1759,7 +1780,7 @@ function Footer({
   desktopSize = "desktop-plus",
   ctaHeadline = "Headline goes here",
   ctaSubhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
-  logoSrc = "assets/mixpanel-logo.svg",
+  logoSrc = "assets/logos/main-logo-absolute-white.svg",
   className
 }) {
   return /*#__PURE__*/React.createElement("div", {
@@ -1965,6 +1986,7 @@ function LgContentCallout({
     headline: headline,
     subhead: subhead,
     primaryLabel: ctaLabel,
+    includeSecondary: !!secondaryLabel,
     secondaryLabel: secondaryLabel,
     onDark: isDark,
     hue: color,
@@ -2047,6 +2069,7 @@ const DEFAULT_QUOTES = [{
 }];
 function Quotes({
   color = "purple",
+  pageBackground = "dark",
   quotes = DEFAULT_QUOTES,
   active = 0,
   logoCount = 3,
@@ -2063,7 +2086,7 @@ function Quotes({
     if (onSelect) onSelect(i);
   };
   return /*#__PURE__*/React.createElement("section", _extends({
-    className: cx("qc", "qc--" + color, "qc--" + desktopSize, className)
+    className: cx("qc", "qc--" + color, "qc--bg-" + pageBackground, "qc--" + desktopSize, className)
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "qc__row"
   }, /*#__PURE__*/React.createElement("div", {
@@ -2116,7 +2139,7 @@ const NAV_LINKS = [{
 function FullTopNav({
   desktopSize = "desktop-plus",
   links = NAV_LINKS,
-  logoSrc = "assets/logo.svg",
+  logoSrc = "assets/logos/main-logo-gray-10.svg",
   caretSrc = "assets/icons/caret-down.svg",
   burgerSrc = "assets/icons/burger-menu.svg",
   onNavigate,
@@ -2349,7 +2372,7 @@ try { (() => {
 const cx = (...a) => a.filter(Boolean).join(" ");
 function LimitedTopNav({
   desktopSize = "login-primary-secondary",
-  logoSrc = "assets/logo.svg",
+  logoSrc = "assets/logos/main-logo-gray-10.svg",
   primaryLabel = "Click Me",
   secondaryLabel = "Click Me",
   viewport = "desktop-plus",
@@ -2389,7 +2412,8 @@ Object.assign(__ds_scope, { LimitedTopNav });
 try { (() => {
 const cx = (...a) => a.filter(Boolean).join(" ");
 function StatLockup({
-  color = "light",
+  color = "purple",
+  pageBackground = "light",
   numberOfStats = 2,
   addHeadline = false,
   tagText = "Text",
@@ -2406,9 +2430,10 @@ function StatLockup({
   ...props
 }) {
   const count = Number(numberOfStats) || 2;
+  const isDark = pageBackground === "dark";
   const items = stats || Array.from({length: count}, () => ({value, suffix, description}));
   return /*#__PURE__*/React.createElement("section", {
-    className: cx("stl", "stl--" + color, "stl--" + desktopSize, className),
+    className: cx("stl", "stl--" + color, "stl--bg-" + pageBackground, "stl--" + desktopSize, className),
     ...props
   }, addHeadline && /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H3",
@@ -2417,6 +2442,8 @@ function StatLockup({
     tagText: tagText,
     button: true,
     includeSecondary: true,
+    onDark: isDark,
+    hue: color,
     desktopSize: desktopSize,
     headline: headline,
     subhead: subhead,
@@ -2428,7 +2455,9 @@ function StatLockup({
     key: i,
     value: s.value,
     suffix: s.suffix,
-    description: s.description
+    description: s.description,
+    onDark: isDark,
+    hue: color
   }))));
 }
 Object.assign(__ds_scope, { StatLockup });
@@ -2438,20 +2467,22 @@ Object.assign(__ds_scope, { StatLockup });
 try { (() => {
 const cx = (...a) => a.filter(Boolean).join(" ");
 function VideoLockup({
-  color = "light",
+  color = "purple",
+  pageBackground = "light",
   includeHeadline = false,
   tagText = "Text",
   headline = "Headline goes here",
   subhead = "Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",
   primaryLabel = "Click Me",
-  secondaryLabel = "Click Me",
+  secondaryLabel,
   children,
   desktopSize = "desktop-plus",
   className,
   ...props
 }) {
+  const isDark = pageBackground === "dark";
   return /*#__PURE__*/React.createElement("section", {
-    className: cx("vl", "vl--" + color, "vl--" + desktopSize, className),
+    className: cx("vl", "vl--" + color, "vl--bg-" + pageBackground, "vl--" + desktopSize, className),
     ...props
   }, includeHeadline && /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H3",
@@ -2459,8 +2490,10 @@ function VideoLockup({
     tag: true,
     tagText: tagText,
     button: true,
-    includeSecondary: true,
+    includeSecondary: !!secondaryLabel,
     desktopSize: desktopSize,
+    onDark: isDark,
+    hue: color,
     headline: headline,
     subhead: subhead,
     primaryLabel: primaryLabel,

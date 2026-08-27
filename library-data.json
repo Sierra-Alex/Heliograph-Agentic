@@ -1520,7 +1520,7 @@
           "required": false,
           "type": "string",
           "doc": "Path to the Mixpanel wordmark.",
-          "def": "\"assets/logo.svg\""
+          "def": "\"assets/logos/main-logo-gray-10.svg\""
         },
         {
           "name": "caretSrc",
@@ -1551,7 +1551,7 @@
           "def": null
         }
       ],
-      "example": "<FullTopNav desktopSize=\"desktop-plus\" logoSrc=\"assets/logo.svg\" />",
+      "example": "<FullTopNav desktopSize=\"desktop-plus\" logoSrc=\"assets/logos/main-logo-gray-10.svg\" />",
       "notes": "Tablet and phone tiers collapse the link row into the burger. Link labels are 14px medium at 70% opacity, full opacity on hover.",
       "files": [
         "components/sections/FullTopNav.jsx",
@@ -1577,7 +1577,7 @@
         {
           "name": "logoSrc",
           "type": "string",
-          "def": "\"assets/logo.svg\"",
+          "def": "\"assets/logos/main-logo-gray-10.svg\"",
           "doc": null,
           "required": false
         },
@@ -1603,7 +1603,7 @@
           "required": false
         }
       ],
-      "example": "<LimitedTopNav desktopSize=\"login-primary-secondary\" logoSrc=\"assets/logo.svg\" />",
+      "example": "<LimitedTopNav desktopSize=\"login-primary-secondary\" logoSrc=\"assets/logos/main-logo-gray-10.svg\" />",
       "notes": "Uses same visual treatment as FullTopNav (blur backdrop, 64px height, border-bottom) but without nav links or burger menu.",
       "files": [
         "components/sections/LimitedTopNav.jsx",
@@ -1666,7 +1666,7 @@
           "required": false,
           "type": "string",
           "doc": "Path to the full Mixpanel logo.  \u2014 pass a path relative to YOUR page",
-          "def": "\"assets/mixpanel-logo.svg\""
+          "def": "\"assets/logos/main-logo-absolute-white.svg\""
         },
         {
           "name": "className",
@@ -2222,18 +2222,18 @@
           "def": "[{question:\"Add question in here...\",answer:\"Add answer in here...\"}]"
         },
         {
-          "name": "pageColor",
+          "name": "color",
           "required": false,
-          "type": "string",
-          "doc": "Background surface colour.",
-          "def": "\"white\""
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "doc": "Accent hue.",
+          "def": "\"purple\""
         },
         {
-          "name": "onDark",
+          "name": "pageBackground",
           "required": false,
-          "type": "boolean",
-          "doc": "Invert for dark surfaces.",
-          "def": "false"
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
+          "doc": "Page surface.",
+          "def": "\"light\""
         },
         {
           "name": "defaultOpen",
@@ -2279,6 +2279,13 @@
           "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
           "doc": "Accent hue.",
           "def": "\"purple\""
+        },
+        {
+          "name": "pageBackground",
+          "required": false,
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
+          "doc": "Page surface.",
+          "def": "\"dark\""
         },
         {
           "name": "quotes",
@@ -2341,9 +2348,16 @@
       "props": [
         {
           "name": "color",
-          "type": "\"light\" | \"default\" | \"muted\"",
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "def": "\"purple\"",
+          "doc": "Accent hue.",
+          "required": false
+        },
+        {
+          "name": "pageBackground",
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
           "def": "\"light\"",
-          "doc": "Neutral background surface",
+          "doc": "Page surface.",
           "required": false
         },
         {
@@ -2435,9 +2449,16 @@
       "props": [
         {
           "name": "color",
-          "type": "\"light\" | \"default\" | \"muted\"",
+          "type": "\"purple\" | \"pool\" | \"mint\" | \"lava\" | \"mustard\" | \"grass\"",
+          "def": "\"purple\"",
+          "doc": "Accent hue.",
+          "required": false
+        },
+        {
+          "name": "pageBackground",
+          "type": "\"light\" | \"standard\" | \"muted\" | \"dark\"",
           "def": "\"light\"",
-          "doc": "Neutral background surface",
+          "doc": "Page surface. Dark switches to dark mode with the chosen hue.",
           "required": false
         },
         {
