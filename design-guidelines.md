@@ -545,6 +545,27 @@ No focus, disabled, or error states — nav links are simple interactive text.
 
 ---
 
+### GLOBAL RULE: HTML heading tags must follow semantic order for SEO
+
+The HTML heading tag (`<h1>`, `<h2>`, `<h3>`, etc.) must always follow sequential document order down the page, regardless of the visual heading size used in the design.
+
+A page must have exactly one `<h1>`, followed by `<h2>`s, then `<h3>`s, and so on — never skipping levels, never repeating `<h1>`. If the hero uses an H2-sized visual style, the HTML tag must still be `<h1>` because it's the first heading on the page. The next section's heading is `<h2>`, then `<h3>`, etc.
+
+**Visual size and HTML tag are independent.** The `heading` prop on CoreTypeLockups controls the visual size (font, spacing, letter-spacing). The HTML tag must be determined by the heading's position in the page hierarchy, not by how big it looks.
+
+**When assembling a page:**
+
+| Position on page | HTML tag | Visual size (can be anything) |
+|---|---|---|
+| First heading (hero) | `<h1>` | H1, H2, H3 — whatever the design calls for |
+| Second-level headings (main sections) | `<h2>` | H2, H3, H4 — whatever the design calls for |
+| Third-level headings (sub-sections, cards) | `<h3>` | H3, H4, H5 — whatever the design calls for |
+| Fourth-level headings | `<h4>` | Any visual size |
+
+**Implementation:** Components that render headings should accept a separate `headingTag` (or `as`) prop to override the HTML element independently of the visual `heading` prop. When building a composed page, always pass the correct semantic tag for the heading's position in the document.
+
+---
+
 ### GLOBAL RULE: No adjacent dark sections in different hues
 
 Two dark sections must never sit directly next to each other unless they share the same hue. A dark purple section next to a dark pool section creates a jarring color clash with no visual breathing room.

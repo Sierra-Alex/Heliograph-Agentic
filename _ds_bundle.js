@@ -714,6 +714,7 @@ const HEADING_TAG_MAP = {
 };
 function CoreTypeLockups({
   heading = "H1",
+  headingTag,
   alignment = "left",
   tag = false,
   tagText = "Label",
@@ -728,7 +729,7 @@ function CoreTypeLockups({
   desktopSize = "desktop-plus",
   className
 }) {
-  const HeadingTag = HEADING_TAG_MAP[heading];
+  const HeadingTag = headingTag || HEADING_TAG_MAP[heading];
   const visual = desktopSize === "tablet" ? TABLET_HEADING[heading] : desktopSize === "phone" ? PHONE_HEADING[heading] : heading;
   const buttonSize = visual === "H5" || visual === "H6" ? "sm" : "lg";
   return /*#__PURE__*/React.createElement("div", {
@@ -969,6 +970,7 @@ const HEADING_TAG_MAP = {
 };
 function HorizontalCoreType({
   heading = "H1",
+  headingTag,
   tag = false,
   tagText = "Label",
   hue = "purple",
@@ -982,7 +984,7 @@ function HorizontalCoreType({
   desktopSize = "desktop-plus",
   className
 }) {
-  const HeadingTag = HEADING_TAG_MAP[heading];
+  const HeadingTag = headingTag || HEADING_TAG_MAP[heading];
   const visual = desktopSize === "tablet" ? TABLET_HEADING[heading] : desktopSize === "phone" ? PHONE_HEADING[heading] : heading;
   const buttonSize = visual === "H5" || visual === "H6" ? "sm" : "lg";
   return /*#__PURE__*/React.createElement("div", {

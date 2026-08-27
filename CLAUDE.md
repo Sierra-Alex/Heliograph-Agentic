@@ -59,6 +59,8 @@ Letter spacing: H1–H3 → `negative-2`, H4 → `negative-1`, H5–H6 → `0`.
 
 Responsive step-down: H1→H2 at tablet (808px), all headings drop one level at phone (384px). H7 (16px) is the floor. Use the mapped heading token at each breakpoint.
 
+**Semantic heading order for SEO:** HTML heading tags (`<h1>`–`<h6>`) must always follow sequential document order down the page — one `<h1>`, then `<h2>`s, then `<h3>`s — regardless of the visual heading size. The `heading` prop controls visual size; the HTML tag is determined by position in the page hierarchy. If the hero uses an H2 visual style, the HTML tag must still be `<h1>`. When assembling pages, pass a `headingTag`/`as` prop to override the HTML element independently of the visual size.
+
 ### Spacing and radius
 
 - Spacing aliases: 8 / 16 / 24 / 32 / 40 / 80
