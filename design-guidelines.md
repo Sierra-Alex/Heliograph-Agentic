@@ -385,6 +385,16 @@ Never use arbitrary z-index values — pick from this scale.
 | tablet (808px) | none (fluid) | 32px | 16px | 6 |
 | phone (384px) | none (fluid) | 16px | 16px | 2 |
 
+### Responsive behavior
+
+Every page section and component must respect all four breakpoint tiers. This is not optional — responsive behavior is part of the component contract, not an enhancement.
+
+- Every section accepts a `desktopSize` prop (`"desktop-plus"` | `"desktop"` | `"tablet"` | `"phone"`). Margins, padding, and typography must step down at each tier.
+- Multi-column layouts (card rows, side-by-side content) must collapse to single-column (`flex-direction: column`) at tablet and phone.
+- Typography steps down at breakpoints: H1→H2 at tablet, all headings drop one level at phone. H7 (16px) is the floor.
+- When creating or modifying a section, always implement and test all four breakpoint tiers in both CSS and JSX.
+- Heliograph uses prop-driven responsive sizing (not media queries) because the library viewer renders components inside a `Frame` that simulates widths.
+
 ### Content max widths
 
 - **Headlines (H3 and above):** `--layout-content-max-width` (980px). Headline text blocks for H1, H2, and H3 must never exceed this width.
@@ -517,6 +527,17 @@ No focus, disabled, or error states — nav links are simple interactive text.
 
 ---
 
+### GLOBAL RULE: No adjacent dark sections in different hues
+
+Two dark sections must never sit directly next to each other unless they share the same hue. A dark purple section next to a dark pool section creates a jarring color clash with no visual breathing room.
+
+**Allowed:** dark purple → dark purple, dark pool → dark pool, dark mint → light → dark mint
+**Not allowed:** dark purple → dark pool, dark lava → dark grass
+
+To break up consecutive dark sections in different hues, insert a light surface section between them.
+
+---
+
 ### GLOBAL RULE: On-dark color spaces must be honored everywhere
 
 Any component that renders text on a dark surface MUST switch ALL text and decorative colors to the on-dark token family. This is not optional — it applies to every component in the system, not just sections.
@@ -544,3 +565,17 @@ This applies to: `CoreTypeLockup`, `HorizontalCoreType`, and any future lockup/t
 3. No component should guess its color space from context — the prop is the contract
 
 **CSS specificity order:** base (light) → `.--on-dark` → `.--on-dark.--{hue}`
+
+---
+
+### GLOBAL RULE: Tags must match the section's hue
+
+A Tag's color must always match the hue of the section or surface it sits on. A purple tag on a pool section — or any other mismatch — breaks the color system and looks accidental.
+
+**Rule:** When a section sets `hue="pool"`, every Tag inside it must also use `color="pool"`. This applies to all six hues: purple, pool, mint, lava, mustard, grass.
+
+**On light surfaces:** Tags default to purple, which is correct only on a purple-accented or hue-neutral section. If the section carries a specific hue identity (e.g. a product section themed to pool), the tag must match.
+
+**On dark surfaces:** The tag must match the section's `hue` prop exactly — pass the same hue value to the Tag's `color` prop and set `onDark={true}`.
+
+**Implementation:** Sections and lockup components that accept a `hue` prop must pass it through to any nested Tag. Never hard-code a Tag color independently of the section's hue.

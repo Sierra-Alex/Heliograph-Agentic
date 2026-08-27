@@ -17,6 +17,10 @@ Always use semantic tokens. Never use raw values or primitive tokens in componen
 
 When a component accepts a `hue` or `color` prop, purple is the default value unless explicitly overridden.
 
+### Tags must match the section hue
+
+A Tag's `color` must always match the `hue` of the section it sits in. A purple tag on a pool section is wrong — pass the section's `hue` through to the Tag. Sections and lockup components must propagate their `hue` to nested Tags, never hard-code a Tag color independently.
+
 ### Colour order
 
 Always list hues in this order: **purple, pool, mint, lava, mustard, grass**. This applies to prop type unions, CSS rule order, enum arrays, dropdown options, and documentation.
