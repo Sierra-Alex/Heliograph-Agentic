@@ -1,4 +1,4 @@
-/* FAQs — Figma node 172:25966 (Page Color=White) */
+/* FAQs — Figma node 172:25966 */
 
 .faqs {
   display: flex;
@@ -6,7 +6,6 @@
   align-items: center;
   gap: var(--generic-spacing-x-lg);
   padding: var(--stack-section-md) var(--layout-grid-desktop-plus-margin);
-  background: var(--surface-light);
 }
 
 .faqs__card {
@@ -16,8 +15,6 @@
   gap: var(--generic-spacing-lg);
   width: 100%;
   padding: var(--generic-spacing-x-lg) var(--generic-spacing-xx-sm);
-  border-radius: 32px;
-  background: var(--surface-default);
 }
 
 .faqs__title {
@@ -36,23 +33,20 @@
   max-width: 840px;
 }
 
-.faqs--default { background: var(--surface-default); }
-.faqs--default .faqs__card { background: var(--surface-light); }
-.faqs--muted { background: var(--surface-muted); }
-.faqs--muted .faqs__card { background: var(--surface-light); }
-.faqs--purple { background: var(--surface-purple-dark); }
-.faqs--pool { background: var(--surface-pool-dark); }
-.faqs--mint { background: var(--surface-mint-dark); }
-.faqs--lava { background: var(--surface-lava-dark); }
-.faqs--mustard { background: var(--surface-mustard-dark); }
-.faqs--grass { background: var(--surface-grass-dark); }
+/* ---- Page Background ---- */
 
-.faqs--on-dark .faqs__card {
-  background: transparent;
-  box-shadow: inset 0 0 0 var(--standard) var(--cards-on-dark-border);
-}
+.faqs--bg-light { background: var(--surface-light); }
+.faqs--bg-standard { background: var(--surface-default); }
+.faqs--bg-muted { background: var(--surface-muted); }
 
-.faqs--on-dark .faqs__title {
+.faqs--bg-dark.faqs--purple { background: var(--surface-purple-dark); }
+.faqs--bg-dark.faqs--pool { background: var(--surface-pool-dark); }
+.faqs--bg-dark.faqs--mint { background: var(--surface-mint-dark); }
+.faqs--bg-dark.faqs--lava { background: var(--surface-lava-dark); }
+.faqs--bg-dark.faqs--mustard { background: var(--surface-mustard-dark); }
+.faqs--bg-dark.faqs--grass { background: var(--surface-grass-dark); }
+
+.faqs--bg-dark .faqs__title {
   color: var(--colors-absolute-white);
 }
 
@@ -67,5 +61,10 @@
 }
 
 .faqs--phone {
-  padding: var(--stack-section-md) var(--layout-grid-phone-margin);
+  padding: var(--generic-spacing-xx-sm) var(--layout-grid-phone-margin);
+}
+
+.faqs--phone .faqs__card {
+  padding: var(--generic-spacing-lg);
+  gap: var(--generic-spacing-lg);
 }
