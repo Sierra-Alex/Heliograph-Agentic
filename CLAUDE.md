@@ -98,6 +98,10 @@ CSS pattern for each section:
 
 When creating or modifying any section, hero, or lockup, always implement and test all four breakpoint tiers in both CSS and JSX. A component that looks the same at desktop-plus and phone is incomplete.
 
+### Sliced gradient placement
+
+Sliced gradient decorations must fade into their surface. The edge of each slice that touches the background must match that background's colour — dark end on dark surfaces, light end on light surfaces. If you can see a hard boundary between a slice and the surface behind it, the gradient is oriented wrong. Use `hero-dark-{hue}` tokens on dark surfaces, `hero-light-{hue}` on light.
+
 ### Elevation
 
 No grey drop shadows. Elevation is a coloured glow: `0 40px 36px -48px` in the card's hue at 30–50%.
