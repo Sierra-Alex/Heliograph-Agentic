@@ -67,9 +67,9 @@ Responsive step-down: H1→H2 at tablet (808px), all headings drop one level at 
 
 ### Responsive layout
 
-Sections use a prop-driven responsive system (not media queries) because the library viewer renders components inside a `Frame` that simulates different widths.
+Sections use a prop-driven responsive system (not media queries) because the library viewer renders components inside a `Frame` that simulates different widths. **Never use CSS media queries for responsive behavior — use the `desktopSize` prop and its CSS modifier classes.**
 
-Every section accepts a `desktopSize` prop: `"desktop-plus"` | `"desktop"` | `"tablet"` | `"phone"` (default `"desktop-plus"`). The prop maps to a CSS class `--{desktopSize}` that steps down horizontal padding to the grid margin token for that breakpoint:
+Every section, hero, and lockup accepts a `desktopSize` prop: `"desktop-plus"` | `"desktop"` | `"tablet"` | `"phone"` (default `"desktop-plus"`). The prop maps to a CSS class `--{desktopSize}` that controls padding, layout direction, and typography at that breakpoint:
 
 | Breakpoint | Margin token | Value | Breakpoint token value |
 |---|---|---|---|
@@ -86,9 +86,15 @@ CSS pattern for each section:
 .prefix--phone   { padding: var(--stack-section-md) var(--layout-grid-phone-margin); }
 ```
 
-At tablet/phone, multi-column layouts (card rows, side-by-side content) should collapse to `flex-direction: column`.
+**What must adapt at each breakpoint:**
+- Padding: margin tokens step down per tier
+- Vertical spacing: `--stack-section-lg` (80px) at desktop, `--stack-section-md` (40px) at phone
+- Multi-column layouts: collapse to `flex-direction: column` at tablet and phone
+- Typography: H1→H2 at tablet, all headings drop one level at phone (H7 floor)
+- Heroes: side-by-side layouts stack vertically at tablet/phone
+- Sections must propagate `desktopSize` to nested patterns that need it
 
-When creating a new section, always include all four breakpoint tiers in both CSS and JSX.
+When creating or modifying any section, hero, or lockup, always implement and test all four breakpoint tiers in both CSS and JSX. A component that looks the same at desktop-plus and phone is incomplete.
 
 ### Elevation
 

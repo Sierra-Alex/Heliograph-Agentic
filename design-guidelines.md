@@ -385,15 +385,31 @@ Never use arbitrary z-index values — pick from this scale.
 | tablet (808px) | none (fluid) | 32px | 16px | 6 |
 | phone (384px) | none (fluid) | 16px | 16px | 2 |
 
-### Responsive behavior
+### GLOBAL RULE: Every component must respect its breakpoint variations
 
-Every page section and component must respect all four breakpoint tiers. This is not optional — responsive behavior is part of the component contract, not an enhancement.
+Responsive behavior is part of the component contract, not an enhancement. Every section, hero, lockup, and pattern in Heliograph is built with four breakpoint tiers. When rendering any component, the correct `desktopSize` prop **must** be passed and the component **must** visually adapt at every tier.
 
-- Every section accepts a `desktopSize` prop (`"desktop-plus"` | `"desktop"` | `"tablet"` | `"phone"`). Margins, padding, and typography must step down at each tier.
-- Multi-column layouts (card rows, side-by-side content) must collapse to single-column (`flex-direction: column`) at tablet and phone.
-- Typography steps down at breakpoints: H1→H2 at tablet, all headings drop one level at phone. H7 (16px) is the floor.
-- When creating or modifying a section, always implement and test all four breakpoint tiers in both CSS and JSX.
-- Heliograph uses prop-driven responsive sizing (not media queries) because the library viewer renders components inside a `Frame` that simulates widths.
+**The `desktopSize` prop is mandatory, not decorative.** Every section and hero accepts `desktopSize`: `"desktop-plus"` | `"desktop"` | `"tablet"` | `"phone"` (default `"desktop-plus"`). The prop maps to a CSS modifier class (`--desktop`, `--tablet`, `--phone`) that controls padding, layout, and typography at that tier. If `desktopSize` is not passed or not respected, the component renders at desktop-plus size regardless of viewport — this is a bug.
+
+**What must change at each breakpoint:**
+
+| Aspect | desktop-plus / desktop | tablet (808px) | phone (384px) |
+|---|---|---|---|
+| Section padding | `--layout-grid-desktop-plus-margin` / `--layout-grid-desktop-margin` | `--layout-grid-tablet-margin` (32px) | `--layout-grid-phone-margin` (16px) |
+| Section vertical spacing | `--stack-section-lg` (80px) | `--stack-section-lg` (80px) | `--stack-section-md` (40px) |
+| Multi-column layout | Side-by-side / grid | Collapse to `flex-direction: column` | Collapse to `flex-direction: column` |
+| Typography | Full heading scale | H1→H2 step-down | All headings drop one level; H7 (16px) is the floor |
+| Hero images | Full-width, side-by-side with text | Stack below text | Stack below text, reduced padding |
+| Card rows | Up to 4 columns | 2 columns or single column | Single column |
+| Button size | As specified (lg/sm) | As specified | As specified |
+
+**Heroes specifically:** SmHero and LgHero must accept and respond to `desktopSize`. At tablet, hero layouts collapse from side-by-side to stacked. At phone, padding tightens, typography steps down, and images stack below the text lockup. A hero that stays full-width at phone is broken.
+
+**Nested components:** When a section passes `desktopSize` down, nested patterns (CoreTypeLockup, HorizontalCoreType, ButtonLockup, card patterns) must also adapt. The section is responsible for propagating `desktopSize` to children that need it.
+
+**Why prop-driven, not media queries:** Heliograph uses prop-driven responsive sizing because the library viewer renders components inside a `Frame` that simulates different widths. CSS media queries respond to the actual viewport, not the simulated frame — so they would not work in the library.
+
+**When building or modifying any component:** always implement and test all four breakpoint tiers in both CSS and JSX. If a component does not visually change between desktop-plus and phone, it is incomplete.
 
 ### Content max widths
 
