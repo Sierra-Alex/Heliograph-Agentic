@@ -5,7 +5,8 @@
   flex-direction: column;
   background: var(--surface-light);
   overflow: clip;
-  width: var(--breakpoints-1440);
+  width: 100%;
+  max-width: var(--breakpoints-1440);
 }
 
 /* ---- Banner ---- */
@@ -35,6 +36,7 @@
 .sh__image {
   flex-shrink: 0;
   width: 684px;
+  max-width: 50%;
   padding: var(--inset-card-border-spacing);
 }
 
@@ -112,7 +114,7 @@
 /* ---- Responsive: Desktop ---- */
 
 .sh--desktop {
-  width: var(--breakpoints-1200);
+  max-width: var(--breakpoints-1200);
 }
 
 .sh--desktop .sh__content {
@@ -126,7 +128,7 @@
 /* ---- Responsive: Tablet ---- */
 
 .sh--tablet {
-  width: var(--breakpoints-808);
+  max-width: var(--breakpoints-808);
 }
 
 .sh--tablet .sh__banner {
@@ -148,7 +150,7 @@
 /* ---- Responsive: Phone ---- */
 
 .sh--phone {
-  width: var(--breakpoints-384);
+  max-width: var(--breakpoints-384);
 }
 
 .sh--phone .sh__banner {

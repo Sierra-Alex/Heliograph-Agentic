@@ -5,7 +5,8 @@
   flex-direction: column;
   background: var(--surface-light);
   overflow: clip;
-  width: var(--breakpoints-1440);
+  width: 100%;
+  max-width: var(--breakpoints-1440);
 }
 
 /* ---- Banner ---- */
@@ -132,7 +133,7 @@
 /* ---- Responsive: Desktop ---- */
 
 .lh--desktop {
-  width: var(--breakpoints-1200);
+  max-width: var(--breakpoints-1200);
 }
 
 .lh--desktop .lh__lockup {
@@ -150,7 +151,7 @@
 /* ---- Responsive: Tablet ---- */
 
 .lh--tablet {
-  width: var(--breakpoints-808);
+  max-width: var(--breakpoints-808);
 }
 
 .lh--tablet .lh__banner {
@@ -169,7 +170,7 @@
 /* ---- Responsive: Phone ---- */
 
 .lh--phone {
-  width: var(--breakpoints-384);
+  max-width: var(--breakpoints-384);
 }
 
 .lh--phone .lh__banner {
