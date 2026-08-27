@@ -2308,7 +2308,7 @@ function SmHero({
   }))), /*#__PURE__*/React.createElement("div", {
     className: "sh__content"
   }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
-    heading: "H1",
+    heading: "H2",
     alignment: stacked ? "center" : "left",
     tag: true,
     tagText: tagText,

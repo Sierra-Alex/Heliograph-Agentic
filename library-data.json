@@ -1771,7 +1771,7 @@
         }
       ],
       "example": "<SmHero color=\"mint\" tagText=\"Product\" headline=\"Session Replay\" />",
-      "notes": "",
+      "notes": "Uses CoreTypeLockups at H2 visual size internally. LgHero uses H1.",
       "files": [
         "components/sections/SmHero.jsx",
         "components/sections/SmHero.css",
