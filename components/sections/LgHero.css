@@ -6,7 +6,6 @@
   background: var(--surface-light);
   overflow: clip;
   width: 100%;
-  max-width: var(--breakpoints-1440);
 }
 
 /* ---- Banner ---- */
@@ -132,12 +131,8 @@
 
 /* ---- Responsive: Desktop ---- */
 
-.lh--desktop {
-  max-width: var(--breakpoints-1200);
-}
-
 .lh--desktop .lh__lockup {
-  width: 750px;
+  max-width: 750px;
 }
 
 .lh--desktop .lh__image {
@@ -150,17 +145,13 @@
 
 /* ---- Responsive: Tablet ---- */
 
-.lh--tablet {
-  max-width: var(--breakpoints-808);
-}
-
 .lh--tablet .lh__banner {
   margin: 0 var(--generic-spacing-xx-sm);
   padding: var(--stack-section-lg) var(--layout-grid-tablet-margin) var(--layout-grid-tablet-margin);
 }
 
 .lh--tablet .lh__lockup {
-  width: 100%;
+  max-width: 100%;
 }
 
 .lh--tablet .lh__image {
@@ -169,17 +160,13 @@
 
 /* ---- Responsive: Phone ---- */
 
-.lh--phone {
-  max-width: var(--breakpoints-384);
-}
-
 .lh--phone .lh__banner {
   margin: 0 var(--generic-spacing-xx-sm);
   padding: var(--stack-section-md) var(--layout-grid-phone-margin) var(--layout-grid-phone-margin);
 }
 
 .lh--phone .lh__lockup {
-  width: 100%;
+  max-width: 100%;
 }
 
 .lh--phone .lh__image {

@@ -6,7 +6,6 @@
   background: var(--surface-light);
   overflow: clip;
   width: 100%;
-  max-width: var(--breakpoints-1440);
 }
 
 /* ---- Banner ---- */
@@ -113,10 +112,6 @@
 
 /* ---- Responsive: Desktop ---- */
 
-.sh--desktop {
-  max-width: var(--breakpoints-1200);
-}
-
 .sh--desktop .sh__content {
   padding-left: var(--layout-grid-desktop-margin);
 }
@@ -126,10 +121,6 @@
 }
 
 /* ---- Responsive: Tablet ---- */
-
-.sh--tablet {
-  max-width: var(--breakpoints-808);
-}
 
 .sh--tablet .sh__banner {
   flex-direction: column;
@@ -148,10 +139,6 @@
 }
 
 /* ---- Responsive: Phone ---- */
-
-.sh--phone {
-  max-width: var(--breakpoints-384);
-}
 
 .sh--phone .sh__banner {
   flex-direction: column;
