@@ -102,6 +102,278 @@ All colors by role. Source of truth is `tokens/semantic-colors.css`; these are l
 
 ---
 
+## Typography reference
+
+Font family is Garnett throughout. Weights: Regular (400), Medium (500). Quote font `arizona` is declared but no font file ships.
+
+### Headline scale
+
+All headlines: Garnett Medium (500), line-height 1.2.
+
+| Token | Size | Letter spacing | Responsive step-down |
+|---|---|---|---|
+| `--headline-h1` | 60px | `--letter-spacing-negative-2` (-0.02em) | → H2 at tablet, → H3 at phone |
+| `--headline-h2` | 48px | `--letter-spacing-negative-2` (-0.02em) | → H3 at phone |
+| `--headline-h3` | 36px | `--letter-spacing-negative-2` (-0.02em) | → H4 at phone |
+| `--headline-h4` | 28px | `--letter-spacing-negative-1` (-0.01em) | → H5 at phone |
+| `--headline-h5` | 22px | `--letter-spacing-0` (0) | → H6 at phone |
+| `--headline-h6` | 18px | `--letter-spacing-0` (0) | H7 (16px) is the floor |
+
+H5–H6 use line-height 1.4 instead of 1.2.
+
+### Body scale
+
+All body: Garnett Regular (400), letter-spacing `+0.02em`. Medium variants (500) available for each.
+
+| Token | Size | Line-height |
+|---|---|---|
+| `--body-b1` / `--body-b1-medium` | 22px | 1.6 |
+| `--body-b2` / `--body-b2-medium` | 18px | 1.6 |
+| `--body-b3` / `--body-b3-medium` | 16px | 1.6 |
+| `--body-b4` / `--body-b4-medium` | 14px | 1.68 |
+| `--body-b5` / `--body-b5-medium` | 12px | 1.68 |
+
+### Component type
+
+| Token | Weight | Size | Line-height | Use |
+|---|---|---|---|---|
+| `--component-button-lg-button` | 500 | 16px | 0.75 | Large button label |
+| `--component-button-sm-button` | 500 | 12px | 0.75 | Small button label |
+| `--component-tag-lg-tag` | 400 | 14px | 0.75 | Large tag |
+| `--component-tag-sm-tag` | 400 | 12px | 0.75 | Small tag |
+| `--component-form-label` | 500 | 16px | 1.6 | Form label |
+| `--component-form-placeholder` | 400 | 16px | 1.6 | Form placeholder |
+
+---
+
+## Spacing reference
+
+### Generic spacing aliases
+
+These are the tokens components use. Never use raw pixel values — pick from this set.
+
+| Token | Value |
+|---|---|
+| `--generic-spacing-xx-sm` | 8px |
+| `--generic-spacing-x-sm` | 16px |
+| `--generic-spacing-sm` | 24px |
+| `--generic-spacing-md` | 32px |
+| `--generic-spacing-lg` | 40px |
+| `--generic-spacing-x-lg` | 80px |
+
+### Section & page stacks
+
+| Token | Value | Use |
+|---|---|---|
+| `--stack-section-lg` | 80px | Vertical padding between sections (desktop) |
+| `--stack-section-md` | 40px | Vertical padding between sections (tablet/phone) |
+| `--stack-page-top` | 64px | Top of page content |
+| `--stack-page-bottom` | 120px | Bottom of page content |
+
+### Full primitive scale
+
+2, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 36, 40, 48, 56, 64, 80, 120, 160 — available as `--spacing-{n}` but prefer semantic aliases above.
+
+---
+
+## Icon rules
+
+### Sizing
+
+| Token | Value | Use |
+|---|---|---|
+| `--icon-sm` | 16px | Small inline icons |
+| `--icon-default` | 24px | Standard icon size |
+
+### Conventions
+
+- All SVGs use `fill="currentColor"` so they inherit text color.
+- No third-party icon sets — only icons shipped in `assets/icons/`.
+- Icons come in **fill** and **stroke** variants. Use fill for solid/active states, stroke for default/inactive.
+
+### Available icons
+
+| Directory | Icons |
+|---|---|
+| `assets/icons/` | `burger-menu`, `caret-down`, `chevron-right` |
+| `assets/icons/brand/` | `logo-fill`, `logo-laptop-fill`, `logo-laptop-stroke` |
+| `assets/icons/multipurpose/` | `ai`, `contextual-ai`, `diamond`, `expand`, `grid`, `grow`, `hub`, `info`, `layer`, `node`, `panels`, `product`, `pulse`, `rows`, `scale`, `schedule`, `speed`, `stack`, `support`, `target`, `tile` (each has `-fill` and `-stroke`) |
+| `assets/icons/product/` | `boards`, `experiments`, `feature-flags`, `flows`, `funnels`, `impact`, `insights`, `metric-trees`, `retention` (each has `-fill` and `-stroke`) |
+
+---
+
+## Card composition rules
+
+### Fill logic — surface contrast flip
+
+Cards must contrast with their parent surface. The fill token flips depending on what the card sits on:
+
+| Parent surface | Card fill token | Card fill value |
+|---|---|---|
+| White (`--surface-light`) | `--cards-on-light-fill-on-white` | `#fafafa` (gray) |
+| Gray (`--surface-default` / `--surface-muted`) | `--cards-on-light-fill-on-gray` | `#ffffff` (white) |
+| Dark (any `--surface-{hue}-dark`) | `--cards-on-dark-fill-{hue}` | Per-hue gradient |
+
+**Always/never:**
+- Always pick the fill token that contrasts with the parent — never use `fill-on-white` over a gray surface or vice versa.
+- On dark surfaces, the card fill is a gradient from the hue's mid-tone to the surface color, not a flat fill.
+
+### Card structure
+
+- Outer card radius: `--border-radius-sm-outer` (24px)
+- Inner image radius: `--border-radius-content` (16px)
+- Border spacing (inset between card edge and image): `--inset-card-border-spacing` (8px)
+- Border: `1px solid --cards-on-light-border` on light, `--cards-on-dark-border` on dark
+- Max cards per row: 4. If more items exist, the row must wrap.
+
+---
+
+## Border radius reference
+
+| Token | Value | Use |
+|---|---|---|
+| `--border-radius-none` | 0px | No rounding |
+| `--border-radius-icon` | 4px | Icon containers |
+| `--border-radius-control` | 4px | Form controls (checkbox, input, toggle track) |
+| `--border-radius-tag` | 4px | Tags |
+| `--border-radius-input` | 4px | Text inputs |
+| `--border-radius-content` | 16px | Images, content panels |
+| `--border-radius-sm-outer` | 24px | Cards (outer) |
+| `--border-radius-lg-outer` | 40px | Page shells, large containers |
+| `--border-radius-pill` | 100px | Buttons, radio circles |
+
+---
+
+## Elevation & shadows
+
+No grey drop shadows. Elevation is a coloured glow in the card's hue.
+
+### On-light glow
+
+`0 40px 36px -48px` at 30–50% opacity.
+
+| Token | Color |
+|---|---|
+| `--shadow-glow-on-light-purple` | `rgba(120,86,255,0.3)` |
+| `--shadow-glow-on-light-pool` | `rgba(114,190,244,0.4)` |
+| `--shadow-glow-on-light-mint` | `rgba(127,225,216,0.5)` |
+| `--shadow-glow-on-light-lava` | `rgba(255,117,87,0.3)` |
+| `--shadow-glow-on-light-mustard` | `rgba(248,188,60,0.3)` |
+| `--shadow-glow-on-light-grass` | `rgba(59,169,116,0.3)` |
+
+### On-dark glow
+
+`0 40px 24px -38px` at 30% opacity (tighter spread than light).
+
+| Token | Color |
+|---|---|
+| `--shadow-glow-on-dark-purple` | `rgba(120,86,255,0.3)` |
+| `--shadow-glow-on-dark-pool` | `rgba(114,190,244,0.3)` |
+| `--shadow-glow-on-dark-mint` | `rgba(127,225,216,0.3)` |
+| `--shadow-glow-on-dark-lava` | `rgba(255,117,87,0.3)` |
+| `--shadow-glow-on-dark-mustard` | `rgba(248,188,60,0.3)` |
+| `--shadow-glow-on-dark-grass` | `rgba(59,169,116,0.3)` |
+
+### Semantic elevation aliases
+
+| Token | Value | Use |
+|---|---|---|
+| `--elevation-card-default-on-light` | `0 40px 36px -48px rgba(120,86,255,0.3)` | Default card shadow on light |
+| `--elevation-card-default-on-dark` | `0 40px 24px -38px rgba(120,86,255,0.3)` | Default card shadow on dark |
+| `--focus` | `0 0 0 4px rgba(120,86,255,0.3)` | Focus ring for all interactive elements |
+
+**Always/never:**
+- Never use `box-shadow` with grey/neutral colours. Shadows are always hue-tinted glows.
+- Only use `box-shadow` for elevation (cards) and focus rings. No decorative shadows.
+
+---
+
+## Gradient tokens
+
+### Hero gradients (dark)
+
+Full-height hero backgrounds. Bottom-up: deep hue → mid hue → bright hue → tint → white.
+
+| Token | Hue |
+|---|---|
+| `--container-fill-gradient-hero-dark-purple` | purple |
+| `--container-fill-gradient-hero-dark-pool` | pool |
+| `--container-fill-gradient-hero-dark-mint` | mint |
+| `--container-fill-gradient-hero-dark-lava` | lava |
+| `--container-fill-gradient-hero-dark-mustard` | mustard |
+| `--container-fill-gradient-hero-dark-grass` | grass |
+
+### Hero gradients (light)
+
+Subtle bottom-fade. Top-down: transparent → tinted → mid hue.
+
+| Token | Hue |
+|---|---|
+| `--container-fill-gradient-hero-light-purple` | purple |
+| `--container-fill-gradient-hero-light-pool` | pool |
+| `--container-fill-gradient-hero-light-mint` | mint |
+| `--container-fill-gradient-hero-light-lava` | lava |
+| `--container-fill-gradient-hero-light-mustard` | mustard |
+| `--container-fill-gradient-hero-light-grass` | grass |
+
+### Product card gradients
+
+Used for square image panels on product cards and ZLayout.
+
+| Token | Hue |
+|---|---|
+| `--container-fill-gradient-product-card-purple` | purple |
+| `--container-fill-gradient-product-card-pool` | pool |
+| `--container-fill-gradient-product-card-mint` | mint |
+| `--container-fill-gradient-product-card-lava` | lava |
+| `--container-fill-gradient-product-card-mustard` | mustard |
+
+### Flat fills
+
+Solid deep-hue fills for containers that don't use gradients.
+
+| Token | Value |
+|---|---|
+| `--container-fill-flat-purple` | `#472ba0` |
+| `--container-fill-flat-pool` | `#39729a` |
+| `--container-fill-flat-mint` | `#00332a` |
+| `--container-fill-flat-lava` | `#993c3b` |
+| `--container-fill-flat-mustard` | `#9c6b25` |
+| `--container-fill-flat-grass` | `#1e6844` |
+
+**Always/never:**
+- Never create ad-hoc gradients. Only use the gradient tokens above.
+- Hero dark gradients are for full-width hero sections and footers. Hero light gradients are for subtle page-bottom fades.
+- Product card gradients are only for the image panel inside product cards and ZLayout.
+
+---
+
+## Aspect ratios
+
+| Token | Value | Use |
+|---|---|---|
+| `--aspect-ratio-sm-product-image` | 2:1 | Small product card images |
+| `--aspect-ratio-md-product-image` | 1:1 | Medium product card images |
+| `--aspect-ratio-lg-product-image` | 2:1 | Large product card/section images |
+| `--aspect-ratio-video` | 2:1 | Video embeds and thumbnails |
+| `--aspect-ratio-lg-resource` | 3:4 | Large resource card images (portrait) |
+
+---
+
+## Z-index scale
+
+| Token | Value | Use |
+|---|---|---|
+| `--z-index-0` | 0 | Base layer |
+| `--z-index-1` | 1 | Slightly raised (active segments, selected states) |
+| `--z-index-100` | 100 | Sticky navigation |
+| `--z-index-200` | 200 | Overlays, dropdowns |
+| `--z-index-300` | 300 | Modals, toasts |
+
+Never use arbitrary z-index values — pick from this scale.
+
+---
+
 ## Layout & max widths
 
 ### Grid

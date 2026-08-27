@@ -153,7 +153,7 @@ Pattern components must have transparent backgrounds in their CSS. Preview backg
 
 ```
 styles.css              <- single consumer entry point
-tokens/                 <- Style Dictionary output (do not hand-edit)
+tokens/                 <- Style Dictionary output + source tokens.json
 components/
   core/                 <- atomic UI elements
   forms/                <- form controls
@@ -166,7 +166,8 @@ index.html              <- browsable library
 section.html            <- component preview viewer
 design-guidelines.md    <- living rules doc (append with "NEW-rule")
 assets/icons/           <- SVG icons, fill="currentColor"
-ui_kits/marketing_site/ <- four-page site recreation
+assets/logos/           <- all logo variants (mark + wordmark)
+guidelines/             <- visual token/style reference cards for library
 ```
 
 ## Known gaps
