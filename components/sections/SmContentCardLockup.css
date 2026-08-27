@@ -54,6 +54,10 @@
   padding: var(--stack-section-md) var(--layout-grid-tablet-margin);
 }
 
+.ccl--tablet .ccl__cards {
+  flex-direction: column;
+}
+
 .ccl--phone {
   padding: var(--stack-section-md) var(--layout-grid-phone-margin);
 }

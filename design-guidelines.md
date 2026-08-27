@@ -405,6 +405,8 @@ Responsive behavior is part of the component contract, not an enhancement. Every
 
 **Heroes specifically:** SmHero and LgHero must accept and respond to `desktopSize`. At tablet, hero layouts collapse from side-by-side to stacked. At phone, padding tightens, typography steps down, and images stack below the text lockup. A hero that stays full-width at phone is broken.
 
+**Side-by-side layouts must collapse at tablet, not just phone.** Any section with a two-column layout (image + text, content + sidebar) must switch to `flex-direction: column` at the tablet tier (808px). Waiting until phone (384px) to collapse causes text to squeeze into an unreadable column at tablet widths. This applies to: ZLayout, SmContentCardLockup, LgProductSection blocks, and any future section with side-by-side content.
+
 **Nested components:** When a section passes `desktopSize` down, nested patterns (CoreTypeLockup, HorizontalCoreType, ButtonLockup, card patterns) must also adapt. The section is responsible for propagating `desktopSize` to children that need it.
 
 **Why prop-driven, not media queries:** Heliograph uses prop-driven responsive sizing because the library viewer renders components inside a `Frame` that simulates different widths. CSS media queries respond to the actual viewport, not the simulated frame — so they would not work in the library.

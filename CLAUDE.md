@@ -89,7 +89,7 @@ CSS pattern for each section:
 **What must adapt at each breakpoint:**
 - Padding: margin tokens step down per tier
 - Vertical spacing: `--stack-section-lg` (80px) at desktop, `--stack-section-md` (40px) at phone
-- Multi-column layouts: collapse to `flex-direction: column` at tablet and phone
+- Multi-column layouts: collapse to `flex-direction: column` at **tablet** (not just phone) — side-by-side content that waits until phone to stack will be unreadable at tablet widths
 - Typography: H1→H2 at tablet, all headings drop one level at phone (H7 floor)
 - Heroes: side-by-side layouts stack vertically at tablet/phone
 - Sections must propagate `desktopSize` to nested patterns that need it
