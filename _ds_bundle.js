@@ -831,12 +831,16 @@ const cx = (...a) => a.filter(Boolean).join(" ");
 function FAQ({
   question = "Add question in here...",
   answer,
-  open = false,
+  open: controlledOpen,
   onDark = false,
   onToggle,
   className,
   ...props
 }) {
+  const [internalOpen, setInternalOpen] = React.useState(false);
+  const isControlled = controlledOpen !== undefined;
+  const open = isControlled ? controlledOpen : internalOpen;
+  const handleToggle = () => { if (onToggle) onToggle(); else setInternalOpen(prev => !prev); };
   const NS = window.HeliographMixpanelDesignSystem_8500f4 || {};
   const Ctrl = open ? NS.RoundMinusButton : NS.RoundPlusButton;
   return /*#__PURE__*/React.createElement("div", _extends({
@@ -846,8 +850,8 @@ function FAQ({
     role: "button",
     tabIndex: 0,
     "aria-expanded": open,
-    onClick: onToggle,
-    onKeyDown: e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onToggle?.(); } }
+    onClick: handleToggle,
+    onKeyDown: e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); handleToggle(); } }
   }, /*#__PURE__*/React.createElement("span", {
     className: "faq-item__question"
   }, question), Ctrl && /*#__PURE__*/React.createElement(Ctrl, {
@@ -1565,7 +1569,7 @@ function FAQs({
   items = DEFAULTS,
   color = "purple",
   pageBackground = "light",
-  defaultOpen = 0,
+  defaultOpen = -1,
   desktopSize = "desktop-plus",
   className,
   ...props

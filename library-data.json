@@ -2253,8 +2253,8 @@
           "name": "defaultOpen",
           "required": false,
           "type": "number",
-          "doc": "Index of the initially open item.",
-          "def": "0"
+          "doc": "Index of the initially open item; -1 for all closed.",
+          "def": "-1"
         },
         {
           "name": "className",

@@ -3,11 +3,11 @@ export interface FAQsProps extends React.HTMLAttributes<HTMLElement> {
   /** @default "FAQs" */
   title?: string;
   items?: { question: string; answer?: string }[];
-  /** Page surface behind the card. @default "white" */
-  pageColor?: "white" | "default" | "muted" | "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
-  /** Use the dark-surface treatment. @default false */
-  onDark?: boolean;
-  /** Index open on first render; -1 for all closed. @default 0 */
+  /** Accent hue. @default "purple" */
+  color?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
+  /** Page surface. @default "light" */
+  pageBackground?: "light" | "standard" | "muted" | "dark";
+  /** Index open on first render; -1 for all closed. @default -1 */
   defaultOpen?: number;
   /** @default "desktop-plus" */
   desktopSize?: "desktop-plus" | "desktop" | "tablet" | "phone";

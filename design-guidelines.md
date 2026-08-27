@@ -543,6 +543,31 @@ Same token pattern as Checkbox but with `--radio-*` tokens. Inner dot scales fro
 
 No focus, disabled, or error states — nav links are simple interactive text.
 
+### FAQ
+
+**Behavior:** accordion — one open at a time, click to toggle, animated expand/collapse via `grid-template-rows` transition (0.36s ease).
+
+| State | Behavior |
+|---|---|
+| Closed (default) | Body hidden (`grid-template-rows: 0fr`), plus icon shown |
+| Open | Body visible (`grid-template-rows: 1fr`), minus icon shown |
+
+**Always/never:**
+- FAQs always start with all items **closed** by default (`defaultOpen={-1}`). Never show an FAQ open on first render.
+- The FAQ component is click-to-toggle — clicking the question row or the +/- button opens or closes the answer. This must always work.
+- When used standalone (without a parent managing state), the FAQ component manages its own open/close state internally. When used inside the FAQs section, the section controls which item is open.
+- Only one FAQ item may be open at a time within a FAQs section. Opening one closes the previously open one.
+- FAQ uses `role="button"`, `tabIndex={0}`, and `aria-expanded` for accessibility. Enter and Space keys toggle the item.
+
+### LogoCarousel
+
+**Behavior:** continuous horizontal scroll animation (36s linear infinite translateX).
+
+**Always/never:**
+- Logos in a carousel or logo row must always be **evenly spaced**. Never cluster logos unevenly or leave irregular gaps between them.
+- Logo images should use consistent height sizing and let width flow naturally from aspect ratio.
+- The carousel animation must be smooth and continuous — no pauses or jumps between cycles.
+
 ---
 
 ### GLOBAL RULE: HTML heading tags must follow semantic order for SEO
