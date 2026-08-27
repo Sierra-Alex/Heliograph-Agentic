@@ -602,20 +602,6 @@ To break up consecutive dark sections in different hues, insert a light surface 
 
 ---
 
-### GLOBAL RULE: Sliced gradients must fade into their surface
-
-When using the `sliced` gradient style, the gradient slices must be placed so their **top color matches the surface they sit on**. The slices should appear to grow out of the background and fade away, not create hard visible edges against the surface.
-
-**On dark surfaces:** Use the `hero-dark-{hue}` gradient tokens. The dark end of the gradient must be at the top (touching the dark surface), and the lighter end fades toward the bottom or center. The dark top blends seamlessly into the dark background — the slice "emerges" from the surface.
-
-**On light surfaces:** Use the `hero-light-{hue}` gradient tokens. The light/white end of the gradient must be at the top (touching the light surface), with the color fading in from below.
-
-**What's wrong:** If the light/peach end of a gradient slice is at the top on a dark surface, every slice has a visible hard edge — a row of bright rectangles floating on dark, instead of a seamless decorative effect. This is the most common mistake.
-
-**Rule:** Always match the gradient direction to the surface. The edge of the slice that touches the background must be the same color as that background. If you can see the boundary between a slice and the surface behind it, the gradient is oriented wrong.
-
----
-
 ### GLOBAL RULE: On-dark color spaces must be honored everywhere
 
 Any component that renders text on a dark surface MUST switch ALL text and decorative colors to the on-dark token family. This is not optional — it applies to every component in the system, not just sections.
