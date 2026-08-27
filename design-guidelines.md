@@ -584,14 +584,35 @@ This applies to: `CoreTypeLockup`, `HorizontalCoreType`, and any future lockup/t
 
 ---
 
-### GLOBAL RULE: Tags must match the section's hue
+### GLOBAL RULE: Tags must always render with correct Heliograph styling
+
+Tags have two requirements that must both be met: they must use the correct hue, and they must render with the correct token triplet. A tag that has the wrong color OR looks visually wrong (plain border, no tinted fill, wrong text color) is broken.
+
+**1. Hue matching — Tag color must match the section's hue**
 
 A Tag's color must always match the hue of the section or surface it sits on. A purple tag on a pool section — or any other mismatch — breaks the color system and looks accidental.
 
-**Rule:** When a section sets `hue="pool"`, every Tag inside it must also use `color="pool"`. This applies to all six hues: purple, pool, mint, lava, mustard, grass.
+When a section sets `hue="pool"`, every Tag inside it must also use `color="pool"`. This applies to all six hues: purple, pool, mint, lava, mustard, grass. Tags default to purple, which is correct only on a purple-accented or hue-neutral section.
 
-**On light surfaces:** Tags default to purple, which is correct only on a purple-accented or hue-neutral section. If the section carries a specific hue identity (e.g. a product section themed to pool), the tag must match.
+**2. Token triplet — Tags must always use their `fill + border + text` token set**
 
-**On dark surfaces:** The tag must match the section's `hue` prop exactly — pass the same hue value to the Tag's `color` prop and set `onDark={true}`.
+Every Tag renders with three tokens that work as a set: `--tag-on-{light|dark}-{hue}-fill`, `--tag-on-{light|dark}-{hue}-border`, `--tag-on-{light|dark}-{hue}-text`. All three must be applied together.
 
-**Implementation:** Sections and lockup components that accept a `hue` prop must pass it through to any nested Tag. Never hard-code a Tag color independently of the section's hue.
+A correctly rendered on-light Tag has:
+- A **tinted color fill** (e.g. `rgba(120,86,255,0.1)` for purple) — never transparent, never white, never gray
+- A **semi-transparent colored border** (e.g. `rgba(120,86,255,0.5)`) — never black, never gray, never `currentColor`
+- **Dark hue-specific text** (e.g. `#2e1670` for purple) — never plain black, never gray
+
+A correctly rendered on-dark Tag has:
+- A **darker tinted fill** (e.g. `rgba(120,86,255,0.2)`) — never transparent, never solid dark
+- A **lighter colored border** (e.g. `#9074ff`) — never white, never gray
+- **Light tinted text** (e.g. `#dad0ff`) — never pure white
+
+If a Tag appears with a plain dark border, no fill, or generic black/gray text, the `onDark` prop or `color` prop is missing or wrong.
+
+**3. Implementation**
+
+- Sections and lockup components must pass their `hue` to nested Tags as `color`, and their `onDark` state to the Tag's `onDark` prop
+- Never hard-code a Tag color independently of the section's hue
+- Never override Tag styles with custom CSS — the token triplet handles everything
+- The Tag component itself handles all visual rendering from the `color` and `onDark` props — if those two props are correct, the Tag will render correctly
