@@ -28,6 +28,8 @@
   display: flex;
   align-items: center;
   padding-left: var(--layout-grid-desktop-plus-margin);
+  position: relative;
+  z-index: var(--z-index-1);
 }
 
 /* ---- Image ---- */
@@ -37,6 +39,8 @@
   width: 684px;
   max-width: 50%;
   padding: var(--inset-card-border-spacing);
+  position: relative;
+  z-index: var(--z-index-1);
 }
 
 .sh__image-placeholder {
