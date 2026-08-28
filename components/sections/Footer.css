@@ -7,9 +7,8 @@
   align-items: center;
   gap: var(--stack-page-bottom);
   padding: var(--stack-section-lg) var(--layout-grid-desktop-plus-margin) var(--layout-grid-desktop-plus-margin);
-  border-radius: var(--border-radius-lg-outer);
+  border-radius: 0 0 var(--border-radius-lg-outer) var(--border-radius-lg-outer);
   overflow: clip;
-
 }
 
 .footer::before {
