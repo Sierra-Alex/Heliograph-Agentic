@@ -1,7 +1,9 @@
 /** Full-width section displaying a row of Stat components with an optional CoreTypeLockups headline. */
 export interface StatLockupProps extends React.HTMLAttributes<HTMLElement> {
-  /** @default "light" */
-  color?: "light" | "default" | "muted";
+  /** Accent hue. @default "purple" */
+  color?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
+  /** Page surface. @default "light" */
+  pageBackground?: "light" | "standard" | "muted" | "dark";
   /** @default 2 */
   numberOfStats?: 2 | 3 | 4;
   /** @default false */

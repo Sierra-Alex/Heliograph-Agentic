@@ -1,7 +1,9 @@
 /** Full-width section with a 16:9 video frame, play button, and optional CoreTypeLockups headline. */
 export interface VideoLockupProps extends React.HTMLAttributes<HTMLElement> {
-  /** @default "light" */
-  color?: "light" | "default" | "muted";
+  /** Accent hue. @default "purple" */
+  color?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
+  /** Page surface. @default "light" */
+  pageBackground?: "light" | "standard" | "muted" | "dark";
   /** @default false */
   includeHeadline?: boolean;
   tagText?: string;

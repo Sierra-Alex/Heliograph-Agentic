@@ -1,7 +1,9 @@
 /** Customer quote carousel, optionally beside a video panel. Figma: Video & Quote Carousel (node 127:16159). */
 export interface QuotesProps extends React.HTMLAttributes<HTMLElement> {
-  /** Surface hue. @default "purple" */
+  /** Accent hue. @default "purple" */
   color?: "purple" | "pool" | "mint" | "lava" | "mustard" | "grass";
+  /** Page surface. @default "dark" */
+  pageBackground?: "light" | "standard" | "muted" | "dark";
   quotes?: { quote: string; name: string; role?: string }[];
   /** Index shown on first render. @default 0 */
   active?: number;

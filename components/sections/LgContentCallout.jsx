@@ -7,7 +7,7 @@ export function LgContentCallout({color="purple",pageBackground="light",imagePos
   const isDark=pageBackground==="dark";
   return (<section className={cx("lrc","lrc--"+color,"lrc--bg-"+pageBackground,imagePosition==="left"&&"lrc--image-left","lrc--"+desktopSize,className)} {...props}>
     <div className="lrc__content">
-      <CoreTypeLockups heading="H3" tag tagText={tagText} button headline={headline} subhead={subhead} primaryLabel={ctaLabel} secondaryLabel={secondaryLabel} onDark={isDark} hue={color} desktopSize={desktopSize}/>
+      <CoreTypeLockups heading="H3" tag tagText={tagText} button headline={headline} subhead={subhead} primaryLabel={ctaLabel} includeSecondary={!!secondaryLabel} secondaryLabel={secondaryLabel} onDark={isDark} hue={color} desktopSize={desktopSize}/>
       {content==="bullets"?<BulletList items={items} onDark={isDark}/>:<AddedContent content={content} onDark={isDark} hue={color} items={items}/>}
     </div>
     <div className="lrc__image">{children}</div>

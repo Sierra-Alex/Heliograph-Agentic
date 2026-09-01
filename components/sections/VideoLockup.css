@@ -25,7 +25,8 @@
 .vl__placeholder {
   position: absolute;
   inset: 0;
-  background: var(--surface-muted);
+  background:
+    repeating-conic-gradient(var(--surface-muted) 0% 25%, var(--surface-light) 0% 50%) 0 0 / 16px 16px;
   border-radius: inherit;
 }
 
@@ -36,19 +37,18 @@
   transform: translate(-50%, -50%);
 }
 
-/* ---- Surface ---- */
+/* ---- Page Background ---- */
 
-.vl--light {
-  background: var(--surface-light);
-}
+.vl--bg-light { background: var(--surface-light); }
+.vl--bg-standard { background: var(--surface-default); }
+.vl--bg-muted { background: var(--surface-muted); }
 
-.vl--default {
-  background: var(--surface-default);
-}
-
-.vl--muted {
-  background: var(--surface-muted);
-}
+.vl--bg-dark.vl--purple { background: var(--surface-purple-dark); }
+.vl--bg-dark.vl--pool { background: var(--surface-pool-dark); }
+.vl--bg-dark.vl--mint { background: var(--surface-mint-dark); }
+.vl--bg-dark.vl--lava { background: var(--surface-lava-dark); }
+.vl--bg-dark.vl--mustard { background: var(--surface-mustard-dark); }
+.vl--bg-dark.vl--grass { background: var(--surface-grass-dark); }
 
 /* ---- Responsive ---- */
 

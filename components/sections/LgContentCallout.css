@@ -66,6 +66,12 @@
   flex-direction: column;
 }
 
+.lrc--tablet > .lrc__content,
+.lrc--tablet > .lrc__image {
+  flex: none;
+  width: 100%;
+}
+
 .lrc--phone {
   padding: var(--stack-section-md) var(--layout-grid-phone-margin);
   flex-direction: column;
@@ -73,4 +79,10 @@
 
 .lrc--phone.lrc--image-left {
   flex-direction: column;
+}
+
+.lrc--phone > .lrc__content,
+.lrc--phone > .lrc__image {
+  flex: none;
+  width: 100%;
 }

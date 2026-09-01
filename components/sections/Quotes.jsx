@@ -1,11 +1,11 @@
 import React from "react";
 const cx=(...a)=>a.filter(Boolean).join(" ");
 const DEFAULT_QUOTES=[{quote:"“Mixpanel helps us enable our customers for success.”",name:"Janna Sheng",role:"Product Manager"}];
-export function Quotes({color="purple",quotes=DEFAULT_QUOTES,active=0,logoCount=3,onSelect,desktopSize="desktop-plus",className,children,...props}){
+export function Quotes({color="purple",pageBackground="dark",quotes=DEFAULT_QUOTES,active=0,logoCount=3,onSelect,desktopSize="desktop-plus",className,children,...props}){
   const [current,setCurrent]=React.useState(active);
   const q=quotes[current]||quotes[0];
   const pick=i=>{setCurrent(i);if(onSelect)onSelect(i)};
-  return (<section className={cx("qc","qc--"+color,"qc--"+desktopSize,className)} {...props}>
+  return (<section className={cx("qc","qc--"+color,"qc--bg-"+pageBackground,"qc--"+desktopSize,className)} {...props}>
     <div className="qc__row">
       <div className="qc__quote">
         <div className="qc__type">
