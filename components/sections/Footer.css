@@ -22,8 +22,44 @@
   border-radius: 50%;
   background: var(--surface-light);
   filter: blur(var(--blur-100));
-  z-index: 0;
+  z-index: var(--z-index-1);
   pointer-events: none;
+}
+
+/* ---- Fluted glass overlay ----
+   Figma: 131.5px strips on a 102.6px pitch (so neighbours overlap), each a
+   white → transparent ramp toward its right edge, Overlay at 30%, over a
+   background blur. Two offset repeating layers reproduce the overlap.
+   Sits under the glow ellipse (::before) and content, as in Figma. */
+
+.footer__fluted {
+  --fluted-strip: 131.5px;
+  --fluted-pitch: 102.6px;
+  --fluted-offset: -26px;
+  --fluted-ramp: linear-gradient(to right, transparent 27px, var(--surface-light) var(--fluted-strip), transparent var(--fluted-strip));
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footer__fluted::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(var(--blur-100));
+  backdrop-filter: blur(var(--blur-100));
+}
+
+.footer__fluted::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--fluted-ramp), var(--fluted-ramp);
+  background-size: calc(var(--fluted-pitch) * 2) 100%;
+  background-position: var(--fluted-offset) 0, calc(var(--fluted-offset) + var(--fluted-pitch)) 0;
+  background-repeat: repeat-x;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
 }
 
 .footer--compact::before {
@@ -201,7 +237,7 @@
 
 .footer--purple {
   background:
-    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    linear-gradient(to top, var(--surface-purple-dark) 25%, transparent 65%),
     var(--container-fill-gradient-hero-dark-purple);
 }
 
@@ -213,7 +249,7 @@
 
 .footer--pool {
   background:
-    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    linear-gradient(to top, var(--surface-pool-dark) 25%, transparent 65%),
     var(--container-fill-gradient-hero-dark-pool);
 }
 
@@ -225,7 +261,7 @@
 
 .footer--mint {
   background:
-    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    linear-gradient(to top, var(--surface-mint-dark) 25%, transparent 65%),
     var(--container-fill-gradient-hero-dark-mint);
 }
 
@@ -237,7 +273,7 @@
 
 .footer--lava {
   background:
-    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    linear-gradient(to top, var(--surface-lava-dark) 25%, transparent 65%),
     var(--container-fill-gradient-hero-dark-lava);
 }
 
@@ -249,7 +285,7 @@
 
 .footer--mustard {
   background:
-    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    linear-gradient(to top, var(--surface-mustard-dark) 25%, transparent 65%),
     var(--container-fill-gradient-hero-dark-mustard);
 }
 
@@ -261,7 +297,7 @@
 
 .footer--grass {
   background:
-    linear-gradient(to top, #090a0b 25%, transparent 65%),
+    linear-gradient(to top, var(--surface-grass-dark) 25%, transparent 65%),
     var(--container-fill-gradient-hero-dark-grass);
 }
 

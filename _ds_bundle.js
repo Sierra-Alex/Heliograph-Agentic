@@ -1791,7 +1791,10 @@ function Footer({
 }) {
   return /*#__PURE__*/React.createElement("div", {
     className: cx("footer", "footer--" + color, "footer--" + desktopSize, !fullNav && "footer--compact", className)
-  }, includeCta && /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "footer__fluted",
+    "aria-hidden": "true"
+  }), includeCta && /*#__PURE__*/React.createElement("div", {
     className: "footer__cta"
   }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H2",
@@ -2250,6 +2253,9 @@ function LgHero({
       width: (i % 2 === 0 ? 128 : 129) + 1
     }
   }))), /*#__PURE__*/React.createElement("div", {
+    className: "lh__fluted",
+    "aria-hidden": "true"
+  }), /*#__PURE__*/React.createElement("div", {
     className: "lh__ellipse"
   }), /*#__PURE__*/React.createElement("div", {
     className: "lh__lockup"
@@ -2310,6 +2316,9 @@ function SmHero({
       width: (i % 2 === 0 ? 128 : 129) + 1
     }
   }))), /*#__PURE__*/React.createElement("div", {
+    className: "sh__fluted",
+    "aria-hidden": "true"
+  }), /*#__PURE__*/React.createElement("div", {
     className: "sh__content"
   }, /*#__PURE__*/React.createElement(__ds_scope.CoreTypeLockups, {
     heading: "H2",

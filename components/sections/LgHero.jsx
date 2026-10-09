@@ -11,6 +11,7 @@ export function LgHero({color="purple",gradientStyle="simple",desktopSize="deskt
     <div className="lh__banner">
       {gradientStyle==="sliced"&&<div className="lh__slices">{Array.from({length:SLICE_COUNT},(_,i)=>(
         <div key={i} className="lh__slice" style={{right:i*128+Math.floor(i/2),top:sliceTop(i),width:(i%2===0?128:129)+1}}/>))}</div>}
+      <div className="lh__fluted" aria-hidden="true"/>
       <div className="lh__ellipse"/>
       <div className="lh__lockup">
         <CoreTypeLockups heading="H1" alignment="center" tag={false} button includeSecondary headline={headline} subhead={subhead} desktopSize={desktopSize}/>

@@ -20,6 +20,7 @@ function FooterLinkItem({text,pill}){
 }
 export function Footer({color="purple",includeCta=true,fullNav=true,desktopSize="desktop-plus",ctaHeadline="Headline goes here",ctaSubhead="Bacon ipsum dolor amet flank brisket prosciutto, pork swine ham strip steak boudin bacon.",logoSrc="assets/logos/main-logo-absolute-white.svg",className}){
   return (<div className={cx("footer","footer--"+color,"footer--"+desktopSize,!fullNav&&"footer--compact",className)}>
+    <div className="footer__fluted" aria-hidden="true"/>
     {includeCta&&<div className="footer__cta">
       <CoreTypeLockups heading="H2" alignment="center" button tag={false} includeSecondary desktopSize={desktopSize} headline={ctaHeadline} subhead={ctaSubhead}/>
     </div>}

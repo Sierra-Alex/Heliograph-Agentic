@@ -10,6 +10,7 @@ export function SmHero({color="purple",gradientStyle="simple",desktopSize="deskt
     <div className="sh__banner">
       {gradientStyle==="sliced"&&<div className="sh__slices">{Array.from({length:SLICE_COUNT},(_,i)=>(
         <div key={i} className="sh__slice" style={{right:i*128+Math.floor(i/2),top:i*59.1,width:(i%2===0?128:129)+1}}/>))}</div>}
+      <div className="sh__fluted" aria-hidden="true"/>
       <div className="sh__content">
         <CoreTypeLockups heading="H2" alignment={stacked?"center":"left"} tag tagText={tagText} button includeSecondary headline={headline} subhead={subhead} desktopSize={desktopSize}/>
       </div>
